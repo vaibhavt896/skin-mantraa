@@ -39,7 +39,7 @@ const pageVariants = {
   exit: { opacity: 0, x: -60 },
 };
 
-const pageTrans = { duration: 0.4, ease: [0.22, 1, 0.36, 1] };
+const pageTrans = { duration: 0.4, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] };
 
 // ── Main Component ───────────────────────────────────────────
 
