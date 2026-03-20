@@ -154,5 +154,5 @@ export const TRUST_STATS = [
   { value: 26, suffix: "+", label: "Years of Experience" },
   { value: 451, suffix: "+", label: "Happy Patients" },
   { value: 15, suffix: "+", label: "Advanced Treatments" },
-  { value: 3, suffix: "", label: "Professional Memberships" },
+  { value: 3, suffix: "", label: "Memberships" },
 ];

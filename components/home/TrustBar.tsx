@@ -15,7 +15,7 @@ function AnimatedCounter({ target, suffix, shouldAnimate }: { target: number; su
     hasRun.current = true;
     const controls = animate(0, target, {
       duration: 2.2,
-      ease: [0.16, 1, 0.3, 1],
+      ease: [0.16, 1, 0.3, 1] as [number, number, number, number],
       onUpdate: (v) => setCurrent(Math.round(v)),
     });
     return controls.stop;
@@ -40,17 +40,8 @@ function Particle({ delay, x, y }: { delay: number; x: number; y: number }) {
         background: "rgba(212,167,106,0.6)",
         pointerEvents: "none",
       }}
-      animate={{
-        y: [-10, 10, -10],
-        opacity: [0, 1, 0],
-        scale: [0, 1.5, 0],
-      }}
-      transition={{
-        duration: 3 + Math.random() * 2,
-        delay,
-        repeat: Infinity,
-        ease: "easeInOut",
-      }}
+      animate={{ y: [-10, 10, -10], opacity: [0, 1, 0], scale: [0, 1.5, 0] }}
+      transition={{ duration: 3.5, delay, repeat: Infinity, ease: "easeInOut" }}
     />
   );
 }
@@ -61,14 +52,21 @@ const PARTICLES = [
   { x: 90, y: 65, delay: 0.2 }, { x: 15, y: 80, delay: 1.2 }, { x: 75, y: 80, delay: 0.7 },
 ];
 
-const STAT_OVERRIDES: Record<number, { display: string; sublabel?: string }> = {
-  3: { display: "BHU IMS", sublabel: "Trained" },
-};
-
 // ─── Stat Card ────────────────────────────────────────────────────────────────
 
-function StatCard({ stat, index, inView, isLast }: { stat: { value: number; suffix: string; label: string }; index: number; inView: boolean; isLast: boolean }) {
-  const override = STAT_OVERRIDES[index];
+// Border classes for 2-col mobile / 4-col desktop grid
+const BORDER_CLASSES = [
+  "border-b border-r md:border-b-0",      // 0: right always + bottom on mobile only
+  "border-b md:border-b-0 md:border-r",   // 1: bottom mobile, right desktop
+  "border-r",                               // 2: right always
+  "",                                        // 3: last — no border
+];
+
+function StatCard({ stat, index, inView }: {
+  stat: { value: number; suffix: string; label: string };
+  index: number;
+  inView: boolean;
+}) {
   const [hovered, setHovered] = useState(false);
 
   return (
@@ -77,43 +75,40 @@ function StatCard({ stat, index, inView, isLast }: { stat: { value: number; suff
       onMouseLeave={() => setHovered(false)}
       initial={{ opacity: 0, y: 30 }}
       animate={inView ? { opacity: 1, y: 0 } : {}}
-      transition={{ duration: 0.7, delay: index * 0.12, ease: [0.22, 1, 0.36, 1] }}
+      transition={{ duration: 0.7, delay: index * 0.12, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
+      className={BORDER_CLASSES[index]}
       style={{
         display: "flex",
         flexDirection: "column" as const,
         alignItems: "center",
         textAlign: "center" as const,
-        padding: "1.25rem 2.5rem",
-        borderRight: isLast ? "none" : "1px solid rgba(212,167,106,0.18)",
-        flex: "1 1 160px",
-        minWidth: "140px",
+        padding: "clamp(1.5rem, 3vw, 2rem) clamp(1rem, 2.5vw, 2.5rem)",
         position: "relative",
         cursor: "default",
+        borderColor: "rgba(212,167,106,0.18)",
       }}
     >
-      {/* Hover glow bg */}
+      {/* Hover glow */}
       <motion.div
         aria-hidden="true"
         animate={{ opacity: hovered ? 1 : 0 }}
         transition={{ duration: 0.3 }}
         style={{
-          position: "absolute",
-          inset: 0,
-          background: "radial-gradient(ellipse at center, rgba(212,167,106,0.12) 0%, transparent 70%)",
+          position: "absolute", inset: 0,
+          background: "radial-gradient(ellipse at center, rgba(212,167,106,0.11) 0%, transparent 70%)",
           pointerEvents: "none",
-          borderRadius: "12px",
         }}
       />
 
       {/* Number */}
       <motion.span
-        animate={{ scale: hovered ? 1.08 : 1 }}
+        animate={{ scale: hovered ? 1.06 : 1 }}
         transition={{ type: "spring", stiffness: 300, damping: 20 }}
         style={{ display: "block", lineHeight: 1 }}
       >
         <span style={{
           fontFamily: "var(--font-display)",
-          fontSize: "clamp(2.2rem, 3.5vw, 3rem)",
+          fontSize: "clamp(2rem, 4vw, 3rem)",
           fontWeight: 700,
           background: "linear-gradient(135deg, #D4A76A 0%, #C78D6B 100%)",
           WebkitBackgroundClip: "text",
@@ -122,36 +117,18 @@ function StatCard({ stat, index, inView, isLast }: { stat: { value: number; suff
           letterSpacing: "-0.03em",
           display: "inline-block",
         }}>
-          {override ? (
-            <>{override.display}</>
-          ) : (
-            <AnimatedCounter target={stat.value} suffix={stat.suffix} shouldAnimate={inView} />
-          )}
+          <AnimatedCounter target={stat.value} suffix={stat.suffix} shouldAnimate={inView} />
         </span>
       </motion.span>
 
-      {/* Sublabel for override */}
-      {override?.sublabel && (
-        <span style={{
-          fontFamily: "var(--font-accent)",
-          fontSize: "0.7rem",
-          fontWeight: 600,
-          color: "#D4A76A",
-          letterSpacing: "0.1em",
-          textTransform: "uppercase" as const,
-          marginTop: "0.2rem",
-        }}>{override.sublabel}</span>
-      )}
-
-      {/* Animated underline */}
+      {/* Animated underline on hover */}
       <motion.div
         animate={{ scaleX: hovered ? 1 : 0 }}
-        transition={{ duration: 0.3, ease: "easeOut" }}
+        transition={{ duration: 0.28, ease: "easeOut" }}
         style={{
-          height: "1px",
-          width: "40px",
+          height: "1px", width: "36px",
           background: "linear-gradient(90deg, transparent, #D4A76A, transparent)",
-          margin: "0.5rem auto 0.35rem",
+          margin: "0.55rem auto 0.4rem",
           transformOrigin: "center",
         }}
         aria-hidden="true"
@@ -160,12 +137,12 @@ function StatCard({ stat, index, inView, isLast }: { stat: { value: number; suff
       {/* Label */}
       <span style={{
         fontFamily: "var(--font-accent)",
-        fontSize: "0.72rem",
-        fontWeight: 400,
-        color: "rgba(253,246,236,0.65)",
-        letterSpacing: "0.06em",
+        fontSize: "clamp(0.62rem, 1.2vw, 0.72rem)",
+        fontWeight: 500,
+        color: "rgba(253,246,236,0.6)",
+        letterSpacing: "0.08em",
         textTransform: "uppercase" as const,
-        marginTop: override?.sublabel ? "0.3rem" : "0.4rem",
+        lineHeight: 1.3,
       }}>
         {stat.label}
       </span>
@@ -184,39 +161,31 @@ export default function TrustBar() {
       id="trust"
       ref={ref}
       style={{
-        background: "linear-gradient(135deg, #1e0f09 0%, #2C1810 50%, #1e0f09 100%)",
-        padding: "4rem 1.5rem",
+        background: "linear-gradient(135deg, #1a0c07 0%, #2C1810 50%, #1a0c07 100%)",
+        padding: "clamp(3rem, 5vw, 4.5rem) 1.5rem",
         overflow: "hidden",
         position: "relative",
       }}
     >
-      {/* Animated gradient border top */}
+      {/* Animated gold border — top */}
       <motion.div
         aria-hidden="true"
         animate={{ backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"] }}
         transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
         style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          right: 0,
-          height: "2px",
+          position: "absolute", top: 0, left: 0, right: 0, height: "2px",
           background: "linear-gradient(90deg, transparent 0%, #D4A76A 25%, #C4704E 50%, #D4A76A 75%, transparent 100%)",
           backgroundSize: "200% 100%",
         }}
       />
 
-      {/* Animated gradient border bottom */}
+      {/* Animated gold border — bottom */}
       <motion.div
         aria-hidden="true"
         animate={{ backgroundPosition: ["100% 50%", "0% 50%", "100% 50%"] }}
         transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
         style={{
-          position: "absolute",
-          bottom: 0,
-          left: 0,
-          right: 0,
-          height: "2px",
+          position: "absolute", bottom: 0, left: 0, right: 0, height: "2px",
           background: "linear-gradient(90deg, transparent 0%, #C4704E 25%, #D4A76A 50%, #C4704E 75%, transparent 100%)",
           backgroundSize: "200% 100%",
         }}
@@ -225,84 +194,113 @@ export default function TrustBar() {
       {/* Radial glow */}
       <div aria-hidden="true" style={{
         position: "absolute", top: "50%", left: "50%",
-        transform: "translate(-50%, -50%)", width: "800px", height: "400px",
+        transform: "translate(-50%, -50%)", width: "900px", height: "500px",
         background: "radial-gradient(ellipse, rgba(212,167,106,0.07) 0%, transparent 65%)",
         pointerEvents: "none",
       }} />
 
       {/* Floating particles */}
-      {PARTICLES.map((p, i) => <Particle key={i} {...p} delay={p.delay} />)}
+      {PARTICLES.map((p, i) => <Particle key={i} {...p} />)}
 
       <div style={{ maxWidth: "1280px", margin: "0 auto", position: "relative", zIndex: 1 }}>
-        <div style={{
-          display: "flex",
-          flexWrap: "wrap" as const,
-          alignItems: "center",
-          justifyContent: "center",
-          gap: 0,
-        }}>
-          {/* Stats */}
+
+        {/* ── Stats grid: 2-col mobile → 4-col desktop ── */}
+        <div className="grid grid-cols-2 md:grid-cols-4">
           {TRUST_STATS.map((stat, index) => (
-            <StatCard
-              key={stat.label}
-              stat={stat}
-              index={index}
-              inView={inView}
-              isLast={index === TRUST_STATS.length - 1}
-            />
+            <StatCard key={stat.label} stat={stat} index={index} inView={inView} />
           ))}
+        </div>
 
-          {/* Vertical divider */}
+        {/* ── Credential strip ── */}
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={inView ? { opacity: 1, y: 0 } : {}}
+          transition={{ duration: 0.7, delay: 0.55, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] }}
+          style={{
+            marginTop: "2.5rem",
+            paddingTop: "2rem",
+            borderTop: "1px solid rgba(212,167,106,0.14)",
+            display: "flex",
+            flexWrap: "wrap" as const,
+            alignItems: "center",
+            justifyContent: "center",
+            gap: "0.75rem",
+          }}
+        >
+          {/* BHU Gold Medallist pill — stands out */}
           <motion.div
-            initial={{ opacity: 0, scaleY: 0 }}
-            animate={inView ? { opacity: 1, scaleY: 1 } : {}}
-            transition={{ duration: 0.6, delay: 0.5 }}
-            aria-hidden="true"
+            whileHover={{ scale: 1.05, y: -1 }}
+            transition={{ type: "spring", stiffness: 350, damping: 20 }}
             style={{
-              width: "1px", height: "60px",
-              background: "linear-gradient(to bottom, transparent, rgba(212,167,106,0.4), transparent)",
-              margin: "0 0.75rem", flexShrink: 0,
-            }}
-            className="hidden md:block"
-          />
-
-          {/* Badges */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={inView ? { opacity: 1, x: 0 } : {}}
-            transition={{ duration: 0.7, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
-            style={{
-              display: "flex", flexWrap: "wrap" as const,
-              alignItems: "center", justifyContent: "center",
-              gap: "0.5rem", padding: "1rem 1.25rem",
+              display: "inline-flex", alignItems: "center", gap: "0.5rem",
+              padding: "0.45rem 1rem 0.45rem 0.55rem",
+              background: "linear-gradient(135deg, rgba(212,167,106,0.18) 0%, rgba(196,112,78,0.12) 100%)",
+              border: "1px solid rgba(212,167,106,0.4)",
+              borderRadius: "100px",
+              cursor: "default",
+              boxShadow: "0 0 20px rgba(212,167,106,0.1)",
             }}
           >
             <span style={{
-              fontFamily: "var(--font-accent)", fontSize: "0.68rem", fontWeight: 500,
-              letterSpacing: "0.08em", textTransform: "uppercase" as const,
-              color: "rgba(253,246,236,0.4)", marginRight: "0.2rem",
-            }}>Member</span>
-            {BRAND.doctor.memberships.map((badge) => (
-              <motion.span
-                key={badge}
-                whileHover={{ scale: 1.08, borderColor: "#D4A76A", background: "rgba(212,167,106,0.15)" }}
-                transition={{ type: "spring", stiffness: 400, damping: 20 }}
-                style={{
-                  display: "inline-flex", alignItems: "center",
-                  padding: "0.3rem 0.85rem",
-                  border: "1px solid rgba(212,167,106,0.4)",
-                  borderRadius: "100px",
-                  fontFamily: "var(--font-accent)", fontSize: "0.72rem",
-                  fontWeight: 600, letterSpacing: "0.1em",
-                  color: "#D4A76A", background: "rgba(212,167,106,0.07)",
-                  cursor: "default",
-                }}
-              >
-                {badge}
-              </motion.span>
-            ))}
+              width: "20px", height: "20px", borderRadius: "50%",
+              background: "linear-gradient(135deg, #C4704E, #D4A76A)",
+              display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0,
+            }}>
+              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.3L12 17l-6.2 4.2 2.4-7.3L2 9.4h7.6L12 2z" fill="white" />
+              </svg>
+            </span>
+            <span style={{
+              fontFamily: "var(--font-accent)", fontSize: "0.72rem", fontWeight: 700,
+              letterSpacing: "0.1em", textTransform: "uppercase" as const, color: "#D4A76A",
+            }}>
+              BHU Gold Medallist
+            </span>
           </motion.div>
-        </div>
+
+          {/* Subtle dot separator */}
+          <span aria-hidden="true" style={{ width: "4px", height: "4px", borderRadius: "50%", background: "rgba(212,167,106,0.3)", flexShrink: 0 }} />
+
+          {/* Member label */}
+          <span style={{
+            fontFamily: "var(--font-accent)", fontSize: "0.66rem", fontWeight: 500,
+            letterSpacing: "0.1em", textTransform: "uppercase" as const,
+            color: "rgba(253,246,236,0.38)",
+          }}>
+            Member
+          </span>
+
+          {/* Membership badges */}
+          {BRAND.doctor.memberships.map((badge) => (
+            <motion.span
+              key={badge}
+              whileHover={{ scale: 1.07, borderColor: "rgba(212,167,106,0.6)", background: "rgba(212,167,106,0.12)" }}
+              transition={{ type: "spring", stiffness: 400, damping: 20 }}
+              style={{
+                display: "inline-flex", alignItems: "center",
+                padding: "0.3rem 0.8rem",
+                border: "1px solid rgba(212,167,106,0.28)",
+                borderRadius: "100px",
+                fontFamily: "var(--font-accent)", fontSize: "0.7rem",
+                fontWeight: 600, letterSpacing: "0.1em",
+                color: "rgba(212,167,106,0.85)", background: "rgba(212,167,106,0.05)",
+                cursor: "default",
+              }}
+            >
+              {badge}
+            </motion.span>
+          ))}
+
+          {/* IMS BHU trained tag */}
+          <span aria-hidden="true" style={{ width: "4px", height: "4px", borderRadius: "50%", background: "rgba(212,167,106,0.3)", flexShrink: 0 }} />
+          <span style={{
+            fontFamily: "var(--font-accent)", fontSize: "0.66rem", fontWeight: 400,
+            letterSpacing: "0.06em", color: "rgba(253,246,236,0.35)",
+          }}>
+            IMS BHU Trained
+          </span>
+        </motion.div>
+
       </div>
     </section>
   );

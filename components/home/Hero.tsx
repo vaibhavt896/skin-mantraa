@@ -72,7 +72,7 @@ function TypewriterText({ startDelay = 1.6 }: { startDelay?: number }) {
   return (
     <em
       className="text-gradient"
-      style={{ fontStyle: "italic", fontWeight: 600, whiteSpace: "nowrap" }}
+      style={{ fontStyle: "italic", fontWeight: 700, whiteSpace: "nowrap" }}
     >
       {displayed}
       <motion.span
@@ -249,9 +249,9 @@ export default function Hero() {
               </span>
               BHU Gold Medallist
               <span style={{ opacity: 0.4, fontWeight: 300 }}>·</span>
-              MD Dermatologist
+              Kanpur&apos;s Trusted Skin Expert
               <span style={{ opacity: 0.4, fontWeight: 300 }}>·</span>
-              Kanpur
+              26+ Years
             </span>
           </motion.div>
 
