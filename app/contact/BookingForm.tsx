@@ -19,10 +19,8 @@ const formSchema = z.object({
       "Enter a valid 10-digit Indian mobile number (starting with 6–9)."
     ),
   email: z
-    .string()
-    .email("Enter a valid email address.")
-    .optional()
-    .or(z.literal("")),
+    .union([z.email("Enter a valid email address."), z.literal("")])
+    .optional(),
   concern: z.string().min(1, "Please select a treatment area."),
   preferredDate: z
     .string()
@@ -101,10 +99,9 @@ export default function BookingForm({ services }: BookingFormProps) {
     },
   });
 
-  const onSubmit = async (data: FormValues) => {
+  const onSubmit = async (_data: FormValues) => {
     setLoading(true);
-    console.log("[SKIN@Mantraa] Appointment Request:", data);
-    // Simulate API call
+    // TODO: Replace with real API endpoint (e.g. POST /api/appointments)
     await new Promise((resolve) => setTimeout(resolve, 1400));
     setLoading(false);
     setSubmitted(true);
