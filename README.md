@@ -9,7 +9,7 @@
 
 SKIN@Mantraa is a full-featured, SEO-optimised clinic website for a specialist dermatologist with 26+ years of experience. The project demonstrates a production-grade frontend architecture: performance-focused rendering strategy, schema-validated forms, an interactive multi-step diagnostic tool, and a polished luxury design system — all without a UI kit.
 
-**Live site:** [skinmantraa.com](https://skinmantraa.com)
+**Live site:** [skinmantraa.com](https://skin-mantraa.vercel.app/)
 
 ---
 
@@ -234,18 +234,6 @@ Or connect the GitHub repository to Vercel for automatic deployments on push.
 - [ ] Real before/after patient images with consent management
 - [ ] Google Analytics 4 integration
 - [ ] WhatsApp Business API for automated booking confirmations
-
----
-
-## About the Clinic
-
-**Dr. Mamta Bhura** — MBBS, MD Dermatology (IMS BHU)  
-Consultant Dermatologist & Cosmetologist with 26+ years of clinical experience across HIHT Dehradun, Kaya Skin Clinic New Delhi, and her own practice.
-
-**SKIN@Mantraa**  
-Bungalow No. 4, 113/196, Swaroop Nagar (Behind Hotel Royal Cliff)  
-Kanpur, Uttar Pradesh 208002  
-[+91 73830 79825](tel:+917383079825) · [skinmantraa@gmail.com](mailto:skinmantraa@gmail.com)
 
 ---
 
