@@ -9,7 +9,7 @@
 
 SKIN@Mantraa is a full-featured, SEO-optimised clinic website for a specialist dermatologist with 26+ years of experience. The project demonstrates a production-grade frontend architecture: performance-focused rendering strategy, schema-validated forms, an interactive multi-step diagnostic tool, and a polished luxury design system — all without a UI kit.
 
-**Live site:** [skinmantraa.com](https://skin-mantraa.vercel.app/)
+**Live site:** [skinmantraa](https://skin-mantraa.vercel.app/)
 
 ---
 
