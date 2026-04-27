@@ -350,7 +350,7 @@ export default function SkinGuidePage() {
                 className="flex justify-center lg:justify-end"
               >
                 <img
-                  src="/skin-guide/Untitled%20design%20800x800.gif"
+                  src="/skin-guide/skin-guide-animation.gif"
                   alt="Skin Guide Animation"
                   className="w-full max-w-[480px] h-auto mix-blend-multiply"
                 />
