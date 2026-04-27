@@ -267,8 +267,6 @@ export default function Header() {
                   <Link
                     key={link.label}
                     href={link.href}
-                    onMouseEnter={() => setHoveredLink(link.label)}
-                    onMouseLeave={() => setHoveredLink(null)}
                     style={{
                       position: "relative",
                       display: "inline-flex",
