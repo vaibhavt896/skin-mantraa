@@ -299,47 +299,63 @@ export default function SkinGuidePage() {
           />
 
           <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
-            <motion.div
-              initial={{ opacity: 0, y: 24 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, ease: "easeOut" }}
-              className="max-w-3xl"
-            >
-              <p
-                className="text-xs uppercase tracking-widest mb-5"
-                style={{ fontFamily: "var(--font-accent)", color: "#C78D6B", letterSpacing: "0.2em" }}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+              {/* Left Column: Text Content */}
+              <motion.div
+                initial={{ opacity: 0, x: -24 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.7, ease: "easeOut" }}
               >
-                Knowledge is Your Best Skin Care
-              </p>
-              <h1
-                className="text-5xl md:text-6xl lg:text-7xl mb-6 leading-none"
-                style={{ fontFamily: "var(--font-display)", fontWeight: 600, color: "#3D2B1F" }}
-              >
-                The{" "}
-                <span
+                <p
+                  className="text-xs uppercase tracking-widest mb-5"
+                  style={{ fontFamily: "var(--font-accent)", color: "#C78D6B", letterSpacing: "0.2em" }}
+                >
+                  Knowledge is Your Best Skin Care
+                </p>
+                <h1
+                  className="text-5xl md:text-6xl lg:text-7xl mb-6 leading-none"
+                  style={{ fontFamily: "var(--font-display)", fontWeight: 600, color: "#3D2B1F" }}
+                >
+                  The{" "}
+                  <span
+                    style={{
+                      background: "linear-gradient(135deg, #C4704E 0%, #D4A76A 100%)",
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                      backgroundClip: "text",
+                      fontStyle: "italic",
+                    }}
+                  >
+                    Skin Guide
+                  </span>
+                </h1>
+                <p
+                  className="text-xl md:text-2xl leading-relaxed"
                   style={{
-                    background: "linear-gradient(135deg, #C4704E 0%, #D4A76A 100%)",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                    backgroundClip: "text",
+                    fontFamily: "var(--font-display)",
                     fontStyle: "italic",
+                    color: "#5C4033",
+                    fontWeight: 400,
                   }}
                 >
-                  Skin Guide
-                </span>
-              </h1>
-              <p
-                className="text-xl md:text-2xl leading-relaxed"
-                style={{
-                  fontFamily: "var(--font-display)",
-                  fontStyle: "italic",
-                  color: "#5C4033",
-                  fontWeight: 400,
-                }}
+                  Expert skin care wisdom from Dr. Mamta Bhura —<br className="hidden md:block" /> evidence-based, practical, honest.
+                </p>
+              </motion.div>
+
+              {/* Right Column: GIF Animation */}
+              <motion.div
+                initial={{ opacity: 0, x: 24 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+                className="flex justify-center lg:justify-end"
               >
-                Expert skin care wisdom from Dr. Mamta Bhura —<br className="hidden md:block" /> evidence-based, practical, honest.
-              </p>
-            </motion.div>
+                <img
+                  src="/skin-guide/Untitled%20design%20800x800.gif"
+                  alt="Skin Guide Animation"
+                  className="w-full max-w-[480px] h-auto mix-blend-multiply"
+                />
+              </motion.div>
+            </div>
           </div>
         </section>
 

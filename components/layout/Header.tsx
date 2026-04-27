@@ -42,6 +42,7 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
+  const [hoveredLink, setHoveredLink] = useState<string | null>(null);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const hoverTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
@@ -143,59 +144,74 @@ export default function Header() {
             </Link>
 
             {/* Desktop Nav */}
-            <nav className="hidden lg:flex items-center gap-8">
-              {NAV_LINKS.map((link) =>
-                link.hasDropdown ? (
+            <nav className="hidden lg:flex items-center gap-1.5 p-1.5 rounded-full border border-black/5 bg-white/5 backdrop-blur-sm">
+              {NAV_LINKS.map((link) => {
+                const isHovered = hoveredLink === link.label;
+                return link.hasDropdown ? (
                   <div
                     key={link.label}
                     ref={dropdownRef}
                     className="relative"
-                    onMouseEnter={handleDropdownEnter}
-                    onMouseLeave={handleDropdownLeave}
+                    onMouseEnter={() => {
+                      handleDropdownEnter();
+                      setHoveredLink(link.label);
+                    }}
+                    onMouseLeave={() => {
+                      handleDropdownLeave();
+                      setHoveredLink(null);
+                    }}
                   >
                     <button
-                      className="flex items-center gap-1 text-sm font-medium transition-colors duration-200"
+                      className="relative px-4 py-2 text-sm font-medium transition-colors duration-300 flex items-center gap-1.5"
                       style={{
                         fontFamily: "var(--font-body)",
-                        color: scrolled ? "#3D2B1F" : "#3D2B1F",
+                        color: "#3D2B1F",
                         letterSpacing: "0.01em",
+                        zIndex: 1,
                       }}
                       aria-expanded={servicesOpen}
                     >
                       {link.label}
                       <svg
-                        width="12"
-                        height="12"
+                        width="10"
+                        height="10"
                         viewBox="0 0 12 12"
                         fill="none"
                         style={{
                           transform: servicesOpen ? "rotate(180deg)" : "rotate(0deg)",
-                          transition: "transform 0.2s ease",
+                          transition: "transform 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
                           color: "#C78D6B",
                         }}
                       >
                         <path
                           d="M2 4L6 8L10 4"
                           stroke="currentColor"
-                          strokeWidth="1.5"
+                          strokeWidth="2"
                           strokeLinecap="round"
                           strokeLinejoin="round"
                         />
                       </svg>
+                      {isHovered && (
+                        <motion.div
+                          layoutId="nav-pill"
+                          className="absolute inset-0 rounded-full bg-black/[0.04] -z-10"
+                          transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                        />
+                      )}
                     </button>
 
                     <AnimatePresence>
                       {servicesOpen && (
                         <motion.div
-                          initial={{ opacity: 0, y: 8, scale: 0.97 }}
+                          initial={{ opacity: 0, y: 10, scale: 0.95 }}
                           animate={{ opacity: 1, y: 0, scale: 1 }}
-                          exit={{ opacity: 0, y: 8, scale: 0.97 }}
-                          transition={{ duration: 0.2, ease: "easeOut" }}
-                          className="absolute top-full left-1/2 -translate-x-1/2 mt-3 w-72 rounded-2xl overflow-hidden"
+                          exit={{ opacity: 0, y: 10, scale: 0.95 }}
+                          transition={{ duration: 0.3, ease: [0.23, 1, 0.32, 1] }}
+                          className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-72 rounded-2xl overflow-hidden"
                           style={{
                             background: "rgba(253, 246, 236, 0.98)",
                             backdropFilter: "blur(20px)",
-                            boxShadow: "0 12px 48px rgba(61, 43, 31, 0.12), 0 0 0 1px rgba(199,141,107,0.12)",
+                            boxShadow: "0 20px 40px rgba(61, 43, 31, 0.15), 0 0 0 1px rgba(199,141,107,0.1)",
                           }}
                         >
                           <div className="p-2">
@@ -203,18 +219,12 @@ export default function Header() {
                               <Link
                                 key={service.id}
                                 href={`/services#${service.id}`}
-                                className="flex items-center gap-3 px-4 py-3 rounded-xl transition-colors duration-150 group/item"
+                                className="flex items-center gap-3 px-4 py-3 rounded-xl transition-all duration-200 group/item hover:bg-[#C78D6B]/10"
                                 style={{ color: "#3D2B1F" }}
-                                onMouseEnter={(e) =>
-                                  (e.currentTarget.style.background = "rgba(199,141,107,0.1)")
-                                }
-                                onMouseLeave={(e) =>
-                                  (e.currentTarget.style.background = "transparent")
-                                }
                                 onClick={() => setServicesOpen(false)}
                               >
                                 <span
-                                  className="w-2 h-2 rounded-full flex-shrink-0"
+                                  className="w-1.5 h-1.5 rounded-full transition-transform duration-300 group-hover/item:scale-125"
                                   style={{ background: "#C78D6B" }}
                                 />
                                 <span
@@ -230,12 +240,12 @@ export default function Header() {
                             ))}
                           </div>
                           <div
-                            className="px-6 py-3 border-t"
-                            style={{ borderColor: "rgba(199,141,107,0.15)" }}
+                            className="px-6 py-4 border-t bg-black/[0.02]"
+                            style={{ borderColor: "rgba(199,141,107,0.12)" }}
                           >
                             <Link
                               href="/services"
-                              className="text-xs font-medium flex items-center gap-1"
+                              className="text-xs font-semibold flex items-center gap-1.5"
                               style={{
                                 fontFamily: "var(--font-accent)",
                                 color: "#C4704E",
@@ -243,9 +253,9 @@ export default function Header() {
                               }}
                               onClick={() => setServicesOpen(false)}
                             >
-                              View All Services
+                              EXPLORE ALL SERVICES
                               <svg width="12" height="12" viewBox="0 0 12 12" fill="none">
-                                <path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                                <path d="M2 6h8M6 2l4 4-4 4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                               </svg>
                             </Link>
                           </div>
@@ -257,59 +267,76 @@ export default function Header() {
                   <Link
                     key={link.label}
                     href={link.href}
+                    onMouseEnter={() => setHoveredLink(link.label)}
+                    onMouseLeave={() => setHoveredLink(null)}
                     style={{
+                      position: "relative",
                       display: "inline-flex",
                       alignItems: "center",
                       gap: "0.35rem",
-                      padding: "0.38rem 0.9rem",
+                      padding: "0.5rem 1.1rem",
                       borderRadius: "100px",
                       fontFamily: "var(--font-accent)",
-                      fontSize: "0.8rem",
-                      fontWeight: 600,
-                      letterSpacing: "0.02em",
+                      fontSize: "0.75rem",
+                      fontWeight: 700,
+                      letterSpacing: "0.04em",
                       color: "#C4704E",
                       background: "transparent padding-box, linear-gradient(135deg, #C4704E 0%, #D4A76A 100%) border-box",
                       border: "1.5px solid transparent",
-                      boxShadow: "0 2px 10px rgba(196,112,78,0.12)",
-                      transition: "all 0.25s ease",
+                      boxShadow: "0 2px 12px rgba(196,112,78,0.12)",
+                      transition: "all 0.3s cubic-bezier(0.4, 0, 0.2, 1)",
+                      zIndex: 1,
                     }}
                     onMouseEnter={(e) => {
+                      setHoveredLink(link.label);
                       const el = e.currentTarget as HTMLElement;
-                      el.style.background = "rgba(196,112,78,0.07) padding-box, linear-gradient(135deg, #C4704E 0%, #D4A76A 100%) border-box";
-                      el.style.boxShadow = "0 4px 20px rgba(196,112,78,0.28)";
-                      el.style.transform = "translateY(-1px)";
+                      el.style.transform = "scale(1.03) translateY(-1px)";
+                      el.style.boxShadow = "0 6px 20px rgba(196,112,78,0.25)";
                     }}
                     onMouseLeave={(e) => {
+                      setHoveredLink(null);
                       const el = e.currentTarget as HTMLElement;
-                      el.style.background = "transparent padding-box, linear-gradient(135deg, #C4704E 0%, #D4A76A 100%) border-box";
-                      el.style.boxShadow = "0 2px 10px rgba(196,112,78,0.12)";
-                      el.style.transform = "translateY(0)";
+                      el.style.transform = "scale(1) translateY(0)";
+                      el.style.boxShadow = "0 2px 12px rgba(196,112,78,0.12)";
                     }}
                   >
                     <svg width="10" height="10" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true">
                       <path d="M8 1l1.4 4.2H14l-3.6 2.6 1.4 4.2L8 9.5 4.2 12l1.4-4.2L2 5.2h4.6L8 1z" />
                     </svg>
                     {link.label}
+                    {isHovered && (
+                      <motion.div
+                        layoutId="nav-pill"
+                        className="absolute inset-0 rounded-full bg-black/[0.04] -z-10"
+                        transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                      />
+                    )}
                   </Link>
                 ) : (
                   <Link
                     key={link.label}
                     href={link.href}
-                    className="relative text-sm font-medium transition-colors duration-200 group/nav"
+                    onMouseEnter={() => setHoveredLink(link.label)}
+                    onMouseLeave={() => setHoveredLink(null)}
+                    className="relative px-4 py-2 text-sm font-medium transition-colors duration-300"
                     style={{
                       fontFamily: "var(--font-body)",
                       color: "#3D2B1F",
                       letterSpacing: "0.01em",
+                      zIndex: 1,
                     }}
                   >
                     {link.label}
-                    <span
-                      className="absolute -bottom-0.5 left-0 w-0 h-px transition-all duration-300 group-hover/nav:w-full"
-                      style={{ background: "#C78D6B" }}
-                    />
+                    {isHovered && (
+                      <motion.div
+                        layoutId="nav-pill"
+                        className="absolute inset-0 rounded-full bg-black/[0.04] -z-10"
+                        transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                      />
+                    )}
                   </Link>
-                )
-              )}
+                );
+              })}
             </nav>
 
             {/* CTA + Hamburger */}
