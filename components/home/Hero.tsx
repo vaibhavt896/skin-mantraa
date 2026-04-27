@@ -283,14 +283,18 @@ export default function Hero() {
           </motion.div>
 
           {/* 2. Main headline */}
-          <motion.div custom={1} variants={heroTextReveal}>
+          <motion.div 
+            custom={1} 
+            variants={heroTextReveal}
+            style={{ maxWidth: "650px" }} // Constrain text width
+          >
             <h1
               style={{
                 fontFamily: "var(--font-display)",
-                fontSize: "clamp(2.8rem, 7vw, 6.5rem)",
+                fontSize: "clamp(2.8rem, 6vw, 5.2rem)", // Slightly smaller for better fit
                 fontWeight: 600,
                 letterSpacing: "-0.03em",
-                lineHeight: 1,
+                lineHeight: 1.1,
                 color: "#3D2B1F",
                 margin: 0,
                 textShadow: "0 2px 20px rgba(253, 246, 236, 0.4)",
