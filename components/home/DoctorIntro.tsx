@@ -71,6 +71,7 @@ function TiltCard({ inView }: { inView: boolean }) {
       {/* 3D Tilt container */}
       <motion.div
         ref={cardRef}
+        className="doctor-tilt-card"
         onMouseMove={handleMouseMove}
         onMouseLeave={handleMouseLeave}
         style={{
@@ -102,7 +103,7 @@ function TiltCard({ inView }: { inView: boolean }) {
 
             {/* Doctor photo */}
             <Image
-              src="/images/Dr. Mamta Bhura -2.png"
+              src="/images/Dr. Mamta Bhura 2.png"
               alt={BRAND.doctor.name}
               fill
               style={{ objectFit: "cover", objectPosition: "center 8%" }}
@@ -201,6 +202,7 @@ function TiltCard({ inView }: { inView: boolean }) {
 
         {/* Rating chip — top right */}
         <motion.div
+          className="doctor-floating-chip doctor-rating-chip"
           animate={{ y: [0, -7, 0] }}
           transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.4 }}
           style={{
@@ -222,6 +224,7 @@ function TiltCard({ inView }: { inView: boolean }) {
 
         {/* Experience chip — left middle */}
         <motion.div
+          className="doctor-floating-chip doctor-experience-chip"
           animate={{ y: [0, -6, 0] }}
           transition={{ duration: 6.5, repeat: Infinity, ease: "easeInOut", delay: 1.8 }}
           style={{
@@ -251,15 +254,16 @@ function TiltCard({ inView }: { inView: boolean }) {
 
         {/* BHU badge — bottom left */}
         <motion.div
+          className="doctor-floating-chip doctor-bhu-chip"
           animate={{ y: [0, -6, 0] }}
           transition={{ duration: 4.5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
           style={{
-            position: "absolute", bottom: "2rem", left: "-1.5rem",
+            position: "absolute", bottom: "-1.25rem", left: "1.35rem",
             display: "flex", alignItems: "center", gap: "0.5rem",
             background: "#2C1810", color: "#D4A76A",
             padding: "0.55rem 1rem", borderRadius: "100px",
             boxShadow: "0 12px 36px rgba(44,24,16,0.45), 0 0 0 1px rgba(212,167,106,0.3)",
-            zIndex: 5,
+            zIndex: 6,
           }}
         >
           <svg width="12" height="12" viewBox="0 0 16 16" fill="none" aria-hidden="true">
@@ -369,6 +373,19 @@ export default function DoctorIntro() {
               fontFamily: "var(--font-accent)", fontSize: "0.75rem", fontWeight: 500,
               color: "rgba(92,64,51,0.6)", letterSpacing: "0.03em", marginTop: "0.85rem",
             }}>— Patient Review, Practo</footer>
+            {/* Handwritten signature */}
+            <motion.div
+              initial={{ opacity: 0, x: -12 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.6, duration: 0.6 }}
+              style={{ marginTop: "0.75rem" }}
+            >
+              <svg width="140" height="36" viewBox="0 0 140 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Dr. Mamta Bhura signature">
+                <path d="M6 28 C12 8, 20 4, 28 16 C36 28, 38 12, 46 10 C54 8, 58 20, 62 18" stroke="#C4704E" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+                <path d="M64 16 C70 8, 76 6, 82 14 C88 22, 90 10, 96 8 C102 6, 106 18, 112 16 C118 14, 122 20, 128 18" stroke="#C4704E" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" fill="none"/>
+                <path d="M8 32 L134 32" stroke="#D4A76A" strokeWidth="0.75" strokeDasharray="3 4" strokeLinecap="round"/>
+              </svg>
+            </motion.div>
           </motion.blockquote>
 
           {/* Qualifications */}

@@ -16,16 +16,16 @@ const NAV_LINKS = [
 ];
 
 const menuOverlayVariants: Variants = {
-  closed: { opacity: 0, clipPath: "inset(0 0 100% 0)" },
+  closed: { opacity: 0, y: "-100%" },
   open: {
     opacity: 1,
-    clipPath: "inset(0 0 0% 0)",
-    transition: { duration: 0.4, ease: "easeInOut" },
+    y: "0%",
+    transition: { duration: 0.4, ease: [0.22, 1, 0.36, 1] },
   },
   exit: {
     opacity: 0,
-    clipPath: "inset(0 0 100% 0)",
-    transition: { duration: 0.3, ease: "easeInOut" },
+    y: "-100%",
+    transition: { duration: 0.3, ease: [0.22, 1, 0.36, 1] },
   },
 };
 

@@ -37,9 +37,27 @@ export default function ServicesClient() {
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section ref={ref} className="py-24 lg:py-32">
-      <div className="max-w-4xl mx-auto px-6 lg:px-8">
-        <motion.div
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: FAQS.map((faq) => ({
+              "@type": "Question",
+              name: faq.question,
+              acceptedAnswer: {
+                "@type": "Answer",
+                text: faq.answer,
+              },
+            })),
+          }),
+        }}
+      />
+      <section ref={ref} className="py-24 lg:py-32">
+        <div className="max-w-4xl mx-auto px-6 lg:px-8">
+          <motion.div
           initial="hidden"
           animate={inView ? "visible" : "hidden"}
           variants={staggerContainer}
@@ -87,6 +105,7 @@ export default function ServicesClient() {
         </motion.div>
       </div>
     </section>
+    </>
   );
 }
 

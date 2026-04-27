@@ -229,11 +229,13 @@ Or connect the GitHub repository to Vercel for automatic deployments on push.
 
 ## Roadmap
 
-- [ ] Backend API for appointment bookings (email notifications via Resend)
-- [ ] Individual article pages under `/skin-guide/[slug]`
-- [ ] Real before/after patient images with consent management
-- [ ] Google Analytics 4 integration
-- [ ] WhatsApp Business API for automated booking confirmations
+- [ ] Backend API integration for appointment bookings (email notifications via Resend)
+- [x] Dynamic routing and rich content rendering for `/services/[id]`
+- [x] Individual article pages under `/skin-guide/[slug]` with reading progress indicators
+- [x] High-performance mobile navigation utilizing GPU-accelerated transforms (iOS Safari optimized)
+- [ ] Integration of authentic, high-resolution clinical before/after photography
+- [ ] Google Analytics 4 integration for conversion tracking
+- [ ] WhatsApp Business API integration for automated booking confirmations
 
 ---
 

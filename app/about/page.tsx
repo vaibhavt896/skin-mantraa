@@ -3,9 +3,11 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import FloatingCTA from "@/components/layout/FloatingCTA";
+import HorizontalTimeline from "@/components/about/HorizontalTimeline";
 import { BRAND } from "@/lib/constants";
 import {
   fadeInUp,
@@ -63,18 +65,21 @@ const MEMBERSHIPS = [
     name: "Indian Medical Association",
     description:
       "India's largest and most respected voluntary organisation of physicians, upholding standards of medical practice and ethics nationwide.",
+    url: "https://www.ima-india.org/ima/",
   },
   {
     abbr: "IADVL",
     name: "Indian Association of Dermatologists, Venereologists & Leprologists",
     description:
       "The premier national body for dermatologists in India, driving advances in skin science, research, and clinical standards.",
+    url: "https://iadvl.org/",
   },
   {
     abbr: "CDSI",
     name: "Cosmetic Dermatology Society of India",
     description:
       "A specialised society dedicated to cosmetic dermatology excellence, ensuring practitioners stay at the forefront of aesthetic medicine.",
+    url: "https://cdsi.in/",
   },
 ];
 
@@ -253,55 +258,29 @@ export default function AboutPage() {
                   >
                     {/* Main blob */}
                     <div
-                      className="relative w-full aspect-[4/5] flex items-center justify-center overflow-hidden"
+                      className="relative w-full aspect-[4/5] overflow-hidden"
                       style={{
                         borderRadius: "60% 40% 55% 45% / 50% 45% 55% 50%",
-                        background:
-                          "linear-gradient(145deg, #F5E6D3 0%, #F8E8E0 35%, #EDD5C0 65%, #F5E6D3 100%)",
                         boxShadow:
                           "0 32px 80px rgba(61, 43, 31, 0.12), 0 0 0 1px rgba(199,141,107,0.1)",
                       }}
                     >
-                      {/* Decorative inner pattern */}
-                      <div
-                        className="absolute inset-8"
-                        style={{
-                          borderRadius: "60% 40% 55% 45% / 50% 45% 55% 50%",
-                          background:
-                            "linear-gradient(135deg, rgba(199,141,107,0.08) 0%, transparent 60%)",
-                          border: "1.5px solid rgba(199,141,107,0.15)",
-                        }}
+                      <Image
+                        src="/images/Dr. Mamta Bhura 1.png"
+                        alt="Dr. Mamta Bhura — SKIN@Mantraa, Kanpur"
+                        fill
+                        style={{ objectFit: "cover", objectPosition: "center 10%" }}
+                        sizes="(max-width: 768px) 90vw, 380px"
+                        priority
                       />
-
-                      {/* Doctor silhouette / monogram */}
-                      <div className="relative z-10 flex flex-col items-center">
-                        <div
-                          style={{
-                            fontFamily: "var(--font-display)",
-                            fontSize: "5rem",
-                            fontStyle: "italic",
-                            fontWeight: 600,
-                            color: "#C78D6B",
-                            opacity: 0.5,
-                            lineHeight: 1,
-                          }}
-                        >
-                          MB
-                        </div>
-                        <p
-                          style={{
-                            fontFamily: "var(--font-accent)",
-                            fontSize: "0.7rem",
-                            letterSpacing: "0.2em",
-                            textTransform: "uppercase",
-                            color: "#C4704E",
-                            marginTop: "0.5rem",
-                            opacity: 0.7,
-                          }}
-                        >
-                          Dr. Mamta Bhura
-                        </p>
-                      </div>
+                      <div
+                        style={{
+                          position: "absolute", inset: 0,
+                          background: "linear-gradient(to bottom, transparent 60%, rgba(44,24,16,0.35) 100%)",
+                          borderRadius: "inherit",
+                        }}
+                        aria-hidden="true"
+                      />
                     </div>
 
                     {/* Floating badge: BHU */}
@@ -545,58 +524,9 @@ export default function AboutPage() {
         </section>
 
         {/* ══════════════════════════════════════════════════
-            3. CAREER TIMELINE
+            3. CAREER TIMELINE (GSAP Horizontal)
         ══════════════════════════════════════════════════ */}
-        <section
-          className="py-24 lg:py-32"
-          style={{ background: "#F5E6D3" }}
-        >
-          <div className="max-w-4xl mx-auto px-6 lg:px-8">
-            <AnimatedSection className="mb-16 text-center">
-              <motion.p
-                variants={fadeInUp}
-                style={{
-                  fontFamily: "var(--font-accent)",
-                  fontSize: "0.75rem",
-                  letterSpacing: "0.18em",
-                  textTransform: "uppercase",
-                  color: "#C4704E",
-                  marginBottom: "0.875rem",
-                }}
-              >
-                A Journey of Excellence
-              </motion.p>
-              <motion.h2
-                variants={fadeInUp}
-                style={{
-                  fontFamily: "var(--font-display)",
-                  fontSize: "clamp(2rem, 4vw, 3.25rem)",
-                  fontWeight: 600,
-                  fontStyle: "italic",
-                  color: "#3D2B1F",
-                  letterSpacing: "-0.02em",
-                }}
-              >
-                26 Years in the Making
-              </motion.h2>
-            </AnimatedSection>
-
-            {/* Timeline */}
-            <div className="relative">
-              {/* Vertical line */}
-              <div
-                className="absolute left-8 top-0 bottom-0 w-px"
-                style={{ background: "rgba(199,141,107,0.25)" }}
-              />
-
-              <div className="space-y-0">
-                {TIMELINE.map((item, idx) => (
-                  <TimelineItem key={idx} item={item} index={idx} />
-                ))}
-              </div>
-            </div>
-          </div>
-        </section>
+        <HorizontalTimeline />
 
         {/* ══════════════════════════════════════════════════
             4. PHILOSOPHY SECTION (dark)
@@ -632,8 +562,18 @@ export default function AboutPage() {
                   textTransform: "uppercase",
                   color: "#D4A76A",
                   marginBottom: "0.875rem",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  gap: "1rem"
                 }}
               >
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" style={{ opacity: 0.6 }}>
+                  <path d="M12 22C12 22 17 17 19 13C21 9 19 4 15 4C13 4 12 6 12 6C12 6 11 4 9 4C5 4 3 9 5 13C7 17 12 22 12 22Z" />
+                  <path d="M12 22V12" />
+                  <path d="M12 12C12 12 15 10 17 7" />
+                  <path d="M12 12C12 12 9 10 7 7" />
+                </svg>
                 My Philosophy
               </motion.p>
               <motion.h2
@@ -822,6 +762,7 @@ export default function AboutPage() {
                         "Institute of Medical Sciences, BHU, Varanasi",
                       year: "1998",
                       note: "Bachelor of Medicine & Bachelor of Surgery",
+                      url: "https://www.bhu.ac.in/Site/UnitHomeTemplate/1_4_12_Institute-of-Medical-Sciences-Home",
                     },
                     {
                       degree: "MD (Dermatology)",
@@ -829,15 +770,27 @@ export default function AboutPage() {
                         "Institute of Medical Sciences, BHU, Varanasi",
                       year: "2001",
                       note: "Specialisation in Dermatology, Venereology & Leprosy",
+                      url: "https://www.bhu.ac.in/Site/UnitHomeTemplate/1_4_12_Institute-of-Medical-Sciences-Home",
                     },
                   ].map((cred) => (
-                    <motion.div
+                    <motion.a
+                      href={cred.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       key={cred.degree}
                       variants={fadeInUp}
-                      className="flex gap-5 p-5 rounded-2xl"
+                      className="flex gap-5 p-5 rounded-2xl transition-all duration-300 hover:-translate-y-1 block"
                       style={{
                         background: "rgba(245,230,211,0.4)",
                         border: "1px solid rgba(199,141,107,0.12)",
+                        boxShadow: "0 4px 12px rgba(61,43,31,0)",
+                        textDecoration: "none",
+                      }}
+                      onMouseEnter={(e) => {
+                        (e.currentTarget as HTMLElement).style.boxShadow = "0 8px 24px rgba(61,43,31,0.06)";
+                      }}
+                      onMouseLeave={(e) => {
+                        (e.currentTarget as HTMLElement).style.boxShadow = "0 4px 12px rgba(61,43,31,0)";
                       }}
                     >
                       <div
@@ -894,7 +847,7 @@ export default function AboutPage() {
                           {cred.note}
                         </p>
                       </div>
-                    </motion.div>
+                    </motion.a>
                   ))}
 
                   {/* Research / publications placeholder */}
@@ -961,13 +914,24 @@ export default function AboutPage() {
 
                 <div className="space-y-5">
                   {MEMBERSHIPS.map((m) => (
-                    <motion.div
+                    <motion.a
+                      href={m.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
                       key={m.abbr}
                       variants={fadeInUp}
-                      className="p-5 rounded-2xl"
+                      className="p-5 rounded-2xl transition-all duration-300 hover:-translate-y-1 block"
                       style={{
                         background: "rgba(245,230,211,0.4)",
                         border: "1px solid rgba(199,141,107,0.12)",
+                        boxShadow: "0 4px 12px rgba(61,43,31,0)",
+                        textDecoration: "none",
+                      }}
+                      onMouseEnter={(e) => {
+                        (e.currentTarget as HTMLElement).style.boxShadow = "0 8px 24px rgba(61,43,31,0.06)";
+                      }}
+                      onMouseLeave={(e) => {
+                        (e.currentTarget as HTMLElement).style.boxShadow = "0 4px 12px rgba(61,43,31,0)";
                       }}
                     >
                       <div className="flex items-center gap-3 mb-2">
@@ -1000,12 +964,12 @@ export default function AboutPage() {
                           fontFamily: "var(--font-body)",
                           fontSize: "0.875rem",
                           color: "#5C4033",
-                          lineHeight: 1.65,
+                          lineHeight: 1.6,
                         }}
                       >
                         {m.description}
                       </p>
-                    </motion.div>
+                    </motion.a>
                   ))}
                 </div>
               </AnimatedSection>
@@ -1105,94 +1069,5 @@ export default function AboutPage() {
       <Footer />
       <FloatingCTA />
     </>
-  );
-}
-
-// ─── Timeline Item Component ─────────────────────────────────────────────────
-function TimelineItem({
-  item,
-  index,
-}: {
-  item: (typeof TIMELINE)[0];
-  index: number;
-}) {
-  const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, { once: true, margin: "-60px" });
-
-  return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, x: -20 }}
-      animate={inView ? { opacity: 1, x: 0 } : {}}
-      transition={{ duration: 0.55, delay: index * 0.07, ease: [0.22, 1, 0.36, 1] }}
-      className="flex gap-8 pb-10 relative"
-    >
-      {/* Year badge on the line */}
-      <div className="flex-shrink-0 flex flex-col items-center" style={{ width: "4rem" }}>
-        <div
-          className="relative z-10 w-16 h-16 rounded-full flex items-center justify-center"
-          style={{
-            background:
-              index === TIMELINE.length - 1
-                ? "linear-gradient(135deg, #C4704E 0%, #C78D6B 100%)"
-                : "#FDF6EC",
-            border:
-              index === TIMELINE.length - 1
-                ? "none"
-                : "2px solid rgba(199,141,107,0.4)",
-            boxShadow: "0 4px 16px rgba(61,43,31,0.08)",
-          }}
-        >
-          <span
-            style={{
-              fontFamily: "var(--font-accent)",
-              fontSize: index === TIMELINE.length - 1 ? "0.6rem" : "0.65rem",
-              fontWeight: 700,
-              color:
-                index === TIMELINE.length - 1 ? "white" : "#C4704E",
-              letterSpacing: "0.04em",
-              textAlign: "center",
-              lineHeight: 1.2,
-            }}
-          >
-            {item.year.includes("–") ? (
-              <>
-                {item.year.split("–")[0]}
-                <br />–<br />
-                {item.year.split("–")[1]}
-              </>
-            ) : (
-              item.year
-            )}
-          </span>
-        </div>
-      </div>
-
-      {/* Content */}
-      <div className="pb-8">
-        <h3
-          style={{
-            fontFamily: "var(--font-display)",
-            fontSize: "1.375rem",
-            fontWeight: 600,
-            color: "#3D2B1F",
-            lineHeight: 1.2,
-            marginBottom: "0.5rem",
-          }}
-        >
-          {item.title}
-        </h3>
-        <p
-          style={{
-            fontFamily: "var(--font-body)",
-            fontSize: "0.9375rem",
-            color: "#5C4033",
-            lineHeight: 1.7,
-          }}
-        >
-          {item.description}
-        </p>
-      </div>
-    </motion.div>
   );
 }

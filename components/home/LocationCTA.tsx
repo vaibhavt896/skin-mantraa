@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion, useInView } from "framer-motion";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { BRAND } from "@/lib/constants";
 import { slideInFromLeft, slideInFromRight, fadeInUp, staggerContainer } from "@/lib/animations";
 
@@ -93,26 +93,33 @@ function isClinicOpen(): boolean {
 }
 
 function HoursTable() {
-  const open = isClinicOpen();
+  const [open, setOpen] = useState<boolean | null>(null);
+
+  useEffect(() => {
+    setOpen(isClinicOpen());
+  }, []);
+
+  const isOpen = open ?? false;
+
   return (
     <div>
       <div style={{ display: "flex", alignItems: "center", gap: "0.5rem", marginBottom: "0.75rem" }}>
         <motion.div
-          animate={{ scale: open ? [1, 1.3, 1] : 1 }}
-          transition={{ duration: 1.5, repeat: open ? Infinity : 0 }}
+          animate={{ scale: isOpen ? [1, 1.3, 1] : 1 }}
+          transition={{ duration: 1.5, repeat: isOpen ? Infinity : 0 }}
           style={{
             width: "8px", height: "8px", borderRadius: "50%",
-            background: open ? "#22c55e" : "#ef4444",
-            boxShadow: open ? "0 0 8px rgba(34,197,94,0.5)" : "none",
+            background: isOpen ? "#22c55e" : "#ef4444",
+            boxShadow: isOpen ? "0 0 8px rgba(34,197,94,0.5)" : "none",
           }}
           aria-hidden="true"
         />
         <span style={{
           fontFamily: "var(--font-accent)", fontSize: "0.72rem", fontWeight: 600,
           letterSpacing: "0.1em", textTransform: "uppercase" as const,
-          color: open ? "#22c55e" : "#ef4444",
+          color: isOpen ? "#22c55e" : "#ef4444",
         }}>
-          {open ? "Open Now" : "Closed Now"}
+          {isOpen ? "Open Now" : "Closed Now"}
         </span>
         <span style={{ fontFamily: "var(--font-accent)", fontSize: "0.65rem", color: "#5C4033", opacity: 0.5, marginLeft: "auto" }}>Clinic Hours</span>
       </div>

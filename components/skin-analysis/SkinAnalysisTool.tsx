@@ -1074,7 +1074,7 @@ export default function SkinAnalysisTool() {
 
         <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
           <Link
-            href="/contact"
+            href={`/contact?concern=${selectedConcern || ''}`}
             style={{
               fontFamily: "var(--font-accent)", fontSize: "0.95rem", fontWeight: 600,
               padding: "14px 32px", borderRadius: 999, textDecoration: "none",

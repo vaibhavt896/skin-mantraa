@@ -44,3 +44,5 @@ next-env.d.ts
 # AI assistant config (dev-only, not for deployment)
 CLAUDE.md
 AGENTS.md
+WORLD-CLASS-REVIEW.md
+docs/

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { usePathname } from "next/navigation";
 import { BRAND } from "@/lib/constants";
 
 const WhatsAppIcon = () => (
@@ -37,13 +38,25 @@ export default function FloatingCTA() {
   const [visible, setVisible] = useState(false);
   const [waHovered, setWaHovered] = useState(false);
   const [phoneHovered, setPhoneHovered] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const onScroll = () => setVisible(window.scrollY > 300);
+    const onResize = () => setIsMobile(window.innerWidth < 768);
     window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onResize, { passive: true });
     onScroll();
-    return () => window.removeEventListener("scroll", onScroll);
+    onResize();
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onResize);
+    };
   }, []);
+
+  // Hide on /contact on mobile — avoid competing with booking form submit
+  const isContactPage = pathname === "/contact";
+  if (isContactPage && isMobile) return null;
 
   const whatsappUrl = `https://wa.me/${BRAND.clinic.whatsapp}?text=Hi%2C%20I%20would%20like%20to%20book%20an%20appointment%20at%20SKIN%40Mantraa.`;
   const phoneUrl = `tel:${BRAND.clinic.phone}`;
@@ -58,7 +71,11 @@ export default function FloatingCTA() {
           exit={{ opacity: 0, y: 20, scale: 0.9 }}
           transition={{ duration: 0.4, ease: "backOut" }}
           className="fixed z-50 flex flex-col gap-3"
-          style={{ bottom: "1.5rem", right: "1.5rem" }}
+          style={{
+            bottom: "1.5rem",
+            right: "1.5rem",
+            willChange: "transform",
+          }}
           aria-label="Quick contact options"
         >
           {/* WhatsApp Button */}

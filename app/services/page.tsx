@@ -1,8 +1,10 @@
 import { Suspense } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import FloatingCTA from "@/components/layout/FloatingCTA";
+import ServiceArticle from "@/components/services/ServiceArticle";
 import { SERVICES, BRAND } from "@/lib/constants";
 import ServicesClient from "./ServicesClient";
 
@@ -74,10 +76,52 @@ const SERVICE_GRADIENTS = [
 ];
 
 // ─── Decorative pattern for gradient panel ───────────────────────────────────
-function DecorativePanel({ gradient, icon, title }: { gradient: string; icon: React.ReactNode; title: string }) {
+function DecorativePanel({ gradient, icon, title, image }: { gradient: string; icon: React.ReactNode; title: string; image?: string }) {
+  if (image) {
+    return (
+      <div className="w-full h-full min-h-[280px] sm:min-h-[340px] lg:min-h-[420px] rounded-3xl relative overflow-hidden group">
+        <Image
+          src={image}
+          alt={`${title} — SKIN@Mantraa treatment`}
+          fill
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 600px"
+          className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+          quality={85}
+          loading="lazy"
+          placeholder="blur"
+          blurDataURL="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjRjVFNkQzIi8+PC9zdmc+"
+        />
+        {/* Dark gradient overlay for visual depth */}
+        <div
+          className="absolute inset-0 pointer-events-none transition-opacity duration-500 group-hover:opacity-70"
+          style={{
+            background: "linear-gradient(to top, rgba(44,24,16,0.55) 0%, rgba(44,24,16,0.15) 40%, transparent 100%)",
+            opacity: 0.85,
+          }}
+        />
+        {/* Title overlay at bottom */}
+        <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-6 z-10">
+          <p
+            style={{
+              fontFamily: "var(--font-display)",
+              fontSize: "clamp(1.1rem, 2vw, 1.35rem)",
+              fontStyle: "italic",
+              fontWeight: 600,
+              color: "#FDF6EC",
+              lineHeight: 1.2,
+              textShadow: "0 1px 4px rgba(0,0,0,0.25)",
+            }}
+          >
+            {title}
+          </p>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div
-      className="w-full h-full min-h-[340px] rounded-3xl flex flex-col items-center justify-center gap-6 relative overflow-hidden"
+      className="w-full h-full min-h-[280px] sm:min-h-[340px] lg:min-h-[420px] rounded-3xl flex flex-col items-center justify-center gap-6 relative overflow-hidden"
       style={{ background: gradient }}
     >
       {/* Subtle radial glow */}
@@ -260,7 +304,7 @@ export default function ServicesPage() {
                 }}
               >
                 From medical dermatology to advanced cosmetic treatments,
-                SKIN@Mantraa offers 15+ evidence-based procedures — each
+                SKIN@Mantraa offers 28+ evidence-based procedures — each
                 selected for clinical efficacy and tailored to Indian skin
                 tones by Dr. Mamta Bhura.
               </p>
@@ -277,7 +321,7 @@ export default function ServicesPage() {
               {SERVICES.map((service, idx) => {
                 const isEven = idx % 2 === 1;
                 return (
-                  <article
+                  <ServiceArticle
                     key={service.id}
                     id={service.id}
                     className={`grid lg:grid-cols-2 gap-10 lg:gap-16 items-center ${
@@ -407,9 +451,10 @@ export default function ServicesPage() {
                         gradient={SERVICE_GRADIENTS[idx]}
                         icon={SERVICE_ICONS[service.icon]}
                         title={service.title}
+                        image={service.image}
                       />
                     </div>
-                  </article>
+                  </ServiceArticle>
                 );
               })}
             </div>

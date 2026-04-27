@@ -43,7 +43,7 @@ export default function SchemaMarkup() {
       },
     ],
     priceRange: "₹₹",
-    image: "https://skinmantraa.com/clinic-exterior.jpg",
+    image: "https://skinmantraa.com/images/Clinic%20Front%20Look.png",
     medicalSpecialty: "Dermatology",
   };
 

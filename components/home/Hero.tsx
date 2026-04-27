@@ -3,7 +3,11 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 import { BRAND, TRUST_STATS } from "@/lib/constants";
 import { staggerContainer, heroTextReveal } from "@/lib/animations";
 
@@ -164,9 +168,29 @@ const premiumParticles = [
 ];
 
 export default function Hero() {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const doctorRef = useRef<HTMLDivElement>(null);
+
+  useGSAP(() => {
+    if (!containerRef.current || !doctorRef.current) return;
+
+    // Parallax depth on doctor portrait
+    gsap.to(doctorRef.current, {
+      yPercent: 15,
+      ease: "none",
+      scrollTrigger: {
+        trigger: containerRef.current,
+        start: "top top",
+        end: "bottom top",
+        scrub: true,
+      },
+    });
+  }, { scope: containerRef });
+
   return (
     <section
       id="hero"
+      ref={containerRef}
       style={{
         position: "relative",
         minHeight: "100svh",
@@ -212,6 +236,7 @@ export default function Hero() {
           {/* 1. Label badge */}
           <motion.div custom={0} variants={heroTextReveal}>
             <span
+              className="hero-trust-badge"
               style={{
                 display: "inline-flex",
                 alignItems: "center",
@@ -488,6 +513,7 @@ export default function Hero() {
             THE DOCTOR IMAGE — no frame
         ════════════════════════════════ */}
         <motion.div
+          ref={doctorRef}
           initial={{ x: 40, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 1.3, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
@@ -502,7 +528,7 @@ export default function Hero() {
           }}
         >
           <Image
-            src="/images/Dr. Mamta Bhura.png"
+            src="/images/Dr. Mamta Bhura 1.png"
             alt="Dr. Mamta Bhura — Dermatologist & Cosmetologist at SKIN@Mantraa, Kanpur"
             fill
             priority

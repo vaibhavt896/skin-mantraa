@@ -6,6 +6,7 @@ import TrustBar from "@/components/home/TrustBar";
 import DoctorIntro from "@/components/home/DoctorIntro";
 import ServicesShowcase from "@/components/home/ServicesShowcase";
 import TestimonialsWall from "@/components/home/TestimonialsWall";
+import SkinAnalysisCTA from "@/components/home/SkinAnalysisCTA";
 import LocationCTA from "@/components/home/LocationCTA";
 
 export default function Home() {
@@ -18,6 +19,7 @@ export default function Home() {
         <DoctorIntro />
         <ServicesShowcase />
         <TestimonialsWall />
+        <SkinAnalysisCTA />
         <LocationCTA />
       </main>
       <Footer />
@@ -25,3 +27,4 @@ export default function Home() {
     </>
   );
 }
+

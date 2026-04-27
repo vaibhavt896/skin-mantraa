@@ -38,6 +38,7 @@ export const SERVICES = [
     icon: "laser",
     color: "from-brand-blush to-brand-champagne",
     featured: true,
+    image: "/Services%20Images%20Assets/Laser%20Treatment%20Image.png",
     treatments: ["Nd-YAG Laser", "IPL Therapy", "Diode Laser", "Q-Switch Laser", "Fractional CO2"],
   },
   {
@@ -47,6 +48,7 @@ export const SERVICES = [
     icon: "sparkles",
     color: "from-brand-champagne to-brand-cream",
     featured: false,
+    image: "/Services%20Images%20Assets/Anti-Aging%20%26%20Rejuvenation.png",
     treatments: ["Botox", "Dermal Fillers", "Thread Lift", "Mesotherapy", "Skin Boosters"],
   },
   {
@@ -56,6 +58,7 @@ export const SERVICES = [
     icon: "shield",
     color: "from-brand-cream to-brand-blush",
     featured: false,
+    image: "/Services%20Images%20Assets/Acne%20%26%20Scar%20Solutions.png",
     treatments: ["Chemical Peels", "Microdermabrasion", "Dermaroller", "Subcision", "TCA Cross"],
   },
   {
@@ -65,6 +68,7 @@ export const SERVICES = [
     icon: "hair",
     color: "from-brand-blush to-brand-champagne",
     featured: false,
+    image: "/Services%20Images%20Assets/Hair%20Restoration.png",
     treatments: ["PRP Therapy", "Laser Hair Removal", "Mesotherapy for Hair", "GFC Treatment"],
   },
   {
@@ -74,6 +78,7 @@ export const SERVICES = [
     icon: "medical",
     color: "from-brand-champagne to-brand-cream",
     featured: false,
+    image: "/Services%20Images%20Assets/Skin%20Disease%20Treatment.png",
     treatments: ["Eczema", "Vitiligo", "Psoriasis", "Fungal Infections", "Allergic Dermatitis"],
   },
   {
@@ -83,6 +88,7 @@ export const SERVICES = [
     icon: "star",
     color: "from-brand-cream to-brand-champagne",
     featured: false,
+    image: "/Services%20Images%20Assets/Cosmetic%20Enhancements.png",
     treatments: ["Tattoo Removal", "Pigmentation", "Sun Damage", "Melasma", "Skin Brightening"],
   },
 ];
@@ -153,6 +159,6 @@ export const TESTIMONIALS = [
 export const TRUST_STATS = [
   { value: 26, suffix: "+", label: "Years of Experience" },
   { value: 451, suffix: "+", label: "Happy Patients" },
-  { value: 15, suffix: "+", label: "Advanced Treatments" },
+  { value: 28, suffix: "+", label: "Advanced Treatments" },
   { value: 3, suffix: "", label: "Memberships" },
 ];

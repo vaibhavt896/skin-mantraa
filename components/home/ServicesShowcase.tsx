@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { motion, useInView, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { useRef, useState, useCallback } from "react";
 import { SERVICES } from "@/lib/constants";
@@ -78,7 +79,7 @@ const SERVICE_ICONS: Record<string, React.FC<{ size?: number }>> = {
 
 interface Service {
   id: string; title: string; shortDesc: string; icon: string;
-  featured: boolean; treatments: string[];
+  featured: boolean; treatments: string[]; image?: string;
 }
 
 function SpotlightCard({ service, Icon, featured }: { service: Service; Icon: React.FC<{ size?: number }>; featured?: boolean }) {
@@ -101,10 +102,10 @@ function SpotlightCard({ service, Icon, featured }: { service: Service; Icon: Re
     <motion.div
       ref={cardRef}
       variants={fadeInUp}
+      className={`service-spotlight-card ${featured ? "sm:col-span-2 lg:col-span-2" : ""}`}
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
-      className={featured ? "sm:col-span-2 lg:col-span-2" : ""}
       style={{
         position: "relative",
         borderRadius: "20px",
@@ -159,7 +160,38 @@ function SpotlightCard({ service, Icon, featured }: { service: Service; Icon: Re
         }}
       />
 
-      <div style={{ position: "relative", zIndex: 1, padding: featured ? "2.5rem 2.75rem" : "1.85rem 2rem", display: "flex", flexDirection: "column" as const, gap: "1.2rem", flex: 1 }}>
+      <div style={{ position: "relative", zIndex: 1, display: "flex", flexDirection: "column" as const, flex: 1, overflow: "hidden" }}>
+        {/* Service Image */}
+        {service.image && (
+          <div style={{
+            position: "relative",
+            width: "100%",
+            height: featured ? "200px" : "160px",
+            borderRadius: "20px 20px 0 0",
+            overflow: "hidden",
+            flexShrink: 0,
+          }}>
+            <Image
+              src={service.image}
+              alt={`${service.title} treatment`}
+              fill
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
+              className="object-cover"
+              quality={80}
+              loading="lazy"
+            />
+            <div
+              aria-hidden="true"
+              style={{
+                position: "absolute", inset: 0,
+                background: "linear-gradient(to bottom, transparent 40%, rgba(253,246,236,0.9) 100%)",
+                pointerEvents: "none",
+              }}
+            />
+          </div>
+        )}
+
+        <div style={{ padding: featured ? "1.75rem 2.75rem 2.5rem" : "1.25rem 2rem 1.85rem", display: "flex", flexDirection: "column" as const, gap: "1.2rem", flex: 1 }}>
         {featured && (
           <span style={{
             fontFamily: "var(--font-accent)", fontSize: "0.65rem", fontWeight: 700,
@@ -235,6 +267,7 @@ function SpotlightCard({ service, Icon, featured }: { service: Service; Icon: Re
             <motion.span animate={hovered ? { x: 4 } : { x: 0 }} transition={{ type: "spring", stiffness: 400, damping: 20 }}>→</motion.span>
           </Link>
         </motion.div>
+        </div>
       </div>
     </motion.div>
   );
