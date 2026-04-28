@@ -7,21 +7,40 @@ import { motion } from "framer-motion";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import FloatingCTA from "@/components/layout/FloatingCTA";
-import { SERVICES, BRAND } from "@/lib/constants";
-import { fadeInUp, staggerContainer, fadeIn } from "@/lib/animations";
+import { fadeInUp, staggerContainer } from "@/lib/animations";
+
+interface ServiceStep {
+  step: string;
+  title: string;
+  text: string;
+}
+
+interface ServiceFaq {
+  q: string;
+  a: string;
+}
+
+interface ServiceDetail {
+  title: string;
+  subtitle: string;
+  description: string;
+  benefits: string[];
+  process: ServiceStep[];
+  faqs: ServiceFaq[];
+}
 
 // Detailed service content map
 // Map service IDs to their corresponding image from the assets folder
 const SERVICE_IMAGE_MAP: Record<string, string> = {
-  "laser-treatments": "/Services%20Images%20Assets/Laser%20Treatment%20Image.png",
-  "anti-aging": "/Services%20Images%20Assets/Anti-Aging%20%26%20Rejuvenation.png",
-  "acne-scars": "/Services%20Images%20Assets/Acne%20%26%20Scar%20Solutions.png",
-  "hair-restoration": "/Services%20Images%20Assets/Hair%20Restoration.png",
-  "skin-conditions": "/Services%20Images%20Assets/Skin%20Disease%20Treatment.png",
-  "cosmetic": "/Services%20Images%20Assets/Cosmetic%20Enhancements.png",
+  "laser-treatments": "/optimized/Laser%20Treatment%20Image.webp",
+  "anti-aging": "/optimized/Anti-Aging%20%26%20Rejuvenation.webp",
+  "acne-scars": "/optimized/Acne%20%26%20Scar%20Solutions.webp",
+  "hair-restoration": "/optimized/Hair%20Restoration.webp",
+  "skin-conditions": "/optimized/Skin%20Disease%20Treatment.webp",
+  "cosmetic": "/optimized/Cosmetic%20Enhancements.webp",
 };
 
-const SERVICE_DETAILS: Record<string, any> = {
+const SERVICE_DETAILS: Record<string, ServiceDetail> = {
   "laser-treatments": {
     title: "Advanced Laser Treatments",
     subtitle: "Precision Light Therapy for Flawless Skin",
@@ -165,8 +184,6 @@ export default function ServiceDetailPage() {
     notFound();
   }
 
-  const service = SERVICES.find((s) => s.id === id);
-
   return (
     <>
       <Header />
@@ -276,7 +293,7 @@ export default function ServiceDetailPage() {
               <p className="text-brand-walnut max-w-2xl mx-auto">From the moment you step in, Dr. Bhura ensures your journey is clinical, comfortable, and clear.</p>
             </div>
             <div className="grid md:grid-cols-4 gap-8">
-              {detail.process.map((p: any, i: number) => (
+              {detail.process.map((p, i) => (
                 <div key={i} className="bg-white p-8 rounded-2xl shadow-sm border border-brand-champagne/30">
                   <span className="text-4xl font-display font-bold text-brand-rosegold/20 mb-4 block">{p.step}</span>
                   <h3 className="text-xl font-display font-semibold text-brand-espresso mb-3">{p.title}</h3>
@@ -292,7 +309,7 @@ export default function ServiceDetailPage() {
           <div className="max-w-3xl mx-auto px-6 lg:px-8">
             <h2 className="text-4xl font-display font-semibold italic text-brand-espresso mb-12 text-center">Frequently Asked Questions</h2>
             <div className="space-y-8">
-              {detail.faqs.map((faq: any, i: number) => (
+              {detail.faqs.map((faq, i) => (
                 <div key={i} className="border-b border-brand-champagne pb-8">
                   <h3 className="text-xl font-display font-semibold text-brand-espresso mb-4">{faq.q}</h3>
                   <p className="text-brand-walnut leading-relaxed">{faq.a}</p>

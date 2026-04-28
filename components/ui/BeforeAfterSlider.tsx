@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import Image from "next/image";
 
 interface BeforeAfterSliderProps {
@@ -169,7 +169,7 @@ export default function BeforeAfterSlider({
           alt={`${treatment} before treatment`}
           fill
           className="object-cover max-w-none w-[var(--slider-width)] pointer-events-none"
-          style={{ "--slider-width": "100%" } as any}
+          style={{ "--slider-width": "100%" } as React.CSSProperties}
         />
         <div className="absolute bottom-3 left-3 z-10">
           <span

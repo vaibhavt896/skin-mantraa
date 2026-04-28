@@ -6,10 +6,22 @@ import { motion, useScroll, useSpring } from "framer-motion";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import FloatingCTA from "@/components/layout/FloatingCTA";
-import { BRAND } from "@/lib/constants";
 import { fadeInUp, staggerContainer } from "@/lib/animations";
 
-const ARTICLES: Record<string, any> = {
+type ArticleBlock =
+  | { type: "p"; text: string }
+  | { type: "h2"; text: string };
+
+interface Article {
+  title: string;
+  category: string;
+  author: string;
+  date: string;
+  readTime: string;
+  content: ArticleBlock[];
+}
+
+const ARTICLES: Record<string, Article> = {
   "sun-protection-guide": {
     title: "The Ultimate Guide to Sun Protection for Indian Skin",
     category: "Skin Care Basics",
@@ -165,7 +177,7 @@ export default function ArticlePage() {
 
           {/* Body */}
           <div className="max-w-3xl mx-auto px-6 lg:px-8 prose prose-lg prose-stone">
-             {article.content.map((block: any, i: number) => {
+             {article.content.map((block, i) => {
                if (block.type === 'h2') return <h2 key={i} className="text-2xl font-display font-semibold text-brand-espresso mt-12 mb-6">{block.text}</h2>;
                return <p key={i} className="text-lg text-brand-walnut leading-relaxed mb-6">{block.text}</p>;
              })}

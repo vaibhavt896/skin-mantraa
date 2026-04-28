@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, Suspense } from "react";
+import { useState, Suspense } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -85,6 +85,7 @@ function BookingFormInner({ services }: BookingFormProps) {
   const [loading, setLoading] = useState(false);
   const searchParams = useSearchParams();
   const defaultConcern = searchParams.get("concern") || "";
+  const defaultMessage = searchParams.get("message") || "";
 
   const {
     register,
@@ -99,7 +100,7 @@ function BookingFormInner({ services }: BookingFormProps) {
       email: "",
       concern: defaultConcern,
       preferredDate: "",
-      message: "",
+      message: defaultMessage,
       website: "", // honeypot — must remain empty
     },
   });

@@ -103,7 +103,7 @@ function TiltCard({ inView }: { inView: boolean }) {
 
             {/* Doctor photo */}
             <Image
-              src="/images/Dr. Mamta Bhura 2.png"
+              src="/optimized/Dr.%20Mamta%20Bhura%202.webp"
               alt={BRAND.doctor.name}
               fill
               style={{ objectFit: "cover", objectPosition: "center 8%" }}
@@ -203,8 +203,18 @@ function TiltCard({ inView }: { inView: boolean }) {
         {/* Rating chip — top right */}
         <motion.div
           className="doctor-floating-chip doctor-rating-chip"
-          animate={{ y: [0, -7, 0] }}
-          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.4 }}
+          animate={{ 
+            y: [0, -7, 0],
+            boxShadow: [
+              "0 8px 28px rgba(60,43,31,0.14), 0 0 0 1px rgba(199,141,107,0.18)",
+              "0 8px 36px rgba(199,141,107,0.25), 0 0 0 1.5px rgba(199,141,107,0.3)",
+              "0 8px 28px rgba(60,43,31,0.14), 0 0 0 1px rgba(199,141,107,0.18)"
+            ]
+          }}
+          transition={{ 
+            y: { duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.4 },
+            boxShadow: { duration: 3, repeat: Infinity, ease: "easeInOut" }
+          }}
           style={{
             position: "absolute", top: "2rem", right: "-1.75rem",
             background: "rgba(255,255,255,0.94)", backdropFilter: "blur(14px)",
@@ -217,8 +227,8 @@ function TiltCard({ inView }: { inView: boolean }) {
         >
           <span style={{ fontSize: "1rem", lineHeight: 1 }}>⭐</span>
           <div>
-            <div style={{ fontFamily: "var(--font-accent)", fontSize: "0.78rem", fontWeight: 700, color: "#3D2B1F", lineHeight: 1 }}>4.9 / 5</div>
-            <div style={{ fontFamily: "var(--font-accent)", fontSize: "0.59rem", color: "#C78D6B", letterSpacing: "0.05em", marginTop: "2px" }}>451+ reviews</div>
+            <div style={{ fontFamily: "var(--font-accent)", fontSize: "0.78rem", fontWeight: 700, color: "#3D2B1F", lineHeight: 1 }}>{BRAND.doctor.rating} / 5</div>
+            <div style={{ fontFamily: "var(--font-accent)", fontSize: "0.59rem", color: "#C78D6B", letterSpacing: "0.05em", marginTop: "2px" }}>{BRAND.doctor.patients} reviews</div>
           </div>
         </motion.div>
 

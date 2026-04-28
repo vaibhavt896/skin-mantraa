@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
@@ -349,11 +350,19 @@ export default function SkinGuidePage() {
                 transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
                 className="flex justify-center lg:justify-end"
               >
-                <img
-                  src="/skin-guide/skin-guide-animation.gif"
-                  alt="Skin Guide Animation"
-                  className="w-full max-w-[480px] h-auto mix-blend-multiply"
-                />
+                <motion.div
+                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                >
+                  <Image
+                    src="/skin-guide/skin-guide-animation.gif"
+                    alt="Skin Guide Animation"
+                    width={480}
+                    height={480}
+                    className="w-full max-w-[480px] h-auto mix-blend-multiply"
+                    priority
+                    unoptimized
+                  />
+                </motion.div>
               </motion.div>
             </div>
           </div>

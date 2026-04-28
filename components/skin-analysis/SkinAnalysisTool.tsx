@@ -8,11 +8,11 @@ import {
   Snowflake, Layers, Eye, Sun, Camera, Upload, ArrowRight,
   ArrowLeft, RotateCcw, Shield, Sparkles, CheckCircle,
   Activity, Heart, TrendingUp, Phone, MessageCircle,
-  X, ChevronRight, Star, Zap,
+  ChevronRight, Star, Zap,
 } from "lucide-react";
 import {
   CONCERNS, QUESTIONS_BY_CONCERN, generateResults, analyzeImage,
-  type ConcernId, type AnalysisResult, type ImageMetrics, type Concern,
+  type ConcernId, type AnalysisResult, type Concern, type ImageMetrics,
 } from "@/lib/skin-analysis";
 import { BRAND } from "@/lib/constants";
 
@@ -29,6 +29,19 @@ const CONCERN_ICONS: Record<string, React.ReactNode> = {
   Layers: <Layers size={24} />,
   Eye: <Eye size={24} />,
   Sun: <Sun size={24} />,
+};
+
+const CONCERN_TO_SERVICE: Record<ConcernId, string> = {
+  acne: "acne-scars",
+  pigmentation: "cosmetic",
+  aging: "anti-aging",
+  "hair-loss": "hair-restoration",
+  rash: "skin-conditions",
+  moles: "skin-conditions",
+  "dry-skin": "skin-conditions",
+  scars: "acne-scars",
+  "dark-circles": "anti-aging",
+  "sun-damage": "cosmetic",
 };
 
 // ── Animations ───────────────────────────────────────────────
@@ -49,7 +62,6 @@ export default function SkinAnalysisTool() {
   const [photoData, setPhotoData] = useState<string | null>(null);
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [currentQ, setCurrentQ] = useState(0);
-  const [imageMetrics, setImageMetrics] = useState<ImageMetrics | null>(null);
   const [results, setResults] = useState<AnalysisResult | null>(null);
   const [processingStep, setProcessingStep] = useState(0);
 
@@ -73,7 +85,6 @@ export default function SkinAnalysisTool() {
     setPhotoData(null);
     setAnswers({});
     setCurrentQ(0);
-    setImageMetrics(null);
     setResults(null);
     setProcessingStep(0);
   }, [stopCamera]);
@@ -99,7 +110,6 @@ export default function SkinAnalysisTool() {
     let metrics: ImageMetrics | null = null;
     if (photoData) {
       metrics = await analyzeImage(photoData);
-      setImageMetrics(metrics);
     }
 
     for (let i = 0; i < steps.length; i++) {
@@ -790,6 +800,30 @@ export default function SkinAnalysisTool() {
     urgent: { label: "Urgent Professional Attention Needed", color: "#B71C1C" },
   };
 
+  const selectedConcernLabel = selectedConcern
+    ? CONCERNS.find((c) => c.id === selectedConcern)?.label || "skin concern"
+    : "skin concern";
+  const primaryCondition = results?.topConditions[0]?.condition.name;
+  const reportSummary = results
+    ? [
+        `Skin analysis report from SKIN@Mantraa website`,
+        `Concern: ${selectedConcernLabel}`,
+        `Skin health score: ${results.skinScore}/100`,
+        `Concern level: ${severityConfig[results.severity].label}`,
+        `Consultation guidance: ${urgencyConfig[results.urgency].label}`,
+        primaryCondition ? `Top possible match: ${primaryCondition}` : "",
+        "",
+        "Please review this as a preliminary screening only. I understand this is not a medical diagnosis.",
+      ]
+        .filter(Boolean)
+        .join("\n")
+    : "";
+  const prefilledService = selectedConcern ? CONCERN_TO_SERVICE[selectedConcern] : "";
+  const bookingHref = `/contact?concern=${encodeURIComponent(prefilledService)}&message=${encodeURIComponent(reportSummary)}`;
+  const whatsappHref = `https://wa.me/${BRAND.clinic.whatsapp}?text=${encodeURIComponent(
+    `Hi Dr. Mamta Bhura, I completed the skin analysis on the SKIN@Mantraa website.\n\n${reportSummary}\n\nI would like to share this report with the clinic and understand whether I should book a consultation.`
+  )}`;
+
   const ResultsView = results ? (
     <motion.div
       key="results"
@@ -1050,7 +1084,7 @@ export default function SkinAnalysisTool() {
         </div>
       </div>
 
-      {/* Booking CTA */}
+      {/* Lead handoff CTA */}
       <div
         style={{
           padding: "32px 28px", borderRadius: 24, textAlign: "center",
@@ -1062,7 +1096,7 @@ export default function SkinAnalysisTool() {
           fontFamily: "var(--font-display)", fontSize: "1.4rem",
           fontWeight: 700, fontStyle: "italic", color: "#FDF6EC", marginBottom: 12,
         }}>
-          Take the Next Step
+          Share Your Report With the Clinic
         </h4>
         <p style={{
           fontFamily: "var(--font-body)", fontSize: "0.92rem",
@@ -1073,43 +1107,44 @@ export default function SkinAnalysisTool() {
         </p>
 
         <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
+          <a
+            href={whatsappHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              fontFamily: "var(--font-accent)", fontSize: "0.95rem", fontWeight: 700,
+              padding: "14px 28px", borderRadius: 999, textDecoration: "none",
+              background: "linear-gradient(135deg, #25D366, #128C7E)", color: "white",
+              boxShadow: "0 6px 24px rgba(37,211,102,0.28)",
+              display: "inline-flex", alignItems: "center", gap: 8,
+              transition: "transform 0.2s",
+            }}
+          >
+            <MessageCircle size={16} /> Send this report to the clinic on WhatsApp
+          </a>
           <Link
-            href={`/contact?concern=${selectedConcern || ''}`}
+            href={bookingHref}
             style={{
               fontFamily: "var(--font-accent)", fontSize: "0.95rem", fontWeight: 600,
-              padding: "14px 32px", borderRadius: 999, textDecoration: "none",
+              padding: "14px 28px", borderRadius: 999, textDecoration: "none",
               background: "linear-gradient(135deg, #C4704E, #D4A76A)", color: "white",
               boxShadow: "0 6px 24px rgba(196,112,78,0.4)",
               display: "inline-flex", alignItems: "center", gap: 8,
               transition: "transform 0.2s",
             }}
           >
-            <Phone size={16} /> Book Appointment
+            <Phone size={16} /> Book with this concern pre-filled
           </Link>
-          <a
-            href={`https://wa.me/${BRAND.clinic.whatsapp}?text=${encodeURIComponent(
-              `Hi Dr. Mamta Bhura, I just completed the Skin Analysis on your website and would like to book a consultation for my ${selectedConcern ? CONCERNS.find(c => c.id === selectedConcern)?.label : "skin"} concern.`
-            )}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{
-              fontFamily: "var(--font-accent)", fontSize: "0.95rem", fontWeight: 600,
-              padding: "14px 32px", borderRadius: 999, textDecoration: "none",
-              background: "rgba(255,255,255,0.1)", color: "#FDF6EC",
-              border: "1.5px solid rgba(253,246,236,0.2)",
-              display: "inline-flex", alignItems: "center", gap: 8,
-              transition: "background 0.2s",
-            }}
-          >
-            <MessageCircle size={16} /> WhatsApp Us
-          </a>
         </div>
 
         <p style={{
           fontFamily: "var(--font-body)", fontSize: "0.72rem",
-          color: "rgba(253,246,236,0.4)", marginTop: 20,
+          color: "rgba(253,246,236,0.58)", marginTop: 20,
+          lineHeight: 1.55,
         }}>
-          Limited slots available. Average wait time: 2-3 days.
+          This report is only a preliminary screening summary. It is not a
+          diagnosis, prescription, or substitute for an in-person dermatology
+          consultation.
         </p>
       </div>
 

@@ -6,6 +6,7 @@ export const BRAND = {
     title: "MBBS, MD (Dermatology)",
     university: "Institute of Medical Sciences, BHU",
     experience: "26+",
+    rating: "4.0",
     patients: "451+",
     specialization: "Dermatologist & Cosmetologist",
     memberships: ["IMA", "IADVL", "CDSI"],
@@ -38,7 +39,7 @@ export const SERVICES = [
     icon: "laser",
     color: "from-brand-blush to-brand-champagne",
     featured: true,
-    image: "/Services%20Images%20Assets/Laser%20Treatment%20Image.png",
+    image: "/optimized/Laser%20Treatment%20Image.webp",
     treatments: ["Nd-YAG Laser", "IPL Therapy", "Diode Laser", "Q-Switch Laser", "Fractional CO2"],
   },
   {
@@ -48,7 +49,7 @@ export const SERVICES = [
     icon: "sparkles",
     color: "from-brand-champagne to-brand-cream",
     featured: false,
-    image: "/Services%20Images%20Assets/Anti-Aging%20%26%20Rejuvenation.png",
+    image: "/optimized/Anti-Aging%20%26%20Rejuvenation.webp",
     treatments: ["Botox", "Dermal Fillers", "Thread Lift", "Mesotherapy", "Skin Boosters"],
   },
   {
@@ -58,7 +59,7 @@ export const SERVICES = [
     icon: "shield",
     color: "from-brand-cream to-brand-blush",
     featured: false,
-    image: "/Services%20Images%20Assets/Acne%20%26%20Scar%20Solutions.png",
+    image: "/optimized/Acne%20%26%20Scar%20Solutions.webp",
     treatments: ["Chemical Peels", "Microdermabrasion", "Dermaroller", "Subcision", "TCA Cross"],
   },
   {
@@ -68,7 +69,7 @@ export const SERVICES = [
     icon: "hair",
     color: "from-brand-blush to-brand-champagne",
     featured: false,
-    image: "/Services%20Images%20Assets/Hair%20Restoration.png",
+    image: "/optimized/Hair%20Restoration.webp",
     treatments: ["PRP Therapy", "Laser Hair Removal", "Mesotherapy for Hair", "GFC Treatment"],
   },
   {
@@ -78,7 +79,7 @@ export const SERVICES = [
     icon: "medical",
     color: "from-brand-champagne to-brand-cream",
     featured: false,
-    image: "/Services%20Images%20Assets/Skin%20Disease%20Treatment.png",
+    image: "/optimized/Skin%20Disease%20Treatment.webp",
     treatments: ["Eczema", "Vitiligo", "Psoriasis", "Fungal Infections", "Allergic Dermatitis"],
   },
   {
@@ -88,7 +89,7 @@ export const SERVICES = [
     icon: "star",
     color: "from-brand-cream to-brand-champagne",
     featured: false,
-    image: "/Services%20Images%20Assets/Cosmetic%20Enhancements.png",
+    image: "/optimized/Cosmetic%20Enhancements.webp",
     treatments: ["Tattoo Removal", "Pigmentation", "Sun Damage", "Melasma", "Skin Brightening"],
   },
 ];

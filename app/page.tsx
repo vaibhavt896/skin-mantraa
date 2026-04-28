@@ -3,6 +3,7 @@ import Footer from "@/components/layout/Footer";
 import FloatingCTA from "@/components/layout/FloatingCTA";
 import Hero from "@/components/home/Hero";
 import TrustBar from "@/components/home/TrustBar";
+import ProofOfCare from "@/components/home/ProofOfCare";
 import DoctorIntro from "@/components/home/DoctorIntro";
 import ServicesShowcase from "@/components/home/ServicesShowcase";
 import TestimonialsWall from "@/components/home/TestimonialsWall";
@@ -16,6 +17,7 @@ export default function Home() {
       <main>
         <Hero />
         <TrustBar />
+        <ProofOfCare />
         <DoctorIntro />
         <ServicesShowcase />
         <TestimonialsWall />
@@ -27,4 +29,3 @@ export default function Home() {
     </>
   );
 }
-

@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { BRAND, SERVICES } from "@/lib/constants";
 
 const QUICK_LINKS = [
@@ -51,13 +51,9 @@ const SOCIAL_LINKS = [
 ];
 
 export default function Footer() {
-  const [currentYear, setCurrentYear] = useState(2026);
+  const currentYear = new Date().getFullYear();
   const [email, setEmail] = useState("");
   const [subscribed, setSubscribed] = useState(false);
-
-  useEffect(() => {
-    setCurrentYear(new Date().getFullYear());
-  }, []);
 
   const handleSubscribe = (e: React.FormEvent) => {
     e.preventDefault();

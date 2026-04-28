@@ -1,7 +1,6 @@
 "use client";
 
 import { useRef } from "react";
-import { motion } from "framer-motion";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -48,7 +47,6 @@ export default function HorizontalTimeline() {
   useGSAP(() => {
     if (!containerRef.current || !trackRef.current) return;
 
-    const items = trackRef.current.children;
     const totalWidth = trackRef.current.scrollWidth - window.innerWidth + 400; // Extra padding
 
     gsap.to(trackRef.current, {

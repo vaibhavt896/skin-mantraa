@@ -88,7 +88,7 @@ function ScannerVisual() {
 
 const STEPS = [
   { n: "01", label: "Answer quick questions" },
-  { n: "02", label: "Get AI-powered insights" },
+  { n: "02", label: "Get clinically guided insights" },
   { n: "03", label: "See personalised results" },
 ];
 

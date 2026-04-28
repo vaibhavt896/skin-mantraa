@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState, useRef } from "react";
 import gsap from "gsap";
@@ -96,76 +97,6 @@ function TypewriterText({ startDelay = 1.6 }: { startDelay?: number }) {
   );
 }
 
-// ---------- Floating blob shapes ----------
-// `ease` must be typed as const so TypeScript narrows it to the Framer Motion
-// Easing literal union rather than the broad `string` type.
-const blobs = [
-  {
-    id: 1,
-    style: {
-      position: "absolute" as const,
-      top: "10%",
-      left: "-8%",
-      width: "420px",
-      height: "420px",
-      background:
-        "radial-gradient(ellipse, rgba(248,232,224,0.55) 0%, rgba(245,230,211,0.2) 70%, transparent 100%)",
-      borderRadius: "62% 38% 70% 30% / 45% 55% 45% 55%",
-      filter: "blur(40px)",
-    },
-    animate: { x: [0, 18, 0], y: [0, -22, 0], rotate: [0, 8, 0] },
-    transition: { duration: 12, repeat: Infinity, ease: "easeInOut" as const },
-  },
-  {
-    id: 2,
-    style: {
-      position: "absolute" as const,
-      bottom: "5%",
-      right: "-6%",
-      width: "360px",
-      height: "360px",
-      background:
-        "radial-gradient(ellipse, rgba(245,230,211,0.5) 0%, rgba(248,232,224,0.2) 70%, transparent 100%)",
-      borderRadius: "38% 62% 30% 70% / 55% 45% 55% 45%",
-      filter: "blur(36px)",
-    },
-    animate: { x: [0, -15, 0], y: [0, 20, 0], rotate: [0, -6, 0] },
-    transition: { duration: 14, repeat: Infinity, ease: "easeInOut" as const },
-  },
-  {
-    id: 3,
-    style: {
-      position: "absolute" as const,
-      top: "40%",
-      left: "38%",
-      width: "260px",
-      height: "260px",
-      background:
-        "radial-gradient(ellipse, rgba(212,167,106,0.08) 0%, transparent 70%)",
-      borderRadius: "50% 50% 60% 40% / 60% 40% 60% 40%",
-      filter: "blur(28px)",
-    },
-    animate: { x: [0, 10, 0], y: [0, -12, 0] },
-    transition: { duration: 10, repeat: Infinity, ease: "easeInOut" as const },
-  },
-];
-
-// ---------- Premium bokeh particles ----------
-const premiumParticles = [
-  { left: "14%", top: "18%", size: 6,  delay: 0,   glow: 14 },
-  { left: "72%", top: "12%", size: 4,  delay: 0.7, glow: 9  },
-  { left: "88%", top: "38%", size: 8,  delay: 1.4, glow: 18 },
-  { left: "22%", top: "58%", size: 5,  delay: 0.3, glow: 11 },
-  { left: "62%", top: "72%", size: 3,  delay: 1.9, glow: 7  },
-  { left: "42%", top: "28%", size: 7,  delay: 2.2, glow: 16 },
-  { left: "80%", top: "62%", size: 4,  delay: 0.9, glow: 9  },
-  { left: "8%",  top: "44%", size: 5,  delay: 1.6, glow: 11 },
-  { left: "52%", top: "86%", size: 6,  delay: 2.5, glow: 13 },
-  { left: "92%", top: "22%", size: 3,  delay: 0.5, glow: 7  },
-  { left: "32%", top: "76%", size: 9,  delay: 1.1, glow: 20 },
-  { left: "68%", top: "48%", size: 4,  delay: 3.0, glow: 9  },
-];
-
 export default function Hero() {
   const containerRef = useRef<HTMLDivElement>(null);
   const doctorRef = useRef<HTMLDivElement>(null);
@@ -201,17 +132,30 @@ export default function Hero() {
     >
       {/* ── Background Video Container ── */}
       <div className="absolute inset-y-0 right-0 w-full lg:w-[50%] z-0">
+        <Image
+          src="/optimized/healthy-skin-poster.webp"
+          alt=""
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover lg:hidden"
+          aria-hidden="true"
+        />
         <video
-          src="/hero-video/Healthy%20Skin%204K%20Video.mp4"
           autoPlay
           loop
           muted
           playsInline
-          className="w-full h-full object-cover"
+          preload="metadata"
+          poster="/optimized/healthy-skin-poster.webp"
+          className="hidden w-full h-full object-cover lg:block"
           style={{ 
             filter: "brightness(1.02) saturate(0.95)"
           }}
-        />
+        >
+          <source src="/optimized/healthy-skin-hero.webm" type="video/webm" />
+          <source src="/optimized/healthy-skin-hero.mp4" type="video/mp4" />
+        </video>
       </div>
 
       {/* ── Subtle light-bleed overlay ── */}
@@ -394,7 +338,7 @@ export default function Hero() {
       </div>
 
       {/* ── Scroll indicator ── */}
-      <a
+      <Link
         href="/#trust"
         style={{
           position: "absolute",
@@ -424,7 +368,7 @@ export default function Hero() {
             <path d="M5 8l5 5 5-5" stroke="#3D2B1F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
         </motion.div>
-      </a>
+      </Link>
     </section>
   );
 }

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion, useInView } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { BRAND } from "@/lib/constants";
 import { slideInFromLeft, slideInFromRight, fadeInUp, staggerContainer } from "@/lib/animations";
 
@@ -93,13 +93,7 @@ function isClinicOpen(): boolean {
 }
 
 function HoursTable() {
-  const [open, setOpen] = useState<boolean | null>(null);
-
-  useEffect(() => {
-    setOpen(isClinicOpen());
-  }, []);
-
-  const isOpen = open ?? false;
+  const [isOpen] = useState(() => isClinicOpen());
 
   return (
     <div>
@@ -254,7 +248,7 @@ export default function LocationCTA() {
             style={{ position: "relative", borderRadius: "24px", overflow: "hidden", height: "440px", boxShadow: "0 20px 60px rgba(60,43,31,0.15)" }}
           >
             <Image
-              src="/images/Clinic Front Look.png"
+              src="/optimized/Clinic%20Front%20Look.webp"
               alt="Skin Mantraa clinic exterior — Swaroop Nagar, Kanpur"
               fill
               style={{ objectFit: "cover", objectPosition: "center 40%" }}

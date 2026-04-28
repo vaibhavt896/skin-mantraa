@@ -11,52 +11,11 @@ import HorizontalTimeline from "@/components/about/HorizontalTimeline";
 import { BRAND } from "@/lib/constants";
 import {
   fadeInUp,
-  fadeIn,
   staggerContainer,
   slideInFromLeft,
   slideInFromRight,
   scaleIn,
 } from "@/lib/animations";
-
-// ─── Career Timeline Data ───────────────────────────────────────────────────
-const TIMELINE = [
-  {
-    year: "1998",
-    title: "MBBS — Institute of Medical Sciences, BHU",
-    description:
-      "Completed her Bachelor of Medicine and Bachelor of Surgery from one of India's foremost medical institutions, laying the scientific foundation for a distinguished career in medicine.",
-  },
-  {
-    year: "2001",
-    title: "MD Dermatology — IMS BHU",
-    description:
-      "Specialised in Dermatology at IMS BHU, mastering the diagnosis and management of complex skin, hair, and nail disorders. Graduated with distinction.",
-  },
-  {
-    year: "2001–2005",
-    title: "Consultant, Himalayan Institute of Medical Sciences",
-    description:
-      "Served as a Consultant Dermatologist at the renowned Himalayan Institute, honing clinical expertise across a diverse patient population in the Himalayan region.",
-  },
-  {
-    year: "2005–2010",
-    title: "Senior Consultant, Kaya Skin Clinic, New Delhi",
-    description:
-      "Joined Kaya Skin Clinic in New Delhi as a Senior Consultant, gaining deep expertise in advanced cosmetic dermatology, laser treatments, and evidence-based aesthetic procedures.",
-  },
-  {
-    year: "2010",
-    title: "Founded SKIN@Mantraa, Kanpur",
-    description:
-      "Returned to Kanpur to establish SKIN@Mantraa — a clinic built on the principle that every patient deserves honest advice, world-class treatments, and genuine care for their long-term skin health.",
-  },
-  {
-    year: "Present",
-    title: "451+ Patients Treated · 15+ Advanced Treatments",
-    description:
-      "Continues to lead SKIN@Mantraa with a commitment to clinical excellence, offering 15+ advanced treatments and counting, with over 451 patients who have experienced real, lasting transformations.",
-  },
-];
 
 // ─── Credential & Membership Data ───────────────────────────────────────────
 const MEMBERSHIPS = [
@@ -266,7 +225,7 @@ export default function AboutPage() {
                       }}
                     >
                       <Image
-                        src="/images/Dr. Mamta Bhura 1.png"
+                        src="/optimized/Dr.%20Mamta%20Bhura%201.webp"
                         alt="Dr. Mamta Bhura — SKIN@Mantraa, Kanpur"
                         fill
                         style={{ objectFit: "cover", objectPosition: "center 10%" }}
