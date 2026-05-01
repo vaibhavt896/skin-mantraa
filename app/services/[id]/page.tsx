@@ -44,7 +44,7 @@ const SERVICE_DETAILS: Record<string, ServiceDetail> = {
   "laser-treatments": {
     title: "Advanced Laser Treatments",
     subtitle: "Precision Light Therapy for Flawless Skin",
-    description: "Our laser suite features world-class Nd:YAG, Q-Switched, and Fractional CO2 technologies, calibrated specifically for Indian skin tones. Whether you're looking for permanent hair reduction, tattoo removal, or skin resurfacing, Dr. Bhura ensures every pulse is delivered with clinical precision.",
+    description: "When skin concerns need precision, laser-based treatments offer control, consistency, and visible improvement. This category includes advanced systems for unwanted hair, melasma, freckles, post-acne marks, sun damage, enlarged pores, and tattoo removal. Depending on your concern, we select the right laser modality to target the problem while protecting surrounding skin — especially important for Indian skin tones.",
     benefits: [
       "Permanent reduction of unwanted hair",
       "Safe and effective tattoo removal",
@@ -66,7 +66,7 @@ const SERVICE_DETAILS: Record<string, ServiceDetail> = {
   "anti-aging": {
     title: "Anti-Aging & Rejuvenation",
     subtitle: "Restore Your Natural Youthful Radiance",
-    description: "Aging is inevitable, but looking aged isn't. Dr. Bhura specializes in 'The Natural Look' — using Botox, Dermal Fillers, and Thread Lifts to subtly restore volume and smooth wrinkles without sacrificing facial expression.",
+    description: "Our anti-aging treatments are designed to soften lines, improve texture, support collagen, and bring back a fresher look without changing what makes your face yours. Whether you want subtle wrinkle softening, deeper skin hydration, lifted contours, or regenerative skin support, we build the plan around your age, skin condition, and aesthetic goals.",
     benefits: [
       "Smoothing of fine lines and deep wrinkles",
       "Restoration of lost facial volume in cheeks and lips",
@@ -86,9 +86,9 @@ const SERVICE_DETAILS: Record<string, ServiceDetail> = {
     ]
   },
   "acne-scars": {
-    title: "Acne & Scar Solutions",
+    title: "Acne, Scars & Pores",
     subtitle: "Clear Skin is Possible at Any Age",
-    description: "Acne isn't just a teenage problem. We treat active acne and the scars it leaves behind using medical-grade peels, microdermabrasion, and advanced subcision techniques.",
+    description: "Acne leaves more than breakouts behind — it often leaves redness, marks, scars, and uneven texture that can affect confidence long after the acne is gone. This section focuses on controlled, step-by-step improvement using treatments that help clear congestion, smooth scars, and refine skin texture over time.",
     benefits: [
       "Elimination of active acne-causing bacteria",
       "Reduction of post-acne pigmentation and redness",
@@ -110,7 +110,7 @@ const SERVICE_DETAILS: Record<string, ServiceDetail> = {
   "hair-restoration": {
     title: "Hair Restoration",
     subtitle: "Scientifically Proven Solutions for Hair Growth",
-    description: "Don't let thinning hair affect your confidence. We use Platelet-Rich Plasma (PRP) and GFC (Growth Factor Concentrate) therapy to stimulate hair follicles and reverse early-stage balding.",
+    description: "Hair loss is rarely just cosmetic — it is often emotional, frustrating, and deeply personal. Our hair restoration treatments are selected to support weaker follicles, improve scalp health, and encourage better hair density where possible. We focus on realistic expectations, proper diagnosis, and a treatment plan that matches the pattern and cause of hair loss.",
     benefits: [
       "Significant reduction in hair fall within 3 sessions",
       "Thickening of existing hair shafts",
@@ -132,7 +132,7 @@ const SERVICE_DETAILS: Record<string, ServiceDetail> = {
   "skin-conditions": {
     title: "Skin Disease Treatment",
     subtitle: "Expert Medical Care for Chronic Skin Issues",
-    description: "Beyond aesthetics, we are a medical dermatology clinic. Dr. Bhura provides evidence-based treatments for chronic conditions like Psoriasis, Vitiligo, and Eczema, focusing on long-term management and relief.",
+    description: "This section brings clinical dermatology to the forefront. For skin conditions that are recurring, uncomfortable, or difficult to manage on your own, our approach begins with accurate diagnosis and continues with a treatment plan that is practical, safe, and medically sound.",
     benefits: [
       "Accurate clinical diagnosis of complex skin diseases",
       "Personalized medication protocols",
@@ -154,7 +154,7 @@ const SERVICE_DETAILS: Record<string, ServiceDetail> = {
   "cosmetic": {
     title: "Cosmetic Enhancements",
     subtitle: "Refining Your Natural Beauty with Science",
-    description: "From permanent tattoo removal to corrective treatments for melasma and pigmentation, our cosmetic procedures are designed to give you radiant, even-toned skin.",
+    description: "Some concerns are not disease — they are refinement. This category is built for patients who want to even out skin tone, reduce visible pigmentation, soften stubborn spots, and improve overall complexion quality. The goal is not to bleach or over-treat the skin, but to make it look clearer, healthier, and more balanced.",
     benefits: [
       "Removal of stubborn dark spots and melasma",
       "Complete removal of unwanted tattoos",

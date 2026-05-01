@@ -32,6 +32,8 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://skinmantraa.in";
+
 export const metadata: Metadata = {
   title: {
     default: "SKIN@Mantraa — Premier Dermatology & Cosmetology in Kanpur",
@@ -39,7 +41,7 @@ export const metadata: Metadata = {
   },
   description:
     "Advanced dermatology & cosmetology by Dr. Mamta Bhura — BHU Gold Medallist with 26+ years of expertise. Laser treatments, anti-aging, acne & hair care in Kanpur.",
-  metadataBase: new URL("https://skinmantraa.com"),
+  metadataBase: new URL(siteUrl),
   alternates: { canonical: "/" },
   icons: {
     icon: [
@@ -57,7 +59,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://skinmantraa.com",
+    url: siteUrl,
     siteName: "SKIN@Mantraa",
     title: "SKIN@Mantraa — Premier Dermatology in Kanpur",
     description:

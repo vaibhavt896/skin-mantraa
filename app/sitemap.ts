@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next';
 import { SERVICES } from '@/lib/constants';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://skinmantraa.com';
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://skinmantraa.in';
 
   const staticRoutes = [
     '',

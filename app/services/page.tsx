@@ -300,13 +300,14 @@ export default function ServicesPage() {
                   fontSize: "1.125rem",
                   lineHeight: 1.7,
                   color: "#5C4033",
-                  maxWidth: "560px",
+                  maxWidth: "600px",
                 }}
               >
-                From medical dermatology to advanced cosmetic treatments,
-                SKIN@Mantraa offers 28+ evidence-based procedures — each
-                selected for clinical efficacy and tailored to Indian skin
-                tones by Dr. Mamta Bhura.
+                At SKIN@Mantraa, every treatment is chosen with purpose — not
+                trend. From medical dermatology to advanced cosmetic procedures,
+                we offer a carefully curated range of evidence-based solutions
+                designed for Indian skin, guided by clinical judgment, and
+                tailored to your specific concern.
               </p>
             </div>
           </div>
@@ -388,7 +389,8 @@ export default function ServicesPage() {
                           marginBottom: "1.75rem",
                         }}
                       >
-                        {service.shortDesc}
+                        {/* @ts-ignore */}
+                        {service.longDesc || service.shortDesc}
                       </p>
 
                       {/* Treatment chips */}
@@ -422,7 +424,8 @@ export default function ServicesPage() {
                           textDecoration: "none",
                         }}
                       >
-                        Explore Treatment
+                        {/* @ts-ignore */}
+                        {service.ctaText || "Explore Treatment"}
                         <svg
                           width="16"
                           height="16"
