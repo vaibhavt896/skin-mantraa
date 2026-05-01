@@ -17,11 +17,10 @@ export default function Home() {
       <main>
         <Hero />
         <TrustBar />
-        <ProofOfCare />
         <DoctorIntro />
         <ServicesShowcase />
         <TestimonialsWall />
-        <SkinAnalysisCTA />
+        <ProofOfCare />
         <LocationCTA />
       </main>
       <Footer />
