@@ -58,7 +58,7 @@ export default function FloatingCTA() {
   const isContactPage = pathname === "/contact";
   if (isContactPage && isMobile) return null;
 
-  const whatsappUrl = `https://wa.me/${BRAND.clinic.whatsapp}?text=Hi%2C%20I%20would%20like%20to%20book%20an%20appointment%20at%20SKIN%40Mantraa.`;
+  const whatsappUrl = `https://wa.me/${BRAND.clinic.whatsapp}?text=Hello%2C%20I%20would%20like%20to%20schedule%20a%20consultation%20at%20SKIN%40Mantraa.`;
   const phoneUrl = `tel:${BRAND.clinic.phone}`;
 
   return (

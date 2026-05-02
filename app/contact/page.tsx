@@ -88,7 +88,7 @@ const FAQ_CARDS = [
 export default function ContactPage() {
   const mapsUrl =
     "https://www.google.com/maps/dir/?api=1&destination=Swaroop+Nagar+Kanpur+Uttar+Pradesh";
-  const whatsappUrl = `https://wa.me/${BRAND.clinic.whatsapp}?text=Hi%2C%20I%20would%20like%20to%20book%20an%20appointment%20at%20SKIN%40Mantraa.`;
+  const whatsappUrl = `https://wa.me/${BRAND.clinic.whatsapp}?text=Hello%2C%20I%20would%20like%20to%20schedule%20a%20consultation%20at%20SKIN%40Mantraa.`;
 
   return (
     <>
