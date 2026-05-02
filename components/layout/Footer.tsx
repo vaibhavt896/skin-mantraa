@@ -16,7 +16,7 @@ const QUICK_LINKS = [
 
 const HOURS = [
   { day: "Monday – Friday", time: "11:00 AM – 6:00 PM" },
-  { day: "Saturday", time: "4:00 PM – 8:00 PM" },
+  { day: "Saturday", time: "12:00 PM – 4:00 PM" },
   { day: "Sunday", time: "10:00 AM – 2:00 PM" },
 ];
 

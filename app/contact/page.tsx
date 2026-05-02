@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
 const HOURS_TABLE = [
   { day: "Monday – Friday", time: "11:00 AM – 6:00 PM", open: true },
-  { day: "Saturday", time: "4:00 PM – 8:00 PM", open: true },
+  { day: "Saturday", time: "12:00 PM – 4:00 PM", open: true },
   { day: "Sunday", time: "10:00 AM – 2:00 PM", open: true },
 ];
 
@@ -587,7 +587,7 @@ export default function ContactPage() {
               style={{ boxShadow: "0 12px 48px rgba(61,43,31,0.12)" }}
             >
               <iframe
-                src="https://maps.google.com/maps?q=Swaroop+Nagar+Kanpur+Uttar+Pradesh&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                src="https://maps.google.com/maps?q=26.48100042497026,80.31557800112557&t=&z=15&ie=UTF8&iwloc=&output=embed"
                 width="100%"
                 height="600"
                 style={{ border: "none", display: "block" }}
