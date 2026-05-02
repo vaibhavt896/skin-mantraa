@@ -24,7 +24,7 @@ export const BRAND = {
     email: "skinmantraa@gmail.com",
     hours: {
       weekdays: "Mon–Fri: 11:00 AM – 6:00 PM",
-      saturday: "Saturday: 12:00 PM – 4:00 PM",
+      saturday: "Saturday: 12:00 PM – 6:00 PM",
       sunday: "Sunday: 10:00 AM – 2:00 PM",
     },
     coordinates: { lat: 26.48100042497026, lng: 80.31557800112557 },

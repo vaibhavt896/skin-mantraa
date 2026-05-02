@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
 const HOURS_TABLE = [
   { day: "Monday – Friday", time: "11:00 AM – 6:00 PM", open: true },
-  { day: "Saturday", time: "12:00 PM – 4:00 PM", open: true },
+  { day: "Saturday", time: "12:00 PM – 6:00 PM", open: true },
   { day: "Sunday", time: "10:00 AM – 2:00 PM", open: true },
 ];
 
