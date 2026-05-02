@@ -276,7 +276,7 @@ export default function AboutPage() {
                           color: "#3D2B1F",
                         }}
                       >
-                        Gold Medallist
+                        <span style={{ whiteSpace: "nowrap" }}>MBBS, MD</span>
                       </p>
                     </motion.div>
 

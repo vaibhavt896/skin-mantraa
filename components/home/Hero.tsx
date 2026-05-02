@@ -76,7 +76,11 @@ function TypewriterText({ startDelay = 1.6 }: { startDelay?: number }) {
   return (
     <em
       className="text-gradient"
-      style={{ fontStyle: "italic", fontWeight: 700, whiteSpace: "nowrap" }}
+      style={{ 
+        fontStyle: "italic", 
+        fontWeight: 700, 
+        whiteSpace: "normal" // Changed from nowrap to normal for mobile wrap
+      }}
     >
       {displayed}
       <motion.span
@@ -167,16 +171,16 @@ export default function Hero() {
       />
 
       {/* ── Main content ── */}
-      <div
-        style={{
-          position: "relative",
-          zIndex: 10,
-          width: "100%",
-          maxWidth: "1440px",
-          margin: "0 auto",
-          padding: "clamp(5rem, 10vh, 7rem) clamp(1.5rem, 5vw, 6rem)",
-        }}
-      >
+        <div
+          style={{
+            position: "relative",
+            zIndex: 10,
+            width: "100%",
+            maxWidth: "1440px",
+            margin: "0 auto",
+            padding: "clamp(4rem, 12vh, 7rem) clamp(1rem, 5vw, 6rem)", // Reduced horizontal padding for mobile
+          }}
+        >
         <motion.div
           variants={staggerContainer}
           initial="hidden"
@@ -198,18 +202,19 @@ export default function Hero() {
                 backdropFilter: "blur(10px)",
                 WebkitBackdropFilter: "blur(10px)",
                 fontFamily: "var(--font-accent)",
-                fontSize: "0.75rem",
+                fontSize: "clamp(0.65rem, 2vw, 0.75rem)", // Responsive font size
                 fontWeight: 600,
                 letterSpacing: "0.08em",
                 textTransform: "uppercase" as const,
                 color: "#3D2B1F",
                 boxShadow: "0 4px 24px rgba(0,0,0,0.08)",
+                maxWidth: "100%"
               }}
             >
               <span
                 style={{
-                  width: "28px",
-                  height: "28px",
+                  width: "24px", // Slightly smaller icon on small screens
+                  height: "24px",
                   borderRadius: "50%",
                   background: "linear-gradient(135deg, #C4704E 0%, #D4A76A 100%)",
                   display: "flex",
@@ -218,11 +223,13 @@ export default function Hero() {
                   flexShrink: 0,
                 }}
               >
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
                   <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.3L12 17l-6.2 4.2 2.4-7.3L2 9.4h7.6L12 2z" fill="white" />
                 </svg>
               </span>
-              BHU Gold Medallist · Kanpur&apos;s Trusted Skin Expert
+              <span className="truncate sm:whitespace-normal">
+                IMS BHU Trained · Kanpur&apos;s Trusted Skin Expert
+              </span>
             </span>
           </motion.div>
 
@@ -235,7 +242,7 @@ export default function Hero() {
             <h1
               style={{
                 fontFamily: "var(--font-display)",
-                fontSize: "clamp(2.8rem, 6vw, 5.2rem)", // Slightly smaller for better fit
+                fontSize: "clamp(2.4rem, 8vw, 5.2rem)", // Slightly smaller min for mobile, larger vw for scaling
                 fontWeight: 600,
                 letterSpacing: "-0.03em",
                 lineHeight: 1.1,
@@ -245,8 +252,8 @@ export default function Hero() {
               }}
             >
               Your Skin Deserves
-              <br />
-              <TypewriterText />
+              <br className="hidden sm:block" />
+              <span className="sm:inline-block"> <TypewriterText /></span>
             </h1>
           </motion.div>
 
@@ -316,7 +323,7 @@ export default function Hero() {
             {[
               `${TRUST_STATS[1].value}${TRUST_STATS[1].suffix} Patients`,
               `${TRUST_STATS[0].value}${TRUST_STATS[0].suffix} Years`,
-              "BHU Gold Standard",
+              "IMS BHU Trained",
             ].map((item, i, arr) => (
               <span key={item} style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
                 <span style={{

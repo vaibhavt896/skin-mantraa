@@ -40,7 +40,7 @@ export const metadata: Metadata = {
     template: "%s | SKIN@Mantraa",
   },
   description:
-    "Advanced dermatology & cosmetology by Dr. Mamta Bhura — BHU Gold Medallist with 26+ years of expertise. Laser treatments, anti-aging, acne & hair care in Kanpur.",
+    "Advanced dermatology & cosmetology by Dr. Mamta Bhura with 26+ years of expertise. Laser treatments, anti-aging, acne & hair care in Kanpur.",
   metadataBase: new URL(siteUrl),
   alternates: { canonical: "/" },
   icons: {

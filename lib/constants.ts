@@ -12,7 +12,7 @@ export const BRAND = {
     memberships: ["IMA", "IADVL", "CDSI"],
     bio: "Trained at one of India's most prestigious medical institutions — the Institute of Medical Sciences, BHU — Dr. Mamta Bhura brings 26+ years of clinical expertise to every patient she treats. Her approach combines cutting-edge cosmetic technology with genuine care for long-term skin health.",
     shortBio:
-      "BHU Gold Medallist. 26 years of transforming skin in Kanpur. Honest diagnoses, real results.",
+      "IMS BHU Trained. 26 years of transforming skin in Kanpur. Honest diagnoses, real results.",
   },
   clinic: {
     address: "Bungalow No. 4, 113/196, Swaroop Nagar",

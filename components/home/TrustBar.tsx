@@ -134,15 +134,14 @@ function StatCard({ stat, index, inView }: {
         aria-hidden="true"
       />
 
-      {/* Label */}
       <span style={{
         fontFamily: "var(--font-accent)",
-        fontSize: "clamp(0.62rem, 1.2vw, 0.72rem)",
-        fontWeight: 500,
+        fontSize: "clamp(0.68rem, 1.2vw, 0.72rem)", // Slightly larger minimum font for mobile legibility
+        fontWeight: 600, // Slightly bolder for mobile
         color: "rgba(253,246,236,0.6)",
         letterSpacing: "0.08em",
         textTransform: "uppercase" as const,
-        lineHeight: 1.3,
+        lineHeight: 1.4,
       }}>
         {stat.label}
       </span>
@@ -205,7 +204,7 @@ export default function TrustBar() {
       <div style={{ maxWidth: "1280px", margin: "0 auto", position: "relative", zIndex: 1 }}>
 
         {/* ── Stats grid: 2-col mobile → 4-col desktop ── */}
-        <div className="grid grid-cols-2 md:grid-cols-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-y-2 md:gap-y-0">
           {TRUST_STATS.map((stat, index) => (
             <StatCard key={stat.label} stat={stat} index={index} inView={inView} />
           ))}
@@ -225,9 +224,11 @@ export default function TrustBar() {
             alignItems: "center",
             justifyContent: "center",
             gap: "0.75rem",
+            paddingLeft: "1rem", // Added padding for mobile edge-to-edge wrap
+            paddingRight: "1rem",
           }}
         >
-          {/* BHU Gold Medallist pill — stands out */}
+          {/* IMS BHU Trained pill — stands out */}
           <motion.div
             whileHover={{ scale: 1.05, y: -1 }}
             transition={{ type: "spring", stiffness: 350, damping: 20 }}
@@ -242,28 +243,28 @@ export default function TrustBar() {
             }}
           >
             <span style={{
-              width: "20px", height: "20px", borderRadius: "50%",
+              width: "18px", height: "18px", borderRadius: "50%", // Smaller circle for mobile wrap
               background: "linear-gradient(135deg, #C4704E, #D4A76A)",
               display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0,
             }}>
-              <svg width="10" height="10" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <svg width="9" height="9" viewBox="0 0 24 24" fill="none" aria-hidden="true">
                 <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.3L12 17l-6.2 4.2 2.4-7.3L2 9.4h7.6L12 2z" fill="white" />
               </svg>
             </span>
             <span style={{
-              fontFamily: "var(--font-accent)", fontSize: "0.72rem", fontWeight: 700,
+              fontFamily: "var(--font-accent)", fontSize: "0.68rem", fontWeight: 700,
               letterSpacing: "0.1em", textTransform: "uppercase" as const, color: "#D4A76A",
             }}>
-              BHU Gold Medallist
+              IMS BHU Trained
             </span>
           </motion.div>
 
-          {/* Subtle dot separator */}
-          <span aria-hidden="true" style={{ width: "4px", height: "4px", borderRadius: "50%", background: "rgba(212,167,106,0.3)", flexShrink: 0 }} />
+          {/* Subtle dot separator - Hidden on smallest mobile if it pushes badges apart */}
+          <span className="hidden sm:inline-block" aria-hidden="true" style={{ width: "4px", height: "4px", borderRadius: "50%", background: "rgba(212,167,106,0.3)", flexShrink: 0 }} />
 
           {/* Member label */}
           <span style={{
-            fontFamily: "var(--font-accent)", fontSize: "0.66rem", fontWeight: 500,
+            fontFamily: "var(--font-accent)", fontSize: "0.62rem", fontWeight: 500,
             letterSpacing: "0.1em", textTransform: "uppercase" as const,
             color: "rgba(253,246,236,0.38)",
           }}>
@@ -271,30 +272,31 @@ export default function TrustBar() {
           </span>
 
           {/* Membership badges */}
-          {BRAND.doctor.memberships.map((badge) => (
-            <motion.span
-              key={badge}
-              whileHover={{ scale: 1.07, borderColor: "rgba(212,167,106,0.6)", background: "rgba(212,167,106,0.12)" }}
-              transition={{ type: "spring", stiffness: 400, damping: 20 }}
-              style={{
-                display: "inline-flex", alignItems: "center",
-                padding: "0.3rem 0.8rem",
-                border: "1px solid rgba(212,167,106,0.28)",
-                borderRadius: "100px",
-                fontFamily: "var(--font-accent)", fontSize: "0.7rem",
-                fontWeight: 600, letterSpacing: "0.1em",
-                color: "rgba(212,167,106,0.85)", background: "rgba(212,167,106,0.05)",
-                cursor: "default",
-              }}
-            >
-              {badge}
-            </motion.span>
-          ))}
+          <div className="flex flex-wrap items-center justify-center gap-2">
+            {BRAND.doctor.memberships.map((badge) => (
+              <motion.span
+                key={badge}
+                whileHover={{ scale: 1.07, borderColor: "rgba(212,167,106,0.6)", background: "rgba(212,167,106,0.12)" }}
+                transition={{ type: "spring", stiffness: 400, damping: 20 }}
+                style={{
+                  display: "inline-flex", alignItems: "center",
+                  padding: "0.25rem 0.7rem",
+                  border: "1px solid rgba(212,167,106,0.28)",
+                  borderRadius: "100px",
+                  fontFamily: "var(--font-accent)", fontSize: "0.65rem",
+                  fontWeight: 600, letterSpacing: "0.1em",
+                  color: "rgba(212,167,106,0.85)", background: "rgba(212,167,106,0.05)",
+                  cursor: "default",
+                }}
+              >
+                {badge}
+              </motion.span>
+            ))}
+          </div>
 
-          {/* IMS BHU trained tag */}
-          <span aria-hidden="true" style={{ width: "4px", height: "4px", borderRadius: "50%", background: "rgba(212,167,106,0.3)", flexShrink: 0 }} />
+          <span className="hidden sm:inline-block" aria-hidden="true" style={{ width: "4px", height: "4px", borderRadius: "50%", background: "rgba(212,167,106,0.3)", flexShrink: 0 }} />
           <span style={{
-            fontFamily: "var(--font-accent)", fontSize: "0.66rem", fontWeight: 400,
+            fontFamily: "var(--font-accent)", fontSize: "0.62rem", fontWeight: 400,
             letterSpacing: "0.06em", color: "rgba(253,246,236,0.35)",
           }}>
             IMS BHU Trained

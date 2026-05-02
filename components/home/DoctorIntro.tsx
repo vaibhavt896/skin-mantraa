@@ -280,7 +280,7 @@ function TiltCard({ inView }: { inView: boolean }) {
             <path d="M8 1l1.8 4H14l-3.4 2.5 1.3 4L8 9 4.1 11.5l1.3-4L2 5h4.2L8 1z" fill="#D4A76A" />
           </svg>
           <span style={{ fontFamily: "var(--font-accent)", fontSize: "0.66rem", fontWeight: 700, letterSpacing: "0.1em", textTransform: "uppercase" as const }}>
-            BHU Gold Standard
+            IMS BHU Trained
           </span>
         </motion.div>
       </motion.div>
