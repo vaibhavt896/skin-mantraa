@@ -20,7 +20,7 @@ export const BRAND = {
     city: "Kanpur, Uttar Pradesh 208002",
     phone: "+917383079825",
     phoneDisplay: "+91 73830 79825",
-    whatsapp: "+919235460024",
+    whatsapp: "+919838000024",
     email: "skinmantraa@gmail.com",
     hours: {
       weekdays: "Mon–Fri: 11:00 AM – 6:00 PM",
