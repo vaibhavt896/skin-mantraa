@@ -32,15 +32,38 @@ SKIN@Mantraa is a full-featured, SEO-optimised clinic website for a specialist d
 
 ### Pages & Routes
 
+**Core**
+
 | Route | Description |
 |---|---|
-| `/` | Landing page — hero, trust bar, doctor intro, services, testimonials, location CTA |
+| `/` | Landing page — hero, trust bar, doctor intro, services, testimonials, FAQ, location CTA |
 | `/about` | Doctor biography, career timeline (1998–present), credentials, memberships |
 | `/services` | 6 service categories with treatments, process workflow, and FAQ accordion |
+| `/services/[id]` | Deep service pages — description, who it's for, candidate criteria, 4-step process, expected results, 6 FAQs + FAQPage schema |
 | `/contact` | Booking form with Zod validation, clinic info, embedded Google Maps |
 | `/skin-analysis` | Interactive 6-step skin analysis tool |
 | `/results` | Before/after transformation gallery with category filters |
 | `/skin-guide` | Educational dermatology article hub with category filtering |
+
+**SEO Landing Pages** (geo-targeted, 1,000+ words each)
+
+| Route | Target Keywords |
+|---|---|
+| `/dermatologist-kanpur` | "best dermatologist in Kanpur", "female dermatologist Kanpur" |
+| `/skin-specialist-swaroop-nagar` | "skin specialist Swaroop Nagar", "skin clinic Swaroop Nagar Kanpur" |
+| `/laser-hair-removal-kanpur` | "laser hair removal Kanpur", "Nd:YAG laser Kanpur" |
+| `/about/dr-mamta-bhura` | "Dr Mamta Bhura Kanpur", "MD dermatology IMS BHU Kanpur" |
+
+**Skin Guide Articles** (clinical depth, BlogPosting + FAQPage schema)
+
+| Route | Topic |
+|---|---|
+| `/skin-guide/hifu-treatment-kanpur` | HIFU skin tightening — mechanism, candidacy, results |
+| `/skin-guide/laser-hair-removal-kanpur` | Laser hair removal — Nd:YAG vs diode, Indian skin, sessions |
+| `/skin-guide/prp-hair-loss-treatment-kanpur` | PRP vs GFC for hair loss — effectiveness, protocol, Indian hair types |
+| `/skin-guide/botox-vs-dermal-fillers-kanpur` | Botox vs fillers — dynamic vs static ageing, combination approaches |
+| `/skin-guide/melasma-treatment-kanpur` | Melasma — triggers, Wood's lamp assessment, phased treatment |
+| `/skin-guide/acne-scar-treatment-kanpur` | Acne scar removal — Dermapen 4, TCA cross, PIH vs structural scars |
 
 ### Interactive Skin Analysis Tool
 
@@ -90,11 +113,16 @@ Custom design tokens defined in [`tailwind.config.ts`](tailwind.config.ts) — n
 ### SEO & Structured Data
 
 - Per-page `Metadata` exported from each route via [`lib/seo.ts`](lib/seo.ts)
-- `SchemaMarkup` component injects JSON-LD for:
-  - `MedicalBusiness` (clinic address, coordinates, hours)
-  - `Physician` (doctor credentials, specialisation)
-- OpenGraph + Twitter card images
+- Homepage metadata covers 33 keywords across all treatment clusters (laser, anti-aging, acne, hair, conditions)
+- `SchemaMarkup` component injects JSON-LD `@graph` for:
+  - `MedicalBusiness` + `LocalBusiness` (address, geo, hours, `areaServed`)
+  - `Physician` (E-E-A-T fields: `gender`, `honorificSuffix`, `alumniOf` IMS BHU, `memberOf` IMA/IADVL/CDSI, `knowsAbout` 30 items)
+- `FAQPage` schema on every page — homepage (8 questions), all 6 service pages (6 each), all landing pages, all articles
+- `BlogPosting` schema on all skin-guide articles
+- `MedicalProcedure` schema on commercial procedure landing pages
+- OpenGraph + Twitter card images on all routes
 - Canonical URLs on every page
+- Sitemap covers 24 routes with correct `priority` and `changeFrequency` values
 
 ---
 
@@ -102,51 +130,73 @@ Custom design tokens defined in [`tailwind.config.ts`](tailwind.config.ts) — n
 
 ```
 skin-mantraa/
-├── app/                        # Next.js App Router
-│   ├── layout.tsx              # Root layout (fonts, schema markup)
-│   ├── page.tsx                # Homepage
-│   ├── about/page.tsx          # Doctor bio & timeline
+├── app/                              # Next.js App Router
+│   ├── layout.tsx                    # Root layout (fonts, schema markup)
+│   ├── page.tsx                      # Homepage
+│   ├── about/
+│   │   ├── page.tsx                  # Doctor bio & timeline
+│   │   └── dr-mamta-bhura/page.tsx   # Doctor profile — credentials, E-E-A-T, Physician schema
 │   ├── contact/
-│   │   ├── page.tsx            # Contact & directions
-│   │   └── BookingForm.tsx     # Validated booking form (client component)
+│   │   ├── page.tsx                  # Contact & directions
+│   │   └── BookingForm.tsx           # Validated booking form (client component)
+│   ├── dermatologist-kanpur/         # Geo landing page — "best dermatologist in Kanpur"
+│   │   └── page.tsx
+│   ├── skin-specialist-swaroop-nagar/ # Local SEO page — Swaroop Nagar area
+│   │   └── page.tsx
+│   ├── laser-hair-removal-kanpur/    # Procedure landing page — commercial, MedicalProcedure schema
+│   │   └── page.tsx
 │   ├── services/
-│   │   ├── page.tsx            # Services listing (server component)
-│   │   └── ServicesClient.tsx  # FAQ accordion (client component)
-│   ├── skin-analysis/page.tsx  # Multi-step analysis tool
-│   ├── skin-guide/page.tsx     # Article hub
-│   └── results/page.tsx        # Before/after gallery
+│   │   ├── page.tsx                  # Services listing (server component)
+│   │   ├── ServicesClient.tsx        # FAQ accordion (client component)
+│   │   └── [id]/page.tsx             # Deep service pages — candidateFor, expectedResults, 6 FAQs
+│   ├── skin-analysis/page.tsx        # Multi-step analysis tool
+│   ├── skin-guide/
+│   │   ├── page.tsx                  # Article hub with category filtering
+│   │   ├── [slug]/page.tsx           # Dynamic fallback for future articles
+│   │   ├── hifu-treatment-kanpur/
+│   │   ├── laser-hair-removal-kanpur/
+│   │   ├── prp-hair-loss-treatment-kanpur/
+│   │   ├── botox-vs-dermal-fillers-kanpur/
+│   │   ├── melasma-treatment-kanpur/
+│   │   └── acne-scar-treatment-kanpur/
+│   ├── results/page.tsx              # Before/after gallery
+│   └── sitemap.ts                    # 24-route sitemap with priorities
 │
 ├── components/
-│   ├── home/                   # Homepage sections
+│   ├── home/                         # Homepage sections
 │   │   ├── Hero.tsx
-│   │   ├── DoctorIntro.tsx
+│   │   ├── TrustBar.tsx
+│   │   ├── WhyChooseUs.tsx           # Clinical narrative + patient transformation stories
+│   │   ├── DoctorIntro.tsx           # 3D tilt card with floating credential chips
 │   │   ├── ServicesShowcase.tsx
+│   │   ├── IndianSkinApproach.tsx    # Fitzpatrick III-V expertise content
 │   │   ├── TestimonialsWall.tsx
+│   │   ├── ProofOfCare.tsx
+│   │   ├── HomepageFAQ.tsx           # 8-question FAQPage with JSON-LD schema
 │   │   ├── LocationCTA.tsx
-│   │   ├── SkinAnalysisCTA.tsx
-│   │   └── TrustBar.tsx
-│   ├── layout/                 # Global layout
-│   │   ├── Header.tsx          # Sticky nav with mobile menu + services dropdown
+│   │   └── SkinAnalysisCTA.tsx
+│   ├── layout/
+│   │   ├── Header.tsx                # Sticky nav with mobile menu + services dropdown
 │   │   ├── Footer.tsx
-│   │   └── FloatingCTA.tsx     # Scroll-triggered WhatsApp + phone buttons
+│   │   └── FloatingCTA.tsx           # Scroll-triggered WhatsApp + phone buttons
 │   ├── shared/
-│   │   ├── SectionHeader.tsx   # Reusable animated section titles
-│   │   ├── CTABlock.tsx        # Full-width CTA with particle animation
-│   │   └── SchemaMarkup.tsx    # JSON-LD structured data
+│   │   ├── SectionHeader.tsx
+│   │   ├── CTABlock.tsx
+│   │   └── SchemaMarkup.tsx          # Global JSON-LD: MedicalBusiness + Physician @graph
 │   └── skin-analysis/
 │       └── SkinAnalysisTool.tsx
 │
 ├── lib/
-│   ├── constants.ts            # BRAND, SERVICES, TESTIMONIALS, TRUST_STATS
-│   ├── seo.ts                  # Metadata generators
-│   ├── animations.ts           # Framer Motion variant presets
-│   └── skin-analysis.ts        # Scoring engine + condition database
+│   ├── constants.ts                  # BRAND, SERVICES, TESTIMONIALS, TRUST_STATS
+│   ├── seo.ts                        # Metadata generators (33-keyword homepage set)
+│   ├── animations.ts                 # Framer Motion variant presets
+│   └── skin-analysis.ts              # Scoring engine + condition database
 │
 ├── public/
-│   ├── images/                 # Clinic & doctor photos
-│   └── og-image.svg            # OpenGraph social preview image
+│   ├── optimized/                    # WebP clinic & doctor photos
+│   └── og-image.svg                  # OpenGraph social preview image
 │
-├── .env.example                # Environment variable template
+├── .env.example
 ├── next.config.ts
 ├── tailwind.config.ts
 └── tsconfig.json
@@ -231,11 +281,16 @@ Or connect the GitHub repository to Vercel for automatic deployments on push.
 
 - [ ] Backend API integration for appointment bookings (email notifications via Resend)
 - [x] Dynamic routing and rich content rendering for `/services/[id]`
-- [x] Individual article pages under `/skin-guide/[slug]` with reading progress indicators
+- [x] Individual article pages under `/skin-guide/[slug]` with BlogPosting + FAQPage schema
 - [x] High-performance mobile navigation utilizing GPU-accelerated transforms (iOS Safari optimized)
+- [x] Geo-targeted landing pages for primary commercial keywords
+- [x] FAQPage JSON-LD schema across all pages (service pages, landing pages, articles, homepage)
+- [x] E-E-A-T Physician entity with gender, alumniOf, memberOf, knowsAbout fields
+- [x] Sitemap covering all 24 routes with correct priority weights
 - [ ] Integration of authentic, high-resolution clinical before/after photography
 - [ ] Google Analytics 4 integration for conversion tracking
 - [ ] WhatsApp Business API integration for automated booking confirmations
+- [ ] Remaining skin-guide articles: vitiligo, thread lift vs botox, hydrafacial, hair transplant vs PRP
 
 ---
 

@@ -78,7 +78,7 @@ function AnimatedPin() {
 
 const HOURS = [
   { days: "Mon – Fri", hours: "11:00 AM – 6:00 PM" },
-  { days: "Saturday", hours: "4:00 PM – 8:00 PM" },
+  { days: "Saturday", hours: "12:00 PM – 6:00 PM" },
   { days: "Sunday", hours: "10:00 AM – 2:00 PM" },
 ];
 
@@ -87,7 +87,7 @@ function isClinicOpen(): boolean {
   const day = now.getDay(); // 0=Sun, 1-5=Mon-Fri, 6=Sat
   const h = now.getHours() + now.getMinutes() / 60;
   if (day >= 1 && day <= 5) return h >= 11 && h < 18;
-  if (day === 6) return h >= 16 && h < 20;
+  if (day === 6) return h >= 12 && h < 18;
   if (day === 0) return h >= 10 && h < 14;
   return false;
 }
@@ -426,6 +426,29 @@ export default function LocationCTA() {
           </motion.div>
         </div>
       </div>
+
+      {/* Local SEO paragraph — visually subtle, semantically valuable */}
+      <p
+        id="local-seo-text"
+        style={{
+          maxWidth: "860px",
+          margin: "3rem auto 0",
+          fontFamily: "var(--font-body)",
+          fontSize: "0.82rem",
+          lineHeight: 1.8,
+          color: "#5C4033",
+          opacity: 0.55,
+          textAlign: "center" as const,
+          padding: "0 1rem",
+        }}
+      >
+        SKIN@Mantraa is Kanpur&apos;s leading dermatology and cosmetology clinic, serving patients
+        from Swaroop Nagar, Kakadeo, Civil Lines, Kidwai Nagar, Govind Nagar, Rawatpur, and
+        across Uttar Pradesh. Conveniently located in Swaroop Nagar behind Hotel Royal Cliff.
+        Whether you are looking for a dermatologist for acne, a skin specialist for laser
+        treatment, a hair loss doctor for PRP therapy, or a cosmetologist for anti-aging
+        procedures in Kanpur — SKIN@Mantraa is equipped and ready to help.
+      </p>
     </section>
   );
 }

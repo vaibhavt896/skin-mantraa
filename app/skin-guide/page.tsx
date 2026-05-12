@@ -62,6 +62,56 @@ const FEATURED_ARTICLE = {
 
 const ARTICLES: Article[] = [
   {
+    slug: "hifu-treatment-kanpur",
+    title: "HIFU Treatment in Kanpur — Not Magic, Just Science That Actually Works",
+    category: "Treatment Guides",
+    excerpt:
+      "HIFU (High-Intensity Focused Ultrasound) is the only non-surgical treatment that reaches the SMAS layer — the same tissue a surgeon tightens during a facelift. Dr. Bhura explains who benefits, what the treatment honestly feels like, and realistic results for Indian skin.",
+    readTime: 7,
+    date: "May 12, 2026",
+    tags: ["skin tightening", "non-surgical", "anti-aging"],
+  },
+  {
+    slug: "laser-hair-removal-kanpur",
+    title: "Laser Hair Removal in Kanpur — How Many Sessions, Best Laser for Indian Skin",
+    category: "Treatment Guides",
+    excerpt:
+      "Most patients need 6 to 8 sessions for lasting hair reduction. But using the wrong laser on Indian skin causes burns and pigmentation. Dr. Bhura explains why Nd:YAG and diode lasers are the safe choice for Fitzpatrick Type III–V skin, and what realistic results look like.",
+    readTime: 8,
+    date: "May 12, 2026",
+    tags: ["laser hair removal", "Indian skin", "Nd:YAG"],
+  },
+  {
+    slug: "prp-hair-loss-treatment-kanpur",
+    title: "Is PRP Effective for Hair Loss? A Clinical Guide for Indian Patients",
+    category: "Hair Care",
+    excerpt:
+      "PRP therapy is evidence-supported for androgenetic alopecia — but only when follicles are still alive and miniaturising. Dr. Bhura explains who actually benefits, how many sessions are needed, and the difference between PRP and the more advanced GFC treatment.",
+    readTime: 8,
+    date: "May 12, 2026",
+    tags: ["PRP", "hair loss", "GFC treatment"],
+  },
+  {
+    slug: "botox-vs-dermal-fillers-kanpur",
+    title: "Botox vs Dermal Fillers — What Is the Difference and Who Needs Which?",
+    category: "Treatment Guides",
+    excerpt:
+      "Botox relaxes muscles that cause expression lines. Fillers restore lost volume. They treat different problems with different mechanisms — and using one where you need the other produces poor results. Dr. Bhura explains the distinction every patient should understand.",
+    readTime: 7,
+    date: "May 12, 2026",
+    tags: ["botox", "dermal fillers", "anti-aging"],
+  },
+  {
+    slug: "melasma-treatment-kanpur",
+    title: "What Causes Melasma and How to Treat It on Indian Skin",
+    category: "Treatment Guides",
+    excerpt:
+      "Melasma is triggered by UV, hormones, and heat — and is especially persistent on Indian skin. The treatment sequence matters: starting with laser without priming can make it significantly worse. Dr. Bhura explains the phased approach that actually works.",
+    readTime: 9,
+    date: "May 12, 2026",
+    tags: ["melasma", "pigmentation", "Indian skin"],
+  },
+  {
     slug: "signs-you-need-a-dermatologist",
     title: "5 Signs You Need to See a Dermatologist",
     category: "Skin Care Tips",

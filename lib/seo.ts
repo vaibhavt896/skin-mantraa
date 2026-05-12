@@ -1,6 +1,8 @@
 import { Metadata } from "next";
 import { BRAND } from "./constants";
 
+const BASE_URL = "https://skinmantraa.in";
+
 export function generatePageMetadata({
   title,
   description,
@@ -12,13 +14,12 @@ export function generatePageMetadata({
   path?: string;
   image?: string;
 }): Metadata {
-  const baseUrl = "https://skinmantraa.com";
-  const url = `${baseUrl}${path}`;
+  const url = `${BASE_URL}${path}`;
 
   return {
     title,
     description,
-    metadataBase: new URL(baseUrl),
+    metadataBase: new URL(BASE_URL),
     openGraph: {
       title,
       description,
@@ -40,21 +41,45 @@ export function generatePageMetadata({
 
 export const homeMetadata: Metadata = {
   title:
-    "SKIN@Mantraa | Dr. Mamta Bhura — Best Dermatologist in Kanpur | 26 Years Experience",
+    "SKIN@Mantraa | Dr. Mamta Bhura — Best Female Dermatologist in Kanpur | 26 Years Experience",
   description:
-    "Visit SKIN@Mantraa in Swaroop Nagar, Kanpur for expert skin care by Dr. Mamta Bhura (MBBS, MD — BHU). Advanced laser treatments, anti-aging, acne solutions, hair restoration. 451+ happy patients. Book now.",
+    "Dr. Mamta Bhura — MD Dermatology, IMS BHU. Kanpur's #1 ranked female dermatologist (ThreeBestRated). Advanced laser, anti-aging, acne, and hair treatments at SKIN@Mantraa, Swaroop Nagar. 451+ patients. Consultation: ₹600.",
   keywords: [
     "dermatologist in Kanpur",
+    "best dermatologist Kanpur",
     "skin specialist Kanpur",
-    "Dr Mamta Bhura",
-    "Skin Mantraa",
+    "Dr Mamta Bhura Kanpur",
+    "female dermatologist Kanpur",
+    "cosmetologist Kanpur",
+    "skin doctor Kanpur Swaroop Nagar",
+    "best skin clinic Kanpur",
     "laser treatment Kanpur",
-    "best skin doctor Swaroop Nagar",
+    "laser hair removal Kanpur",
+    "Nd:YAG laser Kanpur",
+    "laser pigmentation treatment Kanpur",
+    "tattoo removal Kanpur",
+    "skin resurfacing Kanpur",
+    "botox Kanpur",
+    "fillers Kanpur",
+    "thread lift Kanpur",
+    "anti-aging treatment Kanpur",
+    "HIFU Kanpur",
     "acne treatment Kanpur",
-    "hair fall treatment Kanpur",
-    "PRP treatment Kanpur",
+    "acne scar removal Kanpur",
+    "chemical peel Kanpur",
+    "Dermapen 4 Kanpur",
+    "melasma treatment Kanpur",
+    "vitiligo specialist Kanpur",
+    "eczema treatment Kanpur",
+    "psoriasis treatment Kanpur",
+    "PRP hair treatment Kanpur",
+    "GFC hair treatment Kanpur",
+    "hair loss treatment Kanpur",
+    "mesotherapy hair Kanpur",
+    "skin specialist Swaroop Nagar",
+    "laser hair removal Swaroop Nagar Kanpur",
   ],
-  metadataBase: new URL("https://skinmantraa.com"),
+  metadataBase: new URL(BASE_URL),
   openGraph: {
     title: "SKIN@Mantraa — Kanpur's Premier Dermatology Clinic",
     description:
@@ -63,5 +88,5 @@ export const homeMetadata: Metadata = {
     locale: "en_IN",
     type: "website",
   },
-  alternates: { canonical: "https://skinmantraa.com" },
+  alternates: { canonical: BASE_URL },
 };
