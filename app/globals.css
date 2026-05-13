@@ -22,7 +22,7 @@
   /* Fonts */
   --font-display: var(--font-cormorant), serif;
   --font-body: var(--font-dm-sans), sans-serif;
-  --font-accent: var(--font-outfit), sans-serif;
+  --font-accent: var(--font-dm-sans), sans-serif;
 
   /* Shadows */
   --shadow-glow: 0 0 40px rgba(199, 141, 107, 0.15);
@@ -79,7 +79,6 @@
 :root {
   --font-cormorant: "Cormorant Garamond", serif;
   --font-dm-sans: "DM Sans", sans-serif;
-  --font-outfit: "Outfit", sans-serif;
 }
 
 html {
@@ -111,6 +110,8 @@ h1, h2, h3, h4 {
 ::-webkit-scrollbar-track { background: #fdf6ec; }
 ::-webkit-scrollbar-thumb { background: #c78d6b; border-radius: 3px; }
 
+.hide-scrollbar::-webkit-scrollbar { display: none; }
+
 :focus-visible {
   outline: 2px solid #c78d6b;
   outline-offset: 3px;
@@ -124,7 +125,7 @@ h1, h2, h3, h4 {
   padding: 0.875rem 2rem;
   background: linear-gradient(135deg, #c4704e 0%, #c78d6b 100%);
   color: white;
-  font-family: var(--font-outfit), "Outfit", sans-serif;
+  font-family: var(--font-dm-sans), "DM Sans", sans-serif;
   font-weight: 500;
   font-size: 0.9375rem;
   letter-spacing: 0.02em;
@@ -148,7 +149,7 @@ h1, h2, h3, h4 {
   padding: 0.875rem 2rem;
   background: transparent;
   color: #3d2b1f;
-  font-family: var(--font-outfit), "Outfit", sans-serif;
+  font-family: var(--font-dm-sans), "DM Sans", sans-serif;
   font-weight: 500;
   font-size: 0.9375rem;
   letter-spacing: 0.02em;

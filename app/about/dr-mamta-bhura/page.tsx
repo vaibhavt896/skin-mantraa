@@ -27,7 +27,7 @@ export const metadata: Metadata = {
       "Dr. Mamta Bhura — MD Dermatology, IMS BHU. 26+ years. Kanpur's #1 ThreeBestRated dermatologist. Female dermatologist and cosmetologist at SKIN@Mantraa, Swaroop Nagar.",
     url: "https://skinmantraa.in/about/dr-mamta-bhura",
     type: "profile",
-    images: [{ url: "/og-image.svg", width: 1200, height: 630 }],
+    images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
   },
 };
 

@@ -27,7 +27,7 @@ export const metadata: Metadata = {
       "Laser hair removal with Nd:YAG and diode laser — safe for Indian skin. 6–8 sessions for 80–90% permanent reduction. Dr. Mamta Bhura, SKIN@Mantraa, Swaroop Nagar, Kanpur.",
     url: "https://skinmantraa.in/laser-hair-removal-kanpur",
     type: "website",
-    images: [{ url: "/og-image.svg", width: 1200, height: 630 }],
+    images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
   },
 };
 

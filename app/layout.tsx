@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Cormorant_Garamond, DM_Sans, Outfit } from "next/font/google";
+import { Cormorant_Garamond, DM_Sans } from "next/font/google";
 import "./globals.css";
 import SchemaMarkup from "@/components/shared/SchemaMarkup";
 import SmoothScroll from "@/components/layout/SmoothScroll";
@@ -7,7 +7,7 @@ import SmoothScroll from "@/components/layout/SmoothScroll";
 const cormorant = Cormorant_Garamond({
   variable: "--font-cormorant",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+  weight: ["400", "500", "600", "700"],
   style: ["normal", "italic"],
   display: "swap",
 });
@@ -15,14 +15,7 @@ const cormorant = Cormorant_Garamond({
 const dmSans = DM_Sans({
   variable: "--font-dm-sans",
   subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
-  display: "swap",
-});
-
-const outfit = Outfit({
-  variable: "--font-outfit",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "500", "600"],
   display: "swap",
 });
 
@@ -42,7 +35,6 @@ export const metadata: Metadata = {
   description:
     "Advanced dermatology & cosmetology by Dr. Mamta Bhura with 26+ years of expertise. Laser treatments, anti-aging, acne & hair care in Kanpur.",
   metadataBase: new URL(siteUrl),
-  alternates: { canonical: "/" },
   icons: {
     icon: [
       { url: "/icons/icon-32.png", sizes: "32x32", type: "image/png" },
@@ -66,7 +58,7 @@ export const metadata: Metadata = {
       "Expert skin care by Dr. Mamta Bhura, MBBS MD (Dermatology). Laser treatments, anti-aging, acne solutions & hair restoration in Kanpur.",
     images: [
       {
-        url: "/og-image.svg",
+        url: "/opengraph-image",
         width: 1200,
         height: 630,
         alt: "SKIN@Mantraa — Premier Dermatology Clinic, Kanpur",
@@ -78,7 +70,7 @@ export const metadata: Metadata = {
     title: "SKIN@Mantraa — Premier Dermatology in Kanpur",
     description:
       "Expert skin care by Dr. Mamta Bhura. Laser treatments, anti-aging, acne solutions & hair restoration.",
-    images: ["/og-image.svg"],
+    images: ["/opengraph-image"],
   },
   robots: {
     index: true,
@@ -97,7 +89,7 @@ export default function RootLayout({
     <html
       lang="en"
       data-scroll-behavior="smooth"
-      className={`${cormorant.variable} ${dmSans.variable} ${outfit.variable} h-full`}
+      className={`${cormorant.variable} ${dmSans.variable} h-full`}
     >
       <body className="min-h-full flex flex-col">
         <SchemaMarkup />

@@ -17,7 +17,7 @@ export const metadata: Metadata = {
       "Melasma is triggered by UV exposure, hormones, and heat — and is especially prevalent on Indian skin. Dr. Mamta Bhura explains the real causes, what makes it worse, and the step-by-step treatment approach that works.",
     url: "https://skinmantraa.in/skin-guide/melasma-treatment-kanpur",
     type: "article",
-    images: [{ url: "/og-image.svg", width: 1200, height: 630 }],
+    images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
   },
 };
 
@@ -27,7 +27,7 @@ const blogSchema = {
   headline: "What Causes Melasma and How to Treat It on Indian Skin",
   description:
     "Clinical guide to melasma causes and treatment by Dr. Mamta Bhura, SKIN@Mantraa Kanpur. Covers hormonal triggers, sun exposure, heat, and the treatment approach for Fitzpatrick Type III-V skin.",
-  image: "https://skinmantraa.in/og-image.svg",
+  image: "https://skinmantraa.in/opengraph-image",
   author: {
     "@type": "Physician",
     name: "Dr. Mamta Bhura",

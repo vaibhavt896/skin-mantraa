@@ -3,11 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState, useRef } from "react";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-gsap.registerPlugin(ScrollTrigger);
+import { useEffect, useState } from "react";
 import { BRAND, TRUST_STATS } from "@/lib/constants";
 import { staggerContainer, heroTextReveal } from "@/lib/animations";
 
@@ -102,29 +98,9 @@ function TypewriterText({ startDelay = 1.6 }: { startDelay?: number }) {
 }
 
 export default function Hero() {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const doctorRef = useRef<HTMLDivElement>(null);
-
-  useGSAP(() => {
-    if (!containerRef.current || !doctorRef.current) return;
-
-    // Parallax depth on doctor portrait
-    gsap.to(doctorRef.current, {
-      yPercent: 15,
-      ease: "none",
-      scrollTrigger: {
-        trigger: containerRef.current,
-        start: "top top",
-        end: "bottom top",
-        scrub: true,
-      },
-    });
-  }, { scope: containerRef });
-
   return (
     <section
       id="hero"
-      ref={containerRef}
       style={{
         position: "relative",
         minHeight: "100svh",

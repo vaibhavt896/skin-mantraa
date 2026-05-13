@@ -17,7 +17,7 @@ export const metadata: Metadata = {
       "Dr. Mamta Bhura explains HIFU skin tightening in Kanpur — who it works for, what the treatment feels like, and realistic results. Clinical guide from SKIN@Mantraa.",
     url: "https://skinmantraa.in/skin-guide/hifu-treatment-kanpur",
     type: "article",
-    images: [{ url: "/og-image.svg", width: 1200, height: 630 }],
+    images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
   },
 };
 
@@ -27,7 +27,7 @@ const blogSchema = {
   headline: "HIFU Treatment in Kanpur — An Honest Guide From a Dermatologist",
   description:
     "Clinical guide to HIFU skin tightening by Dr. Mamta Bhura, SKIN@Mantraa Kanpur. Who it works for, what to expect, and how Indian skin responds.",
-  image: "https://skinmantraa.in/og-image.svg",
+  image: "https://skinmantraa.in/opengraph-image",
   author: {
     "@type": "Physician",
     name: "Dr. Mamta Bhura",

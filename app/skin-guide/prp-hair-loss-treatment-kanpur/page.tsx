@@ -17,7 +17,7 @@ export const metadata: Metadata = {
       "PRP therapy for hair loss: how it works, who benefits, how many sessions are needed, and realistic results for Indian hair types. Clinical guide by Dr. Mamta Bhura, Kanpur.",
     url: "https://skinmantraa.in/skin-guide/prp-hair-loss-treatment-kanpur",
     type: "article",
-    images: [{ url: "/og-image.svg", width: 1200, height: 630 }],
+    images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
   },
 };
 
@@ -27,7 +27,7 @@ const blogSchema = {
   headline: "Is PRP Effective for Hair Loss? A Clinical Guide for Indian Patients",
   description:
     "Clinical guide to PRP therapy for hair loss by Dr. Mamta Bhura, SKIN@Mantraa Kanpur. Who it works for, how many sessions, and realistic results for Indian hair types.",
-  image: "https://skinmantraa.in/og-image.svg",
+  image: "https://skinmantraa.in/opengraph-image",
   author: {
     "@type": "Physician",
     name: "Dr. Mamta Bhura",

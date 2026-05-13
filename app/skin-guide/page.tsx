@@ -404,7 +404,7 @@ export default function SkinGuidePage() {
                   transition={{ type: "spring", stiffness: 300, damping: 20 }}
                 >
                   <Image
-                    src="/skin-guide/skin-guide-animation.gif"
+                    src="/skin-guide/skin-guide-animation.webp"
                     alt="Skin Guide Animation"
                     width={480}
                     height={480}

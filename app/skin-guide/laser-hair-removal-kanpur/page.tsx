@@ -17,7 +17,7 @@ export const metadata: Metadata = {
       "How many sessions does laser hair removal take? What is the best laser for Indian skin? Dr. Mamta Bhura explains the full clinical picture — sessions, intervals, results, and why the laser type matters for dark skin.",
     url: "https://skinmantraa.in/skin-guide/laser-hair-removal-kanpur",
     type: "article",
-    images: [{ url: "/og-image.svg", width: 1200, height: 630 }],
+    images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
   },
 };
 
@@ -27,7 +27,7 @@ const blogSchema = {
   headline: "Laser Hair Removal in Kanpur — How Many Sessions, What to Expect, Best Laser for Indian Skin",
   description:
     "Clinical guide to laser hair removal for Indian skin by Dr. Mamta Bhura, SKIN@Mantraa Kanpur. Covers session count, intervals, laser types suitable for dark skin, and realistic results.",
-  image: "https://skinmantraa.in/og-image.svg",
+  image: "https://skinmantraa.in/opengraph-image",
   author: {
     "@type": "Physician",
     name: "Dr. Mamta Bhura",

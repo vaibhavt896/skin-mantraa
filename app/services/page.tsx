@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Suspense } from "react";
 import Link from "next/link";
 import Image from "next/image";
@@ -7,6 +8,21 @@ import FloatingCTA from "@/components/layout/FloatingCTA";
 import ServiceArticle from "@/components/services/ServiceArticle";
 import { SERVICES, BRAND } from "@/lib/constants";
 import ServicesClient from "./ServicesClient";
+
+export const metadata: Metadata = {
+  title: "Dermatology & Cosmetic Treatments in Kanpur | SKIN@Mantraa",
+  description:
+    "Advanced laser, anti-aging, acne, hair restoration, and skin disease treatments in Kanpur. Dr. Mamta Bhura — MD Dermatology — offers 28+ evidence-based treatments at SKIN@Mantraa, Swaroop Nagar.",
+  alternates: { canonical: "https://skinmantraa.in/services" },
+  openGraph: {
+    title: "Dermatology & Cosmetic Treatments in Kanpur | SKIN@Mantraa",
+    description:
+      "Laser hair removal, Botox, acne scar treatment, PRP hair restoration, HIFU, vitiligo phototherapy and more — by Dr. Mamta Bhura, MD Dermatology, Kanpur.",
+    url: "https://skinmantraa.in/services",
+    type: "website",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Treatments at SKIN@Mantraa Kanpur" }],
+  },
+};
 
 // ─── Service icon SVGs ───────────────────────────────────────────────────────
 const SERVICE_ICONS: Record<string, React.ReactNode> = {

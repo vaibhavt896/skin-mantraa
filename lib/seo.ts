@@ -7,7 +7,7 @@ export function generatePageMetadata({
   title,
   description,
   path = "",
-  image = "/og-image.svg",
+  image = "/opengraph-image",
 }: {
   title: string;
   description: string;
@@ -84,7 +84,7 @@ export const homeMetadata: Metadata = {
     title: "SKIN@Mantraa — Kanpur's Premier Dermatology Clinic",
     description:
       "Dr. Mamta Bhura, BHU-trained dermatologist with 26 years of experience. Advanced treatments for all skin conditions.",
-    images: [{ url: "/og-image.svg", width: 1200, height: 630 }],
+    images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
     locale: "en_IN",
     type: "website",
   },

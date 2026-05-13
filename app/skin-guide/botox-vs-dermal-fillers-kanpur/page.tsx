@@ -17,7 +17,7 @@ export const metadata: Metadata = {
       "Botox relaxes muscles that cause expression lines. Fillers restore lost volume. They are not interchangeable. Dr. Mamta Bhura explains the difference, who needs which, and how they work together.",
     url: "https://skinmantraa.in/skin-guide/botox-vs-dermal-fillers-kanpur",
     type: "article",
-    images: [{ url: "/og-image.svg", width: 1200, height: 630 }],
+    images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
   },
 };
 
@@ -27,7 +27,7 @@ const blogSchema = {
   headline: "Botox vs Dermal Fillers — What Is the Difference and Who Needs Which?",
   description:
     "Clinical guide explaining the difference between Botox and dermal fillers, by Dr. Mamta Bhura at SKIN@Mantraa Kanpur. Includes who benefits from each, combination approaches, and what to expect.",
-  image: "https://skinmantraa.in/og-image.svg",
+  image: "https://skinmantraa.in/opengraph-image",
   author: {
     "@type": "Physician",
     name: "Dr. Mamta Bhura",

@@ -31,7 +31,7 @@ const config: Config = {
       fontFamily: {
         display: ["var(--font-cormorant)", "serif"],
         body: ["var(--font-dm-sans)", "sans-serif"],
-        accent: ["var(--font-outfit)", "sans-serif"],
+        accent: ["var(--font-dm-sans)", "sans-serif"],
       },
       fontSize: {
         hero: [

@@ -33,14 +33,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const articleSlugs = [
     'hifu-treatment-kanpur',
     'laser-hair-removal-kanpur',
+    'laser-hair-removal-cost-kanpur',
     'prp-hair-loss-treatment-kanpur',
+    'gfc-vs-prp-hair-loss',
     'botox-vs-dermal-fillers-kanpur',
+    'botox-cost-kanpur',
     'melasma-treatment-kanpur',
     'acne-scar-treatment-kanpur',
-    'vitiligo-psoriasis-treatment-kanpur',
-    'thread-lift-vs-botox-kanpur',
-    'hydrafacial-kanpur',
-    'hair-transplant-vs-prp-kanpur',
   ];
 
   const articleRoutes = articleSlugs.map((slug) => ({

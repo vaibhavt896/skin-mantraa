@@ -17,7 +17,7 @@ export const metadata: Metadata = {
       "Acne scars, dark spots, and post-acne pigmentation treated with Dermapen 4, chemical peels, and laser by Dr. Mamta Bhura — best dermatologist in Kanpur for acne and dark spots.",
     url: "https://skinmantraa.in/skin-guide/acne-scar-treatment-kanpur",
     type: "article",
-    images: [{ url: "/og-image.svg", width: 1200, height: 630 }],
+    images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
   },
 };
 
@@ -27,7 +27,7 @@ const blogSchema = {
   headline: "Acne Treatment and Scar Removal in Kanpur — Dermapen 4, Chemical Peels, and What Actually Works",
   description:
     "Clinical guide to acne and scar treatment by Dr. Mamta Bhura, SKIN@Mantraa Kanpur. Covers active acne, post-acne pigmentation, ice-pick scars, and the step-by-step treatment approach with Dermapen 4, chemical peels, and Nd:YAG laser.",
-  image: "https://skinmantraa.in/og-image.svg",
+  image: "https://skinmantraa.in/opengraph-image",
   author: {
     "@type": "Physician",
     name: "Dr. Mamta Bhura",

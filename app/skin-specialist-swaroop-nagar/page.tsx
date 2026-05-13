@@ -27,7 +27,7 @@ export const metadata: Metadata = {
       "SKIN@Mantraa is the leading skin clinic in Swaroop Nagar, Kanpur. Dr. Mamta Bhura — MD Dermatology, 26+ years. Advanced laser, anti-aging, acne, and hair treatments.",
     url: "https://skinmantraa.in/skin-specialist-swaroop-nagar",
     type: "website",
-    images: [{ url: "/og-image.svg", width: 1200, height: 630 }],
+    images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
   },
 };
 

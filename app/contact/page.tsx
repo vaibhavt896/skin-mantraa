@@ -9,9 +9,18 @@ import BookingForm from "./BookingForm";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Contact & Book Appointment | SKIN@Mantraa – Kanpur Dermatology Clinic",
+  title: "Book Appointment | SKIN@Mantraa — Dermatology Clinic, Swaroop Nagar Kanpur",
   description:
-    "Visit SKIN@Mantraa in Swaroop Nagar, Kanpur. Book your dermatology consultation with Dr. Mamta Bhura online, or call/WhatsApp us directly.",
+    "Book a consultation with Dr. Mamta Bhura at SKIN@Mantraa, Swaroop Nagar, Kanpur. Walk-in, phone, or WhatsApp. Mon–Fri 11AM–6PM, Saturday 12–6PM, Sunday 10AM–2PM. Consultation: ₹600.",
+  alternates: { canonical: "https://skinmantraa.in/contact" },
+  openGraph: {
+    title: "Book Appointment | SKIN@Mantraa — Kanpur Dermatology Clinic",
+    description:
+      "Book a dermatology consultation with Dr. Mamta Bhura at SKIN@Mantraa, Swaroop Nagar, Kanpur. Call, WhatsApp, or walk in.",
+    url: "https://skinmantraa.in/contact",
+    type: "website",
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Contact SKIN@Mantraa Kanpur" }],
+  },
 };
 
 const HOURS_TABLE = [
