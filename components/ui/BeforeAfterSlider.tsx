@@ -46,11 +46,12 @@ export default function BeforeAfterSlider({
         style={{ aspectRatio: "4/3" }}
         aria-label={`Before and after placeholder for ${treatment}`}
       >
-        {/* Before — left half */}
+        {/* Before - left half */}
         <div
           className="absolute inset-y-0 left-0 w-1/2 flex items-end justify-start p-3"
           style={{
-            background: "linear-gradient(135deg, #c2b5a8 0%, #a89588 40%, #9c8577 100%)",
+            background:
+              "linear-gradient(135deg, #c2b5a8 0%, #a89588 40%, #9c8577 100%)",
           }}
         >
           <span
@@ -66,11 +67,12 @@ export default function BeforeAfterSlider({
           </span>
         </div>
 
-        {/* After — right half */}
+        {/* After - right half */}
         <div
           className="absolute inset-y-0 right-0 w-1/2 flex items-end justify-end p-3"
           style={{
-            background: "linear-gradient(135deg, #f8e8e0 0%, #f5e6d3 40%, #fdf6ec 100%)",
+            background:
+              "linear-gradient(135deg, #f8e8e0 0%, #f5e6d3 40%, #fdf6ec 100%)",
           }}
         >
           <span
@@ -102,7 +104,13 @@ export default function BeforeAfterSlider({
           }}
         >
           <svg width="14" height="10" viewBox="0 0 14 10" fill="none">
-            <path d="M1 5h12M4 2L1 5l3 3M10 2l3 3-3 3" stroke="#C4704E" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+            <path
+              d="M1 5h12M4 2L1 5l3 3M10 2l3 3-3 3"
+              stroke="#C4704E"
+              strokeWidth="1.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
           </svg>
         </div>
 
@@ -129,7 +137,10 @@ export default function BeforeAfterSlider({
     <div
       ref={containerRef}
       className="relative w-full overflow-hidden rounded-xl select-none"
-      style={{ aspectRatio: "4/3", cursor: isDragging ? "grabbing" : "ew-resize" }}
+      style={{
+        aspectRatio: "4/3",
+        cursor: isDragging ? "grabbing" : "ew-resize",
+      }}
       onMouseMove={handleMouseMove}
       onTouchMove={handleTouchMove}
       onMouseUp={() => setIsDragging(false)}

@@ -30,7 +30,7 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files — keep .env.example committed, ignore everything else
+# env files - keep .env.example committed, ignore everything else
 .env*
 !.env.example
 

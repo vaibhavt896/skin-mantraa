@@ -5,13 +5,13 @@ import { useRef } from "react";
 const TIMELINE = [
   {
     year: "1998",
-    title: "MBBS — Institute of Medical Sciences, BHU",
+    title: "MBBS - Institute of Medical Sciences, BHU",
     description:
       "Completed her Bachelor of Medicine and Bachelor of Surgery from one of India's foremost medical institutions.",
   },
   {
     year: "2001",
-    title: "MD Dermatology — IMS BHU",
+    title: "MD Dermatology - IMS BHU",
     description:
       "Specialised in Dermatology at IMS BHU, mastering the diagnosis and management of complex skin disorders.",
   },
@@ -31,12 +31,13 @@ const TIMELINE = [
     year: "2010",
     title: "Founded SKIN@Mantraa",
     description:
-      "Returned to Kanpur to establish SKIN@Mantraa — offering honest advice, world-class treatments, and genuine care.",
+      "Returned to Kanpur to establish SKIN@Mantraa - offering honest advice, world-class treatments, and genuine care.",
   },
   {
     year: "Present",
     title: "451+ Patients · 28+ Treatments",
-    description: "Continues to lead SKIN@Mantraa with a commitment to clinical excellence.",
+    description:
+      "Continues to lead SKIN@Mantraa with a commitment to clinical excellence.",
   },
 ];
 
@@ -49,7 +50,13 @@ export default function HorizontalTimeline() {
       aria-label="Dr. Mamta Bhura's career timeline"
     >
       {/* Header */}
-      <div style={{ maxWidth: "80rem", margin: "0 auto", padding: "0 1.5rem 3rem" }}>
+      <div
+        style={{
+          maxWidth: "80rem",
+          margin: "0 auto",
+          padding: "0 1.5rem 3rem",
+        }}
+      >
         <p
           style={{
             fontFamily: "var(--font-accent)",
@@ -76,7 +83,7 @@ export default function HorizontalTimeline() {
         </h2>
       </div>
 
-      {/* Scroll track — native CSS scroll-snap */}
+      {/* Scroll track - native CSS scroll-snap */}
       <div
         ref={trackRef}
         style={{

@@ -8,7 +8,7 @@ const FAQS = [
   {
     question: "How do I know which treatment is right for me?",
     answer:
-      "During your initial consultation, Dr. Bhura conducts a comprehensive skin assessment — analysing your skin type, phototype (particularly important for Indian skin tones), medical history, lifestyle, and specific concerns. Based on this thorough evaluation, she designs a personalised treatment plan that prioritises your skin's long-term health over short-term results. There is no one-size-fits-all approach at SKIN@Mantraa.",
+      "During your initial consultation, Dr. Bhura conducts a comprehensive skin assessment - analysing your skin type, phototype (particularly important for Indian skin tones), medical history, lifestyle, and specific concerns. Based on this thorough evaluation, she designs a personalised treatment plan that prioritises your skin's long-term health over short-term results. There is no one-size-fits-all approach at SKIN@Mantraa.",
   },
   {
     question: "Are the treatments safe for Indian skin tones?",
@@ -23,12 +23,12 @@ const FAQS = [
   {
     question: "What is the downtime for laser treatments?",
     answer:
-      "Downtime varies significantly by treatment type and intensity. Nd-YAG laser for pigmentation and hair removal typically involves minimal downtime — mild redness subsiding within a few hours. Fractional CO2 laser resurfacing may require 5–7 days of recovery as the skin heals. Q-Switch laser sessions generally allow patients to resume normal activities the same day. Dr. Bhura will discuss expected downtime and post-treatment care in detail before any procedure, so you can plan accordingly.",
+      "Downtime varies significantly by treatment type and intensity. Nd-YAG laser for pigmentation and hair removal typically involves minimal downtime - mild redness subsiding within a few hours. Fractional CO2 laser resurfacing may require 5–7 days of recovery as the skin heals. Q-Switch laser sessions generally allow patients to resume normal activities the same day. Dr. Bhura will discuss expected downtime and post-treatment care in detail before any procedure, so you can plan accordingly.",
   },
   {
     question: "Do you offer package deals?",
     answer:
-      "Yes — for treatments requiring multiple sessions, such as laser hair removal, PRP therapy, and chemical peel courses, SKIN@Mantraa offers structured packages that provide better value than individual session pricing. Package details are discussed transparently during consultation. Dr. Bhura's philosophy is that packages should only be recommended when genuinely clinically appropriate for your treatment plan — never as a sales tactic.",
+      "Yes - for treatments requiring multiple sessions, such as laser hair removal, PRP therapy, and chemical peel courses, SKIN@Mantraa offers structured packages that provide better value than individual session pricing. Package details are discussed transparently during consultation. Dr. Bhura's philosophy is that packages should only be recommended when genuinely clinically appropriate for your treatment plan - never as a sales tactic.",
   },
 ];
 
@@ -58,53 +58,53 @@ export default function ServicesClient() {
       <section ref={ref} className="py-24 lg:py-32">
         <div className="max-w-4xl mx-auto px-6 lg:px-8">
           <motion.div
-          initial="hidden"
-          animate={inView ? "visible" : "hidden"}
-          variants={staggerContainer}
-          className="mb-14"
-        >
-          <motion.p
-            variants={fadeInUp}
-            style={{
-              fontFamily: "var(--font-accent)",
-              fontSize: "0.75rem",
-              letterSpacing: "0.18em",
-              textTransform: "uppercase",
-              color: "#C4704E",
-              marginBottom: "0.875rem",
-            }}
+            initial="hidden"
+            animate={inView ? "visible" : "hidden"}
+            variants={staggerContainer}
+            className="mb-14"
           >
-            Common Questions
-          </motion.p>
-          <motion.h2
-            variants={fadeInUp}
-            style={{
-              fontFamily: "var(--font-display)",
-              fontSize: "clamp(2rem, 4vw, 3.25rem)",
-              fontWeight: 600,
-              fontStyle: "italic",
-              color: "#3D2B1F",
-              letterSpacing: "-0.02em",
-            }}
-          >
-            Frequently Asked Questions
-          </motion.h2>
-        </motion.div>
+            <motion.p
+              variants={fadeInUp}
+              style={{
+                fontFamily: "var(--font-accent)",
+                fontSize: "0.75rem",
+                letterSpacing: "0.18em",
+                textTransform: "uppercase",
+                color: "#C4704E",
+                marginBottom: "0.875rem",
+              }}
+            >
+              Common Questions
+            </motion.p>
+            <motion.h2
+              variants={fadeInUp}
+              style={{
+                fontFamily: "var(--font-display)",
+                fontSize: "clamp(2rem, 4vw, 3.25rem)",
+                fontWeight: 600,
+                fontStyle: "italic",
+                color: "#3D2B1F",
+                letterSpacing: "-0.02em",
+              }}
+            >
+              Frequently Asked Questions
+            </motion.h2>
+          </motion.div>
 
-        <motion.div
-          initial="hidden"
-          animate={inView ? "visible" : "hidden"}
-          variants={staggerContainer}
-          className="space-y-3"
-        >
-          {FAQS.map((faq, idx) => (
-            <motion.div key={idx} variants={fadeInUp}>
-              <FAQItem question={faq.question} answer={faq.answer} />
-            </motion.div>
-          ))}
-        </motion.div>
-      </div>
-    </section>
+          <motion.div
+            initial="hidden"
+            animate={inView ? "visible" : "hidden"}
+            variants={staggerContainer}
+            className="space-y-3"
+          >
+            {FAQS.map((faq, idx) => (
+              <motion.div key={idx} variants={fadeInUp}>
+                <FAQItem question={faq.question} answer={faq.answer} />
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
     </>
   );
 }

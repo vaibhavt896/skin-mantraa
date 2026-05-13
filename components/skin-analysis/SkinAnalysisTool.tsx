@@ -4,19 +4,52 @@ import { useState, useRef, useCallback, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import {
-  Droplets, Palette, Clock, Wind, AlertTriangle, Search,
-  Snowflake, Layers, Eye, Sun, Camera, Upload, ArrowRight,
-  ArrowLeft, RotateCcw, Shield, Sparkles, CheckCircle,
-  Activity, Heart, TrendingUp, Phone, MessageCircle,
-  ChevronRight, Star, Zap,
+  Droplets,
+  Palette,
+  Clock,
+  Wind,
+  AlertTriangle,
+  Search,
+  Snowflake,
+  Layers,
+  Eye,
+  Sun,
+  Camera,
+  Upload,
+  ArrowRight,
+  ArrowLeft,
+  RotateCcw,
+  Shield,
+  Sparkles,
+  CheckCircle,
+  Activity,
+  Heart,
+  TrendingUp,
+  Phone,
+  MessageCircle,
+  ChevronRight,
+  Star,
+  Zap,
 } from "lucide-react";
 import {
-  CONCERNS, QUESTIONS_BY_CONCERN, generateResults, analyzeImage,
-  type ConcernId, type AnalysisResult, type Concern, type ImageMetrics,
+  CONCERNS,
+  QUESTIONS_BY_CONCERN,
+  generateResults,
+  analyzeImage,
+  type ConcernId,
+  type AnalysisResult,
+  type Concern,
+  type ImageMetrics,
 } from "@/lib/skin-analysis";
 import { BRAND } from "@/lib/constants";
 
-type Step = "welcome" | "concern" | "photo" | "questionnaire" | "processing" | "results";
+type Step =
+  | "welcome"
+  | "concern"
+  | "photo"
+  | "questionnaire"
+  | "processing"
+  | "results";
 
 const CONCERN_ICONS: Record<string, React.ReactNode> = {
   Droplets: <Droplets size={24} />,
@@ -52,13 +85,18 @@ const pageVariants = {
   exit: { opacity: 0, x: -60 },
 };
 
-const pageTrans = { duration: 0.4, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] };
+const pageTrans = {
+  duration: 0.4,
+  ease: [0.22, 1, 0.36, 1] as [number, number, number, number],
+};
 
 // ── Main Component ───────────────────────────────────────────
 
 export default function SkinAnalysisTool() {
   const [step, setStep] = useState<Step>("welcome");
-  const [selectedConcern, setSelectedConcern] = useState<ConcernId | null>(null);
+  const [selectedConcern, setSelectedConcern] = useState<ConcernId | null>(
+    null,
+  );
   const [photoData, setPhotoData] = useState<string | null>(null);
   const [answers, setAnswers] = useState<Record<string, string>>({});
   const [currentQ, setCurrentQ] = useState(0);
@@ -69,7 +107,9 @@ export default function SkinAnalysisTool() {
   const streamRef = useRef<MediaStream | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
-  const questions = selectedConcern ? QUESTIONS_BY_CONCERN[selectedConcern] : [];
+  const questions = selectedConcern
+    ? QUESTIONS_BY_CONCERN[selectedConcern]
+    : [];
 
   const stopCamera = useCallback(() => {
     if (streamRef.current) {
@@ -139,10 +179,15 @@ export default function SkinAnalysisTool() {
         animate={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.5 }}
         style={{
-          width: 80, height: 80, borderRadius: "50%",
+          width: 80,
+          height: 80,
+          borderRadius: "50%",
           background: "linear-gradient(135deg, #C4704E, #D4A76A)",
-          display: "flex", alignItems: "center", justifyContent: "center",
-          margin: "0 auto 24px", boxShadow: "0 8px 32px rgba(196,112,78,0.3)",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          margin: "0 auto 24px",
+          boxShadow: "0 8px 32px rgba(196,112,78,0.3)",
         }}
       >
         <Activity size={36} color="white" />
@@ -150,46 +195,91 @@ export default function SkinAnalysisTool() {
 
       <h2
         style={{
-          fontFamily: "var(--font-display)", fontSize: "clamp(1.8rem, 4vw, 2.6rem)",
-          fontWeight: 700, fontStyle: "italic", color: "#3D2B1F",
-          lineHeight: 1.15, marginBottom: 12,
+          fontFamily: "var(--font-display)",
+          fontSize: "clamp(1.8rem, 4vw, 2.6rem)",
+          fontWeight: 700,
+          fontStyle: "italic",
+          color: "#3D2B1F",
+          lineHeight: 1.15,
+          marginBottom: 12,
         }}
       >
         Smart Skin Analysis
       </h2>
       <p
         style={{
-          fontFamily: "var(--font-body)", fontSize: "1.05rem",
-          color: "#5C4033", lineHeight: 1.7, marginBottom: 36,
+          fontFamily: "var(--font-body)",
+          fontSize: "1.05rem",
+          color: "#5C4033",
+          lineHeight: 1.7,
+          marginBottom: 36,
         }}
       >
         Get a preliminary assessment of your skin concern in under 3 minutes.
         Answer a few clinically-informed questions and receive personalised
-        insights — completely free and private.
+        insights - completely free and private.
       </p>
 
       {/* How it works */}
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20, marginBottom: 40 }}>
+      <div
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(3, 1fr)",
+          gap: 20,
+          marginBottom: 40,
+        }}
+      >
         {[
-          { icon: <Search size={22} />, title: "Select Concern", sub: "Choose your primary skin issue" },
-          { icon: <MessageCircle size={22} />, title: "Answer Questions", sub: "5-6 clinically-informed questions" },
-          { icon: <CheckCircle size={22} />, title: "Get Insights", sub: "Personalised assessment & advice" },
+          {
+            icon: <Search size={22} />,
+            title: "Select Concern",
+            sub: "Choose your primary skin issue",
+          },
+          {
+            icon: <MessageCircle size={22} />,
+            title: "Answer Questions",
+            sub: "5-6 clinically-informed questions",
+          },
+          {
+            icon: <CheckCircle size={22} />,
+            title: "Get Insights",
+            sub: "Personalised assessment & advice",
+          },
         ].map((s, i) => (
           <div key={i} style={{ textAlign: "center" }}>
             <div
               style={{
-                width: 48, height: 48, borderRadius: "50%",
-                background: "rgba(212,167,106,0.15)", display: "flex",
-                alignItems: "center", justifyContent: "center",
-                margin: "0 auto 10px", color: "#C4704E",
+                width: 48,
+                height: 48,
+                borderRadius: "50%",
+                background: "rgba(212,167,106,0.15)",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                margin: "0 auto 10px",
+                color: "#C4704E",
               }}
             >
               {s.icon}
             </div>
-            <p style={{ fontFamily: "var(--font-accent)", fontWeight: 600, fontSize: "0.85rem", color: "#3D2B1F" }}>
+            <p
+              style={{
+                fontFamily: "var(--font-accent)",
+                fontWeight: 600,
+                fontSize: "0.85rem",
+                color: "#3D2B1F",
+              }}
+            >
               {s.title}
             </p>
-            <p style={{ fontFamily: "var(--font-body)", fontSize: "0.78rem", color: "#8B7355", marginTop: 2 }}>
+            <p
+              style={{
+                fontFamily: "var(--font-body)",
+                fontSize: "0.78rem",
+                color: "#8B7355",
+                marginTop: 2,
+              }}
+            >
               {s.sub}
             </p>
           </div>
@@ -199,11 +289,20 @@ export default function SkinAnalysisTool() {
       <button
         onClick={() => setStep("concern")}
         style={{
-          fontFamily: "var(--font-accent)", fontSize: "1rem", fontWeight: 600,
-          padding: "16px 44px", borderRadius: 999, border: "none", cursor: "pointer",
-          background: "linear-gradient(135deg, #C4704E, #C78D6B)", color: "white",
-          boxShadow: "0 6px 28px rgba(196,112,78,0.35)", letterSpacing: "0.03em",
-          display: "inline-flex", alignItems: "center", gap: 10,
+          fontFamily: "var(--font-accent)",
+          fontSize: "1rem",
+          fontWeight: 600,
+          padding: "16px 44px",
+          borderRadius: 999,
+          border: "none",
+          cursor: "pointer",
+          background: "linear-gradient(135deg, #C4704E, #C78D6B)",
+          color: "white",
+          boxShadow: "0 6px 28px rgba(196,112,78,0.35)",
+          letterSpacing: "0.03em",
+          display: "inline-flex",
+          alignItems: "center",
+          gap: 10,
           transition: "transform 0.2s, box-shadow 0.2s",
         }}
         onMouseEnter={(e) => {
@@ -220,7 +319,15 @@ export default function SkinAnalysisTool() {
       </button>
 
       {/* Trust badges */}
-      <div style={{ display: "flex", justifyContent: "center", gap: 24, marginTop: 28, flexWrap: "wrap" }}>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          gap: 24,
+          marginTop: 28,
+          flexWrap: "wrap",
+        }}
+      >
         {[
           { icon: <Shield size={14} />, text: "Evidence-Based" },
           { icon: <Eye size={14} />, text: "100% Private" },
@@ -229,8 +336,12 @@ export default function SkinAnalysisTool() {
           <span
             key={i}
             style={{
-              fontFamily: "var(--font-body)", fontSize: "0.75rem",
-              color: "#8B7355", display: "flex", alignItems: "center", gap: 5,
+              fontFamily: "var(--font-body)",
+              fontSize: "0.75rem",
+              color: "#8B7355",
+              display: "flex",
+              alignItems: "center",
+              gap: 5,
             }}
           >
             {b.icon} {b.text}
@@ -254,10 +365,17 @@ export default function SkinAnalysisTool() {
       <button
         onClick={() => setStep("welcome")}
         style={{
-          fontFamily: "var(--font-body)", fontSize: "0.85rem",
-          color: "#8B7355", background: "none", border: "none",
-          cursor: "pointer", display: "flex", alignItems: "center",
-          gap: 6, marginBottom: 20, padding: 0,
+          fontFamily: "var(--font-body)",
+          fontSize: "0.85rem",
+          color: "#8B7355",
+          background: "none",
+          border: "none",
+          cursor: "pointer",
+          display: "flex",
+          alignItems: "center",
+          gap: 6,
+          marginBottom: 20,
+          padding: 0,
         }}
       >
         <ArrowLeft size={16} /> Back
@@ -265,13 +383,24 @@ export default function SkinAnalysisTool() {
 
       <h3
         style={{
-          fontFamily: "var(--font-display)", fontSize: "clamp(1.4rem, 3vw, 1.9rem)",
-          fontWeight: 700, fontStyle: "italic", color: "#3D2B1F", marginBottom: 8,
+          fontFamily: "var(--font-display)",
+          fontSize: "clamp(1.4rem, 3vw, 1.9rem)",
+          fontWeight: 700,
+          fontStyle: "italic",
+          color: "#3D2B1F",
+          marginBottom: 8,
         }}
       >
         What concerns you most?
       </h3>
-      <p style={{ fontFamily: "var(--font-body)", fontSize: "0.95rem", color: "#5C4033", marginBottom: 28 }}>
+      <p
+        style={{
+          fontFamily: "var(--font-body)",
+          fontSize: "0.95rem",
+          color: "#5C4033",
+          marginBottom: 28,
+        }}
+      >
         Select the skin issue you&apos;d like us to assess.
       </p>
 
@@ -297,20 +426,34 @@ export default function SkinAnalysisTool() {
                 setTimeout(() => setStep("photo"), 200);
               }}
               style={{
-                display: "flex", alignItems: "flex-start", gap: 14,
-                padding: "18px 20px", borderRadius: 16, cursor: "pointer",
-                border: isSelected ? "2px solid #C4704E" : "2px solid rgba(199,141,107,0.15)",
-                background: isSelected ? "rgba(196,112,78,0.06)" : "rgba(255,255,255,0.7)",
-                textAlign: "left", transition: "all 0.2s",
+                display: "flex",
+                alignItems: "flex-start",
+                gap: 14,
+                padding: "18px 20px",
+                borderRadius: 16,
+                cursor: "pointer",
+                border: isSelected
+                  ? "2px solid #C4704E"
+                  : "2px solid rgba(199,141,107,0.15)",
+                background: isSelected
+                  ? "rgba(196,112,78,0.06)"
+                  : "rgba(255,255,255,0.7)",
+                textAlign: "left",
+                transition: "all 0.2s",
               }}
             >
               <div
                 style={{
-                  width: 44, height: 44, borderRadius: 12, flexShrink: 0,
+                  width: 44,
+                  height: 44,
+                  borderRadius: 12,
+                  flexShrink: 0,
                   background: isSelected
                     ? "linear-gradient(135deg, #C4704E, #D4A76A)"
                     : "rgba(212,167,106,0.12)",
-                  display: "flex", alignItems: "center", justifyContent: "center",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
                   color: isSelected ? "white" : "#C4704E",
                   transition: "all 0.2s",
                 }}
@@ -318,16 +461,25 @@ export default function SkinAnalysisTool() {
                 {CONCERN_ICONS[c.icon]}
               </div>
               <div>
-                <p style={{
-                  fontFamily: "var(--font-accent)", fontWeight: 600,
-                  fontSize: "0.9rem", color: "#3D2B1F", marginBottom: 3,
-                }}>
+                <p
+                  style={{
+                    fontFamily: "var(--font-accent)",
+                    fontWeight: 600,
+                    fontSize: "0.9rem",
+                    color: "#3D2B1F",
+                    marginBottom: 3,
+                  }}
+                >
                   {c.label}
                 </p>
-                <p style={{
-                  fontFamily: "var(--font-body)", fontSize: "0.78rem",
-                  color: "#8B7355", lineHeight: 1.45,
-                }}>
+                <p
+                  style={{
+                    fontFamily: "var(--font-body)",
+                    fontSize: "0.78rem",
+                    color: "#8B7355",
+                    lineHeight: 1.45,
+                  }}
+                >
                   {c.description}
                 </p>
               </div>
@@ -343,14 +495,18 @@ export default function SkinAnalysisTool() {
   const startCamera = useCallback(async () => {
     try {
       const stream = await navigator.mediaDevices.getUserMedia({
-        video: { facingMode: "user", width: { ideal: 640 }, height: { ideal: 480 } },
+        video: {
+          facingMode: "user",
+          width: { ideal: 640 },
+          height: { ideal: 480 },
+        },
       });
       streamRef.current = stream;
       if (videoRef.current) {
         videoRef.current.srcObject = stream;
       }
     } catch {
-      // Camera not available — user can still upload
+      // Camera not available - user can still upload
     }
   }, []);
 
@@ -365,13 +521,16 @@ export default function SkinAnalysisTool() {
     stopCamera();
   }, [stopCamera]);
 
-  const handleFileUpload = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
-    const file = e.target.files?.[0];
-    if (!file) return;
-    const reader = new FileReader();
-    reader.onload = () => setPhotoData(reader.result as string);
-    reader.readAsDataURL(file);
-  }, []);
+  const handleFileUpload = useCallback(
+    (e: React.ChangeEvent<HTMLInputElement>) => {
+      const file = e.target.files?.[0];
+      if (!file) return;
+      const reader = new FileReader();
+      reader.onload = () => setPhotoData(reader.result as string);
+      reader.readAsDataURL(file);
+    },
+    [],
+  );
 
   const PhotoView = (
     <motion.div
@@ -383,12 +542,22 @@ export default function SkinAnalysisTool() {
       transition={pageTrans}
     >
       <button
-        onClick={() => { stopCamera(); setStep("concern"); }}
+        onClick={() => {
+          stopCamera();
+          setStep("concern");
+        }}
         style={{
-          fontFamily: "var(--font-body)", fontSize: "0.85rem",
-          color: "#8B7355", background: "none", border: "none",
-          cursor: "pointer", display: "flex", alignItems: "center",
-          gap: 6, marginBottom: 20, padding: 0,
+          fontFamily: "var(--font-body)",
+          fontSize: "0.85rem",
+          color: "#8B7355",
+          background: "none",
+          border: "none",
+          cursor: "pointer",
+          display: "flex",
+          alignItems: "center",
+          gap: 6,
+          marginBottom: 20,
+          padding: 0,
         }}
       >
         <ArrowLeft size={16} /> Back
@@ -396,48 +565,94 @@ export default function SkinAnalysisTool() {
 
       <h3
         style={{
-          fontFamily: "var(--font-display)", fontSize: "clamp(1.4rem, 3vw, 1.9rem)",
-          fontWeight: 700, fontStyle: "italic", color: "#3D2B1F", marginBottom: 8,
+          fontFamily: "var(--font-display)",
+          fontSize: "clamp(1.4rem, 3vw, 1.9rem)",
+          fontWeight: 700,
+          fontStyle: "italic",
+          color: "#3D2B1F",
+          marginBottom: 8,
         }}
       >
         Capture or upload a photo
       </h3>
-      <p style={{ fontFamily: "var(--font-body)", fontSize: "0.95rem", color: "#5C4033", marginBottom: 24 }}>
-        A photo helps enhance the analysis accuracy. You can also skip this step.
+      <p
+        style={{
+          fontFamily: "var(--font-body)",
+          fontSize: "0.95rem",
+          color: "#5C4033",
+          marginBottom: 24,
+        }}
+      >
+        A photo helps enhance the analysis accuracy. You can also skip this
+        step.
       </p>
 
       {photoData ? (
         <div style={{ textAlign: "center" }}>
           <div
             style={{
-              width: "100%", maxWidth: 360, margin: "0 auto",
-              borderRadius: 20, overflow: "hidden",
+              width: "100%",
+              maxWidth: 360,
+              margin: "0 auto",
+              borderRadius: 20,
+              overflow: "hidden",
               border: "3px solid rgba(199,141,107,0.2)",
               boxShadow: "0 8px 32px rgba(61,43,31,0.1)",
             }}
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src={photoData} alt="Captured skin" style={{ width: "100%", display: "block" }} />
+            <img
+              src={photoData}
+              alt="Captured skin"
+              style={{ width: "100%", display: "block" }}
+            />
           </div>
-          <div style={{ display: "flex", gap: 12, justifyContent: "center", marginTop: 20 }}>
+          <div
+            style={{
+              display: "flex",
+              gap: 12,
+              justifyContent: "center",
+              marginTop: 20,
+            }}
+          >
             <button
-              onClick={() => { setPhotoData(null); }}
+              onClick={() => {
+                setPhotoData(null);
+              }}
               style={{
-                fontFamily: "var(--font-accent)", fontSize: "0.85rem",
-                padding: "10px 24px", borderRadius: 999, cursor: "pointer",
-                border: "1.5px solid rgba(199,141,107,0.3)", background: "white",
-                color: "#5C4033", display: "flex", alignItems: "center", gap: 6,
+                fontFamily: "var(--font-accent)",
+                fontSize: "0.85rem",
+                padding: "10px 24px",
+                borderRadius: 999,
+                cursor: "pointer",
+                border: "1.5px solid rgba(199,141,107,0.3)",
+                background: "white",
+                color: "#5C4033",
+                display: "flex",
+                alignItems: "center",
+                gap: 6,
               }}
             >
               <RotateCcw size={15} /> Retake
             </button>
             <button
-              onClick={() => { stopCamera(); setStep("questionnaire"); }}
+              onClick={() => {
+                stopCamera();
+                setStep("questionnaire");
+              }}
               style={{
-                fontFamily: "var(--font-accent)", fontSize: "0.85rem", fontWeight: 600,
-                padding: "10px 28px", borderRadius: 999, cursor: "pointer",
-                border: "none", background: "linear-gradient(135deg, #C4704E, #C78D6B)",
-                color: "white", display: "flex", alignItems: "center", gap: 6,
+                fontFamily: "var(--font-accent)",
+                fontSize: "0.85rem",
+                fontWeight: 600,
+                padding: "10px 28px",
+                borderRadius: 999,
+                cursor: "pointer",
+                border: "none",
+                background: "linear-gradient(135deg, #C4704E, #C78D6B)",
+                color: "white",
+                display: "flex",
+                alignItems: "center",
+                gap: 6,
                 boxShadow: "0 4px 16px rgba(196,112,78,0.3)",
               }}
             >
@@ -450,9 +665,14 @@ export default function SkinAnalysisTool() {
           {/* Camera preview */}
           <div
             style={{
-              width: "100%", maxWidth: 360, margin: "0 auto",
-              aspectRatio: "4/3", borderRadius: 20, overflow: "hidden",
-              background: "#2c1810", position: "relative",
+              width: "100%",
+              maxWidth: 360,
+              margin: "0 auto",
+              aspectRatio: "4/3",
+              borderRadius: 20,
+              overflow: "hidden",
+              background: "#2c1810",
+              position: "relative",
               border: "3px solid rgba(199,141,107,0.2)",
             }}
           >
@@ -466,14 +686,19 @@ export default function SkinAnalysisTool() {
             {/* Overlay guide circle */}
             <div
               style={{
-                position: "absolute", inset: 0,
-                display: "flex", alignItems: "center", justifyContent: "center",
+                position: "absolute",
+                inset: 0,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
                 pointerEvents: "none",
               }}
             >
               <div
                 style={{
-                  width: "70%", height: "70%", borderRadius: "50%",
+                  width: "70%",
+                  height: "70%",
+                  borderRadius: "50%",
                   border: "2px dashed rgba(255,255,255,0.3)",
                 }}
               />
@@ -481,8 +706,11 @@ export default function SkinAnalysisTool() {
             {/* Camera icon when no stream */}
             <div
               style={{
-                position: "absolute", inset: 0,
-                display: "flex", alignItems: "center", justifyContent: "center",
+                position: "absolute",
+                inset: 0,
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
                 color: "rgba(255,255,255,0.25)",
               }}
             >
@@ -490,14 +718,30 @@ export default function SkinAnalysisTool() {
             </div>
           </div>
 
-          <div style={{ display: "flex", gap: 12, justifyContent: "center", marginTop: 20, flexWrap: "wrap" }}>
+          <div
+            style={{
+              display: "flex",
+              gap: 12,
+              justifyContent: "center",
+              marginTop: 20,
+              flexWrap: "wrap",
+            }}
+          >
             <button
               onClick={startCamera}
               style={{
-                fontFamily: "var(--font-accent)", fontSize: "0.85rem", fontWeight: 600,
-                padding: "10px 24px", borderRadius: 999, cursor: "pointer",
-                border: "none", background: "linear-gradient(135deg, #C4704E, #C78D6B)",
-                color: "white", display: "flex", alignItems: "center", gap: 6,
+                fontFamily: "var(--font-accent)",
+                fontSize: "0.85rem",
+                fontWeight: 600,
+                padding: "10px 24px",
+                borderRadius: 999,
+                cursor: "pointer",
+                border: "none",
+                background: "linear-gradient(135deg, #C4704E, #C78D6B)",
+                color: "white",
+                display: "flex",
+                alignItems: "center",
+                gap: 6,
                 boxShadow: "0 4px 16px rgba(196,112,78,0.3)",
               }}
             >
@@ -506,10 +750,17 @@ export default function SkinAnalysisTool() {
             <button
               onClick={capturePhoto}
               style={{
-                fontFamily: "var(--font-accent)", fontSize: "0.85rem",
-                padding: "10px 24px", borderRadius: 999, cursor: "pointer",
-                border: "1.5px solid rgba(199,141,107,0.3)", background: "white",
-                color: "#5C4033", display: "flex", alignItems: "center", gap: 6,
+                fontFamily: "var(--font-accent)",
+                fontSize: "0.85rem",
+                padding: "10px 24px",
+                borderRadius: 999,
+                cursor: "pointer",
+                border: "1.5px solid rgba(199,141,107,0.3)",
+                background: "white",
+                color: "#5C4033",
+                display: "flex",
+                alignItems: "center",
+                gap: 6,
               }}
             >
               Capture
@@ -517,10 +768,17 @@ export default function SkinAnalysisTool() {
             <button
               onClick={() => fileInputRef.current?.click()}
               style={{
-                fontFamily: "var(--font-accent)", fontSize: "0.85rem",
-                padding: "10px 24px", borderRadius: 999, cursor: "pointer",
-                border: "1.5px solid rgba(199,141,107,0.3)", background: "white",
-                color: "#5C4033", display: "flex", alignItems: "center", gap: 6,
+                fontFamily: "var(--font-accent)",
+                fontSize: "0.85rem",
+                padding: "10px 24px",
+                borderRadius: 999,
+                cursor: "pointer",
+                border: "1.5px solid rgba(199,141,107,0.3)",
+                background: "white",
+                color: "#5C4033",
+                display: "flex",
+                alignItems: "center",
+                gap: 6,
               }}
             >
               <Upload size={15} /> Upload
@@ -537,15 +795,22 @@ export default function SkinAnalysisTool() {
 
           <div style={{ textAlign: "center", marginTop: 16 }}>
             <button
-              onClick={() => { stopCamera(); setStep("questionnaire"); }}
+              onClick={() => {
+                stopCamera();
+                setStep("questionnaire");
+              }}
               style={{
-                fontFamily: "var(--font-body)", fontSize: "0.85rem",
-                color: "#8B7355", background: "none", border: "none",
-                cursor: "pointer", textDecoration: "underline",
+                fontFamily: "var(--font-body)",
+                fontSize: "0.85rem",
+                color: "#8B7355",
+                background: "none",
+                border: "none",
+                cursor: "pointer",
+                textDecoration: "underline",
                 textUnderlineOffset: 3,
               }}
             >
-              Skip — continue without photo
+              Skip - continue without photo
             </button>
           </div>
         </div>
@@ -553,13 +818,17 @@ export default function SkinAnalysisTool() {
 
       <p
         style={{
-          fontFamily: "var(--font-body)", fontSize: "0.75rem",
-          color: "#A89880", textAlign: "center", marginTop: 24,
-          maxWidth: 400, margin: "24px auto 0",
+          fontFamily: "var(--font-body)",
+          fontSize: "0.75rem",
+          color: "#A89880",
+          textAlign: "center",
+          marginTop: 24,
+          maxWidth: 400,
+          margin: "24px auto 0",
         }}
       >
-        Your photo is processed entirely on your device. It is never uploaded
-        to any server or stored anywhere.
+        Your photo is processed entirely on your device. It is never uploaded to
+        any server or stored anywhere.
       </p>
     </motion.div>
   );
@@ -567,7 +836,8 @@ export default function SkinAnalysisTool() {
   // ── Step: Questionnaire ──────────────────────────────────
 
   const currentQuestion = questions[currentQ];
-  const progress = questions.length > 0 ? ((currentQ + 1) / questions.length) * 100 : 0;
+  const progress =
+    questions.length > 0 ? ((currentQ + 1) / questions.length) * 100 : 0;
 
   const handleAnswer = (value: string) => {
     setAnswers((prev) => ({ ...prev, [currentQuestion.id]: value }));
@@ -593,10 +863,17 @@ export default function SkinAnalysisTool() {
           else setStep("photo");
         }}
         style={{
-          fontFamily: "var(--font-body)", fontSize: "0.85rem",
-          color: "#8B7355", background: "none", border: "none",
-          cursor: "pointer", display: "flex", alignItems: "center",
-          gap: 6, marginBottom: 20, padding: 0,
+          fontFamily: "var(--font-body)",
+          fontSize: "0.85rem",
+          color: "#8B7355",
+          background: "none",
+          border: "none",
+          cursor: "pointer",
+          display: "flex",
+          alignItems: "center",
+          gap: 6,
+          marginBottom: 20,
+          padding: 0,
         }}
       >
         <ArrowLeft size={16} /> {currentQ > 0 ? "Previous Question" : "Back"}
@@ -604,22 +881,35 @@ export default function SkinAnalysisTool() {
 
       {/* Progress bar */}
       <div style={{ marginBottom: 28 }}>
-        <div style={{
-          display: "flex", justifyContent: "space-between", marginBottom: 8,
-          fontFamily: "var(--font-body)", fontSize: "0.78rem", color: "#8B7355",
-        }}>
-          <span>Question {currentQ + 1} of {questions.length}</span>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "space-between",
+            marginBottom: 8,
+            fontFamily: "var(--font-body)",
+            fontSize: "0.78rem",
+            color: "#8B7355",
+          }}
+        >
+          <span>
+            Question {currentQ + 1} of {questions.length}
+          </span>
           <span>{Math.round(progress)}%</span>
         </div>
-        <div style={{
-          height: 4, borderRadius: 4, background: "rgba(199,141,107,0.12)",
-          overflow: "hidden",
-        }}>
+        <div
+          style={{
+            height: 4,
+            borderRadius: 4,
+            background: "rgba(199,141,107,0.12)",
+            overflow: "hidden",
+          }}
+        >
           <motion.div
             animate={{ width: `${progress}%` }}
             transition={{ duration: 0.4, ease: "easeOut" }}
             style={{
-              height: "100%", borderRadius: 4,
+              height: "100%",
+              borderRadius: 4,
               background: "linear-gradient(90deg, #C4704E, #D4A76A)",
             }}
           />
@@ -636,18 +926,27 @@ export default function SkinAnalysisTool() {
         >
           <h3
             style={{
-              fontFamily: "var(--font-display)", fontSize: "clamp(1.3rem, 2.5vw, 1.65rem)",
-              fontWeight: 700, fontStyle: "italic", color: "#3D2B1F",
-              marginBottom: currentQuestion.helpText ? 8 : 24, lineHeight: 1.3,
+              fontFamily: "var(--font-display)",
+              fontSize: "clamp(1.3rem, 2.5vw, 1.65rem)",
+              fontWeight: 700,
+              fontStyle: "italic",
+              color: "#3D2B1F",
+              marginBottom: currentQuestion.helpText ? 8 : 24,
+              lineHeight: 1.3,
             }}
           >
             {currentQuestion.text}
           </h3>
           {currentQuestion.helpText && (
-            <p style={{
-              fontFamily: "var(--font-body)", fontSize: "0.85rem",
-              color: "#8B7355", marginBottom: 24, lineHeight: 1.5,
-            }}>
+            <p
+              style={{
+                fontFamily: "var(--font-body)",
+                fontSize: "0.85rem",
+                color: "#8B7355",
+                marginBottom: 24,
+                lineHeight: 1.5,
+              }}
+            >
               {currentQuestion.helpText}
             </p>
           )}
@@ -662,34 +961,56 @@ export default function SkinAnalysisTool() {
                   whileTap={{ scale: 0.98 }}
                   onClick={() => handleAnswer(opt.value)}
                   style={{
-                    display: "flex", alignItems: "center", gap: 14,
-                    padding: "16px 20px", borderRadius: 14, cursor: "pointer",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 14,
+                    padding: "16px 20px",
+                    borderRadius: 14,
+                    cursor: "pointer",
                     border: isChosen
                       ? "2px solid #C4704E"
                       : "2px solid rgba(199,141,107,0.12)",
-                    background: isChosen ? "rgba(196,112,78,0.06)" : "rgba(255,255,255,0.7)",
-                    textAlign: "left", transition: "all 0.15s", width: "100%",
+                    background: isChosen
+                      ? "rgba(196,112,78,0.06)"
+                      : "rgba(255,255,255,0.7)",
+                    textAlign: "left",
+                    transition: "all 0.15s",
+                    width: "100%",
                   }}
                 >
                   <div
                     style={{
-                      width: 22, height: 22, borderRadius: "50%", flexShrink: 0,
-                      border: isChosen ? "2px solid #C4704E" : "2px solid rgba(199,141,107,0.25)",
-                      display: "flex", alignItems: "center", justifyContent: "center",
+                      width: 22,
+                      height: 22,
+                      borderRadius: "50%",
+                      flexShrink: 0,
+                      border: isChosen
+                        ? "2px solid #C4704E"
+                        : "2px solid rgba(199,141,107,0.25)",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
                       transition: "all 0.15s",
                     }}
                   >
                     {isChosen && (
-                      <div style={{
-                        width: 10, height: 10, borderRadius: "50%",
-                        background: "#C4704E",
-                      }} />
+                      <div
+                        style={{
+                          width: 10,
+                          height: 10,
+                          borderRadius: "50%",
+                          background: "#C4704E",
+                        }}
+                      />
                     )}
                   </div>
-                  <span style={{
-                    fontFamily: "var(--font-body)", fontSize: "0.95rem",
-                    color: "#3D2B1F",
-                  }}>
+                  <span
+                    style={{
+                      fontFamily: "var(--font-body)",
+                      fontSize: "0.95rem",
+                      color: "#3D2B1F",
+                    }}
+                  >
                     {opt.label}
                   </span>
                 </motion.button>
@@ -726,9 +1047,14 @@ export default function SkinAnalysisTool() {
         animate={{ scale: [1, 1.15, 1], opacity: [0.6, 1, 0.6] }}
         transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
         style={{
-          width: 100, height: 100, borderRadius: "50%",
-          background: "linear-gradient(135deg, rgba(196,112,78,0.15), rgba(212,167,106,0.15))",
-          display: "flex", alignItems: "center", justifyContent: "center",
+          width: 100,
+          height: 100,
+          borderRadius: "50%",
+          background:
+            "linear-gradient(135deg, rgba(196,112,78,0.15), rgba(212,167,106,0.15))",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
           margin: "0 auto 32px",
         }}
       >
@@ -736,7 +1062,9 @@ export default function SkinAnalysisTool() {
           animate={{ rotate: 360 }}
           transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
           style={{
-            width: 56, height: 56, borderRadius: "50%",
+            width: 56,
+            height: 56,
+            borderRadius: "50%",
             border: "3px solid rgba(199,141,107,0.2)",
             borderTopColor: "#C4704E",
           }}
@@ -745,8 +1073,12 @@ export default function SkinAnalysisTool() {
 
       <h3
         style={{
-          fontFamily: "var(--font-display)", fontSize: "1.5rem",
-          fontWeight: 700, fontStyle: "italic", color: "#3D2B1F", marginBottom: 20,
+          fontFamily: "var(--font-display)",
+          fontSize: "1.5rem",
+          fontWeight: 700,
+          fontStyle: "italic",
+          color: "#3D2B1F",
+          marginBottom: 20,
         }}
       >
         Analysing your skin
@@ -759,9 +1091,12 @@ export default function SkinAnalysisTool() {
             initial={{ opacity: 0.3 }}
             animate={{ opacity: processingStep >= i ? 1 : 0.3 }}
             style={{
-              display: "flex", alignItems: "center", gap: 10,
+              display: "flex",
+              alignItems: "center",
+              gap: 10,
               padding: "8px 0",
-              fontFamily: "var(--font-body)", fontSize: "0.85rem",
+              fontFamily: "var(--font-body)",
+              fontSize: "0.85rem",
               color: processingStep >= i ? "#3D2B1F" : "#C0B0A0",
             }}
           >
@@ -775,7 +1110,14 @@ export default function SkinAnalysisTool() {
                 <Activity size={16} color="#C4704E" />
               </motion.div>
             ) : (
-              <div style={{ width: 16, height: 16, borderRadius: "50%", border: "1.5px solid #D5C8BC" }} />
+              <div
+                style={{
+                  width: 16,
+                  height: 16,
+                  borderRadius: "50%",
+                  border: "1.5px solid #D5C8BC",
+                }}
+              />
             )}
             {label}
           </motion.div>
@@ -786,10 +1128,21 @@ export default function SkinAnalysisTool() {
 
   // ── Step: Results ────────────────────────────────────────
 
-  const severityConfig: Record<string, { color: string; bg: string; label: string }> = {
+  const severityConfig: Record<
+    string,
+    { color: string; bg: string; label: string }
+  > = {
     mild: { color: "#4CAF50", bg: "rgba(76,175,80,0.1)", label: "Mild" },
-    moderate: { color: "#FF9800", bg: "rgba(255,152,0,0.1)", label: "Moderate" },
-    significant: { color: "#F44336", bg: "rgba(244,67,54,0.1)", label: "Significant" },
+    moderate: {
+      color: "#FF9800",
+      bg: "rgba(255,152,0,0.1)",
+      label: "Moderate",
+    },
+    significant: {
+      color: "#F44336",
+      bg: "rgba(244,67,54,0.1)",
+      label: "Significant",
+    },
     severe: { color: "#B71C1C", bg: "rgba(183,28,28,0.1)", label: "Severe" },
   };
 
@@ -818,10 +1171,12 @@ export default function SkinAnalysisTool() {
         .filter(Boolean)
         .join("\n")
     : "";
-  const prefilledService = selectedConcern ? CONCERN_TO_SERVICE[selectedConcern] : "";
+  const prefilledService = selectedConcern
+    ? CONCERN_TO_SERVICE[selectedConcern]
+    : "";
   const bookingHref = `/contact?concern=${encodeURIComponent(prefilledService)}&message=${encodeURIComponent(reportSummary)}`;
   const whatsappHref = `https://wa.me/${BRAND.clinic.whatsapp}?text=${encodeURIComponent(
-    `Hi Dr. Mamta Bhura, I completed the skin analysis on the SKIN@Mantraa website.\n\n${reportSummary}\n\nI would like to share this report with the clinic and understand whether I should book a consultation.`
+    `Hi Dr. Mamta Bhura, I completed the skin analysis on the SKIN@Mantraa website.\n\n${reportSummary}\n\nI would like to share this report with the clinic and understand whether I should book a consultation.`,
   )}`;
 
   const ResultsView = results ? (
@@ -834,81 +1189,148 @@ export default function SkinAnalysisTool() {
       transition={pageTrans}
     >
       {/* Score header */}
-      <div style={{
-        textAlign: "center", marginBottom: 36,
-        padding: "36px 24px", borderRadius: 24,
-        background: "linear-gradient(135deg, rgba(196,112,78,0.06), rgba(212,167,106,0.06))",
-        border: "1px solid rgba(199,141,107,0.12)",
-      }}>
-        <div style={{ position: "relative", width: 130, height: 130, margin: "0 auto 20px" }}>
+      <div
+        style={{
+          textAlign: "center",
+          marginBottom: 36,
+          padding: "36px 24px",
+          borderRadius: 24,
+          background:
+            "linear-gradient(135deg, rgba(196,112,78,0.06), rgba(212,167,106,0.06))",
+          border: "1px solid rgba(199,141,107,0.12)",
+        }}
+      >
+        <div
+          style={{
+            position: "relative",
+            width: 130,
+            height: 130,
+            margin: "0 auto 20px",
+          }}
+        >
           <svg width="130" height="130" viewBox="0 0 130 130">
-            <circle cx="65" cy="65" r="58" fill="none" stroke="rgba(199,141,107,0.12)" strokeWidth="8" />
+            <circle
+              cx="65"
+              cy="65"
+              r="58"
+              fill="none"
+              stroke="rgba(199,141,107,0.12)"
+              strokeWidth="8"
+            />
             <motion.circle
-              cx="65" cy="65" r="58" fill="none"
-              stroke="url(#scoreGrad)" strokeWidth="8"
+              cx="65"
+              cy="65"
+              r="58"
+              fill="none"
+              stroke="url(#scoreGrad)"
+              strokeWidth="8"
               strokeLinecap="round"
               strokeDasharray={`${2 * Math.PI * 58}`}
               initial={{ strokeDashoffset: 2 * Math.PI * 58 }}
-              animate={{ strokeDashoffset: 2 * Math.PI * 58 * (1 - results.skinScore / 100) }}
+              animate={{
+                strokeDashoffset:
+                  2 * Math.PI * 58 * (1 - results.skinScore / 100),
+              }}
               transition={{ duration: 1.5, delay: 0.3, ease: "easeOut" }}
               transform="rotate(-90 65 65)"
             />
             <defs>
-              <linearGradient id="scoreGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <linearGradient
+                id="scoreGrad"
+                x1="0%"
+                y1="0%"
+                x2="100%"
+                y2="100%"
+              >
                 <stop offset="0%" stopColor="#C4704E" />
                 <stop offset="100%" stopColor="#D4A76A" />
               </linearGradient>
             </defs>
           </svg>
-          <div style={{
-            position: "absolute", inset: 0,
-            display: "flex", flexDirection: "column",
-            alignItems: "center", justifyContent: "center",
-          }}>
+          <div
+            style={{
+              position: "absolute",
+              inset: 0,
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
             <motion.span
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.8 }}
               style={{
-                fontFamily: "var(--font-display)", fontSize: "2.2rem",
-                fontWeight: 700, fontStyle: "italic", color: "#3D2B1F",
+                fontFamily: "var(--font-display)",
+                fontSize: "2.2rem",
+                fontWeight: 700,
+                fontStyle: "italic",
+                color: "#3D2B1F",
                 lineHeight: 1,
               }}
             >
               {results.skinScore}
             </motion.span>
-            <span style={{
-              fontFamily: "var(--font-body)", fontSize: "0.7rem",
-              color: "#8B7355", marginTop: 2,
-            }}>
+            <span
+              style={{
+                fontFamily: "var(--font-body)",
+                fontSize: "0.7rem",
+                color: "#8B7355",
+                marginTop: 2,
+              }}
+            >
               / 100
             </span>
           </div>
         </div>
 
-        <h3 style={{
-          fontFamily: "var(--font-display)", fontSize: "1.5rem",
-          fontWeight: 700, fontStyle: "italic", color: "#3D2B1F", marginBottom: 8,
-        }}>
+        <h3
+          style={{
+            fontFamily: "var(--font-display)",
+            fontSize: "1.5rem",
+            fontWeight: 700,
+            fontStyle: "italic",
+            color: "#3D2B1F",
+            marginBottom: 8,
+          }}
+        >
           Your Skin Health Score
         </h3>
 
         {/* Severity + Urgency badges */}
-        <div style={{ display: "flex", gap: 10, justifyContent: "center", flexWrap: "wrap" }}>
-          <span style={{
-            padding: "6px 16px", borderRadius: 999, fontSize: "0.8rem",
-            fontFamily: "var(--font-accent)", fontWeight: 600,
-            background: severityConfig[results.severity].bg,
-            color: severityConfig[results.severity].color,
-          }}>
+        <div
+          style={{
+            display: "flex",
+            gap: 10,
+            justifyContent: "center",
+            flexWrap: "wrap",
+          }}
+        >
+          <span
+            style={{
+              padding: "6px 16px",
+              borderRadius: 999,
+              fontSize: "0.8rem",
+              fontFamily: "var(--font-accent)",
+              fontWeight: 600,
+              background: severityConfig[results.severity].bg,
+              color: severityConfig[results.severity].color,
+            }}
+          >
             {severityConfig[results.severity].label} Concern
           </span>
-          <span style={{
-            padding: "6px 16px", borderRadius: 999, fontSize: "0.8rem",
-            fontFamily: "var(--font-accent)", fontWeight: 600,
-            background: "rgba(196,112,78,0.08)",
-            color: urgencyConfig[results.urgency].color,
-          }}>
+          <span
+            style={{
+              padding: "6px 16px",
+              borderRadius: 999,
+              fontSize: "0.8rem",
+              fontFamily: "var(--font-accent)",
+              fontWeight: 600,
+              background: "rgba(196,112,78,0.08)",
+              color: urgencyConfig[results.urgency].color,
+            }}
+          >
             {urgencyConfig[results.urgency].label}
           </span>
         </div>
@@ -917,18 +1339,31 @@ export default function SkinAnalysisTool() {
       {/* Possible conditions */}
       {results.topConditions.length > 0 && (
         <div style={{ marginBottom: 32 }}>
-          <h4 style={{
-            fontFamily: "var(--font-display)", fontSize: "1.2rem",
-            fontWeight: 700, fontStyle: "italic", color: "#3D2B1F",
-            marginBottom: 16, display: "flex", alignItems: "center", gap: 8,
-          }}>
+          <h4
+            style={{
+              fontFamily: "var(--font-display)",
+              fontSize: "1.2rem",
+              fontWeight: 700,
+              fontStyle: "italic",
+              color: "#3D2B1F",
+              marginBottom: 16,
+              display: "flex",
+              alignItems: "center",
+              gap: 8,
+            }}
+          >
             <TrendingUp size={20} color="#C4704E" />
             Possible Conditions
           </h4>
-          <p style={{
-            fontFamily: "var(--font-body)", fontSize: "0.8rem",
-            color: "#A89880", marginBottom: 14, fontStyle: "italic",
-          }}>
+          <p
+            style={{
+              fontFamily: "var(--font-body)",
+              fontSize: "0.8rem",
+              color: "#A89880",
+              marginBottom: 14,
+              fontStyle: "italic",
+            }}
+          >
             Based on your responses. This is not a medical diagnosis.
           </p>
 
@@ -940,63 +1375,108 @@ export default function SkinAnalysisTool() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 + i * 0.15 }}
                 style={{
-                  padding: "20px 22px", borderRadius: 18,
+                  padding: "20px 22px",
+                  borderRadius: 18,
                   background: "rgba(255,255,255,0.8)",
-                  border: i === 0 ? "1.5px solid rgba(196,112,78,0.2)" : "1.5px solid rgba(199,141,107,0.1)",
-                  boxShadow: i === 0 ? "0 4px 20px rgba(196,112,78,0.08)" : "none",
+                  border:
+                    i === 0
+                      ? "1.5px solid rgba(196,112,78,0.2)"
+                      : "1.5px solid rgba(199,141,107,0.1)",
+                  boxShadow:
+                    i === 0 ? "0 4px 20px rgba(196,112,78,0.08)" : "none",
                 }}
               >
-                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 10 }}>
-                  <span style={{
-                    fontFamily: "var(--font-accent)", fontWeight: 700,
-                    fontSize: "0.95rem", color: "#3D2B1F",
-                  }}>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-between",
+                    alignItems: "center",
+                    marginBottom: 10,
+                  }}
+                >
+                  <span
+                    style={{
+                      fontFamily: "var(--font-accent)",
+                      fontWeight: 700,
+                      fontSize: "0.95rem",
+                      color: "#3D2B1F",
+                    }}
+                  >
                     {condition.name}
                   </span>
-                  <span style={{
-                    fontFamily: "var(--font-accent)", fontSize: "0.78rem",
-                    fontWeight: 600, color: "#C4704E",
-                  }}>
+                  <span
+                    style={{
+                      fontFamily: "var(--font-accent)",
+                      fontSize: "0.78rem",
+                      fontWeight: 600,
+                      color: "#C4704E",
+                    }}
+                  >
                     {confidence}% match
                   </span>
                 </div>
                 {/* Confidence bar */}
-                <div style={{
-                  height: 4, borderRadius: 4,
-                  background: "rgba(199,141,107,0.1)", marginBottom: 12,
-                }}>
+                <div
+                  style={{
+                    height: 4,
+                    borderRadius: 4,
+                    background: "rgba(199,141,107,0.1)",
+                    marginBottom: 12,
+                  }}
+                >
                   <motion.div
                     initial={{ width: 0 }}
                     animate={{ width: `${confidence}%` }}
                     transition={{ duration: 0.8, delay: 0.4 + i * 0.15 }}
                     style={{
-                      height: "100%", borderRadius: 4,
+                      height: "100%",
+                      borderRadius: 4,
                       background: "linear-gradient(90deg, #C4704E, #D4A76A)",
                     }}
                   />
                 </div>
-                <p style={{
-                  fontFamily: "var(--font-body)", fontSize: "0.85rem",
-                  color: "#5C4033", lineHeight: 1.55, marginBottom: 10,
-                }}>
+                <p
+                  style={{
+                    fontFamily: "var(--font-body)",
+                    fontSize: "0.85rem",
+                    color: "#5C4033",
+                    lineHeight: 1.55,
+                    marginBottom: 10,
+                  }}
+                >
                   {condition.description}
                 </p>
                 <div style={{ marginBottom: 8 }}>
-                  <span style={{
-                    fontFamily: "var(--font-accent)", fontSize: "0.75rem",
-                    fontWeight: 600, color: "#8B7355", textTransform: "uppercase",
-                    letterSpacing: "0.06em",
-                  }}>
+                  <span
+                    style={{
+                      fontFamily: "var(--font-accent)",
+                      fontSize: "0.75rem",
+                      fontWeight: 600,
+                      color: "#8B7355",
+                      textTransform: "uppercase",
+                      letterSpacing: "0.06em",
+                    }}
+                  >
                     Available Treatments at {BRAND.name}
                   </span>
-                  <div style={{ display: "flex", gap: 6, flexWrap: "wrap", marginTop: 6 }}>
+                  <div
+                    style={{
+                      display: "flex",
+                      gap: 6,
+                      flexWrap: "wrap",
+                      marginTop: 6,
+                    }}
+                  >
                     {condition.availableTreatments.map((t) => (
                       <span
                         key={t}
                         style={{
-                          padding: "4px 10px", borderRadius: 999, fontSize: "0.73rem",
+                          padding: "4px 10px",
+                          borderRadius: 999,
+                          fontSize: "0.73rem",
                           fontFamily: "var(--font-body)",
-                          background: "rgba(212,167,106,0.12)", color: "#5C4033",
+                          background: "rgba(212,167,106,0.12)",
+                          color: "#5C4033",
                         }}
                       >
                         {t}
@@ -1004,12 +1484,22 @@ export default function SkinAnalysisTool() {
                     ))}
                   </div>
                 </div>
-                <p style={{
-                  fontFamily: "var(--font-body)", fontSize: "0.8rem",
-                  color: "#C4704E", fontWeight: 500, marginTop: 8,
-                  display: "flex", alignItems: "flex-start", gap: 6,
-                }}>
-                  <AlertTriangle size={14} style={{ flexShrink: 0, marginTop: 2 }} />
+                <p
+                  style={{
+                    fontFamily: "var(--font-body)",
+                    fontSize: "0.8rem",
+                    color: "#C4704E",
+                    fontWeight: 500,
+                    marginTop: 8,
+                    display: "flex",
+                    alignItems: "flex-start",
+                    gap: 6,
+                  }}
+                >
+                  <AlertTriangle
+                    size={14}
+                    style={{ flexShrink: 0, marginTop: 2 }}
+                  />
                   {condition.whyActNow}
                 </p>
               </motion.div>
@@ -1020,11 +1510,19 @@ export default function SkinAnalysisTool() {
 
       {/* Recommendations */}
       <div style={{ marginBottom: 32 }}>
-        <h4 style={{
-          fontFamily: "var(--font-display)", fontSize: "1.2rem",
-          fontWeight: 700, fontStyle: "italic", color: "#3D2B1F",
-          marginBottom: 14, display: "flex", alignItems: "center", gap: 8,
-        }}>
+        <h4
+          style={{
+            fontFamily: "var(--font-display)",
+            fontSize: "1.2rem",
+            fontWeight: 700,
+            fontStyle: "italic",
+            color: "#3D2B1F",
+            marginBottom: 14,
+            display: "flex",
+            alignItems: "center",
+            gap: 8,
+          }}
+        >
           <Sparkles size={20} color="#C4704E" />
           Professional Recommendations
         </h4>
@@ -1033,17 +1531,28 @@ export default function SkinAnalysisTool() {
             <div
               key={i}
               style={{
-                display: "flex", gap: 12, alignItems: "flex-start",
-                padding: "14px 16px", borderRadius: 14,
+                display: "flex",
+                gap: 12,
+                alignItems: "flex-start",
+                padding: "14px 16px",
+                borderRadius: 14,
                 background: "rgba(255,255,255,0.6)",
                 border: "1px solid rgba(199,141,107,0.08)",
               }}
             >
-              <ChevronRight size={16} color="#C4704E" style={{ flexShrink: 0, marginTop: 2 }} />
-              <span style={{
-                fontFamily: "var(--font-body)", fontSize: "0.9rem",
-                color: "#3D2B1F", lineHeight: 1.55,
-              }}>
+              <ChevronRight
+                size={16}
+                color="#C4704E"
+                style={{ flexShrink: 0, marginTop: 2 }}
+              />
+              <span
+                style={{
+                  fontFamily: "var(--font-body)",
+                  fontSize: "0.9rem",
+                  color: "#3D2B1F",
+                  lineHeight: 1.55,
+                }}
+              >
                 {rec}
               </span>
             </div>
@@ -1053,11 +1562,19 @@ export default function SkinAnalysisTool() {
 
       {/* Lifestyle tips */}
       <div style={{ marginBottom: 36 }}>
-        <h4 style={{
-          fontFamily: "var(--font-display)", fontSize: "1.2rem",
-          fontWeight: 700, fontStyle: "italic", color: "#3D2B1F",
-          marginBottom: 14, display: "flex", alignItems: "center", gap: 8,
-        }}>
+        <h4
+          style={{
+            fontFamily: "var(--font-display)",
+            fontSize: "1.2rem",
+            fontWeight: 700,
+            fontStyle: "italic",
+            color: "#3D2B1F",
+            marginBottom: 14,
+            display: "flex",
+            alignItems: "center",
+            gap: 8,
+          }}
+        >
           <Heart size={20} color="#C4704E" />
           Lifestyle Tips
         </h4>
@@ -1066,17 +1583,28 @@ export default function SkinAnalysisTool() {
             <div
               key={i}
               style={{
-                display: "flex", gap: 12, alignItems: "flex-start",
-                padding: "14px 16px", borderRadius: 14,
+                display: "flex",
+                gap: 12,
+                alignItems: "flex-start",
+                padding: "14px 16px",
+                borderRadius: 14,
                 background: "rgba(212,167,106,0.06)",
                 border: "1px solid rgba(199,141,107,0.08)",
               }}
             >
-              <Star size={14} color="#D4A76A" style={{ flexShrink: 0, marginTop: 3 }} />
-              <span style={{
-                fontFamily: "var(--font-body)", fontSize: "0.88rem",
-                color: "#5C4033", lineHeight: 1.55,
-              }}>
+              <Star
+                size={14}
+                color="#D4A76A"
+                style={{ flexShrink: 0, marginTop: 3 }}
+              />
+              <span
+                style={{
+                  fontFamily: "var(--font-body)",
+                  fontSize: "0.88rem",
+                  color: "#5C4033",
+                  lineHeight: 1.55,
+                }}
+              >
                 {tip}
               </span>
             </div>
@@ -1087,49 +1615,85 @@ export default function SkinAnalysisTool() {
       {/* Lead handoff CTA */}
       <div
         style={{
-          padding: "32px 28px", borderRadius: 24, textAlign: "center",
+          padding: "32px 28px",
+          borderRadius: 24,
+          textAlign: "center",
           background: "linear-gradient(135deg, #2c1810, #3D2B1F)",
           boxShadow: "0 12px 48px rgba(44,24,16,0.25)",
         }}
       >
-        <h4 style={{
-          fontFamily: "var(--font-display)", fontSize: "1.4rem",
-          fontWeight: 700, fontStyle: "italic", color: "#FDF6EC", marginBottom: 12,
-        }}>
+        <h4
+          style={{
+            fontFamily: "var(--font-display)",
+            fontSize: "1.4rem",
+            fontWeight: 700,
+            fontStyle: "italic",
+            color: "#FDF6EC",
+            marginBottom: 12,
+          }}
+        >
           Share Your Report With the Clinic
         </h4>
-        <p style={{
-          fontFamily: "var(--font-body)", fontSize: "0.92rem",
-          color: "rgba(253,246,236,0.75)", lineHeight: 1.65, marginBottom: 24,
-          maxWidth: 480, margin: "0 auto 24px",
-        }}>
+        <p
+          style={{
+            fontFamily: "var(--font-body)",
+            fontSize: "0.92rem",
+            color: "rgba(253,246,236,0.75)",
+            lineHeight: 1.65,
+            marginBottom: 24,
+            maxWidth: 480,
+            margin: "0 auto 24px",
+          }}
+        >
           {results.bookingMessage}
         </p>
 
-        <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
+        <div
+          style={{
+            display: "flex",
+            gap: 12,
+            justifyContent: "center",
+            flexWrap: "wrap",
+          }}
+        >
           <a
             href={whatsappHref}
             target="_blank"
             rel="noopener noreferrer"
             style={{
-              fontFamily: "var(--font-accent)", fontSize: "0.95rem", fontWeight: 700,
-              padding: "14px 28px", borderRadius: 999, textDecoration: "none",
-              background: "linear-gradient(135deg, #25D366, #128C7E)", color: "white",
+              fontFamily: "var(--font-accent)",
+              fontSize: "0.95rem",
+              fontWeight: 700,
+              padding: "14px 28px",
+              borderRadius: 999,
+              textDecoration: "none",
+              background: "linear-gradient(135deg, #25D366, #128C7E)",
+              color: "white",
               boxShadow: "0 6px 24px rgba(37,211,102,0.28)",
-              display: "inline-flex", alignItems: "center", gap: 8,
+              display: "inline-flex",
+              alignItems: "center",
+              gap: 8,
               transition: "transform 0.2s",
             }}
           >
-            <MessageCircle size={16} /> Send this report to the clinic on WhatsApp
+            <MessageCircle size={16} /> Send this report to the clinic on
+            WhatsApp
           </a>
           <Link
             href={bookingHref}
             style={{
-              fontFamily: "var(--font-accent)", fontSize: "0.95rem", fontWeight: 600,
-              padding: "14px 28px", borderRadius: 999, textDecoration: "none",
-              background: "linear-gradient(135deg, #C4704E, #D4A76A)", color: "white",
+              fontFamily: "var(--font-accent)",
+              fontSize: "0.95rem",
+              fontWeight: 600,
+              padding: "14px 28px",
+              borderRadius: 999,
+              textDecoration: "none",
+              background: "linear-gradient(135deg, #C4704E, #D4A76A)",
+              color: "white",
               boxShadow: "0 6px 24px rgba(196,112,78,0.4)",
-              display: "inline-flex", alignItems: "center", gap: 8,
+              display: "inline-flex",
+              alignItems: "center",
+              gap: 8,
               transition: "transform 0.2s",
             }}
           >
@@ -1137,11 +1701,15 @@ export default function SkinAnalysisTool() {
           </Link>
         </div>
 
-        <p style={{
-          fontFamily: "var(--font-body)", fontSize: "0.72rem",
-          color: "rgba(253,246,236,0.58)", marginTop: 20,
-          lineHeight: 1.55,
-        }}>
+        <p
+          style={{
+            fontFamily: "var(--font-body)",
+            fontSize: "0.72rem",
+            color: "rgba(253,246,236,0.58)",
+            marginTop: 20,
+            lineHeight: 1.55,
+          }}
+        >
           This report is only a preliminary screening summary. It is not a
           diagnosis, prescription, or substitute for an in-person dermatology
           consultation.
@@ -1149,20 +1717,28 @@ export default function SkinAnalysisTool() {
       </div>
 
       {/* Disclaimer */}
-      <div style={{
-        marginTop: 28, padding: "16px 20px", borderRadius: 14,
-        background: "rgba(255,152,0,0.06)",
-        border: "1px solid rgba(255,152,0,0.12)",
-      }}>
-        <p style={{
-          fontFamily: "var(--font-body)", fontSize: "0.78rem",
-          color: "#8B7355", lineHeight: 1.6,
-        }}>
-          <strong style={{ color: "#5C4033" }}>Important Disclaimer:</strong> This analysis
-          is a preliminary screening tool and does not constitute a medical diagnosis.
-          It is based on self-reported symptoms and general dermatological criteria.
-          For an accurate diagnosis and treatment plan, please consult
-          Dr. Mamta Bhura or a qualified dermatologist in person.
+      <div
+        style={{
+          marginTop: 28,
+          padding: "16px 20px",
+          borderRadius: 14,
+          background: "rgba(255,152,0,0.06)",
+          border: "1px solid rgba(255,152,0,0.12)",
+        }}
+      >
+        <p
+          style={{
+            fontFamily: "var(--font-body)",
+            fontSize: "0.78rem",
+            color: "#8B7355",
+            lineHeight: 1.6,
+          }}
+        >
+          <strong style={{ color: "#5C4033" }}>Important Disclaimer:</strong>{" "}
+          This analysis is a preliminary screening tool and does not constitute
+          a medical diagnosis. It is based on self-reported symptoms and general
+          dermatological criteria. For an accurate diagnosis and treatment plan,
+          please consult Dr. Mamta Bhura or a qualified dermatologist in person.
         </p>
       </div>
 
@@ -1171,10 +1747,15 @@ export default function SkinAnalysisTool() {
         <button
           onClick={resetAll}
           style={{
-            fontFamily: "var(--font-body)", fontSize: "0.85rem",
-            color: "#8B7355", background: "none", border: "none",
-            cursor: "pointer", display: "inline-flex",
-            alignItems: "center", gap: 6,
+            fontFamily: "var(--font-body)",
+            fontSize: "0.85rem",
+            color: "#8B7355",
+            background: "none",
+            border: "none",
+            cursor: "pointer",
+            display: "inline-flex",
+            alignItems: "center",
+            gap: 6,
           }}
         >
           <RotateCcw size={14} /> Start a new analysis
@@ -1197,32 +1778,48 @@ export default function SkinAnalysisTool() {
   return (
     <div
       style={{
-        maxWidth: 720, margin: "0 auto", padding: "0 24px",
+        maxWidth: 720,
+        margin: "0 auto",
+        padding: "0 24px",
         minHeight: "60vh",
       }}
     >
       {/* Step indicator (for non-welcome/processing/results) */}
       {!["welcome", "processing", "results"].includes(step) && (
-        <div style={{
-          display: "flex", justifyContent: "center", gap: 8, marginBottom: 28,
-        }}>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            gap: 8,
+            marginBottom: 28,
+          }}
+        >
           {(["concern", "photo", "questionnaire"] as Step[]).map((s, i) => (
             <div
               key={s}
               style={{
-                display: "flex", alignItems: "center", gap: 8,
+                display: "flex",
+                alignItems: "center",
+                gap: 8,
               }}
             >
               <div
                 style={{
-                  width: 28, height: 28, borderRadius: "50%",
-                  display: "flex", alignItems: "center", justifyContent: "center",
-                  fontSize: "0.75rem", fontFamily: "var(--font-accent)", fontWeight: 600,
-                  background: step === s
-                    ? "linear-gradient(135deg, #C4704E, #D4A76A)"
-                    : ["concern", "photo", "questionnaire"].indexOf(step) > i
-                      ? "rgba(196,112,78,0.15)"
-                      : "rgba(199,141,107,0.08)",
+                  width: 28,
+                  height: 28,
+                  borderRadius: "50%",
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  fontSize: "0.75rem",
+                  fontFamily: "var(--font-accent)",
+                  fontWeight: 600,
+                  background:
+                    step === s
+                      ? "linear-gradient(135deg, #C4704E, #D4A76A)"
+                      : ["concern", "photo", "questionnaire"].indexOf(step) > i
+                        ? "rgba(196,112,78,0.15)"
+                        : "rgba(199,141,107,0.08)",
                   color: step === s ? "white" : "#8B7355",
                   transition: "all 0.3s",
                 }}
@@ -1234,22 +1831,24 @@ export default function SkinAnalysisTool() {
                 )}
               </div>
               {i < 2 && (
-                <div style={{
-                  width: 32, height: 1.5,
-                  background: ["concern", "photo", "questionnaire"].indexOf(step) > i
-                    ? "#C4704E"
-                    : "rgba(199,141,107,0.15)",
-                  transition: "background 0.3s",
-                }} />
+                <div
+                  style={{
+                    width: 32,
+                    height: 1.5,
+                    background:
+                      ["concern", "photo", "questionnaire"].indexOf(step) > i
+                        ? "#C4704E"
+                        : "rgba(199,141,107,0.15)",
+                    transition: "background 0.3s",
+                  }}
+                />
               )}
             </div>
           ))}
         </div>
       )}
 
-      <AnimatePresence mode="wait">
-        {stepViews[step]}
-      </AnimatePresence>
+      <AnimatePresence mode="wait">{stepViews[step]}</AnimatePresence>
     </div>
   );
 }

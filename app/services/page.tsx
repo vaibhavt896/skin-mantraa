@@ -12,70 +12,291 @@ import ServicesClient from "./ServicesClient";
 export const metadata: Metadata = {
   title: "Dermatology & Cosmetic Treatments in Kanpur | SKIN@Mantraa",
   description:
-    "Advanced laser, anti-aging, acne, hair restoration, and skin disease treatments in Kanpur. Dr. Mamta Bhura — MD Dermatology — offers 28+ evidence-based treatments at SKIN@Mantraa, Swaroop Nagar.",
+    "Advanced laser, anti-aging, acne, hair restoration, and skin disease treatments in Kanpur. Dr. Mamta Bhura - MD Dermatology - offers 28+ evidence-based treatments at SKIN@Mantraa, Swaroop Nagar.",
   alternates: { canonical: "https://skinmantraa.in/services" },
   openGraph: {
     title: "Dermatology & Cosmetic Treatments in Kanpur | SKIN@Mantraa",
     description:
-      "Laser hair removal, Botox, acne scar treatment, PRP hair restoration, HIFU, vitiligo phototherapy and more — by Dr. Mamta Bhura, MD Dermatology, Kanpur.",
+      "Laser hair removal, Botox, acne scar treatment, PRP hair restoration, HIFU, vitiligo phototherapy and more - by Dr. Mamta Bhura, MD Dermatology, Kanpur.",
     url: "https://skinmantraa.in/services",
     type: "website",
-    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Treatments at SKIN@Mantraa Kanpur" }],
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Treatments at SKIN@Mantraa Kanpur",
+      },
+    ],
   },
 };
 
 // ─── Service icon SVGs ───────────────────────────────────────────────────────
 const SERVICE_ICONS: Record<string, React.ReactNode> = {
   laser: (
-    <svg width="60" height="60" viewBox="0 0 60 60" fill="none" aria-hidden="true">
-      <circle cx="30" cy="30" r="28" stroke="#C4704E" strokeWidth="1.5" strokeDasharray="4 3" opacity="0.3" />
-      <circle cx="30" cy="30" r="10" fill="none" stroke="#C4704E" strokeWidth="1.5" />
+    <svg
+      width="60"
+      height="60"
+      viewBox="0 0 60 60"
+      fill="none"
+      aria-hidden="true"
+    >
+      <circle
+        cx="30"
+        cy="30"
+        r="28"
+        stroke="#C4704E"
+        strokeWidth="1.5"
+        strokeDasharray="4 3"
+        opacity="0.3"
+      />
+      <circle
+        cx="30"
+        cy="30"
+        r="10"
+        fill="none"
+        stroke="#C4704E"
+        strokeWidth="1.5"
+      />
       <circle cx="30" cy="30" r="3" fill="#C4704E" />
-      <line x1="30" y1="6" x2="30" y2="20" stroke="#C4704E" strokeWidth="1.5" strokeLinecap="round" />
-      <line x1="30" y1="40" x2="30" y2="54" stroke="#C4704E" strokeWidth="1.5" strokeLinecap="round" />
-      <line x1="6" y1="30" x2="20" y2="30" stroke="#C78D6B" strokeWidth="1.5" strokeLinecap="round" />
-      <line x1="40" y1="30" x2="54" y2="30" stroke="#C78D6B" strokeWidth="1.5" strokeLinecap="round" />
-      <line x1="14" y1="14" x2="23" y2="23" stroke="#D4A76A" strokeWidth="1.5" strokeLinecap="round" />
-      <line x1="37" y1="37" x2="46" y2="46" stroke="#D4A76A" strokeWidth="1.5" strokeLinecap="round" />
+      <line
+        x1="30"
+        y1="6"
+        x2="30"
+        y2="20"
+        stroke="#C4704E"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+      />
+      <line
+        x1="30"
+        y1="40"
+        x2="30"
+        y2="54"
+        stroke="#C4704E"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+      />
+      <line
+        x1="6"
+        y1="30"
+        x2="20"
+        y2="30"
+        stroke="#C78D6B"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+      />
+      <line
+        x1="40"
+        y1="30"
+        x2="54"
+        y2="30"
+        stroke="#C78D6B"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+      />
+      <line
+        x1="14"
+        y1="14"
+        x2="23"
+        y2="23"
+        stroke="#D4A76A"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+      />
+      <line
+        x1="37"
+        y1="37"
+        x2="46"
+        y2="46"
+        stroke="#D4A76A"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+      />
     </svg>
   ),
   sparkles: (
-    <svg width="60" height="60" viewBox="0 0 60 60" fill="none" aria-hidden="true">
-      <path d="M30 8L33 22L47 25L33 28L30 42L27 28L13 25L27 22L30 8Z" stroke="#C4704E" strokeWidth="1.5" strokeLinejoin="round" fill="rgba(196,112,78,0.06)" />
-      <path d="M48 10L49.5 16L56 17.5L49.5 19L48 25L46.5 19L40 17.5L46.5 16L48 10Z" stroke="#C78D6B" strokeWidth="1.2" strokeLinejoin="round" fill="none" />
-      <path d="M12 38L13 42L17 43L13 44L12 48L11 44L7 43L11 42L12 38Z" stroke="#D4A76A" strokeWidth="1.2" strokeLinejoin="round" fill="none" />
+    <svg
+      width="60"
+      height="60"
+      viewBox="0 0 60 60"
+      fill="none"
+      aria-hidden="true"
+    >
+      <path
+        d="M30 8L33 22L47 25L33 28L30 42L27 28L13 25L27 22L30 8Z"
+        stroke="#C4704E"
+        strokeWidth="1.5"
+        strokeLinejoin="round"
+        fill="rgba(196,112,78,0.06)"
+      />
+      <path
+        d="M48 10L49.5 16L56 17.5L49.5 19L48 25L46.5 19L40 17.5L46.5 16L48 10Z"
+        stroke="#C78D6B"
+        strokeWidth="1.2"
+        strokeLinejoin="round"
+        fill="none"
+      />
+      <path
+        d="M12 38L13 42L17 43L13 44L12 48L11 44L7 43L11 42L12 38Z"
+        stroke="#D4A76A"
+        strokeWidth="1.2"
+        strokeLinejoin="round"
+        fill="none"
+      />
       <circle cx="30" cy="25" r="2" fill="#C4704E" opacity="0.5" />
     </svg>
   ),
   shield: (
-    <svg width="60" height="60" viewBox="0 0 60 60" fill="none" aria-hidden="true">
-      <path d="M30 8L50 16V30C50 40 41 49 30 52C19 49 10 40 10 30V16L30 8Z" stroke="#C4704E" strokeWidth="1.5" strokeLinejoin="round" fill="rgba(196,112,78,0.05)" />
-      <path d="M22 30L27 35L38 24" stroke="#C4704E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-      <circle cx="30" cy="30" r="6" stroke="#C78D6B" strokeWidth="0.75" strokeDasharray="2 2" opacity="0.5" />
+    <svg
+      width="60"
+      height="60"
+      viewBox="0 0 60 60"
+      fill="none"
+      aria-hidden="true"
+    >
+      <path
+        d="M30 8L50 16V30C50 40 41 49 30 52C19 49 10 40 10 30V16L30 8Z"
+        stroke="#C4704E"
+        strokeWidth="1.5"
+        strokeLinejoin="round"
+        fill="rgba(196,112,78,0.05)"
+      />
+      <path
+        d="M22 30L27 35L38 24"
+        stroke="#C4704E"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <circle
+        cx="30"
+        cy="30"
+        r="6"
+        stroke="#C78D6B"
+        strokeWidth="0.75"
+        strokeDasharray="2 2"
+        opacity="0.5"
+      />
     </svg>
   ),
   hair: (
-    <svg width="60" height="60" viewBox="0 0 60 60" fill="none" aria-hidden="true">
-      <path d="M20 48C20 36 18 28 22 20C25 14 30 12 30 12C30 12 35 14 38 20C42 28 40 36 40 48" stroke="#C4704E" strokeWidth="1.5" strokeLinecap="round" fill="none" />
-      <path d="M24 44C24 36 22 30 25 24C27 20 30 18 30 18" stroke="#C78D6B" strokeWidth="1.2" strokeLinecap="round" fill="none" opacity="0.6" />
-      <path d="M36 44C36 36 38 30 35 24C33 20 30 18 30 18" stroke="#C78D6B" strokeWidth="1.2" strokeLinecap="round" fill="none" opacity="0.6" />
-      <circle cx="30" cy="10" r="4" fill="none" stroke="#D4A76A" strokeWidth="1.2" />
-      <path d="M14 22C16 26 15 32 16 38" stroke="#D4A76A" strokeWidth="1" strokeLinecap="round" opacity="0.4" />
-      <path d="M46 22C44 26 45 32 44 38" stroke="#D4A76A" strokeWidth="1" strokeLinecap="round" opacity="0.4" />
+    <svg
+      width="60"
+      height="60"
+      viewBox="0 0 60 60"
+      fill="none"
+      aria-hidden="true"
+    >
+      <path
+        d="M20 48C20 36 18 28 22 20C25 14 30 12 30 12C30 12 35 14 38 20C42 28 40 36 40 48"
+        stroke="#C4704E"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+        fill="none"
+      />
+      <path
+        d="M24 44C24 36 22 30 25 24C27 20 30 18 30 18"
+        stroke="#C78D6B"
+        strokeWidth="1.2"
+        strokeLinecap="round"
+        fill="none"
+        opacity="0.6"
+      />
+      <path
+        d="M36 44C36 36 38 30 35 24C33 20 30 18 30 18"
+        stroke="#C78D6B"
+        strokeWidth="1.2"
+        strokeLinecap="round"
+        fill="none"
+        opacity="0.6"
+      />
+      <circle
+        cx="30"
+        cy="10"
+        r="4"
+        fill="none"
+        stroke="#D4A76A"
+        strokeWidth="1.2"
+      />
+      <path
+        d="M14 22C16 26 15 32 16 38"
+        stroke="#D4A76A"
+        strokeWidth="1"
+        strokeLinecap="round"
+        opacity="0.4"
+      />
+      <path
+        d="M46 22C44 26 45 32 44 38"
+        stroke="#D4A76A"
+        strokeWidth="1"
+        strokeLinecap="round"
+        opacity="0.4"
+      />
     </svg>
   ),
   medical: (
-    <svg width="60" height="60" viewBox="0 0 60 60" fill="none" aria-hidden="true">
-      <rect x="10" y="10" width="40" height="40" rx="12" stroke="#C4704E" strokeWidth="1.5" fill="rgba(196,112,78,0.04)" />
-      <path d="M30 18V42M18 30H42" stroke="#C4704E" strokeWidth="2" strokeLinecap="round" />
-      <rect x="18" y="22" width="24" height="16" rx="4" stroke="#C78D6B" strokeWidth="0.75" fill="none" opacity="0.4" />
+    <svg
+      width="60"
+      height="60"
+      viewBox="0 0 60 60"
+      fill="none"
+      aria-hidden="true"
+    >
+      <rect
+        x="10"
+        y="10"
+        width="40"
+        height="40"
+        rx="12"
+        stroke="#C4704E"
+        strokeWidth="1.5"
+        fill="rgba(196,112,78,0.04)"
+      />
+      <path
+        d="M30 18V42M18 30H42"
+        stroke="#C4704E"
+        strokeWidth="2"
+        strokeLinecap="round"
+      />
+      <rect
+        x="18"
+        y="22"
+        width="24"
+        height="16"
+        rx="4"
+        stroke="#C78D6B"
+        strokeWidth="0.75"
+        fill="none"
+        opacity="0.4"
+      />
       <circle cx="30" cy="30" r="3" fill="#D4A76A" opacity="0.5" />
     </svg>
   ),
   star: (
-    <svg width="60" height="60" viewBox="0 0 60 60" fill="none" aria-hidden="true">
-      <path d="M30 10L35 24H50L38 32L42 47L30 38L18 47L22 32L10 24H25L30 10Z" stroke="#C4704E" strokeWidth="1.5" strokeLinejoin="round" fill="rgba(196,112,78,0.06)" />
-      <circle cx="30" cy="30" r="5" fill="none" stroke="#C78D6B" strokeWidth="1" strokeDasharray="2 2" />
+    <svg
+      width="60"
+      height="60"
+      viewBox="0 0 60 60"
+      fill="none"
+      aria-hidden="true"
+    >
+      <path
+        d="M30 10L35 24H50L38 32L42 47L30 38L18 47L22 32L10 24H25L30 10Z"
+        stroke="#C4704E"
+        strokeWidth="1.5"
+        strokeLinejoin="round"
+        fill="rgba(196,112,78,0.06)"
+      />
+      <circle
+        cx="30"
+        cy="30"
+        r="5"
+        fill="none"
+        stroke="#C78D6B"
+        strokeWidth="1"
+        strokeDasharray="2 2"
+      />
       <circle cx="30" cy="30" r="2" fill="#D4A76A" opacity="0.6" />
     </svg>
   ),
@@ -92,13 +313,23 @@ const SERVICE_GRADIENTS = [
 ];
 
 // ─── Decorative pattern for gradient panel ───────────────────────────────────
-function DecorativePanel({ gradient, icon, title, image }: { gradient: string; icon: React.ReactNode; title: string; image?: string }) {
+function DecorativePanel({
+  gradient,
+  icon,
+  title,
+  image,
+}: {
+  gradient: string;
+  icon: React.ReactNode;
+  title: string;
+  image?: string;
+}) {
   if (image) {
     return (
       <div className="w-full h-full min-h-[280px] sm:min-h-[340px] lg:min-h-[420px] rounded-3xl relative overflow-hidden group">
         <Image
           src={image}
-          alt={`${title} — SKIN@Mantraa treatment`}
+          alt={`${title} - SKIN@Mantraa treatment`}
           fill
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 600px"
           className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
@@ -111,7 +342,8 @@ function DecorativePanel({ gradient, icon, title, image }: { gradient: string; i
         <div
           className="absolute inset-0 pointer-events-none transition-opacity duration-500 group-hover:opacity-70"
           style={{
-            background: "linear-gradient(to top, rgba(44,24,16,0.55) 0%, rgba(44,24,16,0.15) 40%, transparent 100%)",
+            background:
+              "linear-gradient(to top, rgba(44,24,16,0.55) 0%, rgba(44,24,16,0.15) 40%, transparent 100%)",
             opacity: 0.85,
           }}
         />
@@ -144,7 +376,8 @@ function DecorativePanel({ gradient, icon, title, image }: { gradient: string; i
       <div
         className="absolute inset-0 opacity-30"
         style={{
-          background: "radial-gradient(circle at 50% 50%, rgba(199,141,107,0.15) 0%, transparent 70%)",
+          background:
+            "radial-gradient(circle at 50% 50%, rgba(199,141,107,0.15) 0%, transparent 70%)",
         }}
       />
       {/* Concentric circles decoration */}
@@ -199,13 +432,13 @@ const PROCESS_STEPS = [
     number: "02",
     title: "Skin Assessment",
     description:
-      "Dr. Bhura conducts a thorough evaluation of your skin type, medical history, and concerns — using clinical expertise to form an accurate diagnosis.",
+      "Dr. Bhura conducts a thorough evaluation of your skin type, medical history, and concerns - using clinical expertise to form an accurate diagnosis.",
   },
   {
     number: "03",
     title: "Personalised Treatment Plan",
     description:
-      "Receive a tailored treatment plan designed specifically for your skin's needs — with honest timelines, realistic expectations, and no unnecessary upselling.",
+      "Receive a tailored treatment plan designed specifically for your skin's needs - with honest timelines, realistic expectations, and no unnecessary upselling.",
   },
   {
     number: "04",
@@ -235,7 +468,8 @@ export default function ServicesPage() {
           <div
             className="absolute top-16 right-16 w-96 h-96 rounded-full pointer-events-none"
             style={{
-              background: "radial-gradient(circle, #C78D6B 0%, transparent 70%)",
+              background:
+                "radial-gradient(circle, #C78D6B 0%, transparent 70%)",
               filter: "blur(70px)",
               opacity: 0.2,
             }}
@@ -243,7 +477,8 @@ export default function ServicesPage() {
           <div
             className="absolute bottom-0 left-0 w-72 h-72 rounded-full pointer-events-none"
             style={{
-              background: "radial-gradient(circle, #C4704E 0%, transparent 70%)",
+              background:
+                "radial-gradient(circle, #C4704E 0%, transparent 70%)",
               filter: "blur(60px)",
               opacity: 0.15,
             }}
@@ -319,7 +554,7 @@ export default function ServicesPage() {
                   maxWidth: "600px",
                 }}
               >
-                At SKIN@Mantraa, every treatment is chosen with purpose — not
+                At SKIN@Mantraa, every treatment is chosen with purpose - not
                 trend. From medical dermatology to advanced cosmetic procedures,
                 we offer a carefully curated range of evidence-based solutions
                 designed for Indian skin, guided by clinical judgment, and
@@ -362,7 +597,10 @@ export default function ServicesPage() {
                         </span>
                         <div
                           className="h-px flex-1"
-                          style={{ background: "rgba(199,141,107,0.2)", maxWidth: "48px" }}
+                          style={{
+                            background: "rgba(199,141,107,0.2)",
+                            maxWidth: "48px",
+                          }}
                         />
                         {service.featured && (
                           <span
@@ -373,7 +611,8 @@ export default function ServicesPage() {
                               letterSpacing: "0.1em",
                               textTransform: "uppercase",
                               color: "white",
-                              background: "linear-gradient(135deg, #C4704E 0%, #C78D6B 100%)",
+                              background:
+                                "linear-gradient(135deg, #C4704E 0%, #C78D6B 100%)",
                             }}
                           >
                             Featured
@@ -465,7 +704,9 @@ export default function ServicesPage() {
                     </div>
 
                     {/* Decorative panel */}
-                    <div className={isEven ? "lg:col-start-1 lg:row-start-1" : ""}>
+                    <div
+                      className={isEven ? "lg:col-start-1 lg:row-start-1" : ""}
+                    >
                       <DecorativePanel
                         gradient={SERVICE_GRADIENTS[idx]}
                         icon={SERVICE_ICONS[service.icon]}
@@ -483,10 +724,7 @@ export default function ServicesPage() {
         {/* ══════════════════════════════════════════════════
             3. PROCESS SECTION
         ══════════════════════════════════════════════════ */}
-        <section
-          className="py-24 lg:py-32"
-          style={{ background: "#F5E6D3" }}
-        >
+        <section className="py-24 lg:py-32" style={{ background: "#F5E6D3" }}>
           <div className="max-w-7xl mx-auto px-6 lg:px-8">
             <div className="mb-16">
               <p
@@ -608,7 +846,7 @@ export default function ServicesPage() {
         </section>
 
         {/* ══════════════════════════════════════════════════
-            4. FAQ — client component (accordion)
+            4. FAQ - client component (accordion)
         ══════════════════════════════════════════════════ */}
         <Suspense fallback={<div className="py-24" />}>
           <ServicesClient />
@@ -624,14 +862,16 @@ export default function ServicesPage() {
           <div
             className="absolute top-0 right-0 w-96 h-96 rounded-full opacity-10 pointer-events-none"
             style={{
-              background: "radial-gradient(circle, #D4A76A 0%, transparent 70%)",
+              background:
+                "radial-gradient(circle, #D4A76A 0%, transparent 70%)",
               filter: "blur(80px)",
             }}
           />
           <div
             className="absolute bottom-0 left-0 w-72 h-72 rounded-full opacity-10 pointer-events-none"
             style={{
-              background: "radial-gradient(circle, #C4704E 0%, transparent 70%)",
+              background:
+                "radial-gradient(circle, #C4704E 0%, transparent 70%)",
               filter: "blur(60px)",
             }}
           />
@@ -714,7 +954,13 @@ export default function ServicesPage() {
                 }}
               >
                 {BRAND.clinic.phoneDisplay}
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" aria-hidden="true">
+                <svg
+                  width="14"
+                  height="14"
+                  viewBox="0 0 14 14"
+                  fill="none"
+                  aria-hidden="true"
+                >
                   <path
                     d="M2 2.5C2 2.5 3.5 1 4.5 1C5.5 1 6 2 6.5 3C7 4 7.5 4.5 7 5C6.5 5.5 6 5.5 6.5 6.5C7 7.5 7.5 8 8.5 9C9.5 10 10 10.5 11 9.5C12 8.5 12 8 12.5 9C13 10 13.5 11 12 12C10.5 13 9 13 7 11C5 9 2 6 2 2.5Z"
                     stroke="currentColor"

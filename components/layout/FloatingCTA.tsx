@@ -54,7 +54,7 @@ export default function FloatingCTA() {
     };
   }, []);
 
-  // Hide on /contact on mobile — avoid competing with booking form submit
+  // Hide on /contact on mobile - avoid competing with booking form submit
   const isContactPage = pathname === "/contact";
   if (isContactPage && isMobile) return null;
 

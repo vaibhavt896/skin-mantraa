@@ -54,7 +54,7 @@ const FAQ_SCHEMA = {
       name: "Is Dr. Mamta Bhura experienced with Indian skin types?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. With 26 years of practice in Kanpur, Dr. Mamta Bhura specialises in treating Fitzpatrick Type III–V Indian skin. She customises all treatment protocols — including laser settings, chemical peel formulations, and energy-based therapies — for Indian skin to minimise pigmentation risk and maximise results.",
+        text: "Yes. With 26 years of practice in Kanpur, Dr. Mamta Bhura specialises in treating Fitzpatrick Type III–V Indian skin. She customises all treatment protocols - including laser settings, chemical peel formulations, and energy-based therapies - for Indian skin to minimise pigmentation risk and maximise results.",
       },
     },
     {
@@ -225,9 +225,15 @@ export default function HomepageFAQ() {
               marginBottom: "1rem",
             }}
           >
-            <span aria-hidden="true" style={{ width: "24px", height: "1px", background: "#C78D6B" }} />
+            <span
+              aria-hidden="true"
+              style={{ width: "24px", height: "1px", background: "#C78D6B" }}
+            />
             Common Questions
-            <span aria-hidden="true" style={{ width: "24px", height: "1px", background: "#C78D6B" }} />
+            <span
+              aria-hidden="true"
+              style={{ width: "24px", height: "1px", background: "#C78D6B" }}
+            />
           </motion.span>
 
           <motion.h2

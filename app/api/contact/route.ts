@@ -5,7 +5,7 @@ export async function POST(req: NextRequest) {
     const body = await req.json();
     const { name, phone, email, concern, message, website } = body;
 
-    // Honeypot check — bots fill the `website` field
+    // Honeypot check - bots fill the `website` field
     if (website) {
       return NextResponse.json({ ok: true }); // silently reject
     }
@@ -14,7 +14,7 @@ export async function POST(req: NextRequest) {
     if (!name || !phone || !concern) {
       return NextResponse.json(
         { error: "Name, phone and concern are required." },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -33,12 +33,15 @@ export async function POST(req: NextRequest) {
     // const resend = new Resend(process.env.RESEND_API_KEY);
     // await resend.emails.send({ ... });
 
-    return NextResponse.json({ ok: true, message: "Appointment request received." });
+    return NextResponse.json({
+      ok: true,
+      message: "Appointment request received.",
+    });
   } catch (err) {
     console.error("[Contact API Error]", err);
     return NextResponse.json(
       { error: "Something went wrong. Please try again." },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

@@ -37,7 +37,7 @@
 
   <!-- Doctor name -->
   <text x="108" y="370" font-family="Georgia, serif" font-size="32" font-weight="600" fill="#3D2B1F">Dr. Mamta Bhura</text>
-  <text x="108" y="405" font-family="Arial, sans-serif" font-size="16" fill="#5C4033" letter-spacing="1">MBBS, MD Dermatology — BHU · 26+ Years Experience</text>
+  <text x="108" y="405" font-family="Arial, sans-serif" font-size="16" fill="#5C4033" letter-spacing="1">MBBS, MD Dermatology - BHU · 26+ Years Experience</text>
 
   <!-- Stats row -->
   <g transform="translate(108, 450)">

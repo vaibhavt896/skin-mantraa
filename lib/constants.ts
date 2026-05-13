@@ -10,7 +10,7 @@ export const BRAND = {
     patients: "451+",
     specialization: "Dermatologist & Cosmetologist",
     memberships: ["IMA", "IADVL", "CDSI"],
-    bio: "Trained at one of India's most prestigious medical institutions — the Institute of Medical Sciences, BHU — Dr. Mamta Bhura brings 26+ years of clinical expertise to every patient she treats. Her approach combines cutting-edge cosmetic technology with genuine care for long-term skin health.",
+    bio: "Trained at one of India's most prestigious medical institutions - the Institute of Medical Sciences, BHU - Dr. Mamta Bhura brings 26+ years of clinical expertise to every patient she treats. Her approach combines cutting-edge cosmetic technology with genuine care for long-term skin health.",
     shortBio:
       "IMS BHU Trained. 26 years of transforming skin in Kanpur. Honest diagnoses, real results.",
   },
@@ -35,8 +35,10 @@ export const SERVICES = [
   {
     id: "laser-treatments",
     title: "Advanced Laser Treatments",
-    shortDesc: "Precise laser solutions for hair reduction, pigmentation, tattoo removal, and skin resurfacing.",
-    longDesc: "When skin concerns need precision, laser-based treatments offer control, consistency, and visible improvement. This category includes advanced systems for unwanted hair, melasma, freckles, post-acne marks, sun damage, enlarged pores, and tattoo removal. Depending on your concern, we select the right laser modality to target the problem while protecting surrounding skin — especially important for Indian skin tones.",
+    shortDesc:
+      "Precise laser solutions for hair reduction, pigmentation, tattoo removal, and skin resurfacing.",
+    longDesc:
+      "When skin concerns need precision, laser-based treatments offer control, consistency, and visible improvement. This category includes advanced systems for unwanted hair, melasma, freckles, post-acne marks, sun damage, enlarged pores, and tattoo removal. Depending on your concern, we select the right laser modality to target the problem while protecting surrounding skin - especially important for Indian skin tones.",
     icon: "laser",
     color: "from-brand-blush to-brand-champagne",
     featured: true,
@@ -49,15 +51,17 @@ export const SERVICES = [
       "Q-Switch Laser",
       "Fractional CO2",
       "Carbon Laser Peel",
-      "RevLite"
+      "RevLite",
     ],
-    ctaText: "Explore Laser Treatments"
+    ctaText: "Explore Laser Treatments",
   },
   {
     id: "anti-aging",
     title: "Anti-Aging & Rejuvenation",
-    shortDesc: "Restore firmness, hydration, glow, and definition with treatments that look natural — never overdone.",
-    longDesc: "Our anti-aging treatments are designed to soften lines, improve texture, support collagen, and bring back a fresher look without changing what makes your face yours. Whether you want subtle wrinkle softening, deeper skin hydration, lifted contours, or regenerative skin support, we build the plan around your age, skin condition, and aesthetic goals.",
+    shortDesc:
+      "Restore firmness, hydration, glow, and definition with treatments that look natural - never overdone.",
+    longDesc:
+      "Our anti-aging treatments are designed to soften lines, improve texture, support collagen, and bring back a fresher look without changing what makes your face yours. Whether you want subtle wrinkle softening, deeper skin hydration, lifted contours, or regenerative skin support, we build the plan around your age, skin condition, and aesthetic goals.",
     icon: "sparkles",
     color: "from-brand-champagne to-brand-cream",
     featured: false,
@@ -74,15 +78,17 @@ export const SERVICES = [
       "PRP for Face",
       "Exosomes",
       "PDRN",
-      "Sculptra"
+      "Sculptra",
     ],
-    ctaText: "Explore Anti-Aging"
+    ctaText: "Explore Anti-Aging",
   },
   {
     id: "acne-scars",
     title: "Acne, Scars & Pores",
-    shortDesc: "Target active acne, post-acne marks, rough texture, and visible pores with customized corrective care.",
-    longDesc: "Acne leaves more than breakouts behind — it often leaves redness, marks, scars, and uneven texture that can affect confidence long after the acne is gone. This section focuses on controlled, step-by-step improvement using treatments that help clear congestion, smooth scars, and refine skin texture over time.",
+    shortDesc:
+      "Target active acne, post-acne marks, rough texture, and visible pores with customized corrective care.",
+    longDesc:
+      "Acne leaves more than breakouts behind - it often leaves redness, marks, scars, and uneven texture that can affect confidence long after the acne is gone. This section focuses on controlled, step-by-step improvement using treatments that help clear congestion, smooth scars, and refine skin texture over time.",
     icon: "shield",
     color: "from-brand-cream to-brand-blush",
     featured: false,
@@ -93,39 +99,56 @@ export const SERVICES = [
       "Microdermabrasion",
       "Dermaroller",
       "Subcision",
-      "TCA CROSS"
+      "TCA CROSS",
     ],
-    ctaText: "Explore Acne & Scar Solutions"
+    ctaText: "Explore Acne & Scar Solutions",
   },
   {
     id: "hair-restoration",
     title: "Hair Restoration",
-    shortDesc: "Doctor-led solutions for thinning hair, early hair fall, and scalp rejuvenation.",
-    longDesc: "Hair loss is rarely just cosmetic — it is often emotional, frustrating, and deeply personal. Our hair restoration treatments are selected to support weaker follicles, improve scalp health, and encourage better hair density where possible. We focus on realistic expectations, proper diagnosis, and a treatment plan that matches the pattern and cause of hair loss.",
+    shortDesc:
+      "Doctor-led solutions for thinning hair, early hair fall, and scalp rejuvenation.",
+    longDesc:
+      "Hair loss is rarely just cosmetic - it is often emotional, frustrating, and deeply personal. Our hair restoration treatments are selected to support weaker follicles, improve scalp health, and encourage better hair density where possible. We focus on realistic expectations, proper diagnosis, and a treatment plan that matches the pattern and cause of hair loss.",
     icon: "hair",
     color: "from-brand-blush to-brand-champagne",
     featured: false,
     image: "/optimized/Hair%20Restoration.webp",
-    treatments: ["PRP Therapy", "Mesotherapy for Hair", "GFC Treatment", "Scalp Rejuvenation"],
-    ctaText: "Explore Hair Restoration"
+    treatments: [
+      "PRP Therapy",
+      "Mesotherapy for Hair",
+      "GFC Treatment",
+      "Scalp Rejuvenation",
+    ],
+    ctaText: "Explore Hair Restoration",
   },
   {
     id: "skin-conditions",
     title: "Skin Disease Treatment",
-    shortDesc: "Medical dermatology for chronic, recurring, and everyday skin concerns.",
-    longDesc: "This section brings clinical dermatology to the forefront. For skin conditions that are recurring, uncomfortable, or difficult to manage on your own, our approach begins with accurate diagnosis and continues with a treatment plan that is practical, safe, and medically sound.",
+    shortDesc:
+      "Medical dermatology for chronic, recurring, and everyday skin concerns.",
+    longDesc:
+      "This section brings clinical dermatology to the forefront. For skin conditions that are recurring, uncomfortable, or difficult to manage on your own, our approach begins with accurate diagnosis and continues with a treatment plan that is practical, safe, and medically sound.",
     icon: "medical",
     color: "from-brand-champagne to-brand-cream",
     featured: false,
     image: "/optimized/Skin%20Disease%20Treatment.webp",
-    treatments: ["Eczema", "Vitiligo", "Psoriasis", "Fungal Infections", "Allergic Dermatitis"],
-    ctaText: "Explore Skin Conditions"
+    treatments: [
+      "Eczema",
+      "Vitiligo",
+      "Psoriasis",
+      "Fungal Infections",
+      "Allergic Dermatitis",
+    ],
+    ctaText: "Explore Skin Conditions",
   },
   {
     id: "cosmetic",
     title: "Cosmetic Enhancements",
-    shortDesc: "Refine pigmentation, fade sun damage, improve tone, and restore a brighter, clearer complexion.",
-    longDesc: "Some concerns are not disease — they are refinement. This category is built for patients who want to even out skin tone, reduce visible pigmentation, soften stubborn spots, and improve overall complexion quality. The goal is not to bleach or over-treat the skin, but to make it look clearer, healthier, and more balanced.",
+    shortDesc:
+      "Refine pigmentation, fade sun damage, improve tone, and restore a brighter, clearer complexion.",
+    longDesc:
+      "Some concerns are not disease - they are refinement. This category is built for patients who want to even out skin tone, reduce visible pigmentation, soften stubborn spots, and improve overall complexion quality. The goal is not to bleach or over-treat the skin, but to make it look clearer, healthier, and more balanced.",
     icon: "star",
     color: "from-brand-cream to-brand-champagne",
     featured: false,
@@ -136,9 +159,9 @@ export const SERVICES = [
       "Melasma Treatment",
       "Sun Damage Reversal",
       "Skin Brightening",
-      "Freckles and Lentigines Treatment"
+      "Freckles and Lentigines Treatment",
     ],
-    ctaText: "Explore Cosmetic Enhancements"
+    ctaText: "Explore Cosmetic Enhancements",
   },
 ];
 
@@ -159,7 +182,7 @@ export const TESTIMONIALS = [
     treatment: "Acne Treatment",
     rating: 5,
     quote:
-      "After struggling with acne for years, Dr. Bhura gave me clear skin in 3 months. She honestly tells you what can and cannot be treated — that trust is rare.",
+      "After struggling with acne for years, Dr. Bhura gave me clear skin in 3 months. She honestly tells you what can and cannot be treated - that trust is rare.",
     source: "Google",
     featured: false,
   },
@@ -169,7 +192,7 @@ export const TESTIMONIALS = [
     treatment: "Anti-Aging",
     rating: 5,
     quote:
-      "The results from my fillers look completely natural. Everyone asks if I've been on vacation — not that I've had any procedure done. That's the mark of a true expert.",
+      "The results from my fillers look completely natural. Everyone asks if I've been on vacation - not that I've had any procedure done. That's the mark of a true expert.",
     source: "Practo",
     featured: false,
   },

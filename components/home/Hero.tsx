@@ -7,13 +7,13 @@ import { useEffect, useState } from "react";
 import { BRAND, TRUST_STATS } from "@/lib/constants";
 import { staggerContainer, heroTextReveal } from "@/lib/animations";
 
-// ---------- Looping typewriter — cycles through phrases ----------
+// ---------- Looping typewriter - cycles through phrases ----------
 const TYPEWRITER_PHRASES = ["a Specialist.", "Flawless Skin.", "Expert Care."];
 
-const TYPE_SPEED   = 72;   // ms per char typed
-const DELETE_SPEED = 38;   // ms per char deleted (faster = snappier backspace)
-const HOLD_MS      = 1800; // pause after fully typed before deleting
-const PAUSE_MS     = 420;  // pause after fully deleted before next phrase
+const TYPE_SPEED = 72; // ms per char typed
+const DELETE_SPEED = 38; // ms per char deleted (faster = snappier backspace)
+const HOLD_MS = 1800; // pause after fully typed before deleting
+const PAUSE_MS = 420; // pause after fully deleted before next phrase
 
 function TypewriterText({ startDelay = 1.6 }: { startDelay?: number }) {
   const [displayed, setDisplayed] = useState("");
@@ -42,9 +42,10 @@ function TypewriterText({ startDelay = 1.6 }: { startDelay?: number }) {
       setStarted(true);
 
       while (!cancelled) {
-        const phrase = TYPEWRITER_PHRASES[phraseIdx % TYPEWRITER_PHRASES.length];
+        const phrase =
+          TYPEWRITER_PHRASES[phraseIdx % TYPEWRITER_PHRASES.length];
 
-        // — Type forward —
+        // - Type forward -
         for (let i = 1; i <= phrase.length; i++) {
           if (cancelled) return;
           setDisplayed(phrase.slice(0, i));
@@ -53,7 +54,7 @@ function TypewriterText({ startDelay = 1.6 }: { startDelay?: number }) {
 
         await sleep(HOLD_MS);
 
-        // — Delete backward —
+        // - Delete backward -
         for (let i = phrase.length - 1; i >= 0; i--) {
           if (cancelled) return;
           setDisplayed(phrase.slice(0, i));
@@ -66,16 +67,18 @@ function TypewriterText({ startDelay = 1.6 }: { startDelay?: number }) {
     }
 
     run();
-    return () => { cancelled = true; };
+    return () => {
+      cancelled = true;
+    };
   }, [startDelay]);
 
   return (
     <em
       className="text-gradient"
-      style={{ 
-        fontStyle: "italic", 
-        fontWeight: 700, 
-        whiteSpace: "normal" // Changed from nowrap to normal for mobile wrap
+      style={{
+        fontStyle: "italic",
+        fontWeight: 700,
+        whiteSpace: "normal", // Changed from nowrap to normal for mobile wrap
       }}
     >
       {displayed}
@@ -129,8 +132,8 @@ export default function Hero() {
           preload="metadata"
           poster="/optimized/healthy-skin-poster.webp"
           className="hidden w-full h-full object-cover lg:block"
-          style={{ 
-            filter: "brightness(1.02) saturate(0.95)"
+          style={{
+            filter: "brightness(1.02) saturate(0.95)",
           }}
         >
           <source src="/optimized/healthy-skin-hero.webm" type="video/webm" />
@@ -139,29 +142,35 @@ export default function Hero() {
       </div>
 
       {/* ── Subtle light-bleed overlay ── */}
-      <div 
+      <div
         className="absolute inset-0 z-1 pointer-events-none"
-        style={{ 
-          background: "radial-gradient(circle at 20% 50%, rgba(253, 246, 236, 0.8) 0%, transparent 60%)"
+        style={{
+          background:
+            "radial-gradient(circle at 20% 50%, rgba(253, 246, 236, 0.8) 0%, transparent 60%)",
         }}
       />
 
       {/* ── Main content ── */}
-        <div
-          style={{
-            position: "relative",
-            zIndex: 10,
-            width: "100%",
-            maxWidth: "1440px",
-            margin: "0 auto",
-            padding: "clamp(4rem, 12vh, 7rem) clamp(1rem, 5vw, 6rem)", // Reduced horizontal padding for mobile
-          }}
-        >
+      <div
+        style={{
+          position: "relative",
+          zIndex: 10,
+          width: "100%",
+          maxWidth: "1440px",
+          margin: "0 auto",
+          padding: "clamp(4rem, 12vh, 7rem) clamp(1rem, 5vw, 6rem)", // Reduced horizontal padding for mobile
+        }}
+      >
         <motion.div
           variants={staggerContainer}
           initial="hidden"
           animate="visible"
-          style={{ display: "flex", flexDirection: "column", gap: "1.75rem", maxWidth: "800px" }}
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            gap: "1.75rem",
+            maxWidth: "800px",
+          }}
         >
           {/* 1. Label badge */}
           <motion.div custom={0} variants={heroTextReveal}>
@@ -184,7 +193,7 @@ export default function Hero() {
                 textTransform: "uppercase" as const,
                 color: "#3D2B1F",
                 boxShadow: "0 4px 24px rgba(0,0,0,0.08)",
-                maxWidth: "100%"
+                maxWidth: "100%",
               }}
             >
               <span
@@ -192,7 +201,8 @@ export default function Hero() {
                   width: "24px", // Slightly smaller icon on small screens
                   height: "24px",
                   borderRadius: "50%",
-                  background: "linear-gradient(135deg, #C4704E 0%, #D4A76A 100%)",
+                  background:
+                    "linear-gradient(135deg, #C4704E 0%, #D4A76A 100%)",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
@@ -200,7 +210,10 @@ export default function Hero() {
                 }}
               >
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
-                  <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.3L12 17l-6.2 4.2 2.4-7.3L2 9.4h7.6L12 2z" fill="white" />
+                  <path
+                    d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.3L12 17l-6.2 4.2 2.4-7.3L2 9.4h7.6L12 2z"
+                    fill="white"
+                  />
                 </svg>
               </span>
               <span className="truncate sm:whitespace-normal">
@@ -210,8 +223,8 @@ export default function Hero() {
           </motion.div>
 
           {/* 2. Main headline */}
-          <motion.div 
-            custom={1} 
+          <motion.div
+            custom={1}
             variants={heroTextReveal}
             style={{ maxWidth: "650px" }} // Constrain text width
           >
@@ -229,7 +242,10 @@ export default function Hero() {
             >
               Your Skin Deserves
               <br className="hidden sm:block" />
-              <span className="sm:inline-block"> <TypewriterText /></span>
+              <span className="sm:inline-block">
+                {" "}
+                <TypewriterText />
+              </span>
             </h1>
           </motion.div>
 
@@ -248,7 +264,9 @@ export default function Hero() {
             }}
           >
             {BRAND.doctor.name}
-            {" — Experience expert dermatological care designed for Indian skin. 26 years of excellence in Kanpur."}
+            {
+              " - Experience expert dermatological care designed for Indian skin. 26 years of excellence in Kanpur."
+            }
           </motion.p>
 
           {/* 4. CTA Buttons */}
@@ -263,21 +281,31 @@ export default function Hero() {
               marginTop: "0.5rem",
             }}
           >
-            <Link href="/contact" className="btn-primary" style={{ padding: "1rem 2.25rem" }}>
+            <Link
+              href="/contact"
+              className="btn-primary"
+              style={{ padding: "1rem 2.25rem" }}
+            >
               Book Appointment
               <svg width="18" height="18" viewBox="0 0 16 16" fill="none">
-                <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                <path
+                  d="M3 8h10M9 4l4 4-4 4"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
               </svg>
             </Link>
-            <Link 
-              href="/services" 
+            <Link
+              href="/services"
               className="btn-ghost"
-              style={{ 
+              style={{
                 padding: "1rem 2.25rem",
                 background: "rgba(253, 246, 236, 0.2)",
                 backdropFilter: "blur(8px)",
                 WebkitBackdropFilter: "blur(8px)",
-                border: "1.5px solid rgba(199, 141, 107, 0.3)"
+                border: "1.5px solid rgba(199, 141, 107, 0.3)",
               }}
             >
               Explore Treatments
@@ -301,18 +329,35 @@ export default function Hero() {
               `${TRUST_STATS[0].value}${TRUST_STATS[0].suffix} Years`,
               "IMS BHU Trained",
             ].map((item, i, arr) => (
-              <span key={item} style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
-                <span style={{
-                  fontFamily: "var(--font-accent)",
-                  fontSize: "0.85rem",
-                  fontWeight: 600,
-                  color: "#3D2B1F",
-                  letterSpacing: "0.05em",
-                }}>
+              <span
+                key={item}
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "0.75rem",
+                }}
+              >
+                <span
+                  style={{
+                    fontFamily: "var(--font-accent)",
+                    fontSize: "0.85rem",
+                    fontWeight: 600,
+                    color: "#3D2B1F",
+                    letterSpacing: "0.05em",
+                  }}
+                >
                   {item}
                 </span>
                 {i < arr.length - 1 && (
-                  <span style={{ width: "4px", height: "4px", borderRadius: "50%", background: "#C78D6B", opacity: 0.6 }} />
+                  <span
+                    style={{
+                      width: "4px",
+                      height: "4px",
+                      borderRadius: "50%",
+                      background: "#C78D6B",
+                      opacity: 0.6,
+                    }}
+                  />
                 )}
               </span>
             ))}
@@ -336,19 +381,30 @@ export default function Hero() {
           textDecoration: "none",
         }}
       >
-        <span style={{
-          fontFamily: "var(--font-accent)",
-          fontSize: "0.75rem",
-          letterSpacing: "0.15em",
-          textTransform: "uppercase" as const,
-          color: "#3D2B1F",
-          fontWeight: 600,
-        }}>
+        <span
+          style={{
+            fontFamily: "var(--font-accent)",
+            fontSize: "0.75rem",
+            letterSpacing: "0.15em",
+            textTransform: "uppercase" as const,
+            color: "#3D2B1F",
+            fontWeight: 600,
+          }}
+        >
           Explore
         </span>
-        <motion.div animate={{ y: [0, 8, 0] }} transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}>
+        <motion.div
+          animate={{ y: [0, 8, 0] }}
+          transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+        >
           <svg width="24" height="24" viewBox="0 0 20 20" fill="none">
-            <path d="M5 8l5 5 5-5" stroke="#3D2B1F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+            <path
+              d="M5 8l5 5 5-5"
+              stroke="#3D2B1F"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
           </svg>
         </motion.div>
       </Link>

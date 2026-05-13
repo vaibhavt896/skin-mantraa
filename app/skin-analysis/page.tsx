@@ -5,11 +5,11 @@ import FloatingCTA from "@/components/layout/FloatingCTA";
 import SkinAnalysisTool from "@/components/skin-analysis/SkinAnalysisTool";
 
 export const metadata: Metadata = {
-  title: "Smart Skin Analysis | Free Online Skin Assessment — SKIN@Mantraa",
+  title: "Smart Skin Analysis | Free Online Skin Assessment - SKIN@Mantraa",
   description:
     "Get a free, evidence-based preliminary skin assessment in under 3 minutes. Identify early signs of acne, pigmentation, hair loss, aging and more. By Dr. Mamta Bhura, Kanpur.",
   openGraph: {
-    title: "Free Smart Skin Analysis — SKIN@Mantraa",
+    title: "Free Smart Skin Analysis - SKIN@Mantraa",
     description:
       "Answer a few clinically-informed questions and get personalised skin insights instantly. 100% free and private.",
   },

@@ -1,4 +1,4 @@
-# SKIN@Mantraa — Dermatology Clinic Website
+# SKIN@Mantraa - Dermatology Clinic Website
 
 > **Live production website for Dr. Mamta Bhura's dermatology clinic in Kanpur, India.**  
 > Built with Next.js 16 App Router, TypeScript, Tailwind CSS 4, and Framer Motion.
@@ -7,7 +7,7 @@
 
 ## Overview
 
-SKIN@Mantraa is a full-featured, SEO-optimised clinic website for a specialist dermatologist with 26+ years of experience. The project demonstrates a production-grade frontend architecture: performance-focused rendering strategy, schema-validated forms, an interactive multi-step diagnostic tool, and a polished luxury design system — all without a UI kit.
+SKIN@Mantraa is a full-featured, SEO-optimised clinic website for a specialist dermatologist with 26+ years of experience. The project demonstrates a production-grade frontend architecture: performance-focused rendering strategy, schema-validated forms, an interactive multi-step diagnostic tool, and a polished luxury design system - all without a UI kit.
 
 **Live site:** [skinmantraa](https://skin-mantraa.vercel.app/)
 
@@ -15,16 +15,16 @@ SKIN@Mantraa is a full-featured, SEO-optimised clinic website for a specialist d
 
 ## Tech Stack
 
-| Layer | Technology |
-|---|---|
-| Framework | Next.js 16.2 (App Router) |
-| Language | TypeScript 5 |
-| Styling | Tailwind CSS 4 + custom design tokens |
-| Animations | Framer Motion 12 |
-| Forms | React Hook Form 7 + Zod 4 |
-| Icons | Lucide React |
-| Compiler | React Compiler (Babel plugin) |
-| Linting | ESLint 9 (flat config) |
+| Layer      | Technology                            |
+| ---------- | ------------------------------------- |
+| Framework  | Next.js 16.2 (App Router)             |
+| Language   | TypeScript 5                          |
+| Styling    | Tailwind CSS 4 + custom design tokens |
+| Animations | Framer Motion 12                      |
+| Forms      | React Hook Form 7 + Zod 4             |
+| Icons      | Lucide React                          |
+| Compiler   | React Compiler (Babel plugin)         |
+| Linting    | ESLint 9 (flat config)                |
 
 ---
 
@@ -34,36 +34,36 @@ SKIN@Mantraa is a full-featured, SEO-optimised clinic website for a specialist d
 
 **Core**
 
-| Route | Description |
-|---|---|
-| `/` | Landing page — hero, trust bar, doctor intro, services, testimonials, FAQ, location CTA |
-| `/about` | Doctor biography, career timeline (1998–present), credentials, memberships |
-| `/services` | 6 service categories with treatments, process workflow, and FAQ accordion |
-| `/services/[id]` | Deep service pages — description, who it's for, candidate criteria, 4-step process, expected results, 6 FAQs + FAQPage schema |
-| `/contact` | Booking form with Zod validation, clinic info, embedded Google Maps |
-| `/skin-analysis` | Interactive 6-step skin analysis tool |
-| `/results` | Before/after transformation gallery with category filters |
-| `/skin-guide` | Educational dermatology article hub with category filtering |
+| Route            | Description                                                                                                                   |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| `/`              | Landing page - hero, trust bar, doctor intro, services, testimonials, FAQ, location CTA                                       |
+| `/about`         | Doctor biography, career timeline (1998–present), credentials, memberships                                                    |
+| `/services`      | 6 service categories with treatments, process workflow, and FAQ accordion                                                     |
+| `/services/[id]` | Deep service pages - description, who it's for, candidate criteria, 4-step process, expected results, 6 FAQs + FAQPage schema |
+| `/contact`       | Booking form with Zod validation, clinic info, embedded Google Maps                                                           |
+| `/skin-analysis` | Interactive 6-step skin analysis tool                                                                                         |
+| `/results`       | Before/after transformation gallery with category filters                                                                     |
+| `/skin-guide`    | Educational dermatology article hub with category filtering                                                                   |
 
 **SEO Landing Pages** (geo-targeted, 1,000+ words each)
 
-| Route | Target Keywords |
-|---|---|
-| `/dermatologist-kanpur` | "best dermatologist in Kanpur", "female dermatologist Kanpur" |
+| Route                            | Target Keywords                                                     |
+| -------------------------------- | ------------------------------------------------------------------- |
+| `/dermatologist-kanpur`          | "best dermatologist in Kanpur", "female dermatologist Kanpur"       |
 | `/skin-specialist-swaroop-nagar` | "skin specialist Swaroop Nagar", "skin clinic Swaroop Nagar Kanpur" |
-| `/laser-hair-removal-kanpur` | "laser hair removal Kanpur", "Nd:YAG laser Kanpur" |
-| `/about/dr-mamta-bhura` | "Dr Mamta Bhura Kanpur", "MD dermatology IMS BHU Kanpur" |
+| `/laser-hair-removal-kanpur`     | "laser hair removal Kanpur", "Nd:YAG laser Kanpur"                  |
+| `/about/dr-mamta-bhura`          | "Dr Mamta Bhura Kanpur", "MD dermatology IMS BHU Kanpur"            |
 
 **Skin Guide Articles** (clinical depth, BlogPosting + FAQPage schema)
 
-| Route | Topic |
-|---|---|
-| `/skin-guide/hifu-treatment-kanpur` | HIFU skin tightening — mechanism, candidacy, results |
-| `/skin-guide/laser-hair-removal-kanpur` | Laser hair removal — Nd:YAG vs diode, Indian skin, sessions |
-| `/skin-guide/prp-hair-loss-treatment-kanpur` | PRP vs GFC for hair loss — effectiveness, protocol, Indian hair types |
-| `/skin-guide/botox-vs-dermal-fillers-kanpur` | Botox vs fillers — dynamic vs static ageing, combination approaches |
-| `/skin-guide/melasma-treatment-kanpur` | Melasma — triggers, Wood's lamp assessment, phased treatment |
-| `/skin-guide/acne-scar-treatment-kanpur` | Acne scar removal — Dermapen 4, TCA cross, PIH vs structural scars |
+| Route                                        | Topic                                                                 |
+| -------------------------------------------- | --------------------------------------------------------------------- |
+| `/skin-guide/hifu-treatment-kanpur`          | HIFU skin tightening - mechanism, candidacy, results                  |
+| `/skin-guide/laser-hair-removal-kanpur`      | Laser hair removal - Nd:YAG vs diode, Indian skin, sessions           |
+| `/skin-guide/prp-hair-loss-treatment-kanpur` | PRP vs GFC for hair loss - effectiveness, protocol, Indian hair types |
+| `/skin-guide/botox-vs-dermal-fillers-kanpur` | Botox vs fillers - dynamic vs static ageing, combination approaches   |
+| `/skin-guide/melasma-treatment-kanpur`       | Melasma - triggers, Wood's lamp assessment, phased treatment          |
+| `/skin-guide/acne-scar-treatment-kanpur`     | Acne scar removal - Dermapen 4, TCA cross, PIH vs structural scars    |
 
 ### Interactive Skin Analysis Tool
 
@@ -93,19 +93,20 @@ The booking form ([`app/contact/BookingForm.tsx`](app/contact/BookingForm.tsx)) 
 
 ### Design System
 
-Custom design tokens defined in [`tailwind.config.ts`](tailwind.config.ts) — no component library used:
+Custom design tokens defined in [`tailwind.config.ts`](tailwind.config.ts) - no component library used:
 
 **Colour palette:**
 
-| Token | Hex | Usage |
-|---|---|---|
-| `brand.cream` | `#FDF6EC` | Page backgrounds |
-| `brand.rosegold` | `#C78D6B` | Primary accents, borders |
-| `brand.terracotta` | `#C4704E` | CTAs, highlights |
-| `brand.espresso` | `#3D2B1F` | Primary text |
-| `brand.champagne` | `#F5E6D3` | Section backgrounds |
+| Token              | Hex       | Usage                    |
+| ------------------ | --------- | ------------------------ |
+| `brand.cream`      | `#FDF6EC` | Page backgrounds         |
+| `brand.rosegold`   | `#C78D6B` | Primary accents, borders |
+| `brand.terracotta` | `#C4704E` | CTAs, highlights         |
+| `brand.espresso`   | `#3D2B1F` | Primary text             |
+| `brand.champagne`  | `#F5E6D3` | Section backgrounds      |
 
 **Typography:**
+
 - Display: Cormorant Garamond (Google Fonts, 300–700)
 - Body: DM Sans (Google Fonts, 300–700)
 - Accent: Outfit (Google Fonts, 400–700)
@@ -117,7 +118,7 @@ Custom design tokens defined in [`tailwind.config.ts`](tailwind.config.ts) — n
 - `SchemaMarkup` component injects JSON-LD `@graph` for:
   - `MedicalBusiness` + `LocalBusiness` (address, geo, hours, `areaServed`)
   - `Physician` (E-E-A-T fields: `gender`, `honorificSuffix`, `alumniOf` IMS BHU, `memberOf` IMA/IADVL/CDSI, `knowsAbout` 30 items)
-- `FAQPage` schema on every page — homepage (8 questions), all 6 service pages (6 each), all landing pages, all articles
+- `FAQPage` schema on every page - homepage (8 questions), all 6 service pages (6 each), all landing pages, all articles
 - `BlogPosting` schema on all skin-guide articles
 - `MedicalProcedure` schema on commercial procedure landing pages
 - OpenGraph + Twitter card images on all routes
@@ -135,20 +136,20 @@ skin-mantraa/
 │   ├── page.tsx                      # Homepage
 │   ├── about/
 │   │   ├── page.tsx                  # Doctor bio & timeline
-│   │   └── dr-mamta-bhura/page.tsx   # Doctor profile — credentials, E-E-A-T, Physician schema
+│   │   └── dr-mamta-bhura/page.tsx   # Doctor profile - credentials, E-E-A-T, Physician schema
 │   ├── contact/
 │   │   ├── page.tsx                  # Contact & directions
 │   │   └── BookingForm.tsx           # Validated booking form (client component)
-│   ├── dermatologist-kanpur/         # Geo landing page — "best dermatologist in Kanpur"
+│   ├── dermatologist-kanpur/         # Geo landing page - "best dermatologist in Kanpur"
 │   │   └── page.tsx
-│   ├── skin-specialist-swaroop-nagar/ # Local SEO page — Swaroop Nagar area
+│   ├── skin-specialist-swaroop-nagar/ # Local SEO page - Swaroop Nagar area
 │   │   └── page.tsx
-│   ├── laser-hair-removal-kanpur/    # Procedure landing page — commercial, MedicalProcedure schema
+│   ├── laser-hair-removal-kanpur/    # Procedure landing page - commercial, MedicalProcedure schema
 │   │   └── page.tsx
 │   ├── services/
 │   │   ├── page.tsx                  # Services listing (server component)
 │   │   ├── ServicesClient.tsx        # FAQ accordion (client component)
-│   │   └── [id]/page.tsx             # Deep service pages — candidateFor, expectedResults, 6 FAQs
+│   │   └── [id]/page.tsx             # Deep service pages - candidateFor, expectedResults, 6 FAQs
 │   ├── skin-analysis/page.tsx        # Multi-step analysis tool
 │   ├── skin-guide/
 │   │   ├── page.tsx                  # Article hub with category filtering
@@ -244,15 +245,15 @@ npm run lint     # Run ESLint
 
 ## Architecture Decisions
 
-**Server vs Client components** — Pages are server components by default for fast initial load and SEO. Only interactive sections (booking form, FAQ accordion, skin analysis tool, navigation) are marked `"use client"`, minimising client-side JavaScript.
+**Server vs Client components** - Pages are server components by default for fast initial load and SEO. Only interactive sections (booking form, FAQ accordion, skin analysis tool, navigation) are marked `"use client"`, minimising client-side JavaScript.
 
-**No CSS framework / UI kit** — All components are written from scratch with Tailwind utility classes and custom design tokens. This keeps the bundle lean and the design fully brand-specific.
+**No CSS framework / UI kit** - All components are written from scratch with Tailwind utility classes and custom design tokens. This keeps the bundle lean and the design fully brand-specific.
 
-**Zod v4 schema validation** — Forms use `z.email()` (the Zod v4 top-level format validator) instead of the deprecated `z.string().email()` chain, keeping the project current with library conventions.
+**Zod v4 schema validation** - Forms use `z.email()` (the Zod v4 top-level format validator) instead of the deprecated `z.string().email()` chain, keeping the project current with library conventions.
 
-**React Compiler** — Enabled via the Babel plugin in `next.config.ts`, automatically memoising components without manual `useMemo`/`useCallback` calls.
+**React Compiler** - Enabled via the Babel plugin in `next.config.ts`, automatically memoising components without manual `useMemo`/`useCallback` calls.
 
-**Animation architecture** — Framer Motion variants are centralised in [`lib/animations.ts`](lib/animations.ts) and shared across components, keeping animation definitions consistent and out of JSX.
+**Animation architecture** - Framer Motion variants are centralised in [`lib/animations.ts`](lib/animations.ts) and shared across components, keeping animation definitions consistent and out of JSX.
 
 ---
 
@@ -271,6 +272,7 @@ vercel --prod
 Or connect the GitHub repository to Vercel for automatic deployments on push.
 
 **Environment variables** to configure in the Vercel dashboard (see [`.env.example`](.env.example)):
+
 - `NEXT_PUBLIC_SITE_URL`
 - `APPOINTMENTS_API_URL` + `APPOINTMENTS_API_KEY` (when backend is integrated)
 - `NEXT_PUBLIC_GA_ID` (for analytics)
@@ -294,4 +296,4 @@ Or connect the GitHub repository to Vercel for automatic deployments on push.
 
 ---
 
-*Built with Next.js App Router · Deployed on Vercel*
+_Built with Next.js App Router · Deployed on Vercel_

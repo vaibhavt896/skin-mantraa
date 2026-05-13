@@ -9,17 +9,25 @@ import BookingForm from "./BookingForm";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Book Appointment | SKIN@Mantraa — Dermatology Clinic, Swaroop Nagar Kanpur",
+  title:
+    "Book Appointment | SKIN@Mantraa - Dermatology Clinic, Swaroop Nagar Kanpur",
   description:
     "Book a consultation with Dr. Mamta Bhura at SKIN@Mantraa, Swaroop Nagar, Kanpur. Walk-in, phone, or WhatsApp. Mon–Fri 11AM–6PM, Saturday 12–6PM, Sunday 10AM–2PM. Consultation: ₹600.",
   alternates: { canonical: "https://skinmantraa.in/contact" },
   openGraph: {
-    title: "Book Appointment | SKIN@Mantraa — Kanpur Dermatology Clinic",
+    title: "Book Appointment | SKIN@Mantraa - Kanpur Dermatology Clinic",
     description:
       "Book a dermatology consultation with Dr. Mamta Bhura at SKIN@Mantraa, Swaroop Nagar, Kanpur. Call, WhatsApp, or walk in.",
     url: "https://skinmantraa.in/contact",
     type: "website",
-    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Contact SKIN@Mantraa Kanpur" }],
+    images: [
+      {
+        url: "/opengraph-image",
+        width: 1200,
+        height: 630,
+        alt: "Contact SKIN@Mantraa Kanpur",
+      },
+    ],
   },
 };
 
@@ -48,7 +56,7 @@ const FAQ_CARDS = [
     ),
     question: "What should I bring?",
     answer:
-      "Please carry a valid government ID and any prior prescription or reports from previous dermatologists. If you've had skin procedures elsewhere, bring photos or discharge summaries — it helps Dr. Bhura give you the most accurate assessment.",
+      "Please carry a valid government ID and any prior prescription or reports from previous dermatologists. If you've had skin procedures elsewhere, bring photos or discharge summaries - it helps Dr. Bhura give you the most accurate assessment.",
   },
   {
     icon: (
@@ -219,7 +227,7 @@ export default function ContactPage() {
                 }}
               >
                 Dr. Mamta Bhura personally attends every consultation. Fill in
-                the form below, call, or WhatsApp us — we&apos;ll confirm your
+                the form below, call, or WhatsApp us - we&apos;ll confirm your
                 slot within a few hours.
               </p>
             </div>
@@ -668,7 +676,9 @@ export default function ContactPage() {
 
         {/* ── CTA Block ─────────────────────────────────────── */}
         <CTABlock
-          headline={"Not ready to book?\nWe're happy to answer questions first."}
+          headline={
+            "Not ready to book?\nWe're happy to answer questions first."
+          }
           subtext="Call or WhatsApp Dr. Bhura's clinic directly. Our team responds within a few hours during clinic hours."
           primaryLabel="WhatsApp Us"
           primaryHref={whatsappUrl}

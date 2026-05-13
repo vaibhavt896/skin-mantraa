@@ -13,7 +13,13 @@ import BeforeAfterSlider from "@/components/ui/BeforeAfterSlider";
 // Types
 // ---------------------------------------------------------------------------
 
-type FilterCategory = "All" | "Laser" | "Anti-Aging" | "Acne & Scars" | "Hair" | "Pigmentation";
+type FilterCategory =
+  | "All"
+  | "Laser"
+  | "Anti-Aging"
+  | "Acne & Scars"
+  | "Hair"
+  | "Pigmentation";
 
 interface Transformation {
   id: number;
@@ -44,8 +50,10 @@ const TRANSFORMATIONS: Transformation[] = [
     category: "Acne & Scars",
     treatment: "Chemical Peel + Dermaroller",
     duration: "3 months · 4 sessions",
-    result: "Significant reduction in active acne and post-acne scarring. Skin texture visibly smoother.",
-    quote: "After struggling with acne for years, Dr. Bhura gave me clear skin in 3 months.",
+    result:
+      "Significant reduction in active acne and post-acne scarring. Skin texture visibly smoother.",
+    quote:
+      "After struggling with acne for years, Dr. Bhura gave me clear skin in 3 months.",
     patientName: "Rahul M.",
   },
   {
@@ -53,8 +61,10 @@ const TRANSFORMATIONS: Transformation[] = [
     category: "Laser",
     treatment: "Nd-YAG Laser",
     duration: "6 weeks · 3 sessions",
-    result: "Unwanted hair reduced by 85%. Skin left smooth with no irritation or downtime.",
-    quote: "Dr. Bhura is absolutely wonderful. The laser treatment results exceeded my expectations.",
+    result:
+      "Unwanted hair reduced by 85%. Skin left smooth with no irritation or downtime.",
+    quote:
+      "Dr. Bhura is absolutely wonderful. The laser treatment results exceeded my expectations.",
     patientName: "Priya S.",
   },
   {
@@ -62,8 +72,10 @@ const TRANSFORMATIONS: Transformation[] = [
     category: "Anti-Aging",
     treatment: "Dermal Fillers + Skin Boosters",
     duration: "Single session",
-    result: "Natural volume restoration with lifted appearance. No swelling, natural-looking results within 5 days.",
-    quote: "Everyone asks if I've been on vacation — not that I've had any procedure done. That's a true expert.",
+    result:
+      "Natural volume restoration with lifted appearance. No swelling, natural-looking results within 5 days.",
+    quote:
+      "Everyone asks if I've been on vacation - not that I've had any procedure done. That's a true expert.",
     patientName: "Sunita K.",
   },
   {
@@ -71,8 +83,10 @@ const TRANSFORMATIONS: Transformation[] = [
     category: "Hair",
     treatment: "PRP Therapy for Hair Fall",
     duration: "6 months · 4 sessions",
-    result: "Significant reduction in hair fall. Visible new growth along hairline and crown.",
-    quote: "Started PRP 6 months ago. The reduction is significant and new growth is visible.",
+    result:
+      "Significant reduction in hair fall. Visible new growth along hairline and crown.",
+    quote:
+      "Started PRP 6 months ago. The reduction is significant and new growth is visible.",
     patientName: "Amit T.",
   },
   {
@@ -80,8 +94,10 @@ const TRANSFORMATIONS: Transformation[] = [
     category: "Pigmentation",
     treatment: "Q-Switch Laser + Melasma Protocol",
     duration: "4 months · 5 sessions",
-    result: "Melasma lightened by approximately 70%. Skin tone significantly more even.",
-    quote: "My skin has never looked this good. Dr. Bhura customized the treatment perfectly for my skin type.",
+    result:
+      "Melasma lightened by approximately 70%. Skin tone significantly more even.",
+    quote:
+      "My skin has never looked this good. Dr. Bhura customized the treatment perfectly for my skin type.",
     patientName: "Kavita R.",
   },
   {
@@ -89,8 +105,10 @@ const TRANSFORMATIONS: Transformation[] = [
     category: "Acne & Scars",
     treatment: "TCA Cross + Subcision",
     duration: "3 months · 3 sessions",
-    result: "Deep ice-pick scars reduced in depth and appearance. Overall skin surface visibly improved.",
-    quote: "I had given up hope on my scars. The results genuinely surprised me — and my family noticed first.",
+    result:
+      "Deep ice-pick scars reduced in depth and appearance. Overall skin surface visibly improved.",
+    quote:
+      "I had given up hope on my scars. The results genuinely surprised me - and my family noticed first.",
     patientName: "Ananya P.",
   },
   {
@@ -98,8 +116,10 @@ const TRANSFORMATIONS: Transformation[] = [
     category: "Laser",
     treatment: "Fractional CO2 Resurfacing",
     duration: "2 months · 2 sessions",
-    result: "Fine lines, sun damage and uneven texture significantly improved. Skin looks years younger.",
-    quote: "Dr. Bhura gave me hope when others said nothing could be done. Remarkable results.",
+    result:
+      "Fine lines, sun damage and uneven texture significantly improved. Skin looks years younger.",
+    quote:
+      "Dr. Bhura gave me hope when others said nothing could be done. Remarkable results.",
     patientName: "Deepak V.",
   },
   {
@@ -107,8 +127,10 @@ const TRANSFORMATIONS: Transformation[] = [
     category: "Anti-Aging",
     treatment: "Botox + Thread Lift",
     duration: "Single session",
-    result: "Forehead lines smoothed, brow lifted subtly. Refreshed appearance without looking 'done'.",
-    quote: "A year on, people think I just look 'well-rested.' That's exactly what I wanted.",
+    result:
+      "Forehead lines smoothed, brow lifted subtly. Refreshed appearance without looking 'done'.",
+    quote:
+      "A year on, people think I just look 'well-rested.' That's exactly what I wanted.",
     patientName: "Nisha G.",
   },
 ];
@@ -117,7 +139,13 @@ const TRANSFORMATIONS: Transformation[] = [
 // TransformationCard
 // ---------------------------------------------------------------------------
 
-function TransformationCard({ item, index }: { item: Transformation; index: number }) {
+function TransformationCard({
+  item,
+  index,
+}: {
+  item: Transformation;
+  index: number;
+}) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 32 }}
@@ -133,9 +161,9 @@ function TransformationCard({ item, index }: { item: Transformation; index: numb
       }}
     >
       {/* Before/After visual */}
-      <BeforeAfterSlider 
-        treatment={item.treatment} 
-        category={item.category} 
+      <BeforeAfterSlider
+        treatment={item.treatment}
+        category={item.category}
         // beforeImage={`/images/results/${item.id}-before.jpg`}
         // afterImage={`/images/results/${item.id}-after.jpg`}
       />
@@ -145,13 +173,21 @@ function TransformationCard({ item, index }: { item: Transformation; index: numb
         <div>
           <h3
             className="text-lg leading-tight mb-0.5"
-            style={{ fontFamily: "var(--font-display)", fontWeight: 600, color: "#3D2B1F" }}
+            style={{
+              fontFamily: "var(--font-display)",
+              fontWeight: 600,
+              color: "#3D2B1F",
+            }}
           >
             {item.treatment}
           </h3>
           <p
             className="text-xs"
-            style={{ fontFamily: "var(--font-accent)", color: "#C78D6B", letterSpacing: "0.05em" }}
+            style={{
+              fontFamily: "var(--font-accent)",
+              color: "#C78D6B",
+              letterSpacing: "0.05em",
+            }}
           >
             {item.duration}
           </p>
@@ -171,15 +207,23 @@ function TransformationCard({ item, index }: { item: Transformation; index: numb
         >
           <p
             className="text-sm italic leading-relaxed mb-1.5"
-            style={{ fontFamily: "var(--font-display)", color: "#5C4033", fontStyle: "italic" }}
+            style={{
+              fontFamily: "var(--font-display)",
+              color: "#5C4033",
+              fontStyle: "italic",
+            }}
           >
             &ldquo;{item.quote}&rdquo;
           </p>
           <cite
             className="text-xs not-italic"
-            style={{ fontFamily: "var(--font-accent)", color: "#C78D6B", fontStyle: "normal" }}
+            style={{
+              fontFamily: "var(--font-accent)",
+              color: "#C78D6B",
+              fontStyle: "normal",
+            }}
           >
-            — {item.patientName}
+            - {item.patientName}
           </cite>
         </blockquote>
       </div>
@@ -232,16 +276,27 @@ export default function ResultsPage() {
         {/* ----------------------------------------------------------------- */}
         <section
           className="pt-32 pb-20 relative overflow-hidden"
-          style={{ background: "linear-gradient(160deg, #FDF6EC 0%, #F5E6D3 60%, #F8E8E0 100%)" }}
+          style={{
+            background:
+              "linear-gradient(160deg, #FDF6EC 0%, #F5E6D3 60%, #F8E8E0 100%)",
+          }}
         >
           {/* Decorative orbs */}
           <div
             className="absolute top-16 right-16 w-64 h-64 rounded-full opacity-30 pointer-events-none"
-            style={{ background: "radial-gradient(circle, #C78D6B 0%, transparent 70%)", filter: "blur(60px)" }}
+            style={{
+              background:
+                "radial-gradient(circle, #C78D6B 0%, transparent 70%)",
+              filter: "blur(60px)",
+            }}
           />
           <div
             className="absolute bottom-0 left-0 w-48 h-48 rounded-full opacity-20 pointer-events-none"
-            style={{ background: "radial-gradient(circle, #C4704E 0%, transparent 70%)", filter: "blur(50px)" }}
+            style={{
+              background:
+                "radial-gradient(circle, #C4704E 0%, transparent 70%)",
+              filter: "blur(50px)",
+            }}
           />
 
           <div className="max-w-7xl mx-auto px-6 lg:px-8 relative">
@@ -253,18 +308,27 @@ export default function ResultsPage() {
             >
               <p
                 className="text-xs uppercase tracking-widest mb-4"
-                style={{ fontFamily: "var(--font-accent)", color: "#C78D6B", letterSpacing: "0.2em" }}
+                style={{
+                  fontFamily: "var(--font-accent)",
+                  color: "#C78D6B",
+                  letterSpacing: "0.2em",
+                }}
               >
                 Patient Transformations
               </p>
               <h1
                 className="text-5xl md:text-6xl lg:text-7xl mb-6 leading-none"
-                style={{ fontFamily: "var(--font-display)", fontWeight: 600, color: "#3D2B1F" }}
+                style={{
+                  fontFamily: "var(--font-display)",
+                  fontWeight: 600,
+                  color: "#3D2B1F",
+                }}
               >
                 Real Results,{" "}
                 <span
                   style={{
-                    background: "linear-gradient(135deg, #C4704E 0%, #D4A76A 100%)",
+                    background:
+                      "linear-gradient(135deg, #C4704E 0%, #D4A76A 100%)",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
                     backgroundClip: "text",
@@ -278,14 +342,17 @@ export default function ResultsPage() {
                 className="text-lg md:text-xl leading-relaxed mb-4"
                 style={{ fontFamily: "var(--font-body)", color: "#5C4033" }}
               >
-                Every transformation at SKIN@Mantraa is personal, medically guided, and built on
-                clinical expertise. Explore what&apos;s possible when science meets genuine care.
+                Every transformation at SKIN@Mantraa is personal, medically
+                guided, and built on clinical expertise. Explore what&apos;s
+                possible when science meets genuine care.
               </p>
               <p
                 className="text-sm italic"
                 style={{ fontFamily: "var(--font-body)", color: "#C78D6B" }}
               >
-                Results shown are representative of outcomes for similar treatments. Individual results vary based on skin type, condition, and adherence to treatment protocols.
+                Results shown are representative of outcomes for similar
+                treatments. Individual results vary based on skin type,
+                condition, and adherence to treatment protocols.
               </p>
             </motion.div>
           </div>
@@ -313,10 +380,17 @@ export default function ResultsPage() {
                   style={{
                     fontFamily: "var(--font-accent)",
                     letterSpacing: "0.02em",
-                    background: activeFilter === cat ? "#C4704E" : "transparent",
+                    background:
+                      activeFilter === cat ? "#C4704E" : "transparent",
                     color: activeFilter === cat ? "#FFFFFF" : "#5C4033",
-                    border: activeFilter === cat ? "1.5px solid #C4704E" : "1.5px solid rgba(199,141,107,0.35)",
-                    boxShadow: activeFilter === cat ? "0 4px 16px rgba(196,112,78,0.25)" : "none",
+                    border:
+                      activeFilter === cat
+                        ? "1.5px solid #C4704E"
+                        : "1.5px solid rgba(199,141,107,0.35)",
+                    boxShadow:
+                      activeFilter === cat
+                        ? "0 4px 16px rgba(196,112,78,0.25)"
+                        : "none",
                   }}
                 >
                   {cat}
@@ -338,7 +412,11 @@ export default function ResultsPage() {
                   className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
                 >
                   {filtered.map((item, index) => (
-                    <TransformationCard key={item.id} item={item} index={index} />
+                    <TransformationCard
+                      key={item.id}
+                      item={item}
+                      index={index}
+                    />
                   ))}
                 </motion.div>
               ) : (
@@ -359,10 +437,7 @@ export default function ResultsPage() {
         {/* ----------------------------------------------------------------- */}
         {/* 4. Medical Disclaimer                                             */}
         {/* ----------------------------------------------------------------- */}
-        <section
-          className="py-14"
-          style={{ background: "#F5E6D3" }}
-        >
+        <section className="py-14" style={{ background: "#F5E6D3" }}>
           <div className="max-w-4xl mx-auto px-6 lg:px-8">
             <div
               className="rounded-2xl p-8 md:p-10"
@@ -377,14 +452,29 @@ export default function ResultsPage() {
                   style={{ background: "rgba(196,112,78,0.12)" }}
                 >
                   <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
-                    <circle cx="9" cy="9" r="8" stroke="#C4704E" strokeWidth="1.5" />
-                    <path d="M9 5v4.5M9 12h.01" stroke="#C4704E" strokeWidth="1.5" strokeLinecap="round" />
+                    <circle
+                      cx="9"
+                      cy="9"
+                      r="8"
+                      stroke="#C4704E"
+                      strokeWidth="1.5"
+                    />
+                    <path
+                      d="M9 5v4.5M9 12h.01"
+                      stroke="#C4704E"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                    />
                   </svg>
                 </div>
                 <div>
                   <h3
                     className="text-xl mb-3"
-                    style={{ fontFamily: "var(--font-display)", fontWeight: 600, color: "#3D2B1F" }}
+                    style={{
+                      fontFamily: "var(--font-display)",
+                      fontWeight: 600,
+                      color: "#3D2B1F",
+                    }}
                   >
                     Medical Disclaimer
                   </h3>
@@ -392,19 +482,30 @@ export default function ResultsPage() {
                     className="text-sm leading-relaxed mb-3"
                     style={{ fontFamily: "var(--font-body)", color: "#5C4033" }}
                   >
-                    Results shown on this page are representative of outcomes achieved by actual patients of SKIN@Mantraa under the care of Dr. Mamta Bhura. All before-and-after documentation is clinical in nature and intended for informational purposes only.
+                    Results shown on this page are representative of outcomes
+                    achieved by actual patients of SKIN@Mantraa under the care
+                    of Dr. Mamta Bhura. All before-and-after documentation is
+                    clinical in nature and intended for informational purposes
+                    only.
                   </p>
                   <p
                     className="text-sm leading-relaxed mb-3"
                     style={{ fontFamily: "var(--font-body)", color: "#5C4033" }}
                   >
-                    <strong>Individual results vary.</strong> Outcomes depend on multiple factors including skin type, age, severity of condition, adherence to pre- and post-treatment care instructions, and the patient&apos;s overall health. No specific result can be guaranteed.
+                    <strong>Individual results vary.</strong> Outcomes depend on
+                    multiple factors including skin type, age, severity of
+                    condition, adherence to pre- and post-treatment care
+                    instructions, and the patient&apos;s overall health. No
+                    specific result can be guaranteed.
                   </p>
                   <p
                     className="text-sm leading-relaxed"
                     style={{ fontFamily: "var(--font-body)", color: "#5C4033" }}
                   >
-                    A consultation with Dr. Bhura is essential to determine the most appropriate treatment plan for your specific skin concern. We encourage every patient to approach treatment with realistic expectations and open communication.
+                    A consultation with Dr. Bhura is essential to determine the
+                    most appropriate treatment plan for your specific skin
+                    concern. We encourage every patient to approach treatment
+                    with realistic expectations and open communication.
                   </p>
                 </div>
               </div>
@@ -420,16 +521,26 @@ export default function ResultsPage() {
             <div className="text-center mb-14">
               <p
                 className="text-xs uppercase tracking-widest mb-3"
-                style={{ fontFamily: "var(--font-accent)", color: "#C78D6B", letterSpacing: "0.2em" }}
+                style={{
+                  fontFamily: "var(--font-accent)",
+                  color: "#C78D6B",
+                  letterSpacing: "0.2em",
+                }}
               >
                 What Patients Say
               </p>
               <h2
                 className="text-4xl md:text-5xl"
-                style={{ fontFamily: "var(--font-display)", fontWeight: 600, color: "#3D2B1F" }}
+                style={{
+                  fontFamily: "var(--font-display)",
+                  fontWeight: 600,
+                  color: "#3D2B1F",
+                }}
               >
                 Voices of{" "}
-                <span style={{ fontStyle: "italic", color: "#C4704E" }}>Transformation</span>
+                <span style={{ fontStyle: "italic", color: "#C4704E" }}>
+                  Transformation
+                </span>
               </h2>
             </div>
 
@@ -455,24 +566,37 @@ export default function ResultsPage() {
                   <blockquote>
                     <p
                       className="text-base leading-relaxed italic"
-                      style={{ fontFamily: "var(--font-display)", color: "#3D2B1F", fontStyle: "italic" }}
+                      style={{
+                        fontFamily: "var(--font-display)",
+                        color: "#3D2B1F",
+                        fontStyle: "italic",
+                      }}
                     >
                       &ldquo;{t.quote}&rdquo;
                     </p>
                   </blockquote>
 
                   {/* Patient info */}
-                  <div className="mt-auto pt-4 border-t flex items-center justify-between" style={{ borderColor: "rgba(199,141,107,0.12)" }}>
+                  <div
+                    className="mt-auto pt-4 border-t flex items-center justify-between"
+                    style={{ borderColor: "rgba(199,141,107,0.12)" }}
+                  >
                     <div>
                       <p
                         className="text-sm font-semibold"
-                        style={{ fontFamily: "var(--font-accent)", color: "#3D2B1F" }}
+                        style={{
+                          fontFamily: "var(--font-accent)",
+                          color: "#3D2B1F",
+                        }}
                       >
                         {t.name}
                       </p>
                       <p
                         className="text-xs"
-                        style={{ fontFamily: "var(--font-body)", color: "#C78D6B" }}
+                        style={{
+                          fontFamily: "var(--font-body)",
+                          color: "#C78D6B",
+                        }}
                       >
                         {t.treatment}
                       </p>
@@ -496,16 +620,22 @@ export default function ResultsPage() {
         </section>
 
         {/* ----------------------------------------------------------------- */}
-        {/* 6. CTA — Start Your Transformation                               */}
+        {/* 6. CTA - Start Your Transformation                               */}
         {/* ----------------------------------------------------------------- */}
         <section
           className="py-20 md:py-28 relative overflow-hidden"
-          style={{ background: "linear-gradient(135deg, #3D2B1F 0%, #5C4033 100%)" }}
+          style={{
+            background: "linear-gradient(135deg, #3D2B1F 0%, #5C4033 100%)",
+          }}
         >
           {/* Decorative glow */}
           <div
             className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 rounded-full opacity-20 pointer-events-none"
-            style={{ background: "radial-gradient(circle, #C78D6B 0%, transparent 70%)", filter: "blur(80px)" }}
+            style={{
+              background:
+                "radial-gradient(circle, #C78D6B 0%, transparent 70%)",
+              filter: "blur(80px)",
+            }}
           />
 
           <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center relative">
@@ -517,18 +647,27 @@ export default function ResultsPage() {
             >
               <p
                 className="text-xs uppercase tracking-widest mb-4"
-                style={{ fontFamily: "var(--font-accent)", color: "#C78D6B", letterSpacing: "0.2em" }}
+                style={{
+                  fontFamily: "var(--font-accent)",
+                  color: "#C78D6B",
+                  letterSpacing: "0.2em",
+                }}
               >
                 Your Journey Begins Here
               </p>
               <h2
                 className="text-4xl md:text-5xl lg:text-6xl mb-6 leading-tight"
-                style={{ fontFamily: "var(--font-display)", fontWeight: 600, color: "#FDF6EC" }}
+                style={{
+                  fontFamily: "var(--font-display)",
+                  fontWeight: 600,
+                  color: "#FDF6EC",
+                }}
               >
                 Start Your{" "}
                 <span
                   style={{
-                    background: "linear-gradient(135deg, #C78D6B 0%, #D4A76A 100%)",
+                    background:
+                      "linear-gradient(135deg, #C78D6B 0%, #D4A76A 100%)",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
                     backgroundClip: "text",
@@ -540,11 +679,15 @@ export default function ResultsPage() {
               </h2>
               <p
                 className="text-lg mb-10 max-w-2xl mx-auto leading-relaxed"
-                style={{ fontFamily: "var(--font-body)", color: "rgba(253,246,236,0.75)" }}
+                style={{
+                  fontFamily: "var(--font-body)",
+                  color: "rgba(253,246,236,0.75)",
+                }}
               >
-                Every journey at SKIN@Mantraa begins with an honest, in-depth consultation.
-                Dr. Bhura will assess your skin, explain your options clearly, and craft a plan
-                built around your unique goals.
+                Every journey at SKIN@Mantraa begins with an honest, in-depth
+                consultation. Dr. Bhura will assess your skin, explain your
+                options clearly, and craft a plan built around your unique
+                goals.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Link
@@ -555,13 +698,22 @@ export default function ResultsPage() {
                 >
                   Book a Consultation
                   <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                    <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    <path
+                      d="M3 8h10M9 4l4 4-4 4"
+                      stroke="currentColor"
+                      strokeWidth="1.5"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
                   </svg>
                 </Link>
                 <Link
                   href="/contact"
                   className="btn-ghost"
-                  style={{ color: "#F5E6D3", borderColor: "rgba(199,141,107,0.4)" }}
+                  style={{
+                    color: "#F5E6D3",
+                    borderColor: "rgba(199,141,107,0.4)",
+                  }}
                 >
                   Contact the Clinic
                 </Link>

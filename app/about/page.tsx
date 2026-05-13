@@ -226,16 +226,21 @@ export default function AboutPage() {
                     >
                       <Image
                         src="/optimized/Dr.%20Mamta%20Bhura%201.webp"
-                        alt="Dr. Mamta Bhura — SKIN@Mantraa, Kanpur"
+                        alt="Dr. Mamta Bhura - SKIN@Mantraa, Kanpur"
                         fill
-                        style={{ objectFit: "cover", objectPosition: "center 10%" }}
+                        style={{
+                          objectFit: "cover",
+                          objectPosition: "center 10%",
+                        }}
                         sizes="(max-width: 768px) 90vw, 380px"
                         priority
                       />
                       <div
                         style={{
-                          position: "absolute", inset: 0,
-                          background: "linear-gradient(to bottom, transparent 60%, rgba(44,24,16,0.35) 100%)",
+                          position: "absolute",
+                          inset: 0,
+                          background:
+                            "linear-gradient(to bottom, transparent 60%, rgba(44,24,16,0.35) 100%)",
                           borderRadius: "inherit",
                         }}
                         aria-hidden="true"
@@ -434,8 +439,8 @@ export default function AboutPage() {
                     After completing her MD Dermatology at IMS BHU, Dr. Bhura
                     spent years sharpening her skills at the Himalayan Institute
                     of Medical Sciences and later at Kaya Skin Clinic in New
-                    Delhi — India&apos;s leading chain of advanced dermatology
-                    clinics — where she gained mastery in laser technologies,
+                    Delhi - India&apos;s leading chain of advanced dermatology
+                    clinics - where she gained mastery in laser technologies,
                     cosmetic injectables, and medical-grade aesthetic protocols.
                   </motion.p>
 
@@ -449,10 +454,10 @@ export default function AboutPage() {
                       marginBottom: "2rem",
                     }}
                   >
-                    In 2010, she returned to Kanpur to found SKIN@Mantraa — a
-                    clinic built on the conviction that patients in Tier-2 cities
-                    deserve the same world-class dermatological care available in
-                    metropolitan India.
+                    In 2010, she returned to Kanpur to found SKIN@Mantraa - a
+                    clinic built on the conviction that patients in Tier-2
+                    cities deserve the same world-class dermatological care
+                    available in metropolitan India.
                   </motion.p>
 
                   <motion.div
@@ -498,14 +503,16 @@ export default function AboutPage() {
           <div
             className="absolute top-0 right-0 w-96 h-96 rounded-full opacity-10 pointer-events-none"
             style={{
-              background: "radial-gradient(circle, #D4A76A 0%, transparent 70%)",
+              background:
+                "radial-gradient(circle, #D4A76A 0%, transparent 70%)",
               filter: "blur(80px)",
             }}
           />
           <div
             className="absolute bottom-0 left-0 w-72 h-72 rounded-full opacity-10 pointer-events-none"
             style={{
-              background: "radial-gradient(circle, #C4704E 0%, transparent 70%)",
+              background:
+                "radial-gradient(circle, #C4704E 0%, transparent 70%)",
               filter: "blur(60px)",
             }}
           />
@@ -524,10 +531,20 @@ export default function AboutPage() {
                   display: "flex",
                   flexDirection: "column",
                   alignItems: "center",
-                  gap: "1rem"
+                  gap: "1rem",
                 }}
               >
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" style={{ opacity: 0.6 }}>
+                <svg
+                  width="32"
+                  height="32"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  style={{ opacity: 0.6 }}
+                >
                   <path d="M12 22C12 22 17 17 19 13C21 9 19 4 15 4C13 4 12 6 12 6C12 6 11 4 9 4C5 4 3 9 5 13C7 17 12 22 12 22Z" />
                   <path d="M12 22V12" />
                   <path d="M12 12C12 12 15 10 17 7" />
@@ -561,12 +578,12 @@ export default function AboutPage() {
                   marginBottom: "1.5rem",
                 }}
               >
-                Medicine, for me, has always been about the person sitting across
-                the table — not the condition they carry. Every patient who walks
-                into SKIN@Mantraa comes with a story, an insecurity, or a hope.
-                My responsibility is to honour that with an honest assessment and
-                a plan that truly serves their skin&apos;s long-term health, not
-                just the next appointment.
+                Medicine, for me, has always been about the person sitting
+                across the table - not the condition they carry. Every patient
+                who walks into SKIN@Mantraa comes with a story, an insecurity,
+                or a hope. My responsibility is to honour that with an honest
+                assessment and a plan that truly serves their skin&apos;s
+                long-term health, not just the next appointment.
               </motion.p>
 
               <motion.p
@@ -580,10 +597,10 @@ export default function AboutPage() {
                 }}
               >
                 I chose to return to Kanpur because I believe world-class
-                dermatology should not be the exclusive privilege of those who can
-                travel to Delhi or Mumbai. The science is the same, the standards
-                must be the same, and the respect for every patient must be
-                absolute — regardless of city or background.
+                dermatology should not be the exclusive privilege of those who
+                can travel to Delhi or Mumbai. The science is the same, the
+                standards must be the same, and the respect for every patient
+                must be absolute - regardless of city or background.
               </motion.p>
 
               <motion.p
@@ -596,10 +613,10 @@ export default function AboutPage() {
                   marginBottom: "3rem",
                 }}
               >
-                That philosophy drives every consultation, every treatment choice,
-                and every follow-up. I will never recommend a procedure you don&apos;t
-                need. I will always tell you what is realistic. That honesty is the
-                foundation SKIN@Mantraa is built on.
+                That philosophy drives every consultation, every treatment
+                choice, and every follow-up. I will never recommend a procedure
+                you don&apos;t need. I will always tell you what is realistic.
+                That honesty is the foundation SKIN@Mantraa is built on.
               </motion.p>
 
               {/* Pull quote */}
@@ -628,7 +645,7 @@ export default function AboutPage() {
                   }}
                 >
                   I believe every patient deserves a doctor who tells the truth
-                  — not just what they want to hear.
+                  - not just what they want to hear.
                 </p>
                 <footer
                   className="mt-4"
@@ -640,7 +657,7 @@ export default function AboutPage() {
                     color: "rgba(253,246,236,0.45)",
                   }}
                 >
-                  — Dr. Mamta Bhura
+                  - Dr. Mamta Bhura
                 </footer>
               </motion.blockquote>
             </AnimatedSection>
@@ -690,8 +707,8 @@ export default function AboutPage() {
                   lineHeight: 1.65,
                 }}
               >
-                A career built on rigorous training, continuous learning, and active
-                participation in India&apos;s premier dermatology bodies.
+                A career built on rigorous training, continuous learning, and
+                active participation in India&apos;s premier dermatology bodies.
               </motion.p>
             </AnimatedSection>
 
@@ -746,10 +763,12 @@ export default function AboutPage() {
                         textDecoration: "none",
                       }}
                       onMouseEnter={(e) => {
-                        (e.currentTarget as HTMLElement).style.boxShadow = "0 8px 24px rgba(61,43,31,0.06)";
+                        (e.currentTarget as HTMLElement).style.boxShadow =
+                          "0 8px 24px rgba(61,43,31,0.06)";
                       }}
                       onMouseLeave={(e) => {
-                        (e.currentTarget as HTMLElement).style.boxShadow = "0 4px 12px rgba(61,43,31,0)";
+                        (e.currentTarget as HTMLElement).style.boxShadow =
+                          "0 4px 12px rgba(61,43,31,0)";
                       }}
                     >
                       <div
@@ -887,10 +906,12 @@ export default function AboutPage() {
                         textDecoration: "none",
                       }}
                       onMouseEnter={(e) => {
-                        (e.currentTarget as HTMLElement).style.boxShadow = "0 8px 24px rgba(61,43,31,0.06)";
+                        (e.currentTarget as HTMLElement).style.boxShadow =
+                          "0 8px 24px rgba(61,43,31,0.06)";
                       }}
                       onMouseLeave={(e) => {
-                        (e.currentTarget as HTMLElement).style.boxShadow = "0 4px 12px rgba(61,43,31,0)";
+                        (e.currentTarget as HTMLElement).style.boxShadow =
+                          "0 4px 12px rgba(61,43,31,0)";
                       }}
                     >
                       <div className="flex items-center gap-3 mb-2">
@@ -991,8 +1012,8 @@ export default function AboutPage() {
                 }}
               >
                 Book a consultation with Dr. Mamta Bhura and take the first step
-                toward the skin you deserve — with honesty, expertise, and genuine
-                care guiding every decision.
+                toward the skin you deserve - with honesty, expertise, and
+                genuine care guiding every decision.
               </motion.p>
 
               <motion.div
