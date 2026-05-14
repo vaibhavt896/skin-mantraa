@@ -38,11 +38,13 @@ const blogSchema = {
   image: "https://skinmantraa.in/opengraph-image",
   author: {
     "@type": "Physician",
+    "@id": "https://skinmantraa.in/about#doctor",
     name: "Dr. Mamta Bhura",
     url: "https://skinmantraa.in/about",
   },
   publisher: {
     "@type": "Organization",
+    "@id": "https://skinmantraa.in/#clinic",
     name: "SKIN@Mantraa",
     url: "https://skinmantraa.in",
   },
@@ -51,6 +53,28 @@ const blogSchema = {
   mainEntityOfPage: "https://skinmantraa.in/skin-guide/gfc-vs-prp-hair-loss",
   keywords:
     "GFC vs PRP hair loss, GFC treatment Kanpur, PRP hair treatment Kanpur, hair loss treatment Kanpur, GFC hair growth Indian patients",
+  about: [
+    {
+      "@type": "MedicalProcedure",
+      name: "GFC Hair Treatment",
+      alternateName: "Growth Factor Concentrate",
+      description:
+        "An advanced hair restoration procedure delivering a higher, purer concentration of growth factors than standard PRP, with fewer inflammatory proteins.",
+      url: "https://skinmantraa.in/services/hair-restoration",
+    },
+    {
+      "@type": "MedicalProcedure",
+      name: "PRP Therapy for Hair Loss",
+      alternateName: "Platelet-Rich Plasma",
+      description:
+        "Evidence-supported hair restoration treatment using concentrated platelets from the patient's own blood to stimulate follicle activity.",
+      url: "https://skinmantraa.in/services/hair-restoration",
+    },
+  ],
+  speakable: {
+    "@type": "SpeakableSpecification",
+    cssSelector: ["h1", ".answer-box"],
+  },
 };
 
 const faqSchema = {
@@ -250,6 +274,41 @@ export default function GFCvsPRPPage() {
           </header>
 
           <div className="max-w-3xl mx-auto px-6 lg:px-8">
+            <div
+              className="answer-box"
+              style={{
+                background: "rgba(196,112,78,0.06)",
+                borderLeft: "3px solid #C4704E",
+                borderRadius: "0 10px 10px 0",
+                padding: "1.1rem 1.4rem",
+                marginBottom: "1.75rem",
+              }}
+            >
+              <p
+                style={{
+                  fontFamily: "var(--font-accent)",
+                  fontSize: "0.65rem",
+                  fontWeight: 700,
+                  letterSpacing: "0.12em",
+                  textTransform: "uppercase",
+                  color: "#C4704E",
+                  margin: "0 0 0.45rem",
+                }}
+              >
+                Quick Answer
+              </p>
+              <p
+                style={{
+                  fontFamily: "var(--font-body)",
+                  fontSize: "1rem",
+                  lineHeight: 1.75,
+                  color: "#3D2B1F",
+                  margin: 0,
+                }}
+              >
+                GFC (Growth Factor Concentrate) and PRP (Platelet-Rich Plasma) both treat hair loss using blood-derived growth factors, but GFC delivers a higher, purer concentration with fewer inflammatory proteins. PRP is well-established; GFC is newer with emerging clinical superiority. Neither works on dead follicles — both require early intervention. At SKIN@Mantraa Kanpur, both are available; the choice depends on degree of thinning and prior response to treatment.
+              </p>
+            </div>
             <h2 style={styles.heading2}>What PRP Actually Is</h2>
             <p style={styles.para}>
               PRP (Platelet Rich Plasma) is prepared by drawing a small amount

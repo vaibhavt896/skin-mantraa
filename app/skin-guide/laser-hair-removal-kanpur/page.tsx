@@ -32,11 +32,13 @@ const blogSchema = {
   image: "https://skinmantraa.in/opengraph-image",
   author: {
     "@type": "Physician",
+    "@id": "https://skinmantraa.in/about#doctor",
     name: "Dr. Mamta Bhura",
     url: "https://skinmantraa.in/about",
   },
   publisher: {
     "@type": "Organization",
+    "@id": "https://skinmantraa.in/#clinic",
     name: "SKIN@Mantraa",
     url: "https://skinmantraa.in",
   },
@@ -46,6 +48,21 @@ const blogSchema = {
     "https://skinmantraa.in/skin-guide/laser-hair-removal-kanpur",
   keywords:
     "laser hair removal Kanpur, how many sessions laser hair removal, best laser for Indian skin, diode laser Kanpur, laser hair removal dark skin, dermatologist Kanpur laser",
+  about: [
+    {
+      "@type": "MedicalProcedure",
+      name: "Laser Hair Removal",
+      description:
+        "A cosmetic procedure using targeted light energy to destroy hair follicles, producing long-term hair reduction. Nd:YAG 1064nm and diode lasers are safest for Indian skin (Fitzpatrick III–V).",
+      url: "https://skinmantraa.in/services/laser-treatments",
+      procedureType: "https://health-lifesci.schema.org/NoninvasiveProcedure",
+      bodyLocation: "Full body, underarms, face, legs, bikini",
+    },
+  ],
+  speakable: {
+    "@type": "SpeakableSpecification",
+    cssSelector: ["h1", ".answer-box"],
+  },
 };
 
 const faqSchema = {
@@ -254,6 +271,41 @@ export default function LaserHairRemovalPage() {
 
           {/* Body */}
           <div className="max-w-3xl mx-auto px-6 lg:px-8">
+            <div
+              className="answer-box"
+              style={{
+                background: "rgba(196,112,78,0.06)",
+                borderLeft: "3px solid #C4704E",
+                borderRadius: "0 10px 10px 0",
+                padding: "1.1rem 1.4rem",
+                marginBottom: "1.75rem",
+              }}
+            >
+              <p
+                style={{
+                  fontFamily: "var(--font-accent)",
+                  fontSize: "0.65rem",
+                  fontWeight: 700,
+                  letterSpacing: "0.12em",
+                  textTransform: "uppercase",
+                  color: "#C4704E",
+                  margin: "0 0 0.45rem",
+                }}
+              >
+                Quick Answer
+              </p>
+              <p
+                style={{
+                  fontFamily: "var(--font-body)",
+                  fontSize: "1rem",
+                  lineHeight: 1.75,
+                  color: "#3D2B1F",
+                  margin: 0,
+                }}
+              >
+                Laser hair removal uses targeted light energy to destroy hair follicles, producing long-term hair reduction. Most patients need 6–8 sessions spaced 4–6 weeks apart. For Indian skin (Fitzpatrick III–V), Nd:YAG 1064nm and diode lasers are the safest choices — IPL and alexandrite lasers carry a real risk of burns and pigmentation on darker tones. Realistic outcome: 70–90% permanent reduction across all treated areas.
+              </p>
+            </div>
             <h2 style={styles.heading2}>Why Multiple Sessions Are Required</h2>
             <p style={styles.para}>
               Laser hair removal works by targeting the pigment (melanin) in the

@@ -34,11 +34,13 @@ const blogSchema = {
   image: "https://skinmantraa.in/opengraph-image",
   author: {
     "@type": "Physician",
+    "@id": "https://skinmantraa.in/about#doctor",
     name: "Dr. Mamta Bhura",
     url: "https://skinmantraa.in/about",
   },
   publisher: {
     "@type": "Organization",
+    "@id": "https://skinmantraa.in/#clinic",
     name: "SKIN@Mantraa",
     url: "https://skinmantraa.in",
   },
@@ -48,6 +50,27 @@ const blogSchema = {
     "https://skinmantraa.in/skin-guide/prp-hair-loss-treatment-kanpur",
   keywords:
     "PRP treatment Kanpur, PRP for hair loss India, platelet rich plasma hair, hair loss treatment Kanpur, GFC hair treatment, androgenetic alopecia treatment India",
+  about: [
+    {
+      "@type": "MedicalProcedure",
+      name: "PRP Therapy for Hair Loss",
+      alternateName: "Platelet-Rich Plasma Hair Treatment",
+      description:
+        "A hair restoration procedure that uses concentrated growth factors from the patient's own blood to stimulate dormant and miniaturising follicles.",
+      url: "https://skinmantraa.in/services/hair-restoration",
+    },
+    {
+      "@type": "MedicalCondition",
+      name: "Androgenetic Alopecia",
+      alternateName: "Male Pattern Baldness, Female Pattern Hair Loss",
+      description:
+        "The most common cause of hair loss, driven by genetic sensitivity to DHT resulting in progressive follicle miniaturisation.",
+    },
+  ],
+  speakable: {
+    "@type": "SpeakableSpecification",
+    cssSelector: ["h1", ".answer-box"],
+  },
 };
 
 const faqSchema = {
@@ -257,6 +280,41 @@ export default function PrpHairLossPage() {
 
           {/* Body */}
           <div className="max-w-3xl mx-auto px-6 lg:px-8">
+            <div
+              className="answer-box"
+              style={{
+                background: "rgba(196,112,78,0.06)",
+                borderLeft: "3px solid #C4704E",
+                borderRadius: "0 10px 10px 0",
+                padding: "1.1rem 1.4rem",
+                marginBottom: "1.75rem",
+              }}
+            >
+              <p
+                style={{
+                  fontFamily: "var(--font-accent)",
+                  fontSize: "0.65rem",
+                  fontWeight: 700,
+                  letterSpacing: "0.12em",
+                  textTransform: "uppercase",
+                  color: "#C4704E",
+                  margin: "0 0 0.45rem",
+                }}
+              >
+                Quick Answer
+              </p>
+              <p
+                style={{
+                  fontFamily: "var(--font-body)",
+                  fontSize: "1rem",
+                  lineHeight: 1.75,
+                  color: "#3D2B1F",
+                  margin: 0,
+                }}
+              >
+                PRP (Platelet-Rich Plasma) therapy for hair loss uses concentrated growth factors from your own blood to stimulate dormant and miniaturising follicles. It is evidence-supported for androgenetic alopecia — but only when follicles are still alive. Dead follicles cannot be revived by PRP. Most protocols require 3–4 monthly sessions followed by maintenance every 4–6 months. Early intervention produces the best outcomes.
+              </p>
+            </div>
             <h2 style={styles.heading2}>What PRP Actually Is</h2>
             <p style={styles.para}>
               PRP stands for Platelet Rich Plasma. It is prepared from your own

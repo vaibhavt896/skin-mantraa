@@ -43,6 +43,7 @@ export const SERVICES = [
     color: "from-brand-blush to-brand-champagne",
     featured: true,
     image: "/optimized/Laser%20Treatment%20Image.webp",
+    imageAlt: "Nd:YAG laser treatment for hair removal and pigmentation at SKIN@Mantraa, Swaroop Nagar, Kanpur",
     treatments: [
       "Nd:YAG Laser",
       "IPL Therapy",
@@ -66,6 +67,7 @@ export const SERVICES = [
     color: "from-brand-champagne to-brand-cream",
     featured: false,
     image: "/optimized/Anti-Aging%20%26%20Rejuvenation.webp",
+    imageAlt: "Botox, dermal fillers, HIFU and anti-aging rejuvenation treatments by Dr. Mamta Bhura at SKIN@Mantraa Kanpur",
     treatments: [
       "Botox",
       "Dermal Fillers",
@@ -93,6 +95,7 @@ export const SERVICES = [
     color: "from-brand-cream to-brand-blush",
     featured: false,
     image: "/optimized/Acne%20%26%20Scar%20Solutions.webp",
+    imageAlt: "Dermapen 4 microneedling and chemical peel for acne scars at SKIN@Mantraa dermatology clinic, Kanpur",
     treatments: [
       "Chemical Peels",
       "Dermapen 4",
@@ -114,6 +117,7 @@ export const SERVICES = [
     color: "from-brand-blush to-brand-champagne",
     featured: false,
     image: "/optimized/Hair%20Restoration.webp",
+    imageAlt: "PRP and GFC hair restoration therapy for hair fall and hair thinning at SKIN@Mantraa, Kanpur",
     treatments: [
       "PRP Therapy",
       "Mesotherapy for Hair",
@@ -133,6 +137,7 @@ export const SERVICES = [
     color: "from-brand-champagne to-brand-cream",
     featured: false,
     image: "/optimized/Skin%20Disease%20Treatment.webp",
+    imageAlt: "Medical dermatology treatment for vitiligo, psoriasis and eczema at SKIN@Mantraa skin disease clinic, Kanpur",
     treatments: [
       "Eczema",
       "Vitiligo",
@@ -153,6 +158,7 @@ export const SERVICES = [
     color: "from-brand-cream to-brand-champagne",
     featured: false,
     image: "/optimized/Cosmetic%20Enhancements.webp",
+    imageAlt: "Pigmentation, melasma and skin brightening treatments using Q-switch laser and chemical peels at SKIN@Mantraa, Kanpur",
     treatments: [
       "Tattoo Removal",
       "Pigmentation Correction",

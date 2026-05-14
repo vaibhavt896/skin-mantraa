@@ -32,11 +32,13 @@ const blogSchema = {
   image: "https://skinmantraa.in/opengraph-image",
   author: {
     "@type": "Physician",
+    "@id": "https://skinmantraa.in/about#doctor",
     name: "Dr. Mamta Bhura",
     url: "https://skinmantraa.in/about",
   },
   publisher: {
     "@type": "Organization",
+    "@id": "https://skinmantraa.in/#clinic",
     name: "SKIN@Mantraa",
     url: "https://skinmantraa.in",
   },
@@ -45,6 +47,22 @@ const blogSchema = {
   mainEntityOfPage: "https://skinmantraa.in/skin-guide/hifu-treatment-kanpur",
   keywords:
     "HIFU treatment Kanpur, non-surgical facelift Kanpur, skin tightening Kanpur, HIFU face lifting, HIFU SMAS layer",
+  about: [
+    {
+      "@type": "MedicalProcedure",
+      name: "HIFU Treatment",
+      alternateName: "High-Intensity Focused Ultrasound",
+      description:
+        "Non-surgical skin tightening using focused ultrasound energy to target the SMAS layer at 4.5mm depth, stimulating collagen production.",
+      url: "https://skinmantraa.in/services/anti-aging",
+      procedureType: "https://health-lifesci.schema.org/NoninvasiveProcedure",
+      bodyLocation: "Face, Neck, Décolletage",
+    },
+  ],
+  speakable: {
+    "@type": "SpeakableSpecification",
+    cssSelector: ["h1", ".answer-box"],
+  },
 };
 
 const faqSchema = {
@@ -292,6 +310,41 @@ export default function HifuBlogPage() {
 
           {/* ─── Body ────────────────────────────────────────────── */}
           <div className="max-w-3xl mx-auto px-6 lg:px-8">
+            <div
+              className="answer-box"
+              style={{
+                background: "rgba(196,112,78,0.06)",
+                borderLeft: "3px solid #C4704E",
+                borderRadius: "0 10px 10px 0",
+                padding: "1.1rem 1.4rem",
+                marginBottom: "1.75rem",
+              }}
+            >
+              <p
+                style={{
+                  fontFamily: "var(--font-accent)",
+                  fontSize: "0.65rem",
+                  fontWeight: 700,
+                  letterSpacing: "0.12em",
+                  textTransform: "uppercase",
+                  color: "#C4704E",
+                  margin: "0 0 0.45rem",
+                }}
+              >
+                Quick Answer
+              </p>
+              <p
+                style={{
+                  fontFamily: "var(--font-body)",
+                  fontSize: "1rem",
+                  lineHeight: 1.75,
+                  color: "#3D2B1F",
+                  margin: 0,
+                }}
+              >
+                HIFU (High-Intensity Focused Ultrasound) is a non-surgical skin tightening treatment that targets the SMAS layer at 4.5mm depth — the same tissue a surgeon tightens during a facelift. It stimulates new collagen production over 3–6 months. At SKIN@Mantraa Kanpur, HIFU treats jawline laxity, neck loosening, brow drooping, and décolletage crepiness. It is safe for all Indian skin tones as it bypasses the epidermis entirely.
+              </p>
+            </div>
             <p style={styles.para}>
               Somewhere between forty and fifty, most of my patients notice the
               same shift. It is not wrinkles exactly - they have had those for a

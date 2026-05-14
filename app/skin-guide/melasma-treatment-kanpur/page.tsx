@@ -31,11 +31,13 @@ const blogSchema = {
   image: "https://skinmantraa.in/opengraph-image",
   author: {
     "@type": "Physician",
+    "@id": "https://skinmantraa.in/about#doctor",
     name: "Dr. Mamta Bhura",
     url: "https://skinmantraa.in/about",
   },
   publisher: {
     "@type": "Organization",
+    "@id": "https://skinmantraa.in/#clinic",
     name: "SKIN@Mantraa",
     url: "https://skinmantraa.in",
   },
@@ -45,6 +47,31 @@ const blogSchema = {
     "https://skinmantraa.in/skin-guide/melasma-treatment-kanpur",
   keywords:
     "what causes melasma, melasma treatment Kanpur, melasma on Indian skin, pigmentation treatment Kanpur, hormonal pigmentation, melasma dermatologist Kanpur",
+  about: [
+    {
+      "@type": "MedicalCondition",
+      name: "Melasma",
+      alternateName: "Chloasma",
+      description:
+        "A chronic skin pigmentation disorder caused by overactivation of melanocytes, triggered by UV exposure, hormonal changes, and heat. Especially prevalent on Indian skin (Fitzpatrick III–V).",
+      possibleTreatment: [
+        { "@type": "MedicalTherapy", name: "Chemical Peel" },
+        { "@type": "MedicalTherapy", name: "Q-Switch Laser" },
+        { "@type": "MedicalTherapy", name: "Tranexamic Acid Therapy" },
+      ],
+    },
+    {
+      "@type": "MedicalProcedure",
+      name: "Melasma Treatment",
+      description:
+        "Phased dermatological treatment for melasma including sun protection, topical priming, and procedure-based depigmentation.",
+      url: "https://skinmantraa.in/services/laser-treatments",
+    },
+  ],
+  speakable: {
+    "@type": "SpeakableSpecification",
+    cssSelector: ["h1", ".answer-box"],
+  },
 };
 
 const faqSchema = {
@@ -254,6 +281,41 @@ export default function MelasmaTreatmentPage() {
 
           {/* Body */}
           <div className="max-w-3xl mx-auto px-6 lg:px-8">
+            <div
+              className="answer-box"
+              style={{
+                background: "rgba(196,112,78,0.06)",
+                borderLeft: "3px solid #C4704E",
+                borderRadius: "0 10px 10px 0",
+                padding: "1.1rem 1.4rem",
+                marginBottom: "1.75rem",
+              }}
+            >
+              <p
+                style={{
+                  fontFamily: "var(--font-accent)",
+                  fontSize: "0.65rem",
+                  fontWeight: 700,
+                  letterSpacing: "0.12em",
+                  textTransform: "uppercase",
+                  color: "#C4704E",
+                  margin: "0 0 0.45rem",
+                }}
+              >
+                Quick Answer
+              </p>
+              <p
+                style={{
+                  fontFamily: "var(--font-body)",
+                  fontSize: "1rem",
+                  lineHeight: 1.75,
+                  color: "#3D2B1F",
+                  margin: 0,
+                }}
+              >
+                Melasma is a chronic pigmentation disorder caused by overactivation of melanocytes, triggered by UV exposure, hormonal changes, and heat. It is especially common and persistent on Indian skin (Fitzpatrick III–V). Effective treatment requires a phased approach — strict sun protection first, topical priming second (tranexamic acid, kojic acid), then procedures. Starting with laser before priming typically worsens melasma significantly.
+              </p>
+            </div>
             <h2 style={styles.heading2}>What Melasma Actually Is</h2>
             <p style={styles.para}>
               Melasma is not a single condition - it is a clinical presentation

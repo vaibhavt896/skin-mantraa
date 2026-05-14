@@ -33,11 +33,13 @@ const blogSchema = {
   image: "https://skinmantraa.in/opengraph-image",
   author: {
     "@type": "Physician",
+    "@id": "https://skinmantraa.in/about#doctor",
     name: "Dr. Mamta Bhura",
     url: "https://skinmantraa.in/about",
   },
   publisher: {
     "@type": "Organization",
+    "@id": "https://skinmantraa.in/#clinic",
     name: "SKIN@Mantraa",
     url: "https://skinmantraa.in",
   },
@@ -47,6 +49,30 @@ const blogSchema = {
     "https://skinmantraa.in/skin-guide/botox-vs-dermal-fillers-kanpur",
   keywords:
     "botox vs fillers, botox Kanpur, dermal fillers Kanpur, difference between botox and fillers, anti-aging treatment Kanpur, wrinkle treatment Kanpur",
+  about: [
+    {
+      "@type": "MedicalProcedure",
+      name: "Botox",
+      alternateName: "Botulinum Toxin Injection",
+      description:
+        "A neuromodulator that temporarily relaxes overactive muscles causing dynamic expression lines — forehead, frown lines, crow's feet.",
+      url: "https://skinmantraa.in/services/anti-aging",
+      procedureType: "https://health-lifesci.schema.org/NoninvasiveProcedure",
+    },
+    {
+      "@type": "MedicalProcedure",
+      name: "Dermal Fillers",
+      alternateName: "Hyaluronic Acid Fillers",
+      description:
+        "Injectable gel that restores lost volume to cheeks, lips, nasolabial folds, and under-eye hollows. Treats different concerns than Botox.",
+      url: "https://skinmantraa.in/services/anti-aging",
+      procedureType: "https://health-lifesci.schema.org/NoninvasiveProcedure",
+    },
+  ],
+  speakable: {
+    "@type": "SpeakableSpecification",
+    cssSelector: ["h1", ".answer-box"],
+  },
 };
 
 const faqSchema = {
@@ -255,6 +281,41 @@ export default function BotoxVsFillerPage() {
 
           {/* Body */}
           <div className="max-w-3xl mx-auto px-6 lg:px-8">
+            <div
+              className="answer-box"
+              style={{
+                background: "rgba(196,112,78,0.06)",
+                borderLeft: "3px solid #C4704E",
+                borderRadius: "0 10px 10px 0",
+                padding: "1.1rem 1.4rem",
+                marginBottom: "1.75rem",
+              }}
+            >
+              <p
+                style={{
+                  fontFamily: "var(--font-accent)",
+                  fontSize: "0.65rem",
+                  fontWeight: 700,
+                  letterSpacing: "0.12em",
+                  textTransform: "uppercase",
+                  color: "#C4704E",
+                  margin: "0 0 0.45rem",
+                }}
+              >
+                Quick Answer
+              </p>
+              <p
+                style={{
+                  fontFamily: "var(--font-body)",
+                  fontSize: "1rem",
+                  lineHeight: 1.75,
+                  color: "#3D2B1F",
+                  margin: 0,
+                }}
+              >
+                Botox (botulinum toxin) relaxes overactive muscles to soften dynamic expression lines — forehead wrinkles, frown lines, crow&apos;s feet. Dermal fillers restore lost volume to static areas — nasolabial folds, cheeks, lips, under-eyes. They treat fundamentally different problems. Using one where you need the other produces poor results. Many patients benefit from both, addressing different concerns at the same visit.
+              </p>
+            </div>
             <h2 style={styles.heading2}>What Botox Is and What It Does</h2>
             <p style={styles.para}>
               Botox is the commercial name for botulinum toxin type A, a protein

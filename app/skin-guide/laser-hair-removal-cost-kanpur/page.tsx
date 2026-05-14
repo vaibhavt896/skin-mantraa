@@ -40,11 +40,13 @@ const blogSchema = {
   image: "https://skinmantraa.in/opengraph-image",
   author: {
     "@type": "Physician",
+    "@id": "https://skinmantraa.in/about#doctor",
     name: "Dr. Mamta Bhura",
     url: "https://skinmantraa.in/about",
   },
   publisher: {
     "@type": "Organization",
+    "@id": "https://skinmantraa.in/#clinic",
     name: "SKIN@Mantraa",
     url: "https://skinmantraa.in",
   },
@@ -54,6 +56,19 @@ const blogSchema = {
     "https://skinmantraa.in/skin-guide/laser-hair-removal-cost-kanpur",
   keywords:
     "laser hair removal cost Kanpur, laser hair removal price Kanpur, laser hair removal Kanpur 2026, how much does laser hair removal cost in Kanpur",
+  about: [
+    {
+      "@type": "MedicalProcedure",
+      name: "Laser Hair Removal",
+      description:
+        "Cosmetic procedure using targeted light energy to permanently reduce unwanted hair. Cost depends on treatment area, skin type, and number of sessions required.",
+      url: "https://skinmantraa.in/services/laser-treatments",
+    },
+  ],
+  speakable: {
+    "@type": "SpeakableSpecification",
+    cssSelector: ["h1", ".answer-box"],
+  },
 };
 
 const faqSchema = {
@@ -243,6 +258,41 @@ export default function LaserCostKanpurPage() {
           </header>
 
           <div className="max-w-3xl mx-auto px-6 lg:px-8">
+            <div
+              className="answer-box"
+              style={{
+                background: "rgba(196,112,78,0.06)",
+                borderLeft: "3px solid #C4704E",
+                borderRadius: "0 10px 10px 0",
+                padding: "1.1rem 1.4rem",
+                marginBottom: "1.75rem",
+              }}
+            >
+              <p
+                style={{
+                  fontFamily: "var(--font-accent)",
+                  fontSize: "0.65rem",
+                  fontWeight: 700,
+                  letterSpacing: "0.12em",
+                  textTransform: "uppercase",
+                  color: "#C4704E",
+                  margin: "0 0 0.45rem",
+                }}
+              >
+                Quick Answer
+              </p>
+              <p
+                style={{
+                  fontFamily: "var(--font-body)",
+                  fontSize: "1rem",
+                  lineHeight: 1.75,
+                  color: "#3D2B1F",
+                  margin: 0,
+                }}
+              >
+                Laser hair removal cost in Kanpur varies by treatment area (underarms, full legs, face, bikini line), the laser used, and the number of sessions required. Most patients need 6–8 sessions. At SKIN@Mantraa, pricing is per session with package options available. A ₹600 consultation determines the right laser for your skin type and provides precise pricing — Nd:YAG 1064nm for Indian skin tones.
+              </p>
+            </div>
             <h2 style={styles.heading2}>
               What Determines Laser Hair Removal Cost
             </h2>

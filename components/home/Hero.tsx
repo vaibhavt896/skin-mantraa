@@ -136,8 +136,12 @@ export default function Hero() {
             filter: "brightness(1.02) saturate(0.95)",
           }}
         >
-          <source src="/optimized/healthy-skin-hero.webm" type="video/webm" />
-          <source src="/optimized/healthy-skin-hero.mp4" type="video/mp4" />
+          {/* Safari/iOS picks HEVC first — best compression, hardware-decoded on Apple silicon */}
+          <source src="/optimized/healthy-skin-hero-1080p-h265.mp4" type='video/mp4; codecs="hvc1"' />
+          {/* Chrome/Firefox/Edge prefer VP9 WebM */}
+          <source src="/optimized/healthy-skin-hero-1080p.webm" type="video/webm" />
+          {/* Universal H.264 fallback */}
+          <source src="/optimized/healthy-skin-hero-1080p.mp4" type="video/mp4" />
         </video>
       </div>
 

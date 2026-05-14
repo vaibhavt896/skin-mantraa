@@ -1,5 +1,29 @@
 import { MetadataRoute } from 'next';
+import { readdirSync, statSync } from 'fs';
+import { join } from 'path';
 import { SERVICES } from '@/lib/constants';
+
+function getArticleSlugs(): string[] {
+  try {
+    const dir = join(process.cwd(), 'app', 'skin-guide');
+    return readdirSync(dir).filter((entry) => {
+      if (['page.tsx', 'layout.tsx', '[slug]'].includes(entry)) return false;
+      return statSync(join(dir, entry)).isDirectory();
+    });
+  } catch {
+    return [
+      'hifu-treatment-kanpur',
+      'laser-hair-removal-kanpur',
+      'laser-hair-removal-cost-kanpur',
+      'prp-hair-loss-treatment-kanpur',
+      'gfc-vs-prp-hair-loss',
+      'botox-vs-dermal-fillers-kanpur',
+      'botox-cost-kanpur',
+      'melasma-treatment-kanpur',
+      'acne-scar-treatment-kanpur',
+    ];
+  }
+}
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://skinmantraa.in';
@@ -23,6 +47,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority,
   }));
 
+  const neighbourhoodRoutes = [
+    '/skin-clinic-kakadeo-kanpur',
+    '/dermatologist-civil-lines-kanpur',
+    '/skin-doctor-kidwai-nagar-kanpur',
+    '/dermatologist-govind-nagar-kanpur',
+    '/skin-specialist-rawatpur-kanpur',
+  ].map((path) => ({
+    url: `${baseUrl}${path}`,
+    lastModified: new Date(),
+    changeFrequency: 'monthly' as const,
+    priority: 0.85,
+  }));
+
   const serviceRoutes = SERVICES.map((service) => ({
     url: `${baseUrl}/services/${service.id}`,
     lastModified: new Date(),
@@ -30,24 +67,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.8,
   }));
 
-  const articleSlugs = [
-    'hifu-treatment-kanpur',
-    'laser-hair-removal-kanpur',
-    'laser-hair-removal-cost-kanpur',
-    'prp-hair-loss-treatment-kanpur',
-    'gfc-vs-prp-hair-loss',
-    'botox-vs-dermal-fillers-kanpur',
-    'botox-cost-kanpur',
-    'melasma-treatment-kanpur',
-    'acne-scar-treatment-kanpur',
-  ];
-
-  const articleRoutes = articleSlugs.map((slug) => ({
+  const articleRoutes = getArticleSlugs().map((slug) => ({
     url: `${baseUrl}/skin-guide/${slug}`,
     lastModified: new Date(),
     changeFrequency: 'monthly' as const,
     priority: 0.7,
   }));
 
-  return [...staticRoutes, ...serviceRoutes, ...articleRoutes];
+  return [...staticRoutes, ...neighbourhoodRoutes, ...serviceRoutes, ...articleRoutes];
 }

@@ -59,6 +59,14 @@ export default function SchemaMarkup() {
           "https://www.practo.com/kanpur/doctor/mamta-bhura-dermatologist",
           "https://www.justdial.com/Kanpur/Dr-Mamta-Bhura-Near-Domino-s-Swaroop-Nagar/0512PX512-X512-160830213024-J7A4_BZDET/reviews",
         ],
+        aggregateRating: {
+          "@type": "AggregateRating",
+          ratingValue: "4.0",
+          bestRating: "5",
+          worstRating: "1",
+          reviewCount: "451",
+          ratingCount: "451",
+        },
         founder: { "@id": "https://skinmantraa.in/about#doctor" },
       },
       {

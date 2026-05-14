@@ -38,11 +38,13 @@ const blogSchema = {
   image: "https://skinmantraa.in/opengraph-image",
   author: {
     "@type": "Physician",
+    "@id": "https://skinmantraa.in/about#doctor",
     name: "Dr. Mamta Bhura",
     url: "https://skinmantraa.in/about",
   },
   publisher: {
     "@type": "Organization",
+    "@id": "https://skinmantraa.in/#clinic",
     name: "SKIN@Mantraa",
     url: "https://skinmantraa.in",
   },
@@ -51,6 +53,21 @@ const blogSchema = {
   mainEntityOfPage: "https://skinmantraa.in/skin-guide/botox-cost-kanpur",
   keywords:
     "botox cost Kanpur, botox price Kanpur, botox Kanpur 2026, how much does botox cost in Kanpur, botox dermatologist Kanpur",
+  about: [
+    {
+      "@type": "MedicalProcedure",
+      name: "Botox",
+      alternateName: "Botulinum Toxin Injection",
+      description:
+        "A neuromodulator injected to relax overactive facial muscles. Priced per unit, with different areas requiring different unit counts depending on muscle strength.",
+      url: "https://skinmantraa.in/services/anti-aging",
+      procedureType: "https://health-lifesci.schema.org/NoninvasiveProcedure",
+    },
+  ],
+  speakable: {
+    "@type": "SpeakableSpecification",
+    cssSelector: ["h1", ".answer-box"],
+  },
 };
 
 const faqSchema = {
@@ -240,6 +257,41 @@ export default function BotoxCostKanpurPage() {
           </header>
 
           <div className="max-w-3xl mx-auto px-6 lg:px-8">
+            <div
+              className="answer-box"
+              style={{
+                background: "rgba(196,112,78,0.06)",
+                borderLeft: "3px solid #C4704E",
+                borderRadius: "0 10px 10px 0",
+                padding: "1.1rem 1.4rem",
+                marginBottom: "1.75rem",
+              }}
+            >
+              <p
+                style={{
+                  fontFamily: "var(--font-accent)",
+                  fontSize: "0.65rem",
+                  fontWeight: 700,
+                  letterSpacing: "0.12em",
+                  textTransform: "uppercase",
+                  color: "#C4704E",
+                  margin: "0 0 0.45rem",
+                }}
+              >
+                Quick Answer
+              </p>
+              <p
+                style={{
+                  fontFamily: "var(--font-body)",
+                  fontSize: "1rem",
+                  lineHeight: 1.75,
+                  color: "#3D2B1F",
+                  margin: 0,
+                }}
+              >
+                Botox cost in Kanpur is priced per unit of toxin used. Common areas: forehead (10–20 units), frown lines between brows (15–25 units), crow&apos;s feet (10–15 units per side). Total cost depends on areas treated and individual muscle strength. At SKIN@Mantraa, Botox is administered by Dr. Mamta Bhura personally. A ₹600 consultation assesses your face and provides exact pricing before any commitment.
+              </p>
+            </div>
             <h2 style={styles.heading2}>How Botox Pricing Works</h2>
             <p style={styles.para}>
               Botox is sold in vials and used in units. The per-unit cost varies

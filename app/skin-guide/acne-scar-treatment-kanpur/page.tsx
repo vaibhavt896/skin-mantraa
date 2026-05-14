@@ -33,11 +33,13 @@ const blogSchema = {
   image: "https://skinmantraa.in/opengraph-image",
   author: {
     "@type": "Physician",
+    "@id": "https://skinmantraa.in/about#doctor",
     name: "Dr. Mamta Bhura",
     url: "https://skinmantraa.in/about",
   },
   publisher: {
     "@type": "Organization",
+    "@id": "https://skinmantraa.in/#clinic",
     name: "SKIN@Mantraa",
     url: "https://skinmantraa.in",
   },
@@ -47,6 +49,32 @@ const blogSchema = {
     "https://skinmantraa.in/skin-guide/acne-scar-treatment-kanpur",
   keywords:
     "acne treatment Kanpur, acne scar removal Kanpur, dermapen 4 acne scars Kanpur, chemical peel Kanpur, best dermatologist Kanpur dark spots, acne scar removal Kanpur, skin resurfacing Kanpur",
+  about: [
+    {
+      "@type": "MedicalCondition",
+      name: "Acne Scars",
+      alternateName: "Post-Acne Scarring",
+      description:
+        "Permanent skin texture changes resulting from inflammatory acne destroying collagen. Types include ice-pick, rolling, boxcar, and post-inflammatory hyperpigmentation.",
+      possibleTreatment: [
+        { "@type": "MedicalTherapy", name: "Dermapen 4 Microneedling" },
+        { "@type": "MedicalTherapy", name: "Chemical Peel" },
+        { "@type": "MedicalTherapy", name: "TCA CROSS" },
+        { "@type": "MedicalTherapy", name: "Subcision" },
+      ],
+    },
+    {
+      "@type": "MedicalProcedure",
+      name: "Acne Scar Treatment",
+      description:
+        "Sequenced dermatological approach to improve acne scarring, beginning with active acne control, followed by targeted procedures based on scar morphology.",
+      url: "https://skinmantraa.in/services/acne-scars",
+    },
+  ],
+  speakable: {
+    "@type": "SpeakableSpecification",
+    cssSelector: ["h1", ".answer-box"],
+  },
 };
 
 const faqSchema = {
@@ -251,6 +279,41 @@ export default function AcneScarTreatmentPage() {
           </header>
 
           <div className="max-w-3xl mx-auto px-6 lg:px-8">
+            <div
+              className="answer-box"
+              style={{
+                background: "rgba(196,112,78,0.06)",
+                borderLeft: "3px solid #C4704E",
+                borderRadius: "0 10px 10px 0",
+                padding: "1.1rem 1.4rem",
+                marginBottom: "1.75rem",
+              }}
+            >
+              <p
+                style={{
+                  fontFamily: "var(--font-accent)",
+                  fontSize: "0.65rem",
+                  fontWeight: 700,
+                  letterSpacing: "0.12em",
+                  textTransform: "uppercase",
+                  color: "#C4704E",
+                  margin: "0 0 0.45rem",
+                }}
+              >
+                Quick Answer
+              </p>
+              <p
+                style={{
+                  fontFamily: "var(--font-body)",
+                  fontSize: "1rem",
+                  lineHeight: 1.75,
+                  color: "#3D2B1F",
+                  margin: 0,
+                }}
+              >
+                Acne scars form when deep inflammation destroys collagen during a breakout. Scar type — ice-pick, rolling, boxcar, or post-inflammatory pigmentation — determines which treatment works. At SKIN@Mantraa Kanpur, treatment is sequenced: control active acne first, then targeted procedures (Dermapen 4, chemical peels, TCA CROSS, subcision) matched to scar morphology. Multiple sessions are always required; realistic improvement is 50–70% reduction for most scar types.
+              </p>
+            </div>
             <h2 style={styles.heading2}>
               Three Different Problems, Three Different Treatments
             </h2>

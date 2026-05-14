@@ -247,6 +247,7 @@ interface Service {
   featured: boolean;
   treatments: string[];
   image?: string;
+  imageAlt?: string;
 }
 
 function SpotlightCard({
@@ -383,7 +384,7 @@ function SpotlightCard({
           >
             <Image
               src={service.image}
-              alt={`${service.title} treatment`}
+              alt={service.imageAlt ?? `${service.title} at SKIN@Mantraa, Kanpur`}
               fill
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 400px"
               className="object-cover"
