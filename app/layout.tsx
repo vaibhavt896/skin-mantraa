@@ -76,6 +76,9 @@ export const metadata: Metadata = {
     googleBot: { index: true, follow: true, "max-image-preview": "large" },
   },
   manifest: "/manifest.webmanifest",
+  other: {
+    "llms-txt": "/llms.txt",
+  },
 };
 
 export default function RootLayout({
@@ -89,6 +92,18 @@ export default function RootLayout({
       data-scroll-behavior="smooth"
       className={`${cormorant.variable} ${dmSans.variable} h-full`}
     >
+      <head>
+        {/* Preload LCP hero image for mobile — reduces LCP from 3.7s */}
+        <link
+          rel="preload"
+          href="/optimized/healthy-skin-poster.webp"
+          as="image"
+          type="image/webp"
+          fetchPriority="high"
+        />
+        {/* Preconnect to image CDN / self origin */}
+        <link rel="preconnect" href="https://skinmantraa.in" />
+      </head>
       <body className="min-h-full flex flex-col">
         <SchemaMarkup />
         <SmoothScroll>{children}</SmoothScroll>

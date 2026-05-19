@@ -104,10 +104,10 @@ export default function IndianSkinApproach() {
           heading="Dermatology Designed for Indian Skin"
           background="#FDF6EC"
           paragraphs={[
-            "Most cosmetic dermatology research originates in Western populations - Fitzpatrick Type I and II skin that behaves very differently under lasers, light, and chemical treatments compared to the Fitzpatrick Type III to V skin tones most North Indian patients have.",
-            "At SKIN@Mantraa, every protocol is adapted for Indian skin. Laser settings, peel formulations, post-procedure care - all of it is calibrated with pigmentation sensitivity, tanning tendency, and Indian skin's unique healing patterns in mind. This is not a modification made as an afterthought. It is built into how we practice.",
-            "After 26 years of treating patients in Kanpur, Dr. Mamta Bhura has deep, practical experience with conditions that disproportionately affect people of Indian descent: melasma, post-inflammatory hyperpigmentation, vitiligo, stubborn acne on oilier skin types, and premature photoageing from Uttar Pradesh's high UV exposure months.",
-            'If you have ever been told a treatment "might not be right for your skin tone," we encourage you to come in for a consultation. In many cases, the right technology used at the right settings works safely and effectively regardless of skin tone.',
+            "Most cosmetic skin research comes from Western populations — lighter skin tones that behave very differently under lasers and chemical treatments compared to the skin tones most North Indian patients have.",
+            "At SKIN@Mantraa, every plan is built for Indian skin. Laser settings, peel types, and after-care are all chosen with Indian skin's pigment sensitivity and healing patterns in mind. This is not an add-on. It is how we work.",
+            "Dr. Mamta Bhura has 26 years of treating patients in Kanpur. She has direct, hands-on experience with conditions common in Indian skin: melasma, dark spots after acne, vitiligo, stubborn oily-skin acne, and early ageing from UP's high UV levels.",
+            'If you have ever been told a treatment "might not suit your skin tone," come in for a consult. With the right tools and settings, most treatments work safely and well on Indian skin.',
           ]}
         />
       </section>
@@ -118,9 +118,9 @@ export default function IndianSkinApproach() {
           heading="Assessment Before Treatment"
           background="#F5E6D3"
           paragraphs={[
-            "Before any procedure at SKIN@Mantraa, every patient goes through a structured skin consultation. We look at skin type, existing conditions, treatment history, and realistic goals. This assessment shapes every decision - which technology to use, what settings to apply, what results to honestly expect, and what timeline to plan for.",
-            "We use a range of advanced dermatology equipment: clinical-grade Nd:YAG, Diode, and Triple-Wavelength laser systems for hair removal and pigmentation; HIFU for non-surgical skin tightening; Dermapen 4 for scar revision and skin rejuvenation; and medical-grade chemical peels formulated for Indian skin. All cosmetic injectables - Botox and dermal fillers - are FDA-approved products administered by Dr. Bhura personally.",
-            "We do not offer packages as a default. We design treatment plans around what you need. Some patients benefit from a single session; others from a structured programme over several months. You will know exactly what to expect before anything is started.",
+            "Before any procedure at SKIN@Mantraa, every patient goes through a skin consult. We look at skin type, health history, and your goals. This shapes every decision — which device to use, what settings to apply, and what results to expect.",
+            "Our clinic has clinical-grade laser systems — Nd:YAG, Diode, and Triple-Wavelength — for hair removal and pigmentation. We also have HIFU for skin tightening, Dermapen 4 for scars and texture, and medical-grade peels for Indian skin. All Botox and filler treatments are done by Dr. Bhura personally, using approved products.",
+            "We do not push packages. We build plans around what you need. Some patients need one session. Others need a few months of care. You will know what to expect before anything begins.",
           ]}
         />
       </section>

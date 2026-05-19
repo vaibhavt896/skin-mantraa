@@ -117,12 +117,11 @@ export default function Hero() {
       <div className="absolute inset-y-0 right-0 w-full lg:w-[50%] z-0">
         <Image
           src="/optimized/healthy-skin-poster.webp"
-          alt=""
+          alt="Healthy glowing skin – dermatology results at SKIN@Mantraa, Kanpur"
           fill
           priority
-          sizes="100vw"
+          sizes="(max-width: 1023px) 100vw, 50vw"
           className="object-cover lg:hidden"
-          aria-hidden="true"
         />
         <video
           autoPlay
@@ -230,12 +229,12 @@ export default function Hero() {
           <motion.div
             custom={1}
             variants={heroTextReveal}
-            style={{ maxWidth: "650px" }} // Constrain text width
+            style={{ maxWidth: "650px" }}
           >
             <h1
               style={{
                 fontFamily: "var(--font-display)",
-                fontSize: "clamp(2.4rem, 8vw, 5.2rem)", // Slightly smaller min for mobile, larger vw for scaling
+                fontSize: "clamp(2.4rem, 8vw, 5.2rem)",
                 fontWeight: 600,
                 letterSpacing: "-0.03em",
                 lineHeight: 1.1,
@@ -246,7 +245,10 @@ export default function Hero() {
             >
               Your Skin Deserves
               <br className="hidden sm:block" />
-              <span className="sm:inline-block">
+              <span
+                className="sm:inline-block"
+                style={{ minHeight: "1.2em", display: "inline-block" }}
+              >
                 {" "}
                 <TypewriterText />
               </span>

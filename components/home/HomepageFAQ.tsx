@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { motion, useInView, AnimatePresence } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { fadeInUp, staggerContainer } from "@/lib/animations";
 
@@ -92,7 +92,6 @@ function FAQItem({ q, a, index }: { q: string; a: string; index: number }) {
       transition={{ duration: 0.4, delay: index * 0.05 }}
       style={{
         borderBottom: "1px solid rgba(199,141,107,0.15)",
-        overflow: "hidden",
       }}
     >
       <button
@@ -158,29 +157,25 @@ function FAQItem({ q, a, index }: { q: string; a: string; index: number }) {
         </span>
       </button>
 
-      <AnimatePresence initial={false}>
-        {open && (
-          <motion.div
-            key="answer"
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.3, ease: "easeInOut" }}
-          >
-            <p
-              style={{
-                fontFamily: "var(--font-body)",
-                fontSize: "0.97rem",
-                lineHeight: 1.8,
-                color: "#5C4033",
-                paddingBottom: "1.25rem",
-              }}
-            >
-              {a}
-            </p>
-          </motion.div>
-        )}
-      </AnimatePresence>
+      {/* Answer always in DOM for SEO/crawlability; height animated for UX */}
+      <motion.div
+        initial={false}
+        animate={{ height: open ? "auto" : 0, opacity: open ? 1 : 0 }}
+        transition={{ duration: 0.3, ease: "easeInOut" }}
+        style={{ overflow: "hidden" }}
+      >
+        <p
+          style={{
+            fontFamily: "var(--font-body)",
+            fontSize: "0.97rem",
+            lineHeight: 1.8,
+            color: "#5C4033",
+            paddingBottom: "1.25rem",
+          }}
+        >
+          {a}
+        </p>
+      </motion.div>
     </motion.div>
   );
 }

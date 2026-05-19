@@ -156,7 +156,7 @@ function TiltCard({ inView }: { inView: boolean }) {
               fill
               style={{ objectFit: "cover", objectPosition: "center 8%" }}
               sizes="(max-width: 768px) 90vw, 440px"
-              priority
+              loading="lazy"
             />
 
             {/* Mouse-tracking glare spotlight */}

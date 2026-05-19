@@ -14,10 +14,9 @@ import HomepageFAQ from "@/components/home/HomepageFAQ";
 import LocationCTA from "@/components/home/LocationCTA";
 
 export const metadata: Metadata = {
-  title:
-    "SKIN@Mantraa | Dr. Mamta Bhura - Best Female Dermatologist in Kanpur | 26 Years",
+  title: "SKIN@Mantraa | Kanpur's Best Dermatologist – Dr. Mamta Bhura",
   description:
-    "Dr. Mamta Bhura - MD Dermatology, IMS BHU. Kanpur's #1 ranked female dermatologist (ThreeBestRated). Advanced laser, anti-aging, acne, and hair treatments at SKIN@Mantraa, Swaroop Nagar. 451+ patients. Consultation: ₹600.",
+    "Dr. Mamta Bhura, MD Dermatology (IMS BHU) – trusted dermatologist in Kanpur. Laser, acne, anti-aging & hair treatments. 451+ patients. Consult from ₹600.",
   alternates: { canonical: "https://skinmantraa.in" },
   openGraph: {
     title: "SKIN@Mantraa - Kanpur's Premier Dermatology Clinic",
