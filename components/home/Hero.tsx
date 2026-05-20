@@ -1,102 +1,145 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useState, type CSSProperties } from "react";
 import { BRAND, TRUST_STATS } from "@/lib/constants";
 import { staggerContainer, heroTextReveal } from "@/lib/animations";
 
-// ---------- Looping typewriter - cycles through phrases ----------
-const TYPEWRITER_PHRASES = ["a Specialist.", "Flawless Skin.", "Expert Care."];
+const EASE_IN = [0.7, 0, 1, 0.45] as [number, number, number, number];
 
-const TYPE_SPEED = 72; // ms per char typed
-const DELETE_SPEED = 38; // ms per char deleted (faster = snappier backspace)
-const HOLD_MS = 1800; // pause after fully typed before deleting
-const PAUSE_MS = 420; // pause after fully deleted before next phrase
+// Holds and gaps (ms)
+const PHRASE_HOLD = 3000; // "The Best Specialist" reading time
+const BRAND_HOLD  = 3200; // "SkinMantraa" reading time
+const EXIT_MS     = 360;
+const INIT_DELAY  = 600;
 
-function TypewriterText({ startDelay = 1.6 }: { startDelay?: number }) {
-  const [displayed, setDisplayed] = useState("");
-  const [cursorVisible, setCursorVisible] = useState(true);
-  const [started, setStarted] = useState(false);
+// 32 ms between chars — continuous L→R stream across all three words
+const STAGGER  = 0.032;
+const WORD_GAP = 0.055; // tiny breath between words
 
-  // Always-on cursor blink once started
+// Cumulative start delays so all three words feel like ONE typing stream
+const BEST_START = 3 * STAGGER + WORD_GAP;                   // after "The"
+const SPEC_START = (3 + 4) * STAGGER + 2 * WORD_GAP;         // after "The Best"
+
+// Accent — italic gradient, terracotta palette
+const ACCENT: CSSProperties = {
+  background: "linear-gradient(135deg, #8C3510 0%, #C85A2A 45%, #A84020 100%)",
+  WebkitBackgroundClip: "text",
+  WebkitTextFillColor: "transparent",
+  backgroundClip: "text",
+  fontStyle: "italic",
+};
+
+// Brand — sweeping shimmer
+const ACCENT_BRAND: CSSProperties = {
+  background:
+    "linear-gradient(110deg, #8C3510 0%, #C85A2A 20%, #E8A060 48%, #C85A2A 72%, #8C3510 100%)",
+  backgroundSize: "260% auto",
+  WebkitBackgroundClip: "text",
+  WebkitTextFillColor: "transparent",
+  backgroundClip: "text",
+  fontStyle: "italic",
+  letterSpacing: "-0.03em",
+  animation: "hero-shimmer 3.2s linear infinite",
+};
+
+type Phase = "idle" | "phrase" | "out" | "brand";
+
+// Each word wraps as a flex item; chars spring in with a shared global delay
+// so "The Best Specialist" reads as one continuous typing stream.
+function Word({
+  text,
+  style,
+  startDelay = 0,
+}: {
+  text: string;
+  style: CSSProperties;
+  startDelay?: number;
+}) {
+  return (
+    <motion.span
+      exit={{ opacity: 0, y: -20, transition: { duration: 0.18, ease: EASE_IN } }}
+      style={{ display: "inline-flex" }}
+    >
+      {text.split("").map((ch, i) => (
+        <motion.span
+          key={i}
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            type: "spring" as const,
+            stiffness: 420,
+            damping: 44,
+            delay: startDelay + i * STAGGER,
+          }}
+          style={{ display: "inline-block", ...style }}
+        >
+          {ch}
+        </motion.span>
+      ))}
+    </motion.span>
+  );
+}
+
+function CinematicHeadline() {
+  const [phase, setPhase] = useState<Phase>("idle");
+
   useEffect(() => {
-    if (!started) return;
-    const id = setInterval(() => setCursorVisible((v) => !v), 530);
-    return () => clearInterval(id);
-  }, [started]);
+    const ids: ReturnType<typeof setTimeout>[] = [];
+    const after = (ms: number, fn: () => void) => { ids.push(setTimeout(fn, ms)); };
 
-  // Main loop
-  useEffect(() => {
-    let cancelled = false;
-    let phraseIdx = 0;
-
-    function sleep(ms: number) {
-      return new Promise<void>((res) => setTimeout(res, ms));
+    function loop() {
+      setPhase("phrase");
+      after(PHRASE_HOLD, () => {
+        setPhase("out");
+        after(EXIT_MS, () => {
+          setPhase("brand");
+          after(BRAND_HOLD, () => {
+            setPhase("out");
+            after(EXIT_MS, loop);
+          });
+        });
+      });
     }
 
-    async function run() {
-      await sleep(startDelay * 1000);
-      if (cancelled) return;
-      setStarted(true);
+    ids.push(setTimeout(loop, INIT_DELAY));
+    return () => ids.forEach(clearTimeout);
+  }, []);
 
-      while (!cancelled) {
-        const phrase =
-          TYPEWRITER_PHRASES[phraseIdx % TYPEWRITER_PHRASES.length];
-
-        // - Type forward -
-        for (let i = 1; i <= phrase.length; i++) {
-          if (cancelled) return;
-          setDisplayed(phrase.slice(0, i));
-          await sleep(TYPE_SPEED);
-        }
-
-        await sleep(HOLD_MS);
-
-        // - Delete backward -
-        for (let i = phrase.length - 1; i >= 0; i--) {
-          if (cancelled) return;
-          setDisplayed(phrase.slice(0, i));
-          await sleep(DELETE_SPEED);
-        }
-
-        await sleep(PAUSE_MS);
-        phraseIdx++;
-      }
-    }
-
-    run();
-    return () => {
-      cancelled = true;
-    };
-  }, [startDelay]);
+  const showPhrase = phase === "phrase";
+  const showBrand  = phase === "brand";
 
   return (
-    <em
-      className="text-gradient"
-      style={{
-        fontStyle: "italic",
-        fontWeight: 700,
-        whiteSpace: "normal", // Changed from nowrap to normal for mobile wrap
-      }}
-    >
-      {displayed}
-      <motion.span
-        aria-hidden="true"
-        animate={{ opacity: cursorVisible ? 1 : 0 }}
-        transition={{ duration: 0.1 }}
+    <>
+      {/* Static heading lines — always present, never re-render */}
+      <span style={{ display: "block" }}>Your Skin</span>
+      <span style={{ display: "block" }}>Deserves</span>
+
+      {/*
+        Accent line — all three words share one AnimatePresence so React
+        reconciles them together. Words are flex items → wrap at boundaries
+        cleanly. Each word has a cumulative startDelay so the typing stream
+        feels unbroken: T-h-e [beat] B-e-s-t [beat] S-p-e-c-i-a-l-i-s-t.
+      */}
+      <span
         style={{
-          display: "inline-block",
-          width: "3px",
-          height: "0.78em",
-          background: "linear-gradient(180deg, #C4704E 0%, #D4A76A 100%)",
-          borderRadius: "2px",
-          marginLeft: "3px",
-          verticalAlign: "middle",
+          display: "flex",
+          flexWrap: "wrap",
+          alignItems: "baseline",
+          gap: "0.28em",
+          minHeight: "1.12em",
         }}
-      />
-    </em>
+      >
+        <AnimatePresence>
+          {showPhrase ? <Word key="the"        text="The"        style={ACCENT}        startDelay={0}          /> : null}
+          {showPhrase ? <Word key="best"       text="Best"       style={ACCENT}        startDelay={BEST_START} /> : null}
+          {showPhrase ? <Word key="specialist" text="Specialist" style={ACCENT}        startDelay={SPEC_START} /> : null}
+          {showBrand  ? <Word key="brand"      text="SkinMantraa" style={ACCENT_BRAND} startDelay={0}          /> : null}
+        </AnimatePresence>
+      </span>
+    </>
   );
 }
 
@@ -110,10 +153,10 @@ export default function Hero() {
         display: "flex",
         alignItems: "center",
         overflow: "hidden",
-        background: "#E8D9CE", // Updated brand background color
+        background: "#E8D9CE",
       }}
     >
-      {/* ── Background Video Container ── */}
+      {/* ── Background Video ── */}
       <div className="absolute inset-y-0 right-0 w-full lg:w-[50%] z-0">
         <Image
           src="/optimized/healthy-skin-poster.webp"
@@ -131,25 +174,20 @@ export default function Hero() {
           preload="metadata"
           poster="/optimized/healthy-skin-poster.webp"
           className="hidden w-full h-full object-cover lg:block"
-          style={{
-            filter: "brightness(1.02) saturate(0.95)",
-          }}
+          style={{ filter: "brightness(1.02) saturate(0.95)" }}
         >
-          {/* Safari/iOS picks HEVC first — best compression, hardware-decoded on Apple silicon */}
           <source src="/optimized/healthy-skin-hero-1080p-h265.mp4" type='video/mp4; codecs="hvc1"' />
-          {/* Chrome/Firefox/Edge prefer VP9 WebM */}
           <source src="/optimized/healthy-skin-hero-1080p.webm" type="video/webm" />
-          {/* Universal H.264 fallback */}
           <source src="/optimized/healthy-skin-hero-1080p.mp4" type="video/mp4" />
         </video>
       </div>
 
-      {/* ── Subtle light-bleed overlay ── */}
+      {/* ── Light-bleed overlay ── */}
       <div
         className="absolute inset-0 z-1 pointer-events-none"
         style={{
           background:
-            "radial-gradient(circle at 20% 50%, rgba(253, 246, 236, 0.8) 0%, transparent 60%)",
+            "radial-gradient(circle at 20% 50%, rgba(253,246,236,0.8) 0%, transparent 60%)",
         }}
       />
 
@@ -161,21 +199,16 @@ export default function Hero() {
           width: "100%",
           maxWidth: "1440px",
           margin: "0 auto",
-          padding: "clamp(4rem, 12vh, 7rem) clamp(1rem, 5vw, 6rem)", // Reduced horizontal padding for mobile
+          padding: "clamp(1rem,5vh,3rem) clamp(1rem,5vw,6rem)",
         }}
       >
         <motion.div
           variants={staggerContainer}
           initial="hidden"
           animate="visible"
-          style={{
-            display: "flex",
-            flexDirection: "column",
-            gap: "1.75rem",
-            maxWidth: "800px",
-          }}
+          style={{ display: "flex", flexDirection: "column", gap: "1.25rem", maxWidth: "min(100%, 580px)" }}
         >
-          {/* 1. Label badge */}
+          {/* 1. Trust badge */}
           <motion.div custom={0} variants={heroTextReveal}>
             <span
               className="hero-trust-badge"
@@ -184,13 +217,13 @@ export default function Hero() {
                 alignItems: "center",
                 gap: "0.6rem",
                 padding: "0.45rem 1.25rem 0.45rem 0.45rem",
-                border: "1.5px solid rgba(253, 246, 236, 0.3)",
+                border: "1.5px solid rgba(253,246,236,0.3)",
                 borderRadius: "100px",
-                background: "rgba(253, 246, 236, 0.15)",
+                background: "rgba(253,246,236,0.15)",
                 backdropFilter: "blur(10px)",
                 WebkitBackdropFilter: "blur(10px)",
                 fontFamily: "var(--font-accent)",
-                fontSize: "clamp(0.65rem, 2vw, 0.75rem)", // Responsive font size
+                fontSize: "clamp(0.65rem,2vw,0.75rem)",
                 fontWeight: 600,
                 letterSpacing: "0.08em",
                 textTransform: "uppercase" as const,
@@ -201,11 +234,10 @@ export default function Hero() {
             >
               <span
                 style={{
-                  width: "24px", // Slightly smaller icon on small screens
+                  width: "24px",
                   height: "24px",
                   borderRadius: "50%",
-                  background:
-                    "linear-gradient(135deg, #C4704E 0%, #D4A76A 100%)",
+                  background: "linear-gradient(135deg,#C4704E 0%,#D4A76A 100%)",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
@@ -225,57 +257,42 @@ export default function Hero() {
             </span>
           </motion.div>
 
-          {/* 2. Main headline */}
-          <motion.div
-            custom={1}
-            variants={heroTextReveal}
-            style={{ maxWidth: "650px" }}
-          >
+          {/* 2. Headline — bold editorial stack, matches reference scale */}
+          <motion.div custom={1} variants={heroTextReveal}>
             <h1
               style={{
                 fontFamily: "var(--font-display)",
-                fontSize: "clamp(2.4rem, 8vw, 5.2rem)",
-                fontWeight: 600,
-                letterSpacing: "-0.03em",
-                lineHeight: 1.1,
-                color: "#3D2B1F",
+                fontSize: "clamp(2.2rem, 5.2vw, 4.8rem)",
+                fontWeight: 700,
+                letterSpacing: "-0.04em",
+                lineHeight: 0.95,
+                color: "#080401",
                 margin: 0,
-                textShadow: "0 2px 20px rgba(253, 246, 236, 0.4)",
               }}
             >
-              Your Skin Deserves
-              <br className="hidden sm:block" />
-              <span
-                className="sm:inline-block"
-                style={{ minHeight: "1.2em", display: "inline-block" }}
-              >
-                {" "}
-                <TypewriterText />
-              </span>
+              <CinematicHeadline />
             </h1>
           </motion.div>
 
-          {/* 3. Subheadline */}
+          {/* 3. Sub-headline */}
           <motion.p
             custom={2}
             variants={heroTextReveal}
             style={{
               fontFamily: "var(--font-body)",
-              fontSize: "clamp(1.1rem, 1.8vw, 1.25rem)",
+              fontSize: "clamp(1.05rem,1.8vw,1.22rem)",
               color: "#4A3728",
-              lineHeight: 1.6,
-              maxWidth: "600px",
+              lineHeight: 1.62,
+              maxWidth: "580px",
               margin: 0,
               fontWeight: 500,
             }}
           >
             {BRAND.doctor.name}
-            {
-              " - Experience expert dermatological care designed for Indian skin. 26 years of excellence in Kanpur."
-            }
+            {" — Expert dermatological care designed for Indian skin. 26 years of excellence in Kanpur."}
           </motion.p>
 
-          {/* 4. CTA Buttons */}
+          {/* 4. CTAs */}
           <motion.div
             custom={3}
             variants={heroTextReveal}
@@ -287,11 +304,7 @@ export default function Hero() {
               marginTop: "0.5rem",
             }}
           >
-            <Link
-              href="/contact"
-              className="btn-primary"
-              style={{ padding: "1rem 2.25rem" }}
-            >
+            <Link href="/contact" className="btn-primary" style={{ padding: "1rem 2.25rem" }}>
               Book Appointment
               <svg width="18" height="18" viewBox="0 0 16 16" fill="none">
                 <path
@@ -308,10 +321,10 @@ export default function Hero() {
               className="btn-ghost"
               style={{
                 padding: "1rem 2.25rem",
-                background: "rgba(253, 246, 236, 0.2)",
+                background: "rgba(253,246,236,0.2)",
                 backdropFilter: "blur(8px)",
                 WebkitBackdropFilter: "blur(8px)",
-                border: "1.5px solid rgba(199, 141, 107, 0.3)",
+                border: "1.5px solid rgba(199,141,107,0.3)",
               }}
             >
               Explore Treatments
@@ -335,14 +348,7 @@ export default function Hero() {
               `${TRUST_STATS[0].value}${TRUST_STATS[0].suffix} Years`,
               "IMS BHU Trained",
             ].map((item, i, arr) => (
-              <span
-                key={item}
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  gap: "0.75rem",
-                }}
-              >
+              <span key={item} style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
                 <span
                   style={{
                     fontFamily: "var(--font-accent)",
