@@ -437,7 +437,7 @@ export default function TrustBar() {
               color: "rgba(253,246,236,0.35)",
             }}
           >
-            IMS BHU Trained
+            Practo &amp; Justdial Verified
           </span>
         </motion.div>
       </div>

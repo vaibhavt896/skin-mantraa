@@ -6,9 +6,9 @@ import FloatingCTA from "@/components/layout/FloatingCTA";
 import { BRAND } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Skin Specialist Near Rawatpur Kanpur — SKIN@Mantraa by Dr. Mamta Bhura",
+  title: "Skin Specialist Near Rawatpur Kanpur | SKIN@Mantraa by Dr. Mamta Bhura",
   description:
-    "Skin specialist near Rawatpur, Kanpur — SKIN@Mantraa at Swaroop Nagar. Dr. Mamta Bhura, MD Dermatology (IMS BHU), 26+ years. Laser, acne, skin disease and hair treatments. Consultation ₹600.",
+    "Skin specialist near Rawatpur, Kanpur, SKIN@Mantraa at Swaroop Nagar. Dr. Mamta Bhura, MD Dermatology (IMS BHU), 26+ years. Laser, acne, skin disease and hair treatments. Consultation ₹600.",
   keywords: [
     "skin specialist Rawatpur Kanpur",
     "dermatologist near Rawatpur Kanpur",
@@ -21,9 +21,9 @@ export const metadata: Metadata = {
     canonical: "https://skinmantraa.in/skin-specialist-rawatpur-kanpur",
   },
   openGraph: {
-    title: "Skin Specialist Near Rawatpur Kanpur — SKIN@Mantraa",
+    title: "Skin Specialist Near Rawatpur Kanpur | SKIN@Mantraa",
     description:
-      "SKIN@Mantraa at Swaroop Nagar serves Rawatpur patients. Dr. Mamta Bhura — MD Dermatology, IMS BHU, 26+ years. Clinical and cosmetic dermatology.",
+      "SKIN@Mantraa at Swaroop Nagar serves Rawatpur patients. Dr. Mamta Bhura, MD Dermatology, IMS BHU, 26+ years. Clinical and cosmetic dermatology.",
     url: "https://skinmantraa.in/skin-specialist-rawatpur-kanpur",
     type: "website",
     images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
@@ -74,7 +74,7 @@ const pageSchema = {
           name: "Which is the best skin clinic near Rawatpur Kanpur?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "SKIN@Mantraa at Swaroop Nagar is the nearest advanced dermatology clinic to Rawatpur — approximately 7 km, or 20–25 minutes by road. It is led by Dr. Mamta Bhura, MBBS MD Dermatology (IMS BHU), ranked #1 dermatologist in Kanpur by ThreeBestRated.in.",
+            text: "SKIN@Mantraa at Swaroop Nagar is the nearest advanced dermatology clinic to Rawatpur, approximately 7 km, or 20–25 minutes by road. It is led by Dr. Mamta Bhura, MBBS MD Dermatology (IMS BHU), ranked #1 dermatologist in Kanpur by ThreeBestRated.in.",
           },
         },
         {
@@ -123,10 +123,10 @@ export default function RawatpurPage() {
               Skin Specialist Near Rawatpur, Kanpur
             </h1>
             <p style={{ fontFamily: "var(--font-body)", fontSize: "1.15rem", lineHeight: 1.75, color: "#5C4033", marginBottom: "1.5rem" }}>
-              SKIN@Mantraa, Swaroop Nagar — advanced clinical and cosmetic dermatology for Rawatpur patients. Dr. Mamta Bhura, MD Dermatology, IMS BHU.
+              SKIN@Mantraa, Swaroop Nagar, advanced clinical and cosmetic dermatology for Rawatpur patients. Dr. Mamta Bhura, MD Dermatology, IMS BHU.
             </p>
             <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-              <Link href="/contact" className="btn-primary">Book Consultation — ₹600</Link>
+              <Link href="/contact" className="btn-primary">Book Consultation, ₹600</Link>
               <a href={`tel:${BRAND.clinic.phone}`} style={{ display: "inline-flex", alignItems: "center", gap: "0.4rem", padding: "0.65rem 1.4rem", borderRadius: "10px", border: "1px solid rgba(199,141,107,0.35)", color: "#C78D6B", fontFamily: "var(--font-accent)", fontSize: "0.85rem", fontWeight: 600, textDecoration: "none" }}>
                 Call Clinic
               </a>
@@ -137,13 +137,13 @@ export default function RawatpurPage() {
             <div className="answer-box" style={{ background: "rgba(196,112,78,0.06)", borderLeft: "3px solid #C4704E", borderRadius: "0 10px 10px 0", padding: "1.1rem 1.4rem", marginBottom: "1.75rem" }}>
               <p style={{ fontFamily: "var(--font-accent)", fontSize: "0.65rem", fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", color: "#C4704E", margin: "0 0 0.45rem" }}>Quick Answer</p>
               <p style={{ fontFamily: "var(--font-body)", fontSize: "1rem", lineHeight: 1.75, color: "#3D2B1F", margin: 0 }}>
-                SKIN@Mantraa at Swaroop Nagar is approximately 7 km from Rawatpur — the nearest premium dermatology clinic. Dr. Mamta Bhura (MBBS, MD Dermatology, IMS BHU, 26+ years) offers the full range of clinical and cosmetic dermatology. Consultation: ₹600.
+                SKIN@Mantraa at Swaroop Nagar is approximately 7 km from Rawatpur, the nearest premium dermatology clinic. Dr. Mamta Bhura (MBBS, MD Dermatology, IMS BHU, 26+ years) offers the full range of clinical and cosmetic dermatology. Consultation: ₹600.
               </p>
             </div>
 
             <h2 style={styles.heading2}>Advanced Skin Care for Rawatpur Patients</h2>
             <p style={styles.para}>
-              Rawatpur is a residential area in Kanpur that falls within SKIN@Mantraa&apos;s served catchment. Patients from Rawatpur visit the clinic at Swaroop Nagar for a wide range of concerns — from chronic skin diseases like vitiligo, psoriasis, and eczema to cosmetic procedures like laser hair removal, Botox, and acne scar treatment.
+              Rawatpur is a residential area in Kanpur that falls within SKIN@Mantraa&apos;s served catchment. Patients from Rawatpur visit the clinic at Swaroop Nagar for a wide range of concerns, from chronic skin diseases like vitiligo, psoriasis, and eczema to cosmetic procedures like laser hair removal, Botox, and acne scar treatment.
             </p>
             <p style={styles.para}>
               Dr. Mamta Bhura trained at IMS BHU, has practised dermatology in Kanpur for over 26 years, and sees patients by appointment. Her practice is built on clinical accuracy: she diagnoses before she treats, and she is direct about what a given treatment can and cannot achieve.
@@ -152,10 +152,10 @@ export default function RawatpurPage() {
             <h2 style={styles.heading2}>What Rawatpur Patients Can Access at SKIN@Mantraa</h2>
             <ul style={{ margin: "0.5rem 0 1.25rem 1.5rem", listStyle: "disc" }}>
               {[
-                "Laser hair removal — Nd:YAG 1064nm, safe for Indian skin",
+                "Laser hair removal, Nd:YAG 1064nm, safe for Indian skin",
                 "Vitiligo treatment with NB-UVB phototherapy",
                 "Psoriasis, eczema, and allergic dermatitis management",
-                "Acne and acne scar treatment — Dermapen 4, chemical peels",
+                "Acne and acne scar treatment, Dermapen 4, chemical peels",
                 "Melasma and pigmentation treatment",
                 "PRP and GFC for hair fall",
                 "Botox, dermal fillers, HIFU anti-aging",
@@ -169,7 +169,7 @@ export default function RawatpurPage() {
 
             <h2 style={styles.heading2}>Clinic Location and Hours</h2>
             <p style={styles.para}>
-              SKIN@Mantraa is located at Bungalow No. 4, 113/196, Swaroop Nagar, Behind Hotel Royal Cliff, Kanpur 208002. From Rawatpur, the clinic is approximately 7 km — a 20–25 minute drive. Open Mon–Fri 11 AM–6 PM, Saturday 12 PM–6 PM, Sunday 10 AM–2 PM. Contact: {BRAND.clinic.phoneDisplay}.
+              SKIN@Mantraa is located at Bungalow No. 4, 113/196, Swaroop Nagar, Behind Hotel Royal Cliff, Kanpur 208002. From Rawatpur, the clinic is approximately 7 km, a 20–25 minute drive. Open Mon–Fri 11 AM–6 PM, Saturday 12 PM–6 PM, Sunday 10 AM–2 PM. Contact: {BRAND.clinic.phoneDisplay}.
             </p>
 
             {/* FAQ */}
@@ -179,7 +179,7 @@ export default function RawatpurPage() {
               </h2>
               <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
                 {[
-                  { q: "Is SKIN@Mantraa accessible from Rawatpur?", a: "Yes. From Rawatpur, the clinic is approximately 7 km at Swaroop Nagar — a 20–25 minute drive by car or auto. It is easily accessible from the Rawatpur Crossing direction via Swaroop Nagar Road." },
+                  { q: "Is SKIN@Mantraa accessible from Rawatpur?", a: "Yes. From Rawatpur, the clinic is approximately 7 km at Swaroop Nagar, a 20–25 minute drive by car or auto. It is easily accessible from the Rawatpur Crossing direction via Swaroop Nagar Road." },
                   { q: "Can I get vitiligo treatment near Rawatpur Kanpur?", a: "Yes. Dr. Mamta Bhura at SKIN@Mantraa offers vitiligo treatment including NB-UVB phototherapy, topical immunomodulators, and combination protocols. She has treated vitiligo patients from Rawatpur and across Kanpur with meaningful outcomes." },
                   { q: "What is the cost of consultation at SKIN@Mantraa?", a: "₹600 for a consultation. This includes examination, diagnosis, and a clear treatment plan. You are under no obligation to proceed with any procedure at the first visit." },
                 ].map(({ q, a }, i) => (
@@ -196,7 +196,7 @@ export default function RawatpurPage() {
 
             <div style={{ background: "#3D2B1F", borderRadius: "14px", padding: "2rem 1.75rem", marginTop: "2.5rem", textAlign: "center" }}>
               <h3 style={{ fontFamily: "var(--font-display)", fontSize: "1.25rem", fontWeight: 600, color: "#FDF6EC", marginBottom: "0.5rem" }}>
-                Book at SKIN@Mantraa — Serving Rawatpur, Kanpur
+                Book at SKIN@Mantraa, Serving Rawatpur, Kanpur
               </h3>
               <p style={{ fontFamily: "var(--font-body)", fontSize: "0.9rem", color: "rgba(253,246,236,0.7)", marginBottom: "1rem", lineHeight: 1.7 }}>
                 Clinical and cosmetic dermatology. Consultation ₹600. Honest, no-pressure care.

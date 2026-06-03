@@ -46,7 +46,7 @@ export default function HorizontalTimeline() {
 
   return (
     <section
-      style={{ background: "#F5E6D3", padding: "6rem 0" }}
+      style={{ background: "#F5E6D3", padding: "clamp(3rem, 8vw, 6rem) 0" }}
       aria-label="Dr. Mamta Bhura's career timeline"
     >
       {/* Header */}

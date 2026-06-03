@@ -14,12 +14,12 @@ import HomepageFAQ from "@/components/home/HomepageFAQ";
 import LocationCTA from "@/components/home/LocationCTA";
 
 export const metadata: Metadata = {
-  title: "SKIN@Mantraa | Kanpur's Best Dermatologist – Dr. Mamta Bhura",
+  title: "SKIN@Mantraa | Kanpur's Best Dermatologist, Dr. Mamta Bhura",
   description:
-    "Dr. Mamta Bhura, MD Dermatology (IMS BHU) – trusted dermatologist in Kanpur. Laser, acne, anti-aging & hair treatments. 451+ patients. Consult from ₹600.",
+    "Dr. Mamta Bhura, MD Dermatology (IMS BHU), is a trusted dermatologist in Kanpur. Laser, acne, anti-aging and hair treatments. 451+ patients. Consult from ₹600.",
   alternates: { canonical: "https://skinmantraa.in" },
   openGraph: {
-    title: "SKIN@Mantraa - Kanpur's Premier Dermatology Clinic",
+    title: "SKIN@Mantraa | Kanpur's Premier Dermatology Clinic",
     description:
       "Dr. Mamta Bhura, BHU-trained dermatologist with 26+ years of experience. Advanced treatments for all skin conditions at SKIN@Mantraa, Swaroop Nagar, Kanpur.",
     url: "https://skinmantraa.in",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "SKIN@Mantraa - Premier Dermatology Clinic, Kanpur",
+        alt: "SKIN@Mantraa, Premier Dermatology Clinic, Kanpur",
       },
     ],
   },

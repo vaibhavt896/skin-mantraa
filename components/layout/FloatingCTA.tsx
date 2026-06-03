@@ -125,7 +125,7 @@ export default function FloatingCTA() {
                 boxShadow: waHovered
                   ? "0 8px 32px rgba(37,211,102,0.5)"
                   : "0 4px 20px rgba(37,211,102,0.35)",
-                padding: waHovered ? "0.75rem 1.25rem" : "0.875rem",
+                padding: (waHovered || isMobile) ? "0.75rem 1.25rem" : "0.875rem",
                 zIndex: 1,
               }}
               onMouseEnter={() => setWaHovered(true)}
@@ -133,7 +133,7 @@ export default function FloatingCTA() {
             >
               <WhatsAppIcon />
               <AnimatePresence>
-                {waHovered && (
+                {(waHovered || isMobile) && (
                   <motion.span
                     key="wa-label"
                     initial={{ opacity: 0, width: 0 }}
@@ -171,14 +171,14 @@ export default function FloatingCTA() {
                 boxShadow: phoneHovered
                   ? "0 8px 32px rgba(196,112,78,0.5)"
                   : "0 4px 20px rgba(196,112,78,0.35)",
-                padding: phoneHovered ? "0.75rem 1.25rem" : "0.875rem",
+                padding: (phoneHovered || isMobile) ? "0.75rem 1.25rem" : "0.875rem",
               }}
               onMouseEnter={() => setPhoneHovered(true)}
               onMouseLeave={() => setPhoneHovered(false)}
             >
               <PhoneIcon />
               <AnimatePresence>
-                {phoneHovered && (
+                {(phoneHovered || isMobile) && (
                   <motion.span
                     key="phone-label"
                     initial={{ opacity: 0, width: 0 }}

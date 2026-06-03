@@ -145,7 +145,7 @@ function BookingFormInner({ services }: BookingFormProps) {
     >
       {/* Card Header */}
       <div
-        className="px-8 py-6"
+        className="px-5 sm:px-8 py-6"
         style={{
           background: "linear-gradient(135deg, #F5E6D3 0%, #FDF6EC 100%)",
           borderBottom: "1px solid rgba(199,141,107,0.15)",
@@ -190,7 +190,7 @@ function BookingFormInner({ services }: BookingFormProps) {
       </div>
 
       {/* Form body */}
-      <div className="px-8 py-8">
+      <div className="px-5 sm:px-8 py-6 sm:py-8">
         <AnimatePresence mode="wait">
           {submitted ? (
             /* ── Success State ── */

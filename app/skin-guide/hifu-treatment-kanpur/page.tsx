@@ -6,17 +6,17 @@ import FloatingCTA from "@/components/layout/FloatingCTA";
 
 export const metadata: Metadata = {
   title:
-    "HIFU Treatment in Kanpur - Non-Surgical Skin Tightening at SKIN@Mantraa",
+    "HIFU Treatment in Kanpur, Non-Surgical Skin Tightening at SKIN@Mantraa",
   description:
-    "Dr. Mamta Bhura explains HIFU skin tightening in Kanpur - who it works for, what the treatment feels like, and realistic results. Clinical guide from SKIN@Mantraa.",
+    "Dr. Mamta Bhura explains HIFU skin tightening in Kanpur, who it works for, what the treatment feels like, and realistic results. Clinical guide from SKIN@Mantraa.",
   alternates: {
     canonical: "https://skinmantraa.in/skin-guide/hifu-treatment-kanpur",
   },
   openGraph: {
     title:
-      "HIFU Treatment in Kanpur - Non-Surgical Skin Tightening at SKIN@Mantraa",
+      "HIFU Treatment in Kanpur, Non-Surgical Skin Tightening at SKIN@Mantraa",
     description:
-      "Dr. Mamta Bhura explains HIFU skin tightening in Kanpur - who it works for, what the treatment feels like, and realistic results. Clinical guide from SKIN@Mantraa.",
+      "Dr. Mamta Bhura explains HIFU skin tightening in Kanpur, who it works for, what the treatment feels like, and realistic results. Clinical guide from SKIN@Mantraa.",
     url: "https://skinmantraa.in/skin-guide/hifu-treatment-kanpur",
     type: "article",
     images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 const blogSchema = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  headline: "HIFU Treatment in Kanpur - An Honest Guide From a Dermatologist",
+  headline: "HIFU Treatment in Kanpur, An Honest Guide From a Dermatologist",
   description:
     "Clinical guide to HIFU skin tightening by Dr. Mamta Bhura, SKIN@Mantraa Kanpur. Who it works for, what to expect, and how Indian skin responds.",
   image: "https://skinmantraa.in/opengraph-image",
@@ -74,7 +74,7 @@ const faqSchema = {
       name: "How many HIFU sessions will I need?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Most patients with mild to moderate laxity see meaningful improvement after a single session. We reassess at the 3-month mark, when collagen response is becoming visible. Some patients benefit from a second session at 6 months, but this is not a standard recommendation - it depends on individual response and the degree of change present.",
+        text: "Most patients with mild to moderate laxity see meaningful improvement after a single session. We reassess at the 3-month mark, when collagen response is becoming visible. Some patients benefit from a second session at 6 months, but this is not a standard recommendation, it depends on individual response and the degree of change present.",
       },
     },
     {
@@ -82,7 +82,7 @@ const faqSchema = {
       name: "Can HIFU be combined with Botox or fillers?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. HIFU addresses structural laxity, Botox addresses dynamic expression lines, and fillers address volume loss - these are different problems requiring different solutions, and they do not interfere with each other. Many patients benefit from a combined approach.",
+        text: "Yes. HIFU addresses structural laxity, Botox addresses dynamic expression lines, and fillers address volume loss, these are different problems requiring different solutions, and they do not interfere with each other. Many patients benefit from a combined approach.",
       },
     },
     {
@@ -106,7 +106,7 @@ const faqSchema = {
       name: "Is HIFU safe during pregnancy or breastfeeding?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "No - HIFU is not recommended during pregnancy or while breastfeeding. Wait until breastfeeding is complete and allow 3 to 6 months post-partum for skin to stabilise before assessing laxity.",
+        text: "No, HIFU is not recommended during pregnancy or while breastfeeding. Wait until breastfeeding is complete and allow 3 to 6 months post-partum for skin to stabilise before assessing laxity.",
       },
     },
     {
@@ -114,7 +114,7 @@ const faqSchema = {
       name: "How much does HIFU cost at SKIN@Mantraa Kanpur?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "HIFU pricing depends on the treatment area - full face and neck, face only, lower face only, décolletage, or a combination. Cost varies accordingly. Please book a consultation (₹600) and we will give you complete pricing and a clear treatment plan at that visit.",
+        text: "HIFU pricing depends on the treatment area, full face and neck, face only, lower face only, décolletage, or a combination. Cost varies accordingly. Please book a consultation (₹600) and we will give you complete pricing and a clear treatment plan at that visit.",
       },
     },
   ],
@@ -217,7 +217,7 @@ export default function HifuBlogPage() {
             </div>
 
             <h1 style={styles.heading1}>
-              HIFU Treatment in Kanpur - Not Magic, Just Science That Actually
+              HIFU Treatment in Kanpur, Not Magic, Just Science That Actually
               Works
             </h1>
 
@@ -342,12 +342,12 @@ export default function HifuBlogPage() {
                   margin: 0,
                 }}
               >
-                HIFU (High-Intensity Focused Ultrasound) is a non-surgical skin tightening treatment that targets the SMAS layer at 4.5mm depth — the same tissue a surgeon tightens during a facelift. It stimulates new collagen production over 3–6 months. At SKIN@Mantraa Kanpur, HIFU treats jawline laxity, neck loosening, brow drooping, and décolletage crepiness. It is safe for all Indian skin tones as it bypasses the epidermis entirely.
+                HIFU (High-Intensity Focused Ultrasound) is a non-surgical skin tightening treatment that targets the SMAS layer at 4.5mm depth, the same tissue a surgeon tightens during a facelift. It stimulates new collagen production over 3–6 months. At SKIN@Mantraa Kanpur, HIFU treats jawline laxity, neck loosening, brow drooping, and décolletage crepiness. It is safe for all Indian skin tones as it bypasses the epidermis entirely.
               </p>
             </div>
             <p style={styles.para}>
               Somewhere between forty and fifty, most of my patients notice the
-              same shift. It is not wrinkles exactly - they have had those for a
+              same shift. It is not wrinkles exactly, they have had those for a
               while, and they have made peace with them. What changes is the
               structure. The jawline is not as clean. The skin under the chin
               has softened. The cheeks have quietly moved a little south of
@@ -360,7 +360,7 @@ export default function HifuBlogPage() {
             </p>
 
             <p style={styles.para}>
-              The honest answer - and I try to always be honest - is that
+              The honest answer, and I try to always be honest, is that
               surgery remains the gold standard when laxity is significant.
               Nothing non-invasive fully replicates what a skilled plastic
               surgeon can achieve when sagging is severe. But for the large
@@ -371,7 +371,7 @@ export default function HifuBlogPage() {
 
             <p style={styles.para}>
               We have this machine at SKIN@Mantraa. Here is everything I
-              actually want you to understand about it - before you book, before
+              actually want you to understand about it, before you book, before
               you spend money, before you decide.
             </p>
 
@@ -388,7 +388,7 @@ export default function HifuBlogPage() {
               What makes HIFU fundamentally different from radiofrequency
               treatments, laser tightening, or the collagen creams sold at
               chemists is this: it reaches the SMAS layer. The SMAS -
-              Superficial Muscular Aponeurotic System - is a fibromuscular sheet
+              Superficial Muscular Aponeurotic System, is a fibromuscular sheet
               that sits approximately 4.5mm below the skin surface, beneath the
               dermis and subcutaneous fat. It is literally the same layer that a
               surgeon tightens when performing a conventional facelift.
@@ -399,7 +399,7 @@ export default function HifuBlogPage() {
               depth. Topical creams stay on the surface. Radiofrequency
               typically reaches 1.5 to 2mm. HIFU, by focusing ultrasound energy
               like a lens focuses light, creates micro-coagulation points at the
-              target depth of 4.5mm - without disturbing the overlying skin at
+              target depth of 4.5mm, without disturbing the overlying skin at
               all.
             </p>
 
@@ -416,14 +416,14 @@ export default function HifuBlogPage() {
 
             <p style={styles.para}>
               The patients I see the most satisfying results in are generally
-              between 35 and 58, with mild to moderate laxity - skin that has
+              between 35 and 58, with mild to moderate laxity, skin that has
               started to change but has not changed dramatically. Specifically:
             </p>
 
             <ul style={styles.ul}>
               {[
                 "A jawline beginning to soften, with early jowl formation along the lower face",
-                "The submental area - the skin and tissue beneath the chin - that has lost its previous tautness",
+                "The submental area, the skin and tissue beneath the chin, that has lost its previous tautness",
                 "A subtle brow heaviness, where the outer brow has dropped slightly",
                 "Neck skin that feels looser and less firm than it did five years ago",
                 "Crepey texture developing across the décolletage",
@@ -437,7 +437,7 @@ export default function HifuBlogPage() {
             <p style={styles.para}>
               HIFU is not appropriate for everyone. If laxity is pronounced -
               deep jowls, significant redundant neck skin, heavy nasolabial
-              folding - I will tell you directly that surgery will deliver a
+              folding, I will tell you directly that surgery will deliver a
               better outcome. It would be wrong to charge for a treatment that
               will only partially address what you are actually bothered by.
             </p>
@@ -445,13 +445,13 @@ export default function HifuBlogPage() {
             <p style={styles.para}>
               Very young patients with good skin elasticity do not need HIFU
               yet. The treatment works because there is collagen scaffolding
-              present that has begun to loosen - the energy stimulates what is
+              present that has begun to loosen, the energy stimulates what is
               already there. When skin is still well-supported at 28, the
               clinical benefit is minimal.
             </p>
 
             <h2 style={styles.heading2}>
-              What the Treatment Feels Like - Honestly
+              What the Treatment Feels Like, Honestly
             </h2>
 
             <p style={styles.para}>
@@ -462,8 +462,8 @@ export default function HifuBlogPage() {
 
             <p style={styles.para}>
               HIFU is not painless. When focused energy passes through to the
-              SMAS layer, most patients feel a warming sensation - sometimes
-              sharp and brief - at the moment of delivery. Bony regions of the
+              SMAS layer, most patients feel a warming sensation, sometimes
+              sharp and brief, at the moment of delivery. Bony regions of the
               face, such as the temples, cheekbones, and along the mandible, are
               typically more sensitive than the fleshier mid-cheek area.
               Tolerance varies considerably between individuals.
@@ -472,7 +472,7 @@ export default function HifuBlogPage() {
             <p style={styles.para}>
               We apply a thin conductive gel to the skin. The applicator is
               moved in precise linear passes across each treatment zone. We
-              typically work at three depths - 4.5mm, 3.0mm, and 1.5mm - to
+              typically work at three depths, 4.5mm, 3.0mm, and 1.5mm, to
               treat different tissue layers in each zone. A full-face and neck
               session takes 60 to 90 minutes.
             </p>
@@ -487,7 +487,7 @@ export default function HifuBlogPage() {
             </p>
 
             <p style={styles.para}>
-              There is no anaesthesia. No incisions. No recovery period - the
+              There is no anaesthesia. No incisions. No recovery period, the
               majority of patients return to normal activity the same day,
               sometimes with mild redness that resolves within a few hours.
             </p>
@@ -501,8 +501,8 @@ export default function HifuBlogPage() {
             <p style={styles.para}>
               The first happens within 48 hours. As any initial mild swelling
               resolves, many patients notice an immediate tightening and a
-              certain brightness to the skin. This is real - it is partly the
-              immediate structural response to the heat - but it is not the full
+              certain brightness to the skin. This is real, it is partly the
+              immediate structural response to the heat, but it is not the full
               result. Do not judge the treatment at day two.
             </p>
 
@@ -520,10 +520,10 @@ export default function HifuBlogPage() {
 
             <ul style={styles.ul}>
               {[
-                "A cleaner, more defined jawline - early jowling visibly reduced",
+                "A cleaner, more defined jawline, early jowling visibly reduced",
                 "Tighter skin below the chin and along the neck",
                 "A subtle lift in the outer brow and upper face",
-                "An overall impression of looking refreshed - without looking altered",
+                "An overall impression of looking refreshed, without looking altered",
               ].map((item, i) => (
                 <li key={i} style={styles.li}>
                   {item}
@@ -534,7 +534,7 @@ export default function HifuBlogPage() {
             <p style={styles.para}>
               HIFU does not freeze expression. Unlike Botox, it does not affect
               muscle movement at all. The results look natural because they come
-              from your own biology - new collagen produced by your own
+              from your own biology, new collagen produced by your own
               fibroblasts.
             </p>
 
@@ -556,7 +556,7 @@ export default function HifuBlogPage() {
 
             <p style={styles.para}>
               The majority of cosmetic energy-based treatments were developed
-              and trialled on predominantly Western populations - Fitzpatrick
+              and trialled on predominantly Western populations, Fitzpatrick
               Type I to III skin. North Indian patients typically have
               Fitzpatrick Type III to V skin, which behaves differently under
               light-based treatments. Laser resurfacing, intense pulsed light,
@@ -567,12 +567,12 @@ export default function HifuBlogPage() {
 
             <p style={styles.para}>
               HIFU avoids this problem structurally. It uses focused mechanical
-              heating of deep tissue - it does not target chromophores, does not
+              heating of deep tissue, it does not target chromophores, does not
               rely on melanin absorption, and does not interact with the
               epidermis in the way light-based treatments do. The energy
               bypasses the skin surface and acts at the SMAS depth. This makes
               HIFU one of the more skin-type-agnostic tightening technologies
-              available - the risk of surface pigmentation change is
+              available, the risk of surface pigmentation change is
               fundamentally lower.
             </p>
 
@@ -595,7 +595,7 @@ export default function HifuBlogPage() {
               Clinical-grade HIFU machines are calibrated to deliver verified
               energy densities at specific tissue depths, confirmed by imaging
               transducers. Consumer or salon-grade machines frequently cannot
-              deliver energy at the 4.5mm SMAS depth - which is the entire point
+              deliver energy at the 4.5mm SMAS depth, which is the entire point
               of the procedure. A treatment that only reaches 1.5mm is a surface
               skin treatment, not a structural one. You may feel something. You
               may not see much.
@@ -604,7 +604,7 @@ export default function HifuBlogPage() {
             <p style={styles.para}>
               The training and judgment of the clinician matters equally.
               Incorrect depth selection, wrong energy parameters, or treating a
-              patient who is not a suitable candidate - these produce either
+              patient who is not a suitable candidate, these produce either
               poor results or, in inexperienced hands, complications. This is
               not a treatment to choose based on price alone.
             </p>
@@ -639,15 +639,15 @@ export default function HifuBlogPage() {
                 {[
                   {
                     q: "How many HIFU sessions will I need?",
-                    a: "Most patients with mild to moderate laxity see meaningful improvement after a single session. We reassess at the 3-month mark, when collagen response is becoming visible. Some patients benefit from a second session at 6 months, but this is not a standard recommendation - it depends on individual response and the degree of change present. We will not suggest a second session unless it is genuinely warranted.",
+                    a: "Most patients with mild to moderate laxity see meaningful improvement after a single session. We reassess at the 3-month mark, when collagen response is becoming visible. Some patients benefit from a second session at 6 months, but this is not a standard recommendation, it depends on individual response and the degree of change present. We will not suggest a second session unless it is genuinely warranted.",
                   },
                   {
                     q: "Can HIFU be combined with Botox or fillers?",
-                    a: "Yes. HIFU addresses structural laxity, Botox addresses dynamic expression lines, and fillers address volume loss - these are different problems requiring different solutions, and they do not interfere with each other. Many patients benefit from a combined approach. We plan this in consultation, not as a default package, based on what your face actually needs.",
+                    a: "Yes. HIFU addresses structural laxity, Botox addresses dynamic expression lines, and fillers address volume loss, these are different problems requiring different solutions, and they do not interfere with each other. Many patients benefit from a combined approach. We plan this in consultation, not as a default package, based on what your face actually needs.",
                   },
                   {
                     q: "How is HIFU different from radiofrequency (RF) tightening?",
-                    a: "Radiofrequency treatments typically work at 1.5 to 2mm depth in the dermis. They are effective for surface skin quality - fine lines, texture, mild tightening. HIFU goes deeper and targets the SMAS layer at 4.5mm. For genuine structural lifting, HIFU reaches tissue that RF generally does not. For surface skin quality, RF treatments may complement HIFU well.",
+                    a: "Radiofrequency treatments typically work at 1.5 to 2mm depth in the dermis. They are effective for surface skin quality, fine lines, texture, mild tightening. HIFU goes deeper and targets the SMAS layer at 4.5mm. For genuine structural lifting, HIFU reaches tissue that RF generally does not. For surface skin quality, RF treatments may complement HIFU well.",
                   },
                   {
                     q: "What should I avoid after a HIFU session?",
@@ -655,11 +655,11 @@ export default function HifuBlogPage() {
                   },
                   {
                     q: "Is HIFU safe during pregnancy or breastfeeding?",
-                    a: "No - HIFU is not recommended during pregnancy or while breastfeeding. Wait until breastfeeding is complete. We also recommend allowing 3 to 6 months post-partum for skin to stabilise before assessing laxity, since skin quality and structure change significantly during the post-pregnancy hormonal recovery period.",
+                    a: "No, HIFU is not recommended during pregnancy or while breastfeeding. Wait until breastfeeding is complete. We also recommend allowing 3 to 6 months post-partum for skin to stabilise before assessing laxity, since skin quality and structure change significantly during the post-pregnancy hormonal recovery period.",
                   },
                   {
                     q: "How much does HIFU cost at SKIN@Mantraa Kanpur?",
-                    a: "HIFU pricing depends on the treatment area - full face and neck, face only, lower face only, décolletage, or a combination. Cost varies accordingly. We do not quote over WhatsApp because the appropriate treatment area is determined after a proper facial assessment. Please book a consultation (₹600) and we will give you complete pricing and a clear treatment plan at that visit.",
+                    a: "HIFU pricing depends on the treatment area, full face and neck, face only, lower face only, décolletage, or a combination. Cost varies accordingly. We do not quote over WhatsApp because the appropriate treatment area is determined after a proper facial assessment. Please book a consultation (₹600) and we will give you complete pricing and a clear treatment plan at that visit.",
                   },
                 ].map(({ q, a }, i) => (
                   <details

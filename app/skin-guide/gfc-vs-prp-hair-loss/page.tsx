@@ -6,14 +6,14 @@ import FloatingCTA from "@/components/layout/FloatingCTA";
 
 export const metadata: Metadata = {
   title:
-    "GFC vs PRP for Hair Loss - Which is Better for Indian Patients? | SKIN@Mantraa",
+    "GFC vs PRP for Hair Loss, Which is Better for Indian Patients? | SKIN@Mantraa",
   description:
-    "GFC and PRP both treat hair loss - but they are not the same. Dr. Mamta Bhura explains the difference in growth factor concentration, who each suits, and which gives better results.",
+    "GFC and PRP both treat hair loss, but they are not the same. Dr. Mamta Bhura explains the difference in growth factor concentration, who each suits, and which gives better results.",
   alternates: {
     canonical: "https://skinmantraa.in/skin-guide/gfc-vs-prp-hair-loss",
   },
   openGraph: {
-    title: "GFC vs PRP for Hair Loss - Which is Better for Indian Patients?",
+    title: "GFC vs PRP for Hair Loss | Which is Better for Indian Patients?",
     description:
       "GFC delivers higher growth factor concentration than standard PRP. Dr. Mamta Bhura explains who benefits from each, and when to upgrade from PRP to GFC.",
     url: "https://skinmantraa.in/skin-guide/gfc-vs-prp-hair-loss",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
 const blogSchema = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  headline: "GFC vs PRP for Hair Loss - Which Is Better for Indian Patients?",
+  headline: "GFC vs PRP for Hair Loss, Which Is Better for Indian Patients?",
   description:
     "Clinical comparison of GFC and PRP hair treatments by Dr. Mamta Bhura, SKIN@Mantraa Kanpur. Covers growth factor concentration differences, patient selection, session protocol, and realistic outcomes.",
   image: "https://skinmantraa.in/opengraph-image",
@@ -86,7 +86,7 @@ const faqSchema = {
       name: "What is the difference between GFC and PRP for hair loss?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "PRP (Platelet Rich Plasma) concentrates platelets from your own blood by spinning it in a centrifuge. GFC (Growth Factor Concentrate) goes a step further - it specifically extracts and concentrates growth factors (PDGF, VEGF, EGF, TGF-β) from the platelets at a higher purity and concentration than standard PRP. GFC delivers more growth factors per injection than PRP, which translates to a stronger biological signal for follicle stimulation - particularly for patients with moderate-to-advanced thinning.",
+        text: "PRP (Platelet Rich Plasma) concentrates platelets from your own blood by spinning it in a centrifuge. GFC (Growth Factor Concentrate) goes a step further, it specifically extracts and concentrates growth factors (PDGF, VEGF, EGF, TGF-β) from the platelets at a higher purity and concentration than standard PRP. GFC delivers more growth factors per injection than PRP, which translates to a stronger biological signal for follicle stimulation, particularly for patients with moderate-to-advanced thinning.",
       },
     },
     {
@@ -94,7 +94,7 @@ const faqSchema = {
       name: "Who is a better candidate for GFC vs PRP?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "PRP is appropriate for patients with early-to-mild androgenetic alopecia who have not yet had any growth factor treatment. GFC is recommended for patients with moderate-to-advanced thinning, those who had an incomplete response to standard PRP, or patients who want the most effective single-modality option from the start. Both treatments work best when follicles are still present but miniaturised - neither works on completely bald scalp areas.",
+        text: "PRP is appropriate for patients with early-to-mild androgenetic alopecia who have not yet had any growth factor treatment. GFC is recommended for patients with moderate-to-advanced thinning, those who had an incomplete response to standard PRP, or patients who want the most effective single-modality option from the start. Both treatments work best when follicles are still present but miniaturised, neither works on completely bald scalp areas.",
       },
     },
     {
@@ -102,7 +102,7 @@ const faqSchema = {
       name: "How many sessions of GFC or PRP are needed for hair loss?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The standard protocol for both PRP and GFC is an initial course of 4 sessions spaced 3 to 4 weeks apart, followed by maintenance sessions every 4 to 6 months. GFC patients typically see a faster and more pronounced response than standard PRP patients - some notice reduced shedding after the first or second session. Maximum results for both treatments are seen 4 to 6 months after completing the initial course.",
+        text: "The standard protocol for both PRP and GFC is an initial course of 4 sessions spaced 3 to 4 weeks apart, followed by maintenance sessions every 4 to 6 months. GFC patients typically see a faster and more pronounced response than standard PRP patients, some notice reduced shedding after the first or second session. Maximum results for both treatments are seen 4 to 6 months after completing the initial course.",
       },
     },
     {
@@ -110,7 +110,7 @@ const faqSchema = {
       name: "Is GFC more expensive than PRP?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "GFC is typically priced higher than standard PRP per session because the preparation process is more involved - the growth factor extraction requires additional centrifugation and activation steps. Whether the additional cost is justified depends on the individual patient's degree of hair loss and response to standard PRP. At SKIN@Mantraa, Dr. Bhura assesses each patient to recommend the most appropriate treatment - PRP or GFC - based on the hair loss pattern, density, and baseline blood panel results.",
+        text: "GFC is typically priced higher than standard PRP per session because the preparation process is more involved, the growth factor extraction requires additional centrifugation and activation steps. Whether the additional cost is justified depends on the individual patient's degree of hair loss and response to standard PRP. At SKIN@Mantraa, Dr. Bhura assesses each patient to recommend the most appropriate treatment, PRP or GFC, based on the hair loss pattern, density, and baseline blood panel results.",
       },
     },
     {
@@ -118,7 +118,7 @@ const faqSchema = {
       name: "Do I need a blood test before PRP or GFC hair treatment?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. All hair restoration patients at SKIN@Mantraa receive a baseline blood panel (ferritin, Vitamin D3, B12, thyroid function, and hormonal markers) before treatment begins. Nutritional deficiencies - especially ferritin and Vitamin D3 - are extremely common in Indian patients and will significantly reduce the effectiveness of PRP or GFC if not corrected. These deficiencies must be treated alongside the hair restoration protocol for best results.",
+        text: "Yes. All hair restoration patients at SKIN@Mantraa receive a baseline blood panel (ferritin, Vitamin D3, B12, thyroid function, and hormonal markers) before treatment begins. Nutritional deficiencies, especially ferritin and Vitamin D3, are extremely common in Indian patients and will significantly reduce the effectiveness of PRP or GFC if not corrected. These deficiencies must be treated alongside the hair restoration protocol for best results.",
       },
     },
   ],
@@ -231,7 +231,7 @@ export default function GFCvsPRPPage() {
               style={{ ...styles.para, fontSize: "1.15rem", color: "#5C4033" }}
             >
               Both GFC and PRP use your own blood to deliver growth factors to
-              thinning follicles - but they are not the same treatment. The
+              thinning follicles, but they are not the same treatment. The
               concentration of active growth factors, the preparation process,
               and the clinical outcomes differ meaningfully. Here is the honest
               comparison every hair loss patient in India should read before
@@ -306,7 +306,7 @@ export default function GFCvsPRPPage() {
                   margin: 0,
                 }}
               >
-                GFC (Growth Factor Concentrate) and PRP (Platelet-Rich Plasma) both treat hair loss using blood-derived growth factors, but GFC delivers a higher, purer concentration with fewer inflammatory proteins. PRP is well-established; GFC is newer with emerging clinical superiority. Neither works on dead follicles — both require early intervention. At SKIN@Mantraa Kanpur, both are available; the choice depends on degree of thinning and prior response to treatment.
+                GFC (Growth Factor Concentrate) and PRP (Platelet-Rich Plasma) both treat hair loss using blood-derived growth factors, but GFC delivers a higher, purer concentration with fewer inflammatory proteins. PRP is well-established; GFC is newer with emerging clinical superiority. Neither works on dead follicles, and both require early intervention. At SKIN@Mantraa Kanpur, both are available; the choice depends on degree of thinning and prior response to treatment.
               </p>
             </div>
             <h2 style={styles.heading2}>What PRP Actually Is</h2>
@@ -314,7 +314,7 @@ export default function GFCvsPRPPage() {
               PRP (Platelet Rich Plasma) is prepared by drawing a small amount
               of your blood and spinning it in a centrifuge to separate the
               components by density. The resulting &ldquo;platelet rich&rdquo;
-              layer - concentrated 2 to 5 times above baseline - is injected
+              layer, concentrated 2 to 5 times above baseline, is injected
               into the scalp at the level of the hair follicles.
             </p>
             <p style={styles.para}>
@@ -327,16 +327,16 @@ export default function GFCvsPRPPage() {
             <p style={styles.para}>
               PRP is well-evidenced for androgenetic alopecia and telogen
               effluvium. It works best when there are still living follicles
-              present - they may be miniaturised and producing thin hair, but
+              present, they may be miniaturised and producing thin hair, but
               they must be there. PRP cannot grow hair where follicles are
               completely absent.
             </p>
 
-            <h2 style={styles.heading2}>What GFC Is - and How It Differs</h2>
+            <h2 style={styles.heading2}>What GFC Is, and How It Differs</h2>
             <p style={styles.para}>
               GFC (Growth Factor Concentrate) was developed as an advancement
               over standard PRP. The key difference is in the preparation: GFC
-              doesn&apos;t just concentrate platelets - it specifically extracts
+              doesn&apos;t just concentrate platelets, it specifically extracts
               and concentrates the active growth factors from those platelets,
               producing a purer, more potent preparation.
             </p>
@@ -451,7 +451,7 @@ export default function GFCvsPRPPage() {
             </p>
             <ul style={styles.ul}>
               <li style={styles.li}>
-                You have early-stage androgenetic alopecia - noticeable thinning
+                You have early-stage androgenetic alopecia, noticeable thinning
                 but good hair density remaining
               </li>
               <li style={styles.li}>
@@ -495,7 +495,7 @@ export default function GFCvsPRPPage() {
               thyroid function (TSH, T3, T4), and hormonal markers (for women).
             </p>
             <p style={styles.para}>
-              This is not optional - it is clinically necessary. Ferritin
+              This is not optional, it is clinically necessary. Ferritin
               deficiency and Vitamin D3 deficiency are extremely common in
               Indian patients, particularly women, and both directly impair hair
               follicle function. No amount of PRP or GFC will produce its full
@@ -600,7 +600,7 @@ export default function GFCvsPRPPage() {
               >
                 Dr. Bhura will assess your hair loss pattern, recommend the
                 appropriate treatment (PRP or GFC), and order your baseline
-                blood panel - all at the initial consultation. Consultation:
+                blood panel, all at the initial consultation. Consultation:
                 ₹600.
               </p>
               <div
@@ -665,7 +665,7 @@ export default function GFCvsPRPPage() {
                 }}
               >
                 Written by <strong>Dr. Mamta Bhura</strong>, MD Dermatology (IMS
-                BHU), Member - IMA, IADVL, CDSI. 26+ years clinical practice in
+                BHU), Member, IMA, IADVL, CDSI. 26+ years clinical practice in
                 Kanpur.
               </p>
               <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem" }}>

@@ -405,6 +405,7 @@ function SpotlightCard({
         )}
 
         <div
+          className={featured ? "service-card-content-featured" : "service-card-content"}
           style={{
             padding: featured
               ? "1.75rem 2.75rem 2.5rem"
@@ -690,8 +691,8 @@ export default function ServicesShowcase() {
               lineHeight: 1.7,
             }}
           >
-            From medical dermatology to cutting-edge cosmetic procedures - all
-            under one roof
+            From medical dermatology to cutting-edge cosmetic procedures, all
+            under one roof.
           </motion.p>
         </motion.div>
 

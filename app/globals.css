@@ -233,11 +233,7 @@ h1, h2, h3, h4 {
   }
 
   .hero-trust-badge {
-    flex-wrap: wrap;
-    width: min(100%, 22rem);
-    border-radius: 18px !important;
-    padding-right: 0.8rem !important;
-    line-height: 1.35;
+    /* nowrap enforced in hero-responsive block above */
   }
 
   .doctor-tilt-card {
@@ -274,6 +270,15 @@ h1, h2, h3, h4 {
     min-width: 0;
   }
 
+  /* Service cards: tighten padding on mobile */
+  .service-card-content-featured {
+    padding: 1.25rem 1.25rem 1.75rem !important;
+  }
+
+  .service-card-content {
+    padding: 1rem 1.25rem 1.5rem !important;
+  }
+
   .review-grid {
     grid-template-columns: 1fr;
     gap: 1rem;
@@ -282,6 +287,30 @@ h1, h2, h3, h4 {
   .review-card {
     min-height: auto !important;
     margin-top: 0 !important;
+  }
+
+  /* Floating CTA: always show label on touch devices */
+  .floating-cta-label {
+    display: block !important;
+    width: auto !important;
+    opacity: 1 !important;
+    overflow: visible !important;
+  }
+
+  .floating-cta-btn {
+    padding: 0.75rem 1.1rem !important;
+  }
+
+  /* Ensure minimum 44px touch targets */
+  .btn-primary,
+  .btn-ghost {
+    min-height: 44px;
+  }
+
+  /* Section vertical padding: scale down on mobile */
+  .section-py {
+    padding-top: 4rem !important;
+    padding-bottom: 4rem !important;
   }
 }
 
@@ -303,6 +332,17 @@ h1, h2, h3, h4 {
   }
 }
 
+/* ── Doctor intro section ─────────────────────────────────────────────── */
+.doctor-intro-section {
+  padding: 7rem 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .doctor-intro-section {
+    padding: 4rem 1.25rem 5rem;
+  }
+}
+
 /* ── Hero animated headline shimmer (Skinmantraa brand moment) ────────── */
 @keyframes hero-shimmer {
   0%   { background-position: 0% center; }
@@ -317,4 +357,43 @@ h1, h2, h3, h4 {
 .card-hover:hover {
   transform: translateY(-4px);
   box-shadow: 0 12px 40px rgba(61,43,31,0.12) !important;
+}
+
+/* ── Global mobile/touch enhancements ────────────────────────────────── */
+
+/* Prevent accidental text selection on interactive elements */
+button, a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Ensure the floating CTAs don't obscure the last footer content on mobile */
+@media (max-width: 768px) {
+  footer {
+    padding-bottom: env(safe-area-inset-bottom, 0);
+  }
+
+  /* Scale back large section spacing site-wide on mobile */
+  .py-24 {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  /* Improve form input tap targets */
+  input, select, textarea {
+    font-size: 16px !important; /* prevents iOS zoom on focus */
+    min-height: 44px;
+  }
+
+  /* Sticky sidebar becomes normal flow on mobile */
+  .sticky {
+    position: static !important;
+  }
+}
+
+/* ── ServicesShowcase section: reduce top/bottom on mobile ────────────── */
+@media (max-width: 640px) {
+  .py-24 {
+    padding-top: 3.5rem !important;
+    padding-bottom: 3.5rem !important;
+  }
 }

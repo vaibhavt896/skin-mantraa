@@ -29,7 +29,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://skinmantraa.in";
 
 export const metadata: Metadata = {
   title: {
-    default: "SKIN@Mantraa - Premier Dermatology & Cosmetology in Kanpur",
+    default: "SKIN@Mantraa | Premier Dermatology & Cosmetology in Kanpur",
     template: "%s | SKIN@Mantraa",
   },
   description:
@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     locale: "en_IN",
     url: siteUrl,
     siteName: "SKIN@Mantraa",
-    title: "SKIN@Mantraa - Premier Dermatology in Kanpur",
+    title: "SKIN@Mantraa | Premier Dermatology in Kanpur",
     description:
       "Expert skin care by Dr. Mamta Bhura, MBBS MD (Dermatology). Laser treatments, anti-aging, acne solutions & hair restoration in Kanpur.",
     images: [
@@ -59,13 +59,13 @@ export const metadata: Metadata = {
         url: "/opengraph-image",
         width: 1200,
         height: 630,
-        alt: "SKIN@Mantraa - Premier Dermatology Clinic, Kanpur",
+        alt: "SKIN@Mantraa, Premier Dermatology Clinic, Kanpur",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "SKIN@Mantraa - Premier Dermatology in Kanpur",
+    title: "SKIN@Mantraa | Premier Dermatology in Kanpur",
     description:
       "Expert skin care by Dr. Mamta Bhura. Laser treatments, anti-aging, acne solutions & hair restoration.",
     images: ["/opengraph-image"],

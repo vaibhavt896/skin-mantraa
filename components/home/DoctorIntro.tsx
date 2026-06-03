@@ -19,10 +19,44 @@ import {
 } from "@/lib/animations";
 
 const QUALIFICATIONS = [
-  { text: "MBBS & MD Dermatology - IMS BHU", icon: "🎓" },
-  { text: "Former Consultant, Kaya Skin Clinic Delhi", icon: "🏥" },
-  { text: "26+ Years Clinical Experience", icon: "⭐" },
-  { text: "IMA | IADVL | CDSI Member", icon: "🏛️" },
+  {
+    text: "MBBS & MD Dermatology, IMS BHU",
+    icon: (
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M12 4L3 8.5l9 4.5 9-4.5L12 4z" stroke="#C4704E" strokeWidth="1.6" strokeLinejoin="round" />
+        <path d="M7 10.5V15c0 1.1 2.2 2.4 5 2.4s5-1.3 5-2.4v-4.5" stroke="#C4704E" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M21 8.5V13" stroke="#C4704E" strokeWidth="1.6" strokeLinecap="round" />
+      </svg>
+    ),
+  },
+  {
+    text: "Former Consultant, Kaya Skin Clinic Delhi",
+    icon: (
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M4 21V7l8-4 8 4v14" stroke="#C4704E" strokeWidth="1.6" strokeLinejoin="round" />
+        <path d="M12 8.5v5M9.5 11h5" stroke="#C4704E" strokeWidth="1.6" strokeLinecap="round" />
+        <path d="M4 21h16" stroke="#C4704E" strokeWidth="1.6" strokeLinecap="round" />
+      </svg>
+    ),
+  },
+  {
+    text: "26+ Years Clinical Experience",
+    icon: (
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M12 3l2.5 5.6 6.1.6-4.6 4 1.4 6L12 18.8 6.6 22l1.4-6L3.4 9.2l6.1-.6L12 3z" stroke="#C4704E" strokeWidth="1.6" strokeLinejoin="round" />
+      </svg>
+    ),
+  },
+  {
+    text: "IMA | IADVL | CDSI Member",
+    icon: (
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+        <path d="M4 9.5L12 4l8 5.5" stroke="#C4704E" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+        <path d="M5 10v8M9.5 10v8M14.5 10v8M19 10v8" stroke="#C4704E" strokeWidth="1.6" strokeLinecap="round" />
+        <path d="M3.5 20.5h17" stroke="#C4704E" strokeWidth="1.6" strokeLinecap="round" />
+      </svg>
+    ),
+  },
 ];
 
 // ─── 3D Tilt Card ─────────────────────────────────────────────────────────────
@@ -551,9 +585,9 @@ export default function DoctorIntro() {
   return (
     <section
       ref={sectionRef}
+      className="doctor-intro-section"
       style={{
         background: "#FDF6EC",
-        padding: "7rem 1.5rem",
         overflow: "hidden",
         position: "relative",
       }}
@@ -575,9 +609,8 @@ export default function DoctorIntro() {
           maxWidth: "1280px",
           margin: "0 auto",
           position: "relative",
-          gap: "4rem",
         }}
-        className="grid grid-cols-1 lg:grid-cols-2 items-center"
+        className="grid grid-cols-1 lg:grid-cols-2 items-center gap-12 lg:gap-16"
       >
         {/* LEFT: 3D Tilt Card */}
         <TiltCard inView={inView} />
@@ -702,7 +735,8 @@ export default function DoctorIntro() {
               >
                 &ldquo;
               </span>
-              She honestly tells you what can and cannot be treated.
+              She honestly tells you what can and cannot be treated, no
+              upselling, just real advice.
               <span
                 aria-hidden="true"
                 style={{
@@ -727,7 +761,7 @@ export default function DoctorIntro() {
                 marginTop: "0.85rem",
               }}
             >
-              - Patient Review, Practo
+              Patient Review, Practo
             </footer>
             {/* Handwritten signature */}
             <motion.div

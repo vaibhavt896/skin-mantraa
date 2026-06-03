@@ -6,18 +6,19 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import FloatingCTA from "@/components/layout/FloatingCTA";
 import ServiceArticle from "@/components/services/ServiceArticle";
+import BreadcrumbSchema from "@/components/shared/BreadcrumbSchema";
 import { SERVICES, BRAND } from "@/lib/constants";
 import ServicesClient from "./ServicesClient";
 
 export const metadata: Metadata = {
   title: "Dermatology & Cosmetic Treatments in Kanpur | SKIN@Mantraa",
   description:
-    "Advanced laser, anti-aging, acne, hair restoration, and skin disease treatments in Kanpur. Dr. Mamta Bhura - MD Dermatology - offers 28+ evidence-based treatments at SKIN@Mantraa, Swaroop Nagar.",
+    "Advanced laser, anti-aging, acne, hair restoration, and skin disease treatments in Kanpur. Dr. Mamta Bhura, MD Dermatology, offers 28+ evidence-based treatments at SKIN@Mantraa, Swaroop Nagar.",
   alternates: { canonical: "https://skinmantraa.in/services" },
   openGraph: {
     title: "Dermatology & Cosmetic Treatments in Kanpur | SKIN@Mantraa",
     description:
-      "Laser hair removal, Botox, acne scar treatment, PRP hair restoration, HIFU, vitiligo phototherapy and more - by Dr. Mamta Bhura, MD Dermatology, Kanpur.",
+      "Laser hair removal, Botox, acne scar treatment, PRP hair restoration, HIFU, vitiligo phototherapy and more, by Dr. Mamta Bhura, MD Dermatology, Kanpur.",
     url: "https://skinmantraa.in/services",
     type: "website",
     images: [
@@ -329,7 +330,7 @@ function DecorativePanel({
       <div className="w-full h-full min-h-[280px] sm:min-h-[340px] lg:min-h-[420px] rounded-3xl relative overflow-hidden group">
         <Image
           src={image}
-          alt={`${title} - SKIN@Mantraa treatment`}
+          alt={`${title} at SKIN@Mantraa, Kanpur`}
           fill
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 600px"
           className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
@@ -432,13 +433,13 @@ const PROCESS_STEPS = [
     number: "02",
     title: "Skin Assessment",
     description:
-      "Dr. Bhura conducts a thorough evaluation of your skin type, medical history, and concerns - using clinical expertise to form an accurate diagnosis.",
+      "Dr. Bhura conducts a thorough evaluation of your skin type, medical history, and concerns, using clinical expertise to form an accurate diagnosis.",
   },
   {
     number: "03",
     title: "Personalised Treatment Plan",
     description:
-      "Receive a tailored treatment plan designed specifically for your skin's needs - with honest timelines, realistic expectations, and no unnecessary upselling.",
+      "Receive a tailored treatment plan designed specifically for your skin's needs, with honest timelines, realistic expectations, and no unnecessary upselling.",
   },
   {
     number: "04",
@@ -452,6 +453,12 @@ const PROCESS_STEPS = [
 export default function ServicesPage() {
   return (
     <>
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", path: "/" },
+          { name: "Services", path: "/services" },
+        ]}
+      />
       <Header />
       <main style={{ background: "#FDF6EC" }}>
         {/* ══════════════════════════════════════════════════
@@ -554,7 +561,7 @@ export default function ServicesPage() {
                   maxWidth: "600px",
                 }}
               >
-                At SKIN@Mantraa, every treatment is chosen with purpose - not
+                At SKIN@Mantraa, every treatment is chosen with purpose, not
                 trend. From medical dermatology to advanced cosmetic procedures,
                 we offer a carefully curated range of evidence-based solutions
                 designed for Indian skin, guided by clinical judgment, and

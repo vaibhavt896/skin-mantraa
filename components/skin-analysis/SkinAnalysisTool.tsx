@@ -217,7 +217,7 @@ export default function SkinAnalysisTool() {
       >
         Get a preliminary assessment of your skin concern in under 3 minutes.
         Answer a few clinically-informed questions and receive personalised
-        insights - completely free and private.
+        insights, completely free and private.
       </p>
 
       {/* How it works */}
@@ -810,7 +810,7 @@ export default function SkinAnalysisTool() {
                 textUnderlineOffset: 3,
               }}
             >
-              Skip - continue without photo
+              Skip and continue without photo
             </button>
           </div>
         </div>

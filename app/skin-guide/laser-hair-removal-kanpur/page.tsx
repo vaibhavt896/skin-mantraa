@@ -6,16 +6,16 @@ import FloatingCTA from "@/components/layout/FloatingCTA";
 
 export const metadata: Metadata = {
   title:
-    "Laser Hair Removal in Kanpur - How Many Sessions, What to Expect | SKIN@Mantraa",
+    "Laser Hair Removal in Kanpur, How Many Sessions, What to Expect | SKIN@Mantraa",
   description:
-    "How many sessions does laser hair removal take? What is the best laser for Indian skin? Dr. Mamta Bhura explains the full clinical picture - sessions, intervals, results, and why the laser type matters for dark skin.",
+    "How many sessions does laser hair removal take? What is the best laser for Indian skin? Dr. Mamta Bhura explains the full clinical picture, sessions, intervals, results, and why the laser type matters for dark skin.",
   alternates: {
     canonical: "https://skinmantraa.in/skin-guide/laser-hair-removal-kanpur",
   },
   openGraph: {
-    title: "Laser Hair Removal in Kanpur - How Many Sessions, What to Expect",
+    title: "Laser Hair Removal in Kanpur | How Many Sessions, What to Expect",
     description:
-      "How many sessions does laser hair removal take? What is the best laser for Indian skin? Dr. Mamta Bhura explains the full clinical picture - sessions, intervals, results, and why the laser type matters for dark skin.",
+      "How many sessions does laser hair removal take? What is the best laser for Indian skin? Dr. Mamta Bhura explains the full clinical picture, sessions, intervals, results, and why the laser type matters for dark skin.",
     url: "https://skinmantraa.in/skin-guide/laser-hair-removal-kanpur",
     type: "article",
     images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
@@ -26,7 +26,7 @@ const blogSchema = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   headline:
-    "Laser Hair Removal in Kanpur - How Many Sessions, What to Expect, Best Laser for Indian Skin",
+    "Laser Hair Removal in Kanpur, How Many Sessions, What to Expect, Best Laser for Indian Skin",
   description:
     "Clinical guide to laser hair removal for Indian skin by Dr. Mamta Bhura, SKIN@Mantraa Kanpur. Covers session count, intervals, laser types suitable for dark skin, and realistic results.",
   image: "https://skinmantraa.in/opengraph-image",
@@ -74,7 +74,7 @@ const faqSchema = {
       name: "How many sessions does laser hair removal take?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Most patients require 6 to 8 sessions for significant and lasting hair reduction. Sessions are spaced 4 to 6 weeks apart for the body and 3 to 4 weeks apart for the face, following the natural hair growth cycle. After 6 sessions, most patients see 80 to 90% permanent hair reduction. Occasional maintenance sessions - once or twice a year - may be needed for the small percentage of fine or dormant follicles that activate over time.",
+        text: "Most patients require 6 to 8 sessions for significant and lasting hair reduction. Sessions are spaced 4 to 6 weeks apart for the body and 3 to 4 weeks apart for the face, following the natural hair growth cycle. After 6 sessions, most patients see 80 to 90% permanent hair reduction. Occasional maintenance sessions, once or twice a year, may be needed for the small percentage of fine or dormant follicles that activate over time.",
       },
     },
     {
@@ -90,7 +90,7 @@ const faqSchema = {
       name: "Is laser hair removal safe for dark Indian skin?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes - when the correct laser is used with appropriate settings. The risk with laser hair removal on dark skin is that the laser energy intended for the hair follicle is partially absorbed by the melanin in the surrounding skin, causing burns or pigmentation changes. This risk is effectively managed by using longer wavelengths (Nd:YAG 1064nm), longer pulse durations, and conservative fluence levels, along with skin cooling during treatment. At SKIN@Mantraa, Dr. Mamta Bhura customises every laser protocol to the patient's Fitzpatrick type.",
+        text: "Yes, when the correct laser is used with appropriate settings. The risk with laser hair removal on dark skin is that the laser energy intended for the hair follicle is partially absorbed by the melanin in the surrounding skin, causing burns or pigmentation changes. This risk is effectively managed by using longer wavelengths (Nd:YAG 1064nm), longer pulse durations, and conservative fluence levels, along with skin cooling during treatment. At SKIN@Mantraa, Dr. Mamta Bhura customises every laser protocol to the patient's Fitzpatrick type.",
       },
     },
     {
@@ -98,7 +98,7 @@ const faqSchema = {
       name: "What areas can be treated with laser hair removal?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Common treatment areas include the upper lip, chin, sideburns, underarms, arms (upper and lower), legs (full, lower, or upper), bikini line, full Brazilian, back, chest, abdomen, and neck. Almost any area of the body with unwanted hair can be treated. The session duration depends on the area size - underarms take 5 to 10 minutes; full legs take 45 to 60 minutes.",
+        text: "Common treatment areas include the upper lip, chin, sideburns, underarms, arms (upper and lower), legs (full, lower, or upper), bikini line, full Brazilian, back, chest, abdomen, and neck. Almost any area of the body with unwanted hair can be treated. The session duration depends on the area size, underarms take 5 to 10 minutes; full legs take 45 to 60 minutes.",
       },
     },
     {
@@ -106,7 +106,7 @@ const faqSchema = {
       name: "What should I do before and after a laser hair removal session?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Before: shave the area 24 hours before treatment (do not wax or thread for 4 weeks before - the hair root must be present). Avoid sun exposure for 2 weeks before. Remove all makeup, creams, or deodorant from the treatment area. After: apply the prescribed soothing cream or aloe vera gel. Avoid direct sun for 2 weeks and use SPF 50 sunscreen on treated areas. Avoid hot baths, saunas, and vigorous exercise for 24 to 48 hours.",
+        text: "Before: shave the area 24 hours before treatment (do not wax or thread for 4 weeks before, the hair root must be present). Avoid sun exposure for 2 weeks before. Remove all makeup, creams, or deodorant from the treatment area. After: apply the prescribed soothing cream or aloe vera gel. Avoid direct sun for 2 weeks and use SPF 50 sunscreen on treated areas. Avoid hot baths, saunas, and vigorous exercise for 24 to 48 hours.",
       },
     },
     {
@@ -230,7 +230,7 @@ export default function LaserHairRemovalPage() {
               Most patients need 6 to 8 sessions of laser hair removal for
               significant and lasting hair reduction. The number, the spacing,
               and the laser type all depend on your hair growth cycle and -
-              critically - your skin tone. For Indian skin, using the wrong
+              critically, your skin tone. For Indian skin, using the wrong
               laser is the most common cause of burns and pigmentation problems.
             </p>
 
@@ -303,7 +303,7 @@ export default function LaserHairRemovalPage() {
                   margin: 0,
                 }}
               >
-                Laser hair removal uses targeted light energy to destroy hair follicles, producing long-term hair reduction. Most patients need 6–8 sessions spaced 4–6 weeks apart. For Indian skin (Fitzpatrick III–V), Nd:YAG 1064nm and diode lasers are the safest choices — IPL and alexandrite lasers carry a real risk of burns and pigmentation on darker tones. Realistic outcome: 70–90% permanent reduction across all treated areas.
+                Laser hair removal uses targeted light energy to destroy hair follicles, producing long-term hair reduction. Most patients need 6–8 sessions spaced 4–6 weeks apart. For Indian skin (Fitzpatrick III–V), Nd:YAG 1064nm and diode lasers are the safest choices. IPL and alexandrite lasers carry a real risk of burns and pigmentation on darker tones. Realistic outcome: 70–90% permanent reduction across all treated areas.
               </p>
             </div>
             <h2 style={styles.heading2}>Why Multiple Sessions Are Required</h2>
@@ -323,8 +323,8 @@ export default function LaserHairRemovalPage() {
               are in anagen at any one time.
             </p>
             <p style={styles.para}>
-              This is why sessions are spaced 4 to 6 weeks apart - to catch
-              follicles as they cycle into the anagen phase - and why multiple
+              This is why sessions are spaced 4 to 6 weeks apart, to catch
+              follicles as they cycle into the anagen phase, and why multiple
               sessions are required. With each session, a new cohort of
               follicles is targeted. After 6 to 8 sessions, the cumulative
               effect is 80 to 90% permanent hair reduction across all follicles
@@ -332,7 +332,7 @@ export default function LaserHairRemovalPage() {
             </p>
 
             <h2 style={styles.heading2}>
-              The Laser Question - Which Type Is Right for Indian Skin?
+              The Laser Question, Which Type Is Right for Indian Skin?
             </h2>
             <p style={styles.para}>
               This is the most clinically important question, and the one most
@@ -344,31 +344,31 @@ export default function LaserHairRemovalPage() {
               energy. For hair removal, the target is melanin in the hair
               follicle. The challenge with Indian skin (Fitzpatrick Type III–V)
               is that the melanin in the surrounding skin also absorbs laser
-              energy - and if the wavelength is poorly chosen, the surrounding
+              energy, and if the wavelength is poorly chosen, the surrounding
               skin heats up along with the follicle, causing burns and
               post-inflammatory hyperpigmentation.
             </p>
             <ul style={styles.ul}>
               <li style={styles.li}>
-                <strong>Nd:YAG 1064nm</strong> - the gold standard for dark
+                <strong>Nd:YAG 1064nm</strong>, the gold standard for dark
                 skin. This wavelength has lower melanin absorption, allowing
                 energy to pass through the skin to the follicle with less
                 heating of the surrounding tissue. Safe for Fitzpatrick Type
                 IV–VI.
               </li>
               <li style={styles.li}>
-                <strong>Diode 810nm</strong> - effective for Fitzpatrick Type
+                <strong>Diode 810nm</strong>, effective for Fitzpatrick Type
                 III–IV with appropriate settings. Good melanin-to-follicle
                 selectivity when used correctly on medium-dark Indian skin.
               </li>
               <li style={styles.li}>
-                <strong>Alexandrite 755nm</strong> - primarily for fair skin
+                <strong>Alexandrite 755nm</strong>, primarily for fair skin
                 (Fitzpatrick Type I–III). High melanin absorption makes it risky
-                on darker Indian skin tones - higher risk of burns, blistering,
+                on darker Indian skin tones, higher risk of burns, blistering,
                 and hyperpigmentation.
               </li>
               <li style={styles.li}>
-                <strong>IPL (Intense Pulsed Light)</strong> - a broad-spectrum
+                <strong>IPL (Intense Pulsed Light)</strong>, a broad-spectrum
                 light source, not a true laser. Effective for very fair skin
                 only. Not recommended for medium-to-dark Indian skin for hair
                 removal.
@@ -378,14 +378,14 @@ export default function LaserHairRemovalPage() {
               At SKIN@Mantraa, we use Nd:YAG and diode laser systems. Before
               every session, Dr. Mamta Bhura assesses your Fitzpatrick type and
               adjusts the fluence, pulse duration, and spot size accordingly.
-              These are not fixed clinic-wide settings - they are calibrated per
+              These are not fixed clinic-wide settings, they are calibrated per
               patient, per session.
             </p>
 
             <h2 style={styles.heading2}>What Happens in a Session</h2>
             <p style={styles.para}>
               The treatment area is shaved 24 hours before your appointment (not
-              waxed - the hair root must be present). A cooling gel is applied.
+              waxed, the hair root must be present). A cooling gel is applied.
               The handpiece is placed against the skin and delivers precisely
               timed laser pulses. A built-in cooling mechanism reduces surface
               discomfort during treatment.
@@ -399,12 +399,12 @@ export default function LaserHairRemovalPage() {
             </p>
             <p style={styles.para}>
               Over the 2 to 3 weeks following a session, treated hairs gradually
-              shed - they do not fall out immediately. This is a normal part of
+              shed, they do not fall out immediately. This is a normal part of
               the process. The skin in the treated area will remain hairless for
               progressively longer durations with each successive session.
             </p>
 
-            <h2 style={styles.heading2}>Realistic Results - What to Expect</h2>
+            <h2 style={styles.heading2}>Realistic Results, What to Expect</h2>
             <p style={styles.para}>After completing 6 to 8 sessions:</p>
             <ul style={styles.ul}>
               <li style={styles.li}>
@@ -421,13 +421,13 @@ export default function LaserHairRemovalPage() {
               </li>
               <li style={styles.li}>
                 Hormonal changes (pregnancy, PCOS, thyroid) can activate dormant
-                follicles - 1 to 2 maintenance sessions per year may be needed
+                follicles, 1 to 2 maintenance sessions per year may be needed
                 in these cases
               </li>
             </ul>
             <p style={styles.para}>
               Laser hair removal does not guarantee 100% permanent hair removal
-              for every follicle - no treatment does. What it reliably delivers
+              for every follicle, no treatment does. What it reliably delivers
               is a major, lasting reduction in hair density and thickness,
               eliminating the need for regular waxing, threading, or shaving in
               the treated area.
@@ -437,8 +437,8 @@ export default function LaserHairRemovalPage() {
               Special Considerations for Laser in Kanpur&apos;s Climate
             </h2>
             <p style={styles.para}>
-              In Kanpur&apos;s climate - with intense summer UV and temperature
-              extremes - photoprotection around laser sessions is
+              In Kanpur&apos;s climate, with intense summer UV and temperature
+              extremes, photoprotection around laser sessions is
               non-negotiable. Tanned or sun-exposed skin carries more surface
               melanin, which increases the risk of surface heating during laser
               treatment. We ask patients to:
@@ -598,7 +598,7 @@ export default function LaserHairRemovalPage() {
                 }}
               >
                 Written by <strong>Dr. Mamta Bhura</strong>, MD Dermatology (IMS
-                BHU), Member - IMA, IADVL, CDSI. 26+ years clinical practice in
+                BHU), Member, IMA, IADVL, CDSI. 26+ years clinical practice in
                 Kanpur.
               </p>
               <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem" }}>

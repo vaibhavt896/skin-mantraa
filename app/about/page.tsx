@@ -8,6 +8,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import FloatingCTA from "@/components/layout/FloatingCTA";
 import HorizontalTimeline from "@/components/about/HorizontalTimeline";
+import BreadcrumbSchema from "@/components/shared/BreadcrumbSchema";
 import { BRAND } from "@/lib/constants";
 import {
   fadeInUp,
@@ -76,6 +77,12 @@ export default function AboutPage() {
 
   return (
     <>
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", path: "/" },
+          { name: "About Dr. Mamta Bhura", path: "/about" },
+        ]}
+      />
       <Header />
       <main style={{ background: "#FDF6EC" }}>
         {/* ══════════════════════════════════════════════════
@@ -226,7 +233,7 @@ export default function AboutPage() {
                     >
                       <Image
                         src="/optimized/Dr.%20Mamta%20Bhura%201.webp"
-                        alt="Dr. Mamta Bhura - SKIN@Mantraa, Kanpur"
+                        alt="Dr. Mamta Bhura, dermatologist at SKIN@Mantraa, Kanpur"
                         fill
                         style={{
                           objectFit: "cover",
@@ -439,8 +446,8 @@ export default function AboutPage() {
                     After completing her MD Dermatology at IMS BHU, Dr. Bhura
                     spent years sharpening her skills at the Himalayan Institute
                     of Medical Sciences and later at Kaya Skin Clinic in New
-                    Delhi - India&apos;s leading chain of advanced dermatology
-                    clinics - where she gained mastery in laser technologies,
+                    Delhi, India&apos;s leading chain of advanced dermatology
+                    clinics, where she gained mastery in laser technologies,
                     cosmetic injectables, and medical-grade aesthetic protocols.
                   </motion.p>
 
@@ -454,7 +461,7 @@ export default function AboutPage() {
                       marginBottom: "2rem",
                     }}
                   >
-                    In 2010, she returned to Kanpur to found SKIN@Mantraa - a
+                    In 2010, she returned to Kanpur to found SKIN@Mantraa, a
                     clinic built on the conviction that patients in Tier-2
                     cities deserve the same world-class dermatological care
                     available in metropolitan India.
@@ -579,7 +586,7 @@ export default function AboutPage() {
                 }}
               >
                 Medicine, for me, has always been about the person sitting
-                across the table - not the condition they carry. Every patient
+                across the table, not the condition they carry. Every patient
                 who walks into SKIN@Mantraa comes with a story, an insecurity,
                 or a hope. My responsibility is to honour that with an honest
                 assessment and a plan that truly serves their skin&apos;s
@@ -600,7 +607,7 @@ export default function AboutPage() {
                 dermatology should not be the exclusive privilege of those who
                 can travel to Delhi or Mumbai. The science is the same, the
                 standards must be the same, and the respect for every patient
-                must be absolute - regardless of city or background.
+                must be absolute, regardless of city or background.
               </motion.p>
 
               <motion.p
@@ -644,8 +651,8 @@ export default function AboutPage() {
                     lineHeight: 1.4,
                   }}
                 >
-                  I believe every patient deserves a doctor who tells the truth
-                  - not just what they want to hear.
+                  I believe every patient deserves a doctor who tells the truth,
+                  not just what they want to hear.
                 </p>
                 <footer
                   className="mt-4"
@@ -657,7 +664,7 @@ export default function AboutPage() {
                     color: "rgba(253,246,236,0.45)",
                   }}
                 >
-                  - Dr. Mamta Bhura
+                  Dr. Mamta Bhura
                 </footer>
               </motion.blockquote>
             </AnimatedSection>
@@ -1012,8 +1019,8 @@ export default function AboutPage() {
                 }}
               >
                 Book a consultation with Dr. Mamta Bhura and take the first step
-                toward the skin you deserve - with honesty, expertise, and
-                genuine care guiding every decision.
+                toward the skin you deserve, guided by honesty, expertise, and
+                genuine care at every step.
               </motion.p>
 
               <motion.div

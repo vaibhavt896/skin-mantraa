@@ -330,7 +330,7 @@ export default function LocationCTA() {
         position: "relative",
         overflow: "hidden",
       }}
-      className="py-24 px-4 sm:px-6 lg:px-8"
+      className="py-16 sm:py-24 px-4 sm:px-6 lg:px-8"
     >
       {/* Decorative circles */}
       <div
@@ -434,8 +434,8 @@ export default function LocationCTA() {
               lineHeight: 1.7,
             }}
           >
-            Conveniently located in Kanpur - come meet Dr. Mamta Bhura and begin
-            your transformation
+            Conveniently located in Swaroop Nagar, Kanpur. Come meet Dr. Mamta
+            Bhura and begin your skin transformation.
           </motion.p>
         </motion.div>
 
@@ -456,7 +456,7 @@ export default function LocationCTA() {
           >
             <Image
               src="/optimized/Clinic%20Front%20Look.webp"
-              alt="Skin Mantraa clinic exterior - Swaroop Nagar, Kanpur"
+              alt="SKIN@Mantraa clinic exterior in Swaroop Nagar, Kanpur"
               fill
               style={{ objectFit: "cover", objectPosition: "center 40%" }}
               sizes="(max-width: 1024px) 100vw, 50vw"
@@ -651,7 +651,7 @@ export default function LocationCTA() {
                   margin: 0,
                 }}
               >
-                {BRAND.name} - {BRAND.doctor.specialization}
+                {BRAND.name} · {BRAND.doctor.specialization}
               </p>
             </div>
 
@@ -699,7 +699,7 @@ export default function LocationCTA() {
                 >
                   {BRAND.clinic.phoneDisplay}
                 </a>
-                <span style={{ opacity: 0.6 }}> - click to call</span>
+                <span style={{ opacity: 0.6 }}> · tap to call</span>
               </ContactRow>
 
               <ContactRow icon={<WhatsAppIcon />}>
@@ -723,7 +723,7 @@ export default function LocationCTA() {
                 </a>
                 <span style={{ opacity: 0.6 }}>
                   {" "}
-                  - quick response guaranteed
+                  · usually a quick reply
                 </span>
               </ContactRow>
             </div>
@@ -824,7 +824,7 @@ export default function LocationCTA() {
         Conveniently located in Swaroop Nagar behind Hotel Royal Cliff. Whether
         you are looking for a dermatologist for acne, a skin specialist for
         laser treatment, a hair loss doctor for PRP therapy, or a cosmetologist
-        for anti-aging procedures in Kanpur - SKIN@Mantraa is equipped and ready
+        for anti-aging procedures in Kanpur, SKIN@Mantraa is equipped and ready
         to help.
       </p>
     </section>

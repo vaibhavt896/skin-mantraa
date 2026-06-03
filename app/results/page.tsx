@@ -75,7 +75,7 @@ const TRANSFORMATIONS: Transformation[] = [
     result:
       "Natural volume restoration with lifted appearance. No swelling, natural-looking results within 5 days.",
     quote:
-      "Everyone asks if I've been on vacation - not that I've had any procedure done. That's a true expert.",
+      "Everyone asks if I've been on vacation, not whether I've had any procedure done. That's the mark of a true expert.",
     patientName: "Sunita K.",
   },
   {
@@ -108,7 +108,7 @@ const TRANSFORMATIONS: Transformation[] = [
     result:
       "Deep ice-pick scars reduced in depth and appearance. Overall skin surface visibly improved.",
     quote:
-      "I had given up hope on my scars. The results genuinely surprised me - and my family noticed first.",
+      "I had given up hope on my scars. The results genuinely surprised me, and my family noticed first.",
     patientName: "Ananya P.",
   },
   {
@@ -223,7 +223,7 @@ function TransformationCard({
               fontStyle: "normal",
             }}
           >
-            - {item.patientName}
+            {item.patientName}, verified patient
           </cite>
         </blockquote>
       </div>

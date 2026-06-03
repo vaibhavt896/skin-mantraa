@@ -6,9 +6,9 @@ import FloatingCTA from "@/components/layout/FloatingCTA";
 import { BRAND } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Dr. Mamta Bhura - Best Female Dermatologist in Kanpur | SKIN@Mantraa",
+  title: "Dr. Mamta Bhura | Best Female Dermatologist in Kanpur | SKIN@Mantraa",
   description:
-    "Dr. Mamta Bhura - MBBS, MD Dermatology (IMS BHU). 26+ years clinical experience. Kanpur's #1 ranked dermatologist by ThreeBestRated. Female dermatologist specialising in laser, anti-aging, acne, and hair treatments for Indian skin.",
+    "Dr. Mamta Bhura, MBBS, MD Dermatology (IMS BHU). 26+ years clinical experience. Kanpur's #1 ranked dermatologist by ThreeBestRated. Female dermatologist specialising in laser, anti-aging, acne, and hair treatments for Indian skin.",
   keywords: [
     "Dr Mamta Bhura Kanpur",
     "female dermatologist Kanpur",
@@ -22,9 +22,9 @@ export const metadata: Metadata = {
     canonical: "https://skinmantraa.in/about/dr-mamta-bhura",
   },
   openGraph: {
-    title: "Dr. Mamta Bhura - Best Female Dermatologist in Kanpur",
+    title: "Dr. Mamta Bhura | Best Female Dermatologist in Kanpur",
     description:
-      "Dr. Mamta Bhura - MD Dermatology, IMS BHU. 26+ years. Kanpur's #1 ThreeBestRated dermatologist. Female dermatologist and cosmetologist at SKIN@Mantraa, Swaroop Nagar.",
+      "Dr. Mamta Bhura, MD Dermatology, IMS BHU. 26+ years. Kanpur's #1 ThreeBestRated dermatologist. Female dermatologist and cosmetologist at SKIN@Mantraa, Swaroop Nagar.",
     url: "https://skinmantraa.in/about/dr-mamta-bhura",
     type: "profile",
     images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
@@ -117,7 +117,7 @@ const doctorSchema = {
           name: "What are Dr. Mamta Bhura's qualifications?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Dr. Mamta Bhura holds an MBBS and MD in Dermatology from the Institute of Medical Sciences, Banaras Hindu University (IMS BHU) - one of India's most prestigious medical institutions. She is a member of the Indian Medical Association (IMA), IADVL, and the Cosmetology Society of India (CDSI).",
+            text: "Dr. Mamta Bhura holds an MBBS and MD in Dermatology from the Institute of Medical Sciences, Banaras Hindu University (IMS BHU), one of India's most prestigious medical institutions. She is a member of the Indian Medical Association (IMA), IADVL, and the Cosmetology Society of India (CDSI).",
           },
         },
         {
@@ -133,7 +133,7 @@ const doctorSchema = {
           name: "Is Dr. Mamta Bhura a female dermatologist?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes. Dr. Mamta Bhura is a female dermatologist and cosmetologist. She is one of Kanpur's most experienced female skin specialists, and many patients - particularly women - specifically seek a female dermatologist for consultations involving skin, hair, and cosmetic concerns.",
+            text: "Yes. Dr. Mamta Bhura is a female dermatologist and cosmetologist. She is one of Kanpur's most experienced female skin specialists, and many patients, particularly women, specifically seek a female dermatologist for consultations involving skin, hair, and cosmetic concerns.",
           },
         },
         {
@@ -149,7 +149,7 @@ const doctorSchema = {
           name: "Is Dr. Mamta Bhura verified on Practo?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes. Dr. Mamta Bhura is verified on Practo and Justdial, with a 4.8-star rating. She has been ranked #1 dermatologist in Kanpur by ThreeBestRated.in - an independent ranking organisation that evaluates reputation, credibility, and experience.",
+            text: "Yes. Dr. Mamta Bhura is verified on Practo and Justdial, with a 4.0-star rating. She has been ranked #1 dermatologist in Kanpur by ThreeBestRated.in, an independent ranking organisation that evaluates reputation, credibility, and experience.",
           },
         },
       ],
@@ -187,10 +187,10 @@ const MEMBERSHIPS = [
 const RECOGNITION = [
   {
     title: "#1 Dermatologist in Kanpur",
-    source: "ThreeBestRated.in - Independent Ranking",
+    source: "ThreeBestRated.in, Independent Ranking",
   },
-  { title: "4.8★ Rating", source: "Practo - Verified Patient Reviews" },
-  { title: "4.8★ Rating", source: "Justdial - Verified Reviews" },
+  { title: "4.0★ Rating", source: "Practo, Verified Patient Reviews" },
+  { title: "4.0★ Rating", source: "Justdial, Verified Reviews" },
   {
     title: "451+ Patient Reviews",
     source: "Across Practo, Google, and Justdial",
@@ -295,7 +295,7 @@ export default function DrMamtaBhuraPage() {
                   textDecoration: "none",
                 }}
               >
-                Book Consultation - ₹600
+                Book Consultation, ₹600
               </Link>
               <Link
                 href="/dermatologist-kanpur"
@@ -499,7 +499,7 @@ export default function DrMamtaBhuraPage() {
                   color: "#2d2d2d",
                 }}
               >
-                Dr. Mamta Bhura began her dermatology training at IMS BHU - one
+                Dr. Mamta Bhura began her dermatology training at IMS BHU, one
                 of India&apos;s most selective and prestigious medical
                 institutions. After completing her MD in Dermatology, she joined
                 Kaya Skin Clinic in New Delhi as a Consultant Dermatologist,
@@ -517,10 +517,10 @@ export default function DrMamtaBhuraPage() {
               >
                 In 26+ years of full-time practice at SKIN@Mantraa, Dr. Bhura
                 has treated thousands of patients across the full spectrum of
-                dermatology - medical conditions (vitiligo, psoriasis, eczema,
+                dermatology, medical conditions (vitiligo, psoriasis, eczema,
                 melasma), procedural and laser treatments, and cosmetic
                 dermatology (Botox, fillers, thread lift, HIFU). She remains the
-                sole practising dermatologist at the clinic - every procedure is
+                sole practising dermatologist at the clinic, every procedure is
                 performed or directly supervised by her.
               </p>
               <p
@@ -532,12 +532,12 @@ export default function DrMamtaBhuraPage() {
                 }}
               >
                 Her practice is built on a specific principle: Indian skin -
-                Fitzpatrick Type III to V - requires different treatment
+                Fitzpatrick Type III to V, requires different treatment
                 protocols than those developed for lighter skin types. Laser
                 settings, chemical peel formulations, injectable techniques, and
                 post-treatment care are all calibrated for the melanin density,
                 healing patterns, and pigmentation risk specific to Indian skin.
-                This is not marketing - it is what keeps patients safe and
+                This is not marketing, it is what keeps patients safe and
                 produces predictable results.
               </p>
             </div>

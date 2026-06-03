@@ -6,9 +6,9 @@ import FloatingCTA from "@/components/layout/FloatingCTA";
 import { BRAND } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Skin Specialist in Swaroop Nagar, Kanpur - SKIN@Mantraa Clinic",
+  title: "Skin Specialist in Swaroop Nagar, Kanpur | SKIN@Mantraa Clinic",
   description:
-    "SKIN@Mantraa is the leading skin clinic in Swaroop Nagar, Kanpur. Dr. Mamta Bhura - MD Dermatology, IMS BHU, 26+ years experience. Serving Kakadeo, Civil Lines, Kidwai Nagar, Govind Nagar, and all of Kanpur.",
+    "SKIN@Mantraa is the leading skin clinic in Swaroop Nagar, Kanpur. Dr. Mamta Bhura, MD Dermatology, IMS BHU, 26+ years experience. Serving Kakadeo, Civil Lines, Kidwai Nagar, Govind Nagar, and all of Kanpur.",
   keywords: [
     "skin specialist Swaroop Nagar",
     "skin clinic Swaroop Nagar Kanpur",
@@ -22,9 +22,9 @@ export const metadata: Metadata = {
     canonical: "https://skinmantraa.in/skin-specialist-swaroop-nagar",
   },
   openGraph: {
-    title: "Skin Specialist in Swaroop Nagar, Kanpur - SKIN@Mantraa",
+    title: "Skin Specialist in Swaroop Nagar, Kanpur | SKIN@Mantraa",
     description:
-      "SKIN@Mantraa is the leading skin clinic in Swaroop Nagar, Kanpur. Dr. Mamta Bhura - MD Dermatology, 26+ years. Advanced laser, anti-aging, acne, and hair treatments.",
+      "SKIN@Mantraa is the leading skin clinic in Swaroop Nagar, Kanpur. Dr. Mamta Bhura, MD Dermatology, 26+ years. Advanced laser, anti-aging, acne, and hair treatments.",
     url: "https://skinmantraa.in/skin-specialist-swaroop-nagar",
     type: "website",
     images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
@@ -212,7 +212,7 @@ export default function SkinSpecialistSwaroopNagarPage() {
               }}
             >
               SKIN@Mantraa is the premier dermatology and cosmetology clinic in
-              Swaroop Nagar. Dr. Mamta Bhura - MD Dermatology, IMS BHU - has
+              Swaroop Nagar. Dr. Mamta Bhura, MD Dermatology, IMS BHU, has
               served Kanpur for 26+ years from this location. Advanced
               treatments for all skin, laser, and hair concerns.
             </p>

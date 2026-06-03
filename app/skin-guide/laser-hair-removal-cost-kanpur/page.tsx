@@ -6,7 +6,7 @@ import FloatingCTA from "@/components/layout/FloatingCTA";
 
 export const metadata: Metadata = {
   title:
-    "Laser Hair Removal Cost in Kanpur (2026) - Area-wise Pricing Guide | SKIN@Mantraa",
+    "Laser Hair Removal Cost in Kanpur (2026), Area-wise Pricing Guide | SKIN@Mantraa",
   description:
     "What does laser hair removal cost in Kanpur? Dr. Mamta Bhura explains pricing by area, factors that affect cost, and what's included. Honest guide from SKIN@Mantraa.",
   alternates: {
@@ -14,9 +14,9 @@ export const metadata: Metadata = {
       "https://skinmantraa.in/skin-guide/laser-hair-removal-cost-kanpur",
   },
   openGraph: {
-    title: "Laser Hair Removal Cost in Kanpur (2026) - Area-wise Pricing Guide",
+    title: "Laser Hair Removal Cost in Kanpur (2026) | Area-wise Pricing Guide",
     description:
-      "Laser hair removal pricing in Kanpur by area - underarms, full legs, face, bikini line. What's included per session and what to watch out for.",
+      "Laser hair removal pricing in Kanpur by area, underarms, full legs, face, bikini line. What's included per session and what to watch out for.",
     url: "https://skinmantraa.in/skin-guide/laser-hair-removal-cost-kanpur",
     type: "article",
     images: [
@@ -34,7 +34,7 @@ const blogSchema = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   headline:
-    "Laser Hair Removal Cost in Kanpur (2026) - Area-wise Pricing Guide",
+    "Laser Hair Removal Cost in Kanpur (2026), Area-wise Pricing Guide",
   description:
     "Honest guide to laser hair removal pricing in Kanpur by Dr. Mamta Bhura. Area-wise session costs, package factors, and what to look for when comparing clinics.",
   image: "https://skinmantraa.in/opengraph-image",
@@ -80,7 +80,7 @@ const faqSchema = {
       name: "How much does laser hair removal cost in Kanpur?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Laser hair removal cost in Kanpur varies by treatment area and number of sessions. At SKIN@Mantraa, pricing is structured per session by area - underarms, face, full legs, bikini line, and back are the most common. Multi-session packages are available at a reduced per-session cost. Book a consultation (₹600) for a personalised assessment and current pricing for your specific areas.",
+        text: "Laser hair removal cost in Kanpur varies by treatment area and number of sessions. At SKIN@Mantraa, pricing is structured per session by area, underarms, face, full legs, bikini line, and back are the most common. Multi-session packages are available at a reduced per-session cost. Book a consultation (₹600) for a personalised assessment and current pricing for your specific areas.",
       },
     },
     {
@@ -88,7 +88,7 @@ const faqSchema = {
       name: "Is cheaper laser hair removal in Kanpur safe?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Not always. The risk with laser hair removal - particularly on Indian (Fitzpatrick III–V) skin - is that the wrong laser wavelength or poorly calibrated settings cause burns and post-inflammatory hyperpigmentation. Very low-cost sessions often use IPL devices (not true lasers) or alexandrite lasers unsuitable for dark skin. At SKIN@Mantraa, we use Nd:YAG and diode laser systems with settings calibrated per patient by Dr. Bhura. Price should not be the only criterion - the laser type, doctor supervision, and skin type experience matter far more.",
+        text: "Not always. The risk with laser hair removal, particularly on Indian (Fitzpatrick III–V) skin, is that the wrong laser wavelength or poorly calibrated settings cause burns and post-inflammatory hyperpigmentation. Very low-cost sessions often use IPL devices (not true lasers) or alexandrite lasers unsuitable for dark skin. At SKIN@Mantraa, we use Nd:YAG and diode laser systems with settings calibrated per patient by Dr. Bhura. Price should not be the only criterion, the laser type, doctor supervision, and skin type experience matter far more.",
       },
     },
     {
@@ -216,7 +216,7 @@ export default function LaserCostKanpurPage() {
             <p
               style={{ ...styles.para, fontSize: "1.15rem", color: "#5C4033" }}
             >
-              Laser hair removal pricing in Kanpur varies widely - from very
+              Laser hair removal pricing in Kanpur varies widely, from very
               low-cost packages at parlours to clinical pricing at dermatology
               practices. Understanding what you are paying for (and what you are
               not getting) is as important as the number itself.
@@ -290,7 +290,7 @@ export default function LaserCostKanpurPage() {
                   margin: 0,
                 }}
               >
-                Laser hair removal cost in Kanpur varies by treatment area (underarms, full legs, face, bikini line), the laser used, and the number of sessions required. Most patients need 6–8 sessions. At SKIN@Mantraa, pricing is per session with package options available. A ₹600 consultation determines the right laser for your skin type and provides precise pricing — Nd:YAG 1064nm for Indian skin tones.
+                Laser hair removal cost in Kanpur varies by treatment area (underarms, full legs, face, bikini line), the laser used, and the number of sessions required. Most patients need 6–8 sessions. At SKIN@Mantraa, pricing is per session with package options available. A ₹600 consultation determines the right laser for your skin type and provides precise pricing, using Nd:YAG 1064nm for Indian skin tones.
               </p>
             </div>
             <h2 style={styles.heading2}>
@@ -304,7 +304,7 @@ export default function LaserCostKanpurPage() {
             </p>
             <p style={styles.para}>
               Sessions are priced individually or as part of a multi-session
-              package. Package pricing - usually covering 6 sessions - offers
+              package. Package pricing, usually covering 6 sessions, offers
               better per-session value and is what most patients opt for once
               their initial consultation confirms suitability.
             </p>
@@ -347,8 +347,8 @@ export default function LaserCostKanpurPage() {
             </ul>
             <p style={styles.para}>
               At SKIN@Mantraa, you can combine multiple areas in one session.
-              Combination pricing is available - for example, underarms + full
-              arms, or full legs + bikini line - which is often more economical
+              Combination pricing is available, for example, underarms + full
+              arms, or full legs + bikini line, which is often more economical
               than treating each area separately.
             </p>
 
@@ -360,7 +360,7 @@ export default function LaserCostKanpurPage() {
               on Indian skin (Fitzpatrick Type III–V) requires the{" "}
               <em>correct laser wavelength</em>. The Nd:YAG 1064nm and diode
               810nm lasers are the appropriate choices for dark skin. The 755nm
-              alexandrite laser - widely used for fair skin - has higher melanin
+              alexandrite laser, widely used for fair skin, has higher melanin
               absorption and causes a significantly elevated risk of burns and
               post-inflammatory hyperpigmentation on darker Indian skin.
             </p>
@@ -396,7 +396,7 @@ export default function LaserCostKanpurPage() {
               Mamta Bhura before starting treatment. Fitzpatrick type is
               assessed, a test patch is done, and laser settings (fluence, pulse
               duration, spot size) are documented and adjusted at each session.
-              This is standard clinical practice - not an add-on.
+              This is standard clinical practice, not an add-on.
             </p>
 
             <h2 style={styles.heading2}>How Many Sessions Will You Need?</h2>
@@ -414,7 +414,7 @@ export default function LaserCostKanpurPage() {
             </p>
 
             <h2 style={styles.heading2}>
-              Book a Consultation - Get Accurate Pricing for Your Plan
+              Book a Consultation, Get Accurate Pricing for Your Plan
             </h2>
             <p style={styles.para}>
               The most accurate way to get pricing for your specific treatment
@@ -563,7 +563,7 @@ export default function LaserCostKanpurPage() {
                 }}
               >
                 Written by <strong>Dr. Mamta Bhura</strong>, MD Dermatology (IMS
-                BHU), Member - IMA, IADVL, CDSI. 26+ years clinical practice in
+                BHU), Member, IMA, IADVL, CDSI. 26+ years clinical practice in
                 Kanpur.
               </p>
               <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem" }}>

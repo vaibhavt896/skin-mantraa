@@ -6,7 +6,7 @@ import FloatingCTA from "@/components/layout/FloatingCTA";
 
 export const metadata: Metadata = {
   title:
-    "Acne Treatment and Scar Removal in Kanpur - Dermapen 4, Chemical Peels | SKIN@Mantraa",
+    "Acne Treatment and Scar Removal in Kanpur, Dermapen 4, Chemical Peels | SKIN@Mantraa",
   description:
     "Acne scars, dark spots, and post-acne pigmentation treated with Dermapen 4, chemical peels, and laser by Dr. Mamta Bhura in Kanpur. Best dermatologist in Kanpur for acne and dark spots.",
   alternates: {
@@ -14,9 +14,9 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title:
-      "Acne Treatment and Scar Removal in Kanpur - Dermapen 4, Chemical Peels",
+      "Acne Treatment and Scar Removal in Kanpur, Dermapen 4, Chemical Peels",
     description:
-      "Acne scars, dark spots, and post-acne pigmentation treated with Dermapen 4, chemical peels, and laser by Dr. Mamta Bhura - best dermatologist in Kanpur for acne and dark spots.",
+      "Acne scars, dark spots, and post-acne pigmentation treated with Dermapen 4, chemical peels, and laser by Dr. Mamta Bhura, best dermatologist in Kanpur for acne and dark spots.",
     url: "https://skinmantraa.in/skin-guide/acne-scar-treatment-kanpur",
     type: "article",
     images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
@@ -27,7 +27,7 @@ const blogSchema = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   headline:
-    "Acne Treatment and Scar Removal in Kanpur - Dermapen 4, Chemical Peels, and What Actually Works",
+    "Acne Treatment and Scar Removal in Kanpur, Dermapen 4, Chemical Peels, and What Actually Works",
   description:
     "Clinical guide to acne and scar treatment by Dr. Mamta Bhura, SKIN@Mantraa Kanpur. Covers active acne, post-acne pigmentation, ice-pick scars, and the step-by-step treatment approach with Dermapen 4, chemical peels, and Nd:YAG laser.",
   image: "https://skinmantraa.in/opengraph-image",
@@ -86,7 +86,7 @@ const faqSchema = {
       name: "What is the best treatment for acne scars in Kanpur?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The best treatment for acne scars depends on the scar type. Atrophic (depressed) scars - ice pick, boxcar, and rolling scars - respond best to Dermapen 4 microneedling with multiple sessions, and deeper scars may need subcision or TCA cross before microneedling. Hyperpigmented post-acne marks (PIH) respond well to chemical peels and topical brighteners. Hypertrophic (raised) scars are treated with intralesional corticosteroid injections. At SKIN@Mantraa, Dr. Bhura first classifies your scar types before recommending a treatment plan - most patients require a combination approach.",
+        text: "The best treatment for acne scars depends on the scar type. Atrophic (depressed) scars, ice pick, boxcar, and rolling scars, respond best to Dermapen 4 microneedling with multiple sessions, and deeper scars may need subcision or TCA cross before microneedling. Hyperpigmented post-acne marks (PIH) respond well to chemical peels and topical brighteners. Hypertrophic (raised) scars are treated with intralesional corticosteroid injections. At SKIN@Mantraa, Dr. Bhura first classifies your scar types before recommending a treatment plan, most patients require a combination approach.",
       },
     },
     {
@@ -102,7 +102,7 @@ const faqSchema = {
       name: "What chemical peels are used for acne and dark spots?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "For active acne in Indian skin, salicylic acid (BHA) peels at 20 to 30% are the first choice - salicylic acid is oil-soluble and penetrates sebaceous follicles directly. For post-acne dark spots (PIH), glycolic acid or mandelic acid peels are used after a skin-priming phase to reduce pigmentation safely. Peels are always preceded by priming with topical retinoids and depigmenting agents to reduce the risk of post-inflammatory hyperpigmentation in Indian skin.",
+        text: "For active acne in Indian skin, salicylic acid (BHA) peels at 20 to 30% are the first choice, salicylic acid is oil-soluble and penetrates sebaceous follicles directly. For post-acne dark spots (PIH), glycolic acid or mandelic acid peels are used after a skin-priming phase to reduce pigmentation safely. Peels are always preceded by priming with topical retinoids and depigmenting agents to reduce the risk of post-inflammatory hyperpigmentation in Indian skin.",
       },
     },
     {
@@ -110,7 +110,7 @@ const faqSchema = {
       name: "What is the difference between acne marks and acne scars?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Acne marks (post-inflammatory hyperpigmentation or PIH) are flat, discoloured areas - red, brown, or dark - left after a pimple heals. They are not true scars: the skin surface is intact, and they fade over months to years with proper treatment and sun protection. Acne scars are structural changes in the skin tissue - either depressed (ice pick, boxcar, rolling) or raised (hypertrophic, keloid). They do not fade on their own and require procedural treatment.",
+        text: "Acne marks (post-inflammatory hyperpigmentation or PIH) are flat, discoloured areas, red, brown, or dark, left after a pimple heals. They are not true scars: the skin surface is intact, and they fade over months to years with proper treatment and sun protection. Acne scars are structural changes in the skin tissue, either depressed (ice pick, boxcar, rolling) or raised (hypertrophic, keloid). They do not fade on their own and require procedural treatment.",
       },
     },
     {
@@ -118,7 +118,7 @@ const faqSchema = {
       name: "Is Nd:YAG laser used for acne scar treatment?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Q-switched Nd:YAG laser is used for active acne (reducing P. acnes bacteria and sebum production) and for post-acne pigmentation (targeting melanin in dark spots). Fractional Nd:YAG laser can also be used for scar resurfacing in Indian skin - it is preferred over ablative CO2 laser for darker skin tones because it carries a lower risk of post-inflammatory hyperpigmentation.",
+        text: "Yes. Q-switched Nd:YAG laser is used for active acne (reducing P. acnes bacteria and sebum production) and for post-acne pigmentation (targeting melanin in dark spots). Fractional Nd:YAG laser can also be used for scar resurfacing in Indian skin, it is preferred over ablative CO2 laser for darker skin tones because it carries a lower risk of post-inflammatory hyperpigmentation.",
       },
     },
     {
@@ -126,7 +126,7 @@ const faqSchema = {
       name: "Why does acne leave dark spots on Indian skin?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Indian skin (Fitzpatrick Type III–V) has more reactive melanocytes - pigment-producing cells - than lighter skin types. Any inflammation, including the inflammation from an acne lesion, triggers a localised melanocyte response: the skin darkens in the healing area. This post-inflammatory hyperpigmentation (PIH) is not a scar - it is a pigmentation response specific to darker skin tones, and it is entirely treatable with the right topical agents, chemical peels, and sun protection.",
+        text: "Indian skin (Fitzpatrick Type III–V) has more reactive melanocytes, pigment-producing cells, than lighter skin types. Any inflammation, including the inflammation from an acne lesion, triggers a localised melanocyte response: the skin darkens in the healing area. This post-inflammatory hyperpigmentation (PIH) is not a scar, it is a pigmentation response specific to darker skin tones, and it is entirely treatable with the right topical agents, chemical peels, and sun protection.",
       },
     },
   ],
@@ -236,7 +236,7 @@ export default function AcneScarTreatmentPage() {
             >
               Acne scars and dark spots left by acne are among the most common
               concerns at SKIN@Mantraa. The right treatment depends on what you
-              are actually dealing with - active acne, post-acne pigmentation
+              are actually dealing with, active acne, post-acne pigmentation
               (marks), or true structural scars. These are different problems
               requiring different approaches, and treating one with the protocol
               for another is why so many patients come in after failed
@@ -311,7 +311,7 @@ export default function AcneScarTreatmentPage() {
                   margin: 0,
                 }}
               >
-                Acne scars form when deep inflammation destroys collagen during a breakout. Scar type — ice-pick, rolling, boxcar, or post-inflammatory pigmentation — determines which treatment works. At SKIN@Mantraa Kanpur, treatment is sequenced: control active acne first, then targeted procedures (Dermapen 4, chemical peels, TCA CROSS, subcision) matched to scar morphology. Multiple sessions are always required; realistic improvement is 50–70% reduction for most scar types.
+                Acne scars form when deep inflammation destroys collagen during a breakout. Scar type (ice-pick, rolling, boxcar, or post-inflammatory pigmentation) determines which treatment works. At SKIN@Mantraa Kanpur, treatment is sequenced: control active acne first, then targeted procedures (Dermapen 4, chemical peels, TCA CROSS, subcision) matched to scar morphology. Multiple sessions are always required; realistic improvement is 50–70% reduction for most scar types.
               </p>
             </div>
             <h2 style={styles.heading2}>
@@ -323,17 +323,17 @@ export default function AcneScarTreatmentPage() {
             </p>
             <ul style={styles.ul}>
               <li style={styles.li}>
-                <strong>Active acne</strong> - the condition itself: comedones,
+                <strong>Active acne</strong>, the condition itself: comedones,
                 papules, pustules, cysts. Needs to be controlled medically
                 before any scar treatment begins.
               </li>
               <li style={styles.li}>
-                <strong>Post-inflammatory hyperpigmentation (PIH)</strong> - the
+                <strong>Post-inflammatory hyperpigmentation (PIH)</strong>, the
                 dark marks left after a pimple heals. Flat, discoloured skin.
                 Not a true scar. Treatable with topicals + peels.
               </li>
               <li style={styles.li}>
-                <strong>Atrophic scars</strong> - actual structural damage:
+                <strong>Atrophic scars</strong>, actual structural damage:
                 ice-pick (deep, narrow), boxcar (broad, sharp edges), rolling
                 (broad, sloped). These require procedural treatment: Dermapen,
                 subcision, TCA cross, or laser resurfacing.
@@ -342,13 +342,13 @@ export default function AcneScarTreatmentPage() {
             <p style={styles.para}>
               The treatment plan begins with controlling active acne first.
               Performing Dermapen or peels on skin with active inflammatory acne
-              is counterproductive - it can spread bacteria and worsen
+              is counterproductive, it can spread bacteria and worsen
               inflammation. Once acne is controlled for a minimum of 4 to 6
               weeks, procedural scar treatment begins.
             </p>
 
             <h2 style={styles.heading2}>
-              Treating Active Acne - Medical Control First
+              Treating Active Acne, Medical Control First
             </h2>
             <p style={styles.para}>
               Active acne at SKIN@Mantraa is managed with a combination of
@@ -366,13 +366,13 @@ export default function AcneScarTreatmentPage() {
               </li>
               <li style={styles.li}>
                 <strong>Severe nodular/cystic acne</strong>: Oral isotretinoin
-                (Accutane) - the most effective treatment for severe, scarring
+                (Accutane), the most effective treatment for severe, scarring
                 acne
               </li>
             </ul>
             <p style={styles.para}>
               Salicylic acid chemical peels at 20 to 30% are introduced after 4
-              to 6 weeks to accelerate clearance - BHA peels penetrate
+              to 6 weeks to accelerate clearance, BHA peels penetrate
               oil-filled pores directly, reducing comedones and P. acnes
               bacteria more effectively than surface-level treatments alone.
             </p>
@@ -381,8 +381,8 @@ export default function AcneScarTreatmentPage() {
               Chemical Peels for Post-Acne Dark Spots
             </h2>
             <p style={styles.para}>
-              Post-inflammatory hyperpigmentation (PIH) - the dark marks that
-              linger for months after acne heals - is extremely common on Indian
+              Post-inflammatory hyperpigmentation (PIH), the dark marks that
+              linger for months after acne heals, is extremely common on Indian
               skin due to the stronger melanocyte response in Fitzpatrick Type
               III–V skin types. Chemical peels are the most effective procedural
               tool for PIH.
@@ -393,8 +393,8 @@ export default function AcneScarTreatmentPage() {
             <ul style={styles.ul}>
               <li style={styles.li}>
                 <strong>Priming phase</strong> (4 weeks): Topical depigmenting
-                agents - modified Kligman&apos;s formula, tranexamic acid, or
-                kojic acid combination - to suppress melanocyte activity before
+                agents, modified Kligman&apos;s formula, tranexamic acid, or
+                kojic acid combination, to suppress melanocyte activity before
                 peeling
               </li>
               <li style={styles.li}>
@@ -403,12 +403,12 @@ export default function AcneScarTreatmentPage() {
               </li>
               <li style={styles.li}>
                 <strong>Maintenance</strong>: SPF 50+ PA+++ sunscreen daily
-                (mandatory - UV exposure will darken marks again)
+                (mandatory, UV exposure will darken marks again)
               </li>
             </ul>
             <p style={styles.para}>
               Skipping the priming phase and going straight to high-strength
-              peels is the most common mistake in Indian skin - it triggers
+              peels is the most common mistake in Indian skin, it triggers
               paradoxical darkening from post-peel inflammation.
             </p>
 
@@ -448,7 +448,7 @@ export default function AcneScarTreatmentPage() {
             </ul>
             <p style={styles.para}>
               For deep ice-pick scars, TCA CROSS (chemical reconstruction of
-              skin scars) is performed before Dermapen - a high-concentration
+              skin scars) is performed before Dermapen, a high-concentration
               TCA drop is placed into the base of each ice-pick scar to
               stimulate collagen in the scar floor, raising it before
               microneedling further remodels the surface.
@@ -476,7 +476,7 @@ export default function AcneScarTreatmentPage() {
               For scar resurfacing, fractional laser is an option after Dermapen
               courses for patients with persistent shallow boxcar scars. We use
               Nd:YAG fractional rather than ablative CO2 laser in Indian skin to
-              minimise post-inflammatory pigmentation risk - the trade-off is
+              minimise post-inflammatory pigmentation risk, the trade-off is
               more sessions needed, but significantly safer for Fitzpatrick Type
               III–V patients.
             </p>
@@ -618,7 +618,7 @@ export default function AcneScarTreatmentPage() {
                 }}
               >
                 Written by <strong>Dr. Mamta Bhura</strong>, MD Dermatology (IMS
-                BHU), Member - IMA, IADVL, CDSI. 26+ years clinical practice in
+                BHU), Member, IMA, IADVL, CDSI. 26+ years clinical practice in
                 Kanpur.
               </p>
               <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem" }}>

@@ -12,7 +12,7 @@ import { BRAND } from "@/lib/constants";
 // ---------------------------------------------------------------------------
 // Note: metadata export is handled in a separate layout or via generateMetadata
 // For this client component page, SEO tags are set here as a reference comment.
-// Title: "Skin Guide | Expert Dermatology Advice - SKIN@Mantraa"
+// Title: "Skin Guide | Expert Dermatology Advice, SKIN@Mantraa"
 // Description: Evidence-based skin care guides by Dr. Mamta Bhura, Kanpur's
 // leading dermatologist. Learn about treatments, common myths, and seasonal tips.
 // ---------------------------------------------------------------------------
@@ -57,17 +57,17 @@ const FEATURED_ARTICLE = {
   readTime: 8,
   date: "March 10, 2026",
   excerpt:
-    "Indian skin has a natural advantage in melanin, but that doesn't make it immune to UV damage, melasma, or accelerated ageing. Dr. Bhura breaks down which SPF numbers actually matter, the difference between chemical and physical sunscreens, and why most people in North India are significantly under-protected - even in winter.",
+    "Indian skin has a natural advantage in melanin, but that doesn't make it immune to UV damage, melasma, or accelerated ageing. Dr. Bhura breaks down which SPF numbers actually matter, the difference between chemical and physical sunscreens, and why most people in North India are significantly under-protected, even in winter.",
 };
 
 const ARTICLES: Article[] = [
   {
     slug: "hifu-treatment-kanpur",
     title:
-      "HIFU Treatment in Kanpur - Not Magic, Just Science That Actually Works",
+      "HIFU Treatment in Kanpur, Not Magic, Just Science That Actually Works",
     category: "Treatment Guides",
     excerpt:
-      "HIFU (High-Intensity Focused Ultrasound) is the only non-surgical treatment that reaches the SMAS layer - the same tissue a surgeon tightens during a facelift. Dr. Bhura explains who benefits, what the treatment honestly feels like, and realistic results for Indian skin.",
+      "HIFU (High-Intensity Focused Ultrasound) is the only non-surgical treatment that reaches the SMAS layer, the same tissue a surgeon tightens during a facelift. Dr. Bhura explains who benefits, what the treatment honestly feels like, and realistic results for Indian skin.",
     readTime: 7,
     date: "May 12, 2026",
     tags: ["skin tightening", "non-surgical", "anti-aging"],
@@ -75,7 +75,7 @@ const ARTICLES: Article[] = [
   {
     slug: "laser-hair-removal-kanpur",
     title:
-      "Laser Hair Removal in Kanpur - How Many Sessions, Best Laser for Indian Skin",
+      "Laser Hair Removal in Kanpur, How Many Sessions, Best Laser for Indian Skin",
     category: "Treatment Guides",
     excerpt:
       "Most patients need 6 to 8 sessions for lasting hair reduction. But using the wrong laser on Indian skin causes burns and pigmentation. Dr. Bhura explains why Nd:YAG and diode lasers are the safe choice for Fitzpatrick Type III–V skin, and what realistic results look like.",
@@ -89,7 +89,7 @@ const ARTICLES: Article[] = [
       "Is PRP Effective for Hair Loss? A Clinical Guide for Indian Patients",
     category: "Hair Care",
     excerpt:
-      "PRP therapy is evidence-supported for androgenetic alopecia - but only when follicles are still alive and miniaturising. Dr. Bhura explains who actually benefits, how many sessions are needed, and the difference between PRP and the more advanced GFC treatment.",
+      "PRP therapy is evidence-supported for androgenetic alopecia, but only when follicles are still alive and miniaturising. Dr. Bhura explains who actually benefits, how many sessions are needed, and the difference between PRP and the more advanced GFC treatment.",
     readTime: 8,
     date: "May 12, 2026",
     tags: ["PRP", "hair loss", "GFC treatment"],
@@ -97,10 +97,10 @@ const ARTICLES: Article[] = [
   {
     slug: "botox-vs-dermal-fillers-kanpur",
     title:
-      "Botox vs Dermal Fillers - What Is the Difference and Who Needs Which?",
+      "Botox vs Dermal Fillers, What Is the Difference and Who Needs Which?",
     category: "Treatment Guides",
     excerpt:
-      "Botox relaxes muscles that cause expression lines. Fillers restore lost volume. They treat different problems with different mechanisms - and using one where you need the other produces poor results. Dr. Bhura explains the distinction every patient should understand.",
+      "Botox relaxes muscles that cause expression lines. Fillers restore lost volume. They treat different problems with different mechanisms, and using one where you need the other produces poor results. Dr. Bhura explains the distinction every patient should understand.",
     readTime: 7,
     date: "May 12, 2026",
     tags: ["botox", "dermal fillers", "anti-aging"],
@@ -110,7 +110,7 @@ const ARTICLES: Article[] = [
     title: "What Causes Melasma and How to Treat It on Indian Skin",
     category: "Treatment Guides",
     excerpt:
-      "Melasma is triggered by UV, hormones, and heat - and is especially persistent on Indian skin. The treatment sequence matters: starting with laser without priming can make it significantly worse. Dr. Bhura explains the phased approach that actually works.",
+      "Melasma is triggered by UV, hormones, and heat, and is especially persistent on Indian skin. The treatment sequence matters: starting with laser without priming can make it significantly worse. Dr. Bhura explains the phased approach that actually works.",
     readTime: 9,
     date: "May 12, 2026",
     tags: ["melasma", "pigmentation", "Indian skin"],
@@ -120,7 +120,7 @@ const ARTICLES: Article[] = [
     title: "5 Signs You Need to See a Dermatologist",
     category: "Skin Care Tips",
     excerpt:
-      "Persistent acne, unusual moles, prolonged rashes - there are clear signals your skin is asking for professional attention. Here's how to tell when over-the-counter isn't enough.",
+      "Persistent acne, unusual moles, prolonged rashes, there are clear signals your skin is asking for professional attention. Here's how to tell when over-the-counter isn't enough.",
     readTime: 5,
     date: "February 28, 2026",
   },
@@ -129,7 +129,7 @@ const ARTICLES: Article[] = [
     title: "Debunking Common Indian Skin Myths",
     category: "Myth Busters",
     excerpt:
-      "From 'besan face packs cure acne' to 'dark skin doesn't age' - Dr. Bhura addresses the most persistent myths that do more harm than good to Indian skin health.",
+      "From 'besan face packs cure acne' to 'dark skin doesn't age', Dr. Bhura addresses the most persistent myths that do more harm than good to Indian skin health.",
     readTime: 6,
     date: "February 14, 2026",
   },
@@ -147,7 +147,7 @@ const ARTICLES: Article[] = [
     title: "Understanding Melasma: Causes & Treatment Options",
     category: "Treatment Guides",
     excerpt:
-      "Melasma is one of the most common - and most misunderstood - skin conditions among Indian women. Dr. Bhura explains the hormonal triggers, what worsens it, and the step-by-step approach that actually works.",
+      "Melasma is one of the most common, and most misunderstood, skin conditions among Indian women. Dr. Bhura explains the hormonal triggers, what worsens it, and the step-by-step approach that actually works.",
     readTime: 9,
     date: "January 18, 2026",
   },
@@ -165,7 +165,7 @@ const ARTICLES: Article[] = [
     title: "Chemical Peels vs Lasers: Which Is Right for You?",
     category: "Treatment Guides",
     excerpt:
-      "Both are powerful tools for improving skin texture, tone, and clarity - but they work very differently and suit different concerns. Dr. Bhura walks you through the decision framework she uses with patients every day.",
+      "Both are powerful tools for improving skin texture, tone, and clarity, but they work very differently and suit different concerns. Dr. Bhura walks you through the decision framework she uses with patients every day.",
     readTime: 8,
     date: "December 20, 2025",
   },
@@ -889,7 +889,7 @@ export default function SkinGuidePage() {
                   style={{ fontFamily: "var(--font-body)", color: "#5C4033" }}
                 >
                   Get Dr. Bhura&apos;s monthly skin tips directly to your inbox
-                  - no fluff, no spam. Just honest, evidence-based advice
+                 , no fluff, no spam. Just honest, evidence-based advice
                   tailored for Indian skin.
                 </p>
 
@@ -1059,7 +1059,7 @@ export default function SkinGuidePage() {
                   color: "rgba(253,246,236,0.72)",
                 }}
               >
-                Reading is a great start - but nothing replaces a one-to-one
+                Reading is a great start, but nothing replaces a one-to-one
                 consultation with a board-certified dermatologist who
                 understands Indian skin.
               </p>

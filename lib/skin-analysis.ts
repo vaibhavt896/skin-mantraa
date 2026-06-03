@@ -105,7 +105,7 @@ export const CONCERNS: Concern[] = [
     label: "Hair Loss & Thinning",
     description: "Receding hairline, bald patches, or overall thinning",
     icon: "Wind",
-    bodyAreas: ["Scalp - Top", "Scalp - Front", "Scalp - Sides", "Eyebrows"],
+    bodyAreas: ["Scalp, Top", "Scalp, Front", "Scalp, Sides", "Eyebrows"],
   },
   {
     id: "rash",
@@ -362,19 +362,19 @@ const PIGMENTATION_QUESTIONS: Question[] = [
     text: "How often are you exposed to sun without protection?",
     options: [
       {
-        label: "Rarely - I always use sunscreen",
+        label: "Rarely, I always use sunscreen",
         value: "protected",
         severity: 0,
         urgency: 0,
       },
       {
-        label: "Sometimes - I forget sunscreen often",
+        label: "Sometimes, I forget sunscreen often",
         value: "sometimes",
         severity: 1,
         urgency: 0,
       },
       {
-        label: "Frequently - outdoor work / lifestyle",
+        label: "Frequently, outdoor work / lifestyle",
         value: "frequent",
         severity: 2,
         urgency: 1,
@@ -441,7 +441,7 @@ const AGING_QUESTIONS: Question[] = [
         flags: ["photoaging"],
       },
       {
-        label: "Loss of volume - hollow cheeks or temples",
+        label: "Loss of volume, hollow cheeks or temples",
         value: "volume-loss",
         severity: 2,
         urgency: 0,
@@ -472,26 +472,26 @@ const AGING_QUESTIONS: Question[] = [
     text: "How much cumulative sun exposure have you had over the years?",
     options: [
       {
-        label: "Minimal - mostly indoors",
+        label: "Minimal, mostly indoors",
         value: "minimal",
         severity: 0,
         urgency: 0,
       },
       {
-        label: "Moderate - mixed indoor/outdoor",
+        label: "Moderate, mixed indoor/outdoor",
         value: "moderate",
         severity: 1,
         urgency: 0,
       },
       {
-        label: "Significant - years of outdoor activity",
+        label: "Significant, years of outdoor activity",
         value: "high",
         severity: 2,
         urgency: 1,
         flags: ["photoaging"],
       },
       {
-        label: "Very high - farming, sports, etc.",
+        label: "Very high, farming, sports, etc.",
         value: "very-high",
         severity: 3,
         urgency: 1,
@@ -569,7 +569,7 @@ const HAIR_LOSS_QUESTIONS: Question[] = [
     text: "How much hair do you notice falling daily?",
     options: [
       {
-        label: "A few strands - seems normal",
+        label: "A few strands, seems normal",
         value: "normal",
         severity: 0,
         urgency: 0,
@@ -865,14 +865,14 @@ const DRY_SKIN_QUESTIONS: Question[] = [
         urgency: 0,
       },
       {
-        label: "Moderate - disrupts daily activities",
+        label: "Moderate, disrupts daily activities",
         value: "moderate",
         severity: 2,
         urgency: 1,
         flags: ["eczema"],
       },
       {
-        label: "Severe - disrupts sleep",
+        label: "Severe, disrupts sleep",
         value: "severe",
         severity: 3,
         urgency: 2,
@@ -887,21 +887,21 @@ const DRY_SKIN_QUESTIONS: Question[] = [
     options: [
       { label: "No", value: "no", severity: 0, urgency: 0 },
       {
-        label: "Yes - I have one of these",
+        label: "Yes, I have one of these",
         value: "self",
         severity: 1,
         urgency: 0,
         flags: ["eczema"],
       },
       {
-        label: "Yes - in family",
+        label: "Yes, in family",
         value: "family",
         severity: 1,
         urgency: 0,
         flags: ["eczema"],
       },
       {
-        label: "Yes - both self and family",
+        label: "Yes, both self and family",
         value: "both",
         severity: 2,
         urgency: 1,
@@ -974,25 +974,25 @@ const SCARS_QUESTIONS: Question[] = [
     text: "How much do the scars affect your confidence or daily life?",
     options: [
       {
-        label: "Not much - minor cosmetic concern",
+        label: "Not much, minor cosmetic concern",
         value: "minor",
         severity: 0,
         urgency: 0,
       },
       {
-        label: "Somewhat - I notice them often",
+        label: "Somewhat, I notice them often",
         value: "moderate",
         severity: 1,
         urgency: 0,
       },
       {
-        label: "Significantly - I avoid social situations",
+        label: "Significantly, I avoid social situations",
         value: "significant",
         severity: 2,
         urgency: 1,
       },
       {
-        label: "Severely - major impact on self-esteem",
+        label: "Severely, major impact on self-esteem",
         value: "severe",
         severity: 3,
         urgency: 2,
@@ -1009,7 +1009,7 @@ const DARK_CIRCLES_QUESTIONS: Question[] = [
     text: "What do your dark circles look like?",
     options: [
       {
-        label: "Bluish tint - visible veins",
+        label: "Bluish tint, visible veins",
         value: "vascular",
         severity: 1,
         urgency: 0,
@@ -1043,25 +1043,25 @@ const DARK_CIRCLES_QUESTIONS: Question[] = [
     text: "How is your sleep quality?",
     options: [
       {
-        label: "Good - 7-8 hours most nights",
+        label: "Good, 7-8 hours most nights",
         value: "good",
         severity: 0,
         urgency: 0,
       },
       {
-        label: "Fair - 5-7 hours, sometimes broken",
+        label: "Fair, 5-7 hours, sometimes broken",
         value: "fair",
         severity: 1,
         urgency: 0,
       },
       {
-        label: "Poor - less than 5 hours regularly",
+        label: "Poor, less than 5 hours regularly",
         value: "poor",
         severity: 2,
         urgency: 0,
       },
       {
-        label: "Very poor - chronic insomnia or disruption",
+        label: "Very poor, chronic insomnia or disruption",
         value: "very-poor",
         severity: 2,
         urgency: 0,
@@ -1280,7 +1280,7 @@ export const CONDITIONS: Condition[] = [
     id: "pih",
     name: "Post-Inflammatory Hyperpigmentation",
     description:
-      "Dark marks left behind after acne, injury, or inflammation - the skin\u2019s exaggerated healing response.",
+      "Dark marks left behind after acne, injury, or inflammation, the skin\u2019s exaggerated healing response.",
     concerns: ["pigmentation", "acne", "scars"],
     keySymptoms: [
       "Dark spots after breakouts",
@@ -1316,7 +1316,7 @@ export const CONDITIONS: Condition[] = [
     id: "photoaging",
     name: "Photoaging (Sun-Induced Aging)",
     description:
-      "Premature skin aging caused by chronic UV exposure - wrinkles, sagging, and pigment changes beyond your biological age.",
+      "Premature skin aging caused by chronic UV exposure, wrinkles, sagging, and pigment changes beyond your biological age.",
     concerns: ["aging", "sun-damage"],
     keySymptoms: [
       "Premature wrinkles",
@@ -1544,7 +1544,7 @@ export const CONDITIONS: Condition[] = [
     id: "acne-scars",
     name: "Acne Scars",
     description:
-      "Permanent texture changes from healed acne - pitted (ice-pick, boxcar, rolling) or raised scars.",
+      "Permanent texture changes from healed acne, pitted (ice-pick, boxcar, rolling) or raised scars.",
     concerns: ["scars"],
     keySymptoms: [
       "Pitted skin texture",
@@ -1632,10 +1632,10 @@ const RECOMMENDATIONS_BY_CONCERN: Record<ConcernId, string[]> = {
   pigmentation: [
     "Medical-grade depigmenting protocols are 3-5x more effective than over-the-counter products",
     "A combination of peels + lasers + homecare achieves the fastest, most even results",
-    "Sun protection is non-negotiable - even the best treatment fails without daily SPF 30+",
+    "Sun protection is non-negotiable, even the best treatment fails without daily SPF 30+",
   ],
   aging: [
-    "Modern anti-aging treatments stimulate your own collagen - results look natural, not artificial",
+    "Modern anti-aging treatments stimulate your own collagen, results look natural, not artificial",
     "Starting a preventive protocol in your 30s-40s delays visible aging by years",
     "A customised combination approach outperforms any single treatment or product",
   ],
@@ -1647,12 +1647,12 @@ const RECOMMENDATIONS_BY_CONCERN: Record<ConcernId, string[]> = {
   rash: [
     "Professional patch testing identifies the exact allergen so you can avoid future flare-ups",
     "Prescription-strength treatments resolve rashes faster and prevent the itch-scratch-damage cycle",
-    "Chronic rashes need a management plan - not just short-term relief but long-term control",
+    "Chronic rashes need a management plan, not just short-term relief but long-term control",
   ],
   moles: [
     "Dermoscopic evaluation provides 10-30x magnification to assess features invisible to the naked eye",
     "A baseline mole map enables tracking of any future changes with precision",
-    "The vast majority of moles are harmless - professional screening provides peace of mind",
+    "The vast majority of moles are harmless, professional screening provides peace of mind",
   ],
   "dry-skin": [
     "A barrier-repair protocol restores your skin\u2019s natural moisture-retention ability",
@@ -1662,24 +1662,24 @@ const RECOMMENDATIONS_BY_CONCERN: Record<ConcernId, string[]> = {
   scars: [
     "Microneedling with PRP can improve acne scars by 50-70% over a series of sessions",
     "Combination therapy (laser + microneedling + peels) gives superior results to any single approach",
-    "Newer scars respond faster to treatment - don\u2019t wait years to start",
+    "Newer scars respond faster to treatment, don\u2019t wait years to start",
   ],
   "dark-circles": [
-    "Under-eye darkness has different causes (pigment, veins, volume loss) - the right treatment depends on the type",
+    "Under-eye darkness has different causes (pigment, veins, volume loss), the right treatment depends on the type",
     "Professional treatments achieve results that no amount of concealer or eye cream can match",
     "Addressing underlying causes (allergies, sleep, nutrition) amplifies treatment results",
   ],
   "sun-damage": [
     "Professional-grade sun damage reversal protocols combine peels, lasers, and retinoid therapy",
     "Rough or scaly sun-damaged patches should be evaluated to rule out pre-cancerous changes",
-    "It\u2019s never too late to reverse sun damage - skin has remarkable repair capacity with the right protocol",
+    "It\u2019s never too late to reverse sun damage, skin has remarkable repair capacity with the right protocol",
   ],
 };
 
 const LIFESTYLE_TIPS_BY_CONCERN: Record<ConcernId, string[]> = {
   acne: [
     "Change your pillowcase every 2-3 days to reduce bacterial buildup",
-    "Avoid touching your face during the day - hands carry oils and bacteria",
+    "Avoid touching your face during the day, hands carry oils and bacteria",
     "Consider reducing dairy and high-glycemic foods, which can trigger breakouts",
   ],
   pigmentation: [
@@ -1688,7 +1688,7 @@ const LIFESTYLE_TIPS_BY_CONCERN: Record<ConcernId, string[]> = {
     "Vitamin C serum in the morning boosts sun protection and fights pigment production",
   ],
   aging: [
-    "Start retinol at night - it\u2019s the gold-standard anti-aging active with decades of evidence",
+    "Start retinol at night, it\u2019s the gold-standard anti-aging active with decades of evidence",
     "Sleep on your back to avoid sleep-crease wrinkles",
     "Antioxidant-rich diet (berries, leafy greens, nuts) supports skin repair from within",
   ],
@@ -1700,12 +1700,12 @@ const LIFESTYLE_TIPS_BY_CONCERN: Record<ConcernId, string[]> = {
   rash: [
     "Switch to fragrance-free, hypoallergenic skincare and laundry products",
     "Keep a symptom diary to identify patterns and potential triggers",
-    "Avoid hot showers - lukewarm water is gentler on irritated skin",
+    "Avoid hot showers, lukewarm water is gentler on irritated skin",
   ],
   moles: [
     "Perform a monthly self-check using the ABCDE method (Asymmetry, Border, Colour, Diameter, Evolution)",
     "Photograph moles you\u2019re monitoring so you can compare over time",
-    "Use SPF 30+ daily - UV exposure is the main modifiable risk factor for mole changes",
+    "Use SPF 30+ daily, UV exposure is the main modifiable risk factor for mole changes",
   ],
   "dry-skin": [
     "Moisturise within 3 minutes of bathing while skin is still damp to lock in hydration",
@@ -1713,19 +1713,19 @@ const LIFESTYLE_TIPS_BY_CONCERN: Record<ConcernId, string[]> = {
     "Drink at least 2-3 litres of water daily for internal hydration",
   ],
   scars: [
-    "Apply sunscreen on scars daily - UV exposure darkens and worsens scar appearance",
+    "Apply sunscreen on scars daily, UV exposure darkens and worsens scar appearance",
     "Silicone-based scar sheets can help flatten raised scars over time",
     "Gentle massage on healed scars improves blood flow and may soften tissue",
   ],
   "dark-circles": [
-    "Aim for 7-8 hours of quality sleep - elevate your head slightly to reduce puffiness",
+    "Aim for 7-8 hours of quality sleep, elevate your head slightly to reduce puffiness",
     "Cold compresses for 10 minutes in the morning reduce puffiness and constrict blood vessels",
-    "Manage allergies proactively - antihistamines reduce the \u2018allergic shiner\u2019 effect",
+    "Manage allergies proactively, antihistamines reduce the \u2018allergic shiner\u2019 effect",
   ],
   "sun-damage": [
-    "Adopt the shadow rule - if your shadow is shorter than you, seek shade",
+    "Adopt the shadow rule, if your shadow is shorter than you, seek shade",
     "Wear a broad-brimmed hat and UV-protective clothing for outdoor activities",
-    "Check and replace expired sunscreen - efficacy drops significantly after expiry",
+    "Check and replace expired sunscreen, efficacy drops significantly after expiry",
   ],
 };
 

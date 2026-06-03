@@ -6,9 +6,9 @@ import FloatingCTA from "@/components/layout/FloatingCTA";
 import { BRAND } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Skin Clinic Near Kakadeo Kanpur — SKIN@Mantraa, Swaroop Nagar",
+  title: "Skin Clinic Near Kakadeo Kanpur | SKIN@Mantraa, Swaroop Nagar",
   description:
-    "Looking for a skin clinic near Kakadeo, Kanpur? SKIN@Mantraa in Swaroop Nagar is just 3 km away. Dr. Mamta Bhura — MD Dermatology, IMS BHU, 26+ years experience. Laser, anti-aging, acne and hair treatments.",
+    "Looking for a skin clinic near Kakadeo, Kanpur? SKIN@Mantraa in Swaroop Nagar is just 3 km away. Dr. Mamta Bhura, MD Dermatology, IMS BHU, 26+ years experience. Laser, anti-aging, acne and hair treatments.",
   keywords: [
     "skin clinic Kakadeo Kanpur",
     "dermatologist near Kakadeo",
@@ -21,9 +21,9 @@ export const metadata: Metadata = {
     canonical: "https://skinmantraa.in/skin-clinic-kakadeo-kanpur",
   },
   openGraph: {
-    title: "Skin Clinic Near Kakadeo Kanpur — SKIN@Mantraa",
+    title: "Skin Clinic Near Kakadeo Kanpur | SKIN@Mantraa",
     description:
-      "SKIN@Mantraa in Swaroop Nagar is the nearest premium dermatology clinic to Kakadeo, Kanpur. Dr. Mamta Bhura — 26+ years, MD Dermatology, IMS BHU.",
+      "SKIN@Mantraa in Swaroop Nagar is the nearest premium dermatology clinic to Kakadeo, Kanpur. Dr. Mamta Bhura, 26+ years, MD Dermatology, IMS BHU.",
     url: "https://skinmantraa.in/skin-clinic-kakadeo-kanpur",
     type: "website",
     images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
@@ -94,7 +94,7 @@ const pageSchema = {
           name: "Which skin clinic near Kakadeo Kanpur is best?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "SKIN@Mantraa in Swaroop Nagar is approximately 3 km from Kakadeo and is the closest premium dermatology clinic in the area. It is led by Dr. Mamta Bhura — MBBS MD Dermatology (IMS BHU) with 26+ years of clinical experience, ranked #1 dermatologist in Kanpur by ThreeBestRated.in.",
+            text: "SKIN@Mantraa in Swaroop Nagar is approximately 3 km from Kakadeo and is the closest premium dermatology clinic in the area. It is led by Dr. Mamta Bhura, MBBS MD Dermatology (IMS BHU) with 26+ years of clinical experience, ranked #1 dermatologist in Kanpur by ThreeBestRated.in.",
           },
         },
         {
@@ -102,7 +102,7 @@ const pageSchema = {
           name: "How far is SKIN@Mantraa from Kakadeo?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "SKIN@Mantraa is located at Bungalow No. 4, 113/196, Swaroop Nagar, Behind Hotel Royal Cliff, Kanpur — approximately 3 km from Kakadeo. The clinic is easily accessible by auto, cab, or personal vehicle.",
+            text: "SKIN@Mantraa is located at Bungalow No. 4, 113/196, Swaroop Nagar, Behind Hotel Royal Cliff, Kanpur, approximately 3 km from Kakadeo. The clinic is easily accessible by auto, cab, or personal vehicle.",
           },
         },
         {
@@ -118,7 +118,7 @@ const pageSchema = {
           name: "Does SKIN@Mantraa serve patients from Kakadeo?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes. SKIN@Mantraa regularly serves patients from Kakadeo, Govind Nagar, Civil Lines, Kidwai Nagar, and across Kanpur. The clinic is a short drive from Kakadeo — approximately 10–15 minutes depending on traffic.",
+            text: "Yes. SKIN@Mantraa regularly serves patients from Kakadeo, Govind Nagar, Civil Lines, Kidwai Nagar, and across Kanpur. The clinic is a short drive from Kakadeo, approximately 10–15 minutes depending on traffic.",
           },
         },
       ],
@@ -167,10 +167,10 @@ export default function KakadeoPage() {
               Skin Clinic Near Kakadeo, Kanpur
             </h1>
             <p style={{ fontFamily: "var(--font-body)", fontSize: "1.15rem", lineHeight: 1.75, color: "#5C4033", marginBottom: "1.5rem" }}>
-              SKIN@Mantraa, Swaroop Nagar — the nearest premium dermatology clinic to Kakadeo. Led by Dr. Mamta Bhura, MD Dermatology, IMS BHU.
+              SKIN@Mantraa, Swaroop Nagar, the nearest premium dermatology clinic to Kakadeo. Led by Dr. Mamta Bhura, MD Dermatology, IMS BHU.
             </p>
             <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-              <Link href="/contact" className="btn-primary">Book Consultation — ₹600</Link>
+              <Link href="/contact" className="btn-primary">Book Consultation, ₹600</Link>
               <a href={`tel:${BRAND.clinic.phone}`} style={{ display: "inline-flex", alignItems: "center", gap: "0.4rem", padding: "0.65rem 1.4rem", borderRadius: "10px", border: "1px solid rgba(199,141,107,0.35)", color: "#C78D6B", fontFamily: "var(--font-accent)", fontSize: "0.85rem", fontWeight: 600, textDecoration: "none" }}>
                 Call Clinic
               </a>
@@ -186,16 +186,16 @@ export default function KakadeoPage() {
                 Quick Answer
               </p>
               <p style={{ fontFamily: "var(--font-body)", fontSize: "1rem", lineHeight: 1.75, color: "#3D2B1F", margin: 0 }}>
-                SKIN@Mantraa in Swaroop Nagar is approximately 3 km from Kakadeo — the nearest advanced dermatology clinic to the area. Dr. Mamta Bhura (MBBS, MD Dermatology, IMS BHU) offers laser, anti-aging, acne, hair restoration, and skin disease treatments. Consultation fee: ₹600.
+                SKIN@Mantraa in Swaroop Nagar is approximately 3 km from Kakadeo, the nearest advanced dermatology clinic to the area. Dr. Mamta Bhura (MBBS, MD Dermatology, IMS BHU) offers laser, anti-aging, acne, hair restoration, and skin disease treatments. Consultation fee: ₹600.
               </p>
             </div>
 
             <h2 style={styles.heading2}>Closest Advanced Skin Clinic to Kakadeo</h2>
             <p style={styles.para}>
-              If you live in Kakadeo and need a dermatologist, SKIN@Mantraa at Swaroop Nagar is approximately 10–15 minutes away by road. The clinic is located at Bungalow No. 4, 113/196, Swaroop Nagar, Behind Hotel Royal Cliff — a well-known landmark in the area.
+              If you live in Kakadeo and need a dermatologist, SKIN@Mantraa at Swaroop Nagar is approximately 10–15 minutes away by road. The clinic is located at Bungalow No. 4, 113/196, Swaroop Nagar, Behind Hotel Royal Cliff, a well-known landmark in the area.
             </p>
             <p style={styles.para}>
-              SKIN@Mantraa is led by Dr. Mamta Bhura — MBBS MD Dermatology from IMS BHU, with 26+ years of clinical experience in Kanpur. She has been ranked the #1 dermatologist in Kanpur by ThreeBestRated.in and is a verified practitioner on Practo and Justdial with a strong patient review record.
+              SKIN@Mantraa is led by Dr. Mamta Bhura, MBBS MD Dermatology from IMS BHU, with 26+ years of clinical experience in Kanpur. She has been ranked the #1 dermatologist in Kanpur by ThreeBestRated.in and is a verified practitioner on Practo and Justdial with a strong patient review record.
             </p>
 
             <h2 style={styles.heading2}>Treatments Available for Kakadeo Patients</h2>
@@ -204,7 +204,7 @@ export default function KakadeoPage() {
             </p>
             <ul style={{ margin: "0.5rem 0 1.25rem 1.5rem", listStyle: "disc" }}>
               {[
-                "Laser hair removal — Nd:YAG 1064nm and diode laser, safe for Indian skin",
+                "Laser hair removal, Nd:YAG 1064nm and diode laser, safe for Indian skin",
                 "Botox for forehead lines, frown lines, and crow's feet",
                 "Dermal fillers for cheeks, lips, and nasolabial folds",
                 "HIFU non-surgical skin tightening",
@@ -225,7 +225,7 @@ export default function KakadeoPage() {
               Most patients from Kakadeo tell us the same thing: they tried local options first, and eventually came to SKIN@Mantraa because they needed an accurate diagnosis, a clear treatment plan, and a doctor who would be honest about what can and cannot be treated.
             </p>
             <p style={styles.para}>
-              Dr. Bhura trained at IMS BHU — one of India's most respected medical institutions for dermatology. Her approach is clinical first: she does not offer treatments that are not indicated, and she does not upsell procedures that are unlikely to help your specific condition. Consultation is ₹600, with no hidden costs.
+              Dr. Bhura trained at IMS BHU, one of India's most respected medical institutions for dermatology. Her approach is clinical first: she does not offer treatments that are not indicated, and she does not upsell procedures that are unlikely to help your specific condition. Consultation is ₹600, with no hidden costs.
             </p>
 
             <h2 style={styles.heading2}>Clinic Hours and Location</h2>
@@ -254,7 +254,7 @@ export default function KakadeoPage() {
                   },
                   {
                     q: "What is the consultation fee?",
-                    a: "Consultation with Dr. Mamta Bhura is ₹600. This is a clinical consultation — she examines your skin, makes a diagnosis, and gives you a clear treatment plan and realistic expectations. No upselling.",
+                    a: "Consultation with Dr. Mamta Bhura is ₹600. This is a clinical consultation, she examines your skin, makes a diagnosis, and gives you a clear treatment plan and realistic expectations. No upselling.",
                   },
                 ].map(({ q, a }, i) => (
                   <details key={i} style={{ border: "1px solid rgba(199,141,107,0.2)", borderRadius: "10px", overflow: "hidden" }}>

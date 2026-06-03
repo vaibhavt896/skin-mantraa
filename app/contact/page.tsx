@@ -10,12 +10,12 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title:
-    "Book Appointment | SKIN@Mantraa - Dermatology Clinic, Swaroop Nagar Kanpur",
+    "Book Appointment | SKIN@Mantraa Dermatology Clinic, Swaroop Nagar Kanpur",
   description:
     "Book a consultation with Dr. Mamta Bhura at SKIN@Mantraa, Swaroop Nagar, Kanpur. Walk-in, phone, or WhatsApp. Mon–Fri 11AM–6PM, Saturday 12–6PM, Sunday 10AM–2PM. Consultation: ₹600.",
   alternates: { canonical: "https://skinmantraa.in/contact" },
   openGraph: {
-    title: "Book Appointment | SKIN@Mantraa - Kanpur Dermatology Clinic",
+    title: "Book Appointment | SKIN@Mantraa, Kanpur Dermatology Clinic",
     description:
       "Book a dermatology consultation with Dr. Mamta Bhura at SKIN@Mantraa, Swaroop Nagar, Kanpur. Call, WhatsApp, or walk in.",
     url: "https://skinmantraa.in/contact",
@@ -56,7 +56,7 @@ const FAQ_CARDS = [
     ),
     question: "What should I bring?",
     answer:
-      "Please carry a valid government ID and any prior prescription or reports from previous dermatologists. If you've had skin procedures elsewhere, bring photos or discharge summaries - it helps Dr. Bhura give you the most accurate assessment.",
+      "Please carry a valid government ID and any prior prescription or reports from previous dermatologists. If you've had skin procedures elsewhere, bring photos or discharge summaries. It helps Dr. Bhura give you the most accurate assessment.",
   },
   {
     icon: (
@@ -113,7 +113,7 @@ export default function ContactPage() {
       <main style={{ background: "#FDF6EC" }}>
         {/* ── Hero ──────────────────────────────────────────── */}
         <section
-          className="relative pt-36 pb-20 px-6 overflow-hidden"
+          className="relative pt-28 sm:pt-36 pb-12 sm:pb-20 px-5 sm:px-6 overflow-hidden"
           style={{
             background:
               "linear-gradient(160deg, #F5E6D3 0%, #FDF6EC 55%, #F8E8E0 100%)",
@@ -227,7 +227,7 @@ export default function ContactPage() {
                 }}
               >
                 Dr. Mamta Bhura personally attends every consultation. Fill in
-                the form below, call, or WhatsApp us - we&apos;ll confirm your
+                the form below, call, or WhatsApp us, and we&apos;ll confirm your
                 slot within a few hours.
               </p>
             </div>
@@ -235,9 +235,9 @@ export default function ContactPage() {
         </section>
 
         {/* ── Main Content ──────────────────────────────────── */}
-        <section className="py-16 px-6">
+        <section className="py-10 sm:py-16 px-5 sm:px-6">
           <div className="max-w-7xl mx-auto">
-            <div className="grid lg:grid-cols-5 gap-10 xl:gap-14">
+            <div className="grid lg:grid-cols-5 gap-8 xl:gap-14">
               {/* Left: Booking Form */}
               <div className="lg:col-span-3">
                 <BookingForm services={SERVICES} />
@@ -254,7 +254,7 @@ export default function ContactPage() {
                 >
                   {/* Card header */}
                   <div
-                    className="px-8 py-6"
+                    className="px-5 sm:px-8 py-6"
                     style={{
                       background:
                         "linear-gradient(135deg, #3D2B1F 0%, #2C1810 100%)",
@@ -286,7 +286,7 @@ export default function ContactPage() {
                     </h2>
                   </div>
 
-                  <div className="px-8 py-7 flex flex-col gap-6">
+                  <div className="px-5 sm:px-8 py-6 sm:py-7 flex flex-col gap-6">
                     {/* Address */}
                     <div className="flex gap-3.5">
                       <div

@@ -6,7 +6,7 @@ import FloatingCTA from "@/components/layout/FloatingCTA";
 
 export const metadata: Metadata = {
   title:
-    "Is PRP Effective for Hair Loss? A Clinical Guide for Indian Patients - SKIN@Mantraa",
+    "Is PRP Effective for Hair Loss? A Clinical Guide for Indian Patients, SKIN@Mantraa",
   description:
     "PRP therapy for hair loss: how it works, who benefits, how many sessions are needed, and realistic results for Indian hair types. Clinical guide by Dr. Mamta Bhura, Kanpur.",
   alternates: {
@@ -82,7 +82,7 @@ const faqSchema = {
       name: "Is PRP effective for hair loss in India?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes - PRP (Platelet Rich Plasma) is an evidence-supported treatment for androgenetic alopecia (pattern hair loss) and is well-suited to Indian hair types. Clinical studies show PRP significantly increases hair density and thickness when the follicle is still alive and miniaturising, rather than absent. It works best in early-to-mid stages of hair loss, not in areas of complete baldness.",
+        text: "Yes, PRP (Platelet Rich Plasma) is an evidence-supported treatment for androgenetic alopecia (pattern hair loss) and is well-suited to Indian hair types. Clinical studies show PRP significantly increases hair density and thickness when the follicle is still alive and miniaturising, rather than absent. It works best in early-to-mid stages of hair loss, not in areas of complete baldness.",
       },
     },
     {
@@ -106,7 +106,7 @@ const faqSchema = {
       name: "Does PRP work for female pattern hair loss?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. Female pattern hair loss (FPHL) - which typically presents as diffuse thinning over the crown and mid-scalp rather than a receding hairline - responds well to PRP. In women, PRP is often combined with topical minoxidil or nutritional supplementation depending on the underlying cause of the hair loss (hormonal, nutritional deficiency, or post-partum).",
+        text: "Yes. Female pattern hair loss (FPHL), which typically presents as diffuse thinning over the crown and mid-scalp rather than a receding hairline, responds well to PRP. In women, PRP is often combined with topical minoxidil or nutritional supplementation depending on the underlying cause of the hair loss (hormonal, nutritional deficiency, or post-partum).",
       },
     },
     {
@@ -114,7 +114,7 @@ const faqSchema = {
       name: "Is PRP hair treatment painful?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "The injections cause mild discomfort. We apply a topical anaesthetic cream for 30 to 45 minutes before the procedure, which makes the session well-tolerated by most patients. There is no downtime - you can return to work the same day. Some patients experience mild scalp tenderness or redness for 24 to 48 hours.",
+        text: "The injections cause mild discomfort. We apply a topical anaesthetic cream for 30 to 45 minutes before the procedure, which makes the session well-tolerated by most patients. There is no downtime, you can return to work the same day. Some patients experience mild scalp tenderness or redness for 24 to 48 hours.",
       },
     },
     {
@@ -236,7 +236,7 @@ export default function PrpHairLossPage() {
               style={{ ...styles.para, fontSize: "1.15rem", color: "#5C4033" }}
             >
               PRP (Platelet Rich Plasma) therapy is an evidence-supported
-              treatment for androgenetic alopecia - pattern hair loss - in both
+              treatment for androgenetic alopecia, pattern hair loss, in both
               men and women. It is effective when the hair follicle is still
               alive and miniaturising. It does not work on follicles that are
               completely dormant or absent. This distinction matters before you
@@ -312,7 +312,7 @@ export default function PrpHairLossPage() {
                   margin: 0,
                 }}
               >
-                PRP (Platelet-Rich Plasma) therapy for hair loss uses concentrated growth factors from your own blood to stimulate dormant and miniaturising follicles. It is evidence-supported for androgenetic alopecia — but only when follicles are still alive. Dead follicles cannot be revived by PRP. Most protocols require 3–4 monthly sessions followed by maintenance every 4–6 months. Early intervention produces the best outcomes.
+                PRP (Platelet-Rich Plasma) therapy for hair loss uses concentrated growth factors from your own blood to stimulate dormant and miniaturising follicles. It is evidence-supported for androgenetic alopecia, but only when follicles are still alive. Dead follicles cannot be revived by PRP. Most protocols require 3–4 monthly sessions followed by maintenance every 4–6 months. Early intervention produces the best outcomes.
               </p>
             </div>
             <h2 style={styles.heading2}>What PRP Actually Is</h2>
@@ -320,7 +320,7 @@ export default function PrpHairLossPage() {
               PRP stands for Platelet Rich Plasma. It is prepared from your own
               blood. A small sample is drawn, placed in a centrifuge, and spun
               to separate the blood components. The resulting plasma layer is
-              rich in platelets - the same cells responsible for wound healing
+              rich in platelets, the same cells responsible for wound healing
               and tissue repair. When injected into the scalp at the level of
               the hair follicle, the growth factors released by platelets
               stimulate follicular activity: they encourage dormant follicles to
@@ -329,9 +329,9 @@ export default function PrpHairLossPage() {
             </p>
             <p style={styles.para}>
               This is not a "boost" treatment in the general wellness sense. PRP
-              contains specific proteins - PDGF (platelet-derived growth
+              contains specific proteins, PDGF (platelet-derived growth
               factor), VEGF (vascular endothelial growth factor), EGF (epidermal
-              growth factor), and IGF (insulin-like growth factor) - that act on
+              growth factor), and IGF (insulin-like growth factor), that act on
               follicular cells directly. The evidence base for PRP in
               androgenetic alopecia is solid: multiple randomised controlled
               trials show meaningful improvements in hair count, hair shaft
@@ -343,8 +343,8 @@ export default function PrpHairLossPage() {
               PRP produces the best results in patients with early-to-moderate
               hair loss. The key clinical marker is whether follicles are still
               present and miniaturising versus completely absent. In areas of
-              complete baldness - where the scalp appears smooth and no fine
-              hair is visible even under dermatoscopy - PRP will not produce
+              complete baldness, where the scalp appears smooth and no fine
+              hair is visible even under dermatoscopy, PRP will not produce
               regrowth because there are no follicles left to stimulate.
             </p>
             <p style={styles.para}>Patients who typically respond well:</p>
@@ -357,11 +357,11 @@ export default function PrpHairLossPage() {
                 Women with Ludwig Grade I–II diffuse thinning across the crown
               </li>
               <li style={styles.li}>
-                Post-partum hair shedding (telogen effluvium) - here PRP
+                Post-partum hair shedding (telogen effluvium), here PRP
                 accelerates recovery
               </li>
               <li style={styles.li}>
-                Patients with alopecia areata (patchy hair loss) - often a good
+                Patients with alopecia areata (patchy hair loss), often a good
                 response in non-scarring patches
               </li>
               <li style={styles.li}>
@@ -374,12 +374,12 @@ export default function PrpHairLossPage() {
               and dermatoscopy. If there is an underlying hormonal cause
               (thyroid dysfunction, PCOS), nutritional deficiency (ferritin,
               Vitamin D3, B12), or anagen effluvium from medication, that is
-              addressed first or in parallel - because PRP alone will not offset
+              addressed first or in parallel, because PRP alone will not offset
               an ongoing cause of hair loss.
             </p>
 
             <h2 style={styles.heading2}>
-              PRP vs GFC - What Is the Difference?
+              PRP vs GFC, What Is the Difference?
             </h2>
             <p style={styles.para}>
               GFC stands for Growth Factor Concentrate. It is a more advanced
@@ -388,7 +388,7 @@ export default function PrpHairLossPage() {
               platelets and extract the growth factors at a higher concentration
               and in a more stable form. The result is a preparation with a
               significantly higher level of PDGF, VEGF, and EGF than standard
-              PRP - with less plasma volume, meaning less fluid is injected into
+              PRP, with less plasma volume, meaning less fluid is injected into
               the scalp per session.
             </p>
             <p style={styles.para}>
@@ -424,31 +424,31 @@ export default function PrpHairLossPage() {
             <p style={styles.para}>
               Maintenance sessions are recommended every 4 to 6 months after the
               initial course to sustain results. Androgenetic alopecia is a
-              progressive condition - PRP does not permanently reverse the
+              progressive condition, PRP does not permanently reverse the
               genetic predisposition. It manages it effectively as long as
               treatment continues.
             </p>
             <p style={styles.para}>
               The procedure takes 45 to 60 minutes. A topical anaesthetic is
-              applied beforehand. There is no downtime - most patients return to
+              applied beforehand. There is no downtime, most patients return to
               work immediately. Mild scalp tenderness and redness lasting 24 to
               48 hours are common and expected.
             </p>
 
             <h2 style={styles.heading2}>
-              PRP for Indian Hair - What the Fitzpatrick Data Shows
+              PRP for Indian Hair, What the Fitzpatrick Data Shows
             </h2>
             <p style={styles.para}>
               Indian hair has specific structural characteristics: a
               predominantly oval cross-section (compared to the rounder
               cross-section of East Asian hair), high melanin density, and a
               natural tendency toward dryness along the shaft. These structural
-              traits do not affect PRP efficacy - PRP works at the follicular
+              traits do not affect PRP efficacy, PRP works at the follicular
               unit beneath the scalp surface, not the hair shaft itself.
             </p>
             <p style={styles.para}>
               What does affect Indian patients is the higher rate of nutritional
-              deficiency as a contributing factor to hair loss - particularly
+              deficiency as a contributing factor to hair loss, particularly
               low ferritin, Vitamin D3 deficiency, and B12 deficiency, which are
               significantly more prevalent in vegetarian populations. At
               SKIN@Mantraa, all hair loss patients receive a baseline blood
@@ -457,8 +457,8 @@ export default function PrpHairLossPage() {
               causing hair shedding.
             </p>
             <p style={styles.para}>
-              Hormonal factors - particularly PCOS in women and DHT-driven
-              miniaturisation in men - are also addressed. PRP works best as
+              Hormonal factors, particularly PCOS in women and DHT-driven
+              miniaturisation in men, are also addressed. PRP works best as
               part of a complete hair loss management plan, not as a standalone
               injection series.
             </p>
@@ -471,7 +471,7 @@ export default function PrpHairLossPage() {
                 present)
               </li>
               <li style={styles.li}>
-                Permanently stop androgenetic alopecia - it manages the
+                Permanently stop androgenetic alopecia, it manages the
                 condition, it does not cure it
               </li>
               <li style={styles.li}>
@@ -485,7 +485,7 @@ export default function PrpHairLossPage() {
             <p style={styles.para}>
               If you are considering both PRP and a hair transplant, we can
               assess which is appropriate at your current stage and discuss
-              sequencing - PRP is often used post-transplant to improve graft
+              sequencing, PRP is often used post-transplant to improve graft
               survival and density.
             </p>
 
@@ -565,7 +565,7 @@ export default function PrpHairLossPage() {
               >
                 Dr. Mamta Bhura will examine your scalp under dermatoscopy,
                 review your blood work, and recommend the most appropriate
-                protocol - PRP, GFC, or a combined approach. Consultation: ₹600.
+                protocol, PRP, GFC, or a combined approach. Consultation: ₹600.
               </p>
               <div
                 style={{
@@ -630,7 +630,7 @@ export default function PrpHairLossPage() {
                 }}
               >
                 Written by <strong>Dr. Mamta Bhura</strong>, MD Dermatology (IMS
-                BHU), Member - IMA, IADVL, CDSI. 26+ years clinical practice in
+                BHU), Member, IMA, IADVL, CDSI. 26+ years clinical practice in
                 Kanpur.
               </p>
               <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem" }}>

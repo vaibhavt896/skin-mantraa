@@ -6,7 +6,7 @@ import FloatingCTA from "@/components/layout/FloatingCTA";
 
 export const metadata: Metadata = {
   title:
-    "Botox vs Dermal Fillers - What Is the Difference? | SKIN@Mantraa Kanpur",
+    "Botox vs Dermal Fillers, What Is the Difference? | SKIN@Mantraa Kanpur",
   description:
     "Botox relaxes muscles that cause expression lines. Fillers restore lost volume. They are not interchangeable. Dr. Mamta Bhura explains the difference, who needs which, and how they work together.",
   alternates: {
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
       "https://skinmantraa.in/skin-guide/botox-vs-dermal-fillers-kanpur",
   },
   openGraph: {
-    title: "Botox vs Dermal Fillers - What Is the Difference?",
+    title: "Botox vs Dermal Fillers | What Is the Difference?",
     description:
       "Botox relaxes muscles that cause expression lines. Fillers restore lost volume. They are not interchangeable. Dr. Mamta Bhura explains the difference, who needs which, and how they work together.",
     url: "https://skinmantraa.in/skin-guide/botox-vs-dermal-fillers-kanpur",
@@ -27,7 +27,7 @@ const blogSchema = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   headline:
-    "Botox vs Dermal Fillers - What Is the Difference and Who Needs Which?",
+    "Botox vs Dermal Fillers, What Is the Difference and Who Needs Which?",
   description:
     "Clinical guide explaining the difference between Botox and dermal fillers, by Dr. Mamta Bhura at SKIN@Mantraa Kanpur. Includes who benefits from each, combination approaches, and what to expect.",
   image: "https://skinmantraa.in/opengraph-image",
@@ -55,7 +55,7 @@ const blogSchema = {
       name: "Botox",
       alternateName: "Botulinum Toxin Injection",
       description:
-        "A neuromodulator that temporarily relaxes overactive muscles causing dynamic expression lines — forehead, frown lines, crow's feet.",
+        "A neuromodulator that temporarily relaxes overactive muscles causing dynamic expression lines: forehead, frown lines, crow's feet.",
       url: "https://skinmantraa.in/services/anti-aging",
       procedureType: "https://health-lifesci.schema.org/NoninvasiveProcedure",
     },
@@ -84,7 +84,7 @@ const faqSchema = {
       name: "What is the difference between Botox and dermal fillers?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Botox (botulinum toxin) is a muscle-relaxing injection that reduces dynamic wrinkles - lines caused by repeated muscle movement like frowning, squinting, and smiling. Dermal fillers are injectable gels (typically hyaluronic acid) that restore volume lost with age and improve static lines - creases that are visible even when the face is at rest. They work differently, last for different durations, and address different concerns. Many patients benefit from both.",
+        text: "Botox (botulinum toxin) is a muscle-relaxing injection that reduces dynamic wrinkles, lines caused by repeated muscle movement like frowning, squinting, and smiling. Dermal fillers are injectable gels (typically hyaluronic acid) that restore volume lost with age and improve static lines, creases that are visible even when the face is at rest. They work differently, last for different durations, and address different concerns. Many patients benefit from both.",
       },
     },
     {
@@ -108,7 +108,7 @@ const faqSchema = {
       name: "Do Botox and fillers work together?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes - Botox and fillers address different aspects of facial ageing and can be used in the same session or at staged intervals. Botox reduces the muscle activity that causes dynamic lines; fillers restore lost facial volume and soften static creases. A combination approach produces more natural, comprehensive results than either treatment alone.",
+        text: "Yes, Botox and fillers address different aspects of facial ageing and can be used in the same session or at staged intervals. Botox reduces the muscle activity that causes dynamic lines; fillers restore lost facial volume and soften static creases. A combination approach produces more natural, comprehensive results than either treatment alone.",
       },
     },
     {
@@ -239,7 +239,7 @@ export default function BotoxVsFillerPage() {
             >
               Botox relaxes the muscles that cause expression lines. Fillers
               restore the volume your face has lost with age. They are not
-              interchangeable - they treat different problems with different
+              interchangeable, they treat different problems with different
               mechanisms. Many patients need both, but understanding which does
               what is essential before choosing either.
             </p>
@@ -313,7 +313,7 @@ export default function BotoxVsFillerPage() {
                   margin: 0,
                 }}
               >
-                Botox (botulinum toxin) relaxes overactive muscles to soften dynamic expression lines — forehead wrinkles, frown lines, crow&apos;s feet. Dermal fillers restore lost volume to static areas — nasolabial folds, cheeks, lips, under-eyes. They treat fundamentally different problems. Using one where you need the other produces poor results. Many patients benefit from both, addressing different concerns at the same visit.
+                Botox (botulinum toxin) relaxes overactive muscles to soften dynamic expression lines: forehead wrinkles, frown lines, crow&apos;s feet. Dermal fillers restore lost volume to static areas: nasolabial folds, cheeks, lips, under-eyes. They treat fundamentally different problems. Using one where you need the other produces poor results. Many patients benefit from both, addressing different concerns at the same visit.
               </p>
             </div>
             <h2 style={styles.heading2}>What Botox Is and What It Does</h2>
@@ -322,12 +322,12 @@ export default function BotoxVsFillerPage() {
               that temporarily blocks the nerve signals that cause muscle
               contraction. When injected in small, precise doses into specific
               facial muscles, it reduces the repeated muscle movement
-              responsible for expression lines - the frown lines between the
+              responsible for expression lines, the frown lines between the
               eyebrows (glabellar lines), the horizontal forehead lines, and the
               crow&apos;s feet around the eyes.
             </p>
             <p style={styles.para}>
-              These are called <em>dynamic</em> wrinkles - they are created by
+              These are called <em>dynamic</em> wrinkles, they are created by
               movement, not by loss of volume or skin thinning. Every time you
               frown, squint at a screen, or raise your eyebrows in surprise,
               those muscles contract and fold the overlying skin. Do this
@@ -339,7 +339,7 @@ export default function BotoxVsFillerPage() {
               at 2 weeks. It lasts 3 to 6 months, after which the muscles
               gradually regain full activity and the lines slowly return.
               Regular treatment prevents lines from deepening progressively over
-              time - this is why patients who maintain regular Botox from their
+              time, this is why patients who maintain regular Botox from their
               mid-30s often look noticeably different at 50 than peers who did
               not.
             </p>
@@ -348,9 +348,9 @@ export default function BotoxVsFillerPage() {
               What Dermal Fillers Are and What They Do
             </h2>
             <p style={styles.para}>
-              Dermal fillers are injectable gels - most commonly hyaluronic acid
+              Dermal fillers are injectable gels, most commonly hyaluronic acid
               (HA), a substance naturally present in skin and connective tissue
-              - used to restore volume that the face has lost with age. From the
+             , used to restore volume that the face has lost with age. From the
               mid-20s onwards, the face loses fat, bone mass, and collagen in
               predictable patterns. The cheeks flatten, the under-eye area
               hollows, the nasolabial folds (lines from nose to corner of mouth)
@@ -363,23 +363,23 @@ export default function BotoxVsFillerPage() {
             </p>
             <ul style={styles.ul}>
               <li style={styles.li}>
-                <strong>Cheeks</strong> - restoring midface volume and lifting
+                <strong>Cheeks</strong>, restoring midface volume and lifting
                 the lower face passively
               </li>
               <li style={styles.li}>
-                <strong>Nasolabial folds</strong> - softening deep nose-to-mouth
+                <strong>Nasolabial folds</strong>, softening deep nose-to-mouth
                 lines
               </li>
               <li style={styles.li}>
-                <strong>Under-eye (tear trough)</strong> - addressing hollowing
+                <strong>Under-eye (tear trough)</strong>, addressing hollowing
                 and dark circles caused by volume loss
               </li>
               <li style={styles.li}>
-                <strong>Lips</strong> - enhancing definition, volume, or
+                <strong>Lips</strong>, enhancing definition, volume, or
                 symmetry
               </li>
               <li style={styles.li}>
-                <strong>Jawline and chin</strong> - improving facial structure
+                <strong>Jawline and chin</strong>, improving facial structure
                 and definition
               </li>
             </ul>
@@ -410,8 +410,8 @@ export default function BotoxVsFillerPage() {
               </li>
             </ul>
             <p style={styles.para}>
-              A common mistake - particularly in clinics that do not perform
-              thorough assessments - is using fillers to fill dynamic lines.
+              A common mistake, particularly in clinics that do not perform
+              thorough assessments, is using fillers to fill dynamic lines.
               Injecting filler into an active forehead line or crow&apos;s foot
               does not address the muscle contraction causing it, and the filler
               will be rapidly broken down by the repeated movement. The correct
@@ -422,7 +422,7 @@ export default function BotoxVsFillerPage() {
             <h2 style={styles.heading2}>How Botox and Fillers Work Together</h2>
             <p style={styles.para}>
               Most patients seeking anti-aging treatment in their 40s and beyond
-              benefit from both Botox and fillers - but addressing different
+              benefit from both Botox and fillers, but addressing different
               zones. A typical combination approach:
             </p>
             <ul style={styles.ul}>
@@ -436,7 +436,7 @@ export default function BotoxVsFillerPage() {
             </ul>
             <p style={styles.para}>
               HIFU skin tightening can be added to this combination when the
-              primary concern is skin laxity - the structural looseness of the
+              primary concern is skin laxity, the structural looseness of the
               skin itself, which neither Botox nor fillers directly address.
               Each targets a different level of the ageing process: muscle
               activity, volume, and structural support respectively.
@@ -448,7 +448,7 @@ export default function BotoxVsFillerPage() {
               Type III–V Indian skin. Botox acts on the muscle layer beneath the
               skin, with no surface skin contact. Hyaluronic acid is
               biocompatible and naturally present in the skin. The primary
-              safety factor for both is technique - improper placement of filler
+              safety factor for both is technique, improper placement of filler
               can cause bruising, asymmetry, or in rare cases, vascular
               complications.
             </p>
@@ -535,7 +535,7 @@ export default function BotoxVsFillerPage() {
               >
                 Dr. Bhura will assess your face in detail, identify which
                 concerns are dynamic vs static, and recommend the right
-                combination - Botox, fillers, HIFU, or all three. Consultation:
+                combination, Botox, fillers, HIFU, or all three. Consultation:
                 ₹600.
               </p>
               <div
@@ -601,7 +601,7 @@ export default function BotoxVsFillerPage() {
                 }}
               >
                 Written by <strong>Dr. Mamta Bhura</strong>, MD Dermatology (IMS
-                BHU), Member - IMA, IADVL, CDSI. 26+ years clinical practice in
+                BHU), Member, IMA, IADVL, CDSI. 26+ years clinical practice in
                 Kanpur.
               </p>
               <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem" }}>

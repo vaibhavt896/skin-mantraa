@@ -154,7 +154,7 @@ const ARTICLES: Record<string, Article> = {
       { type: "h2", text: "Ideal Candidates" },
       {
         type: "p",
-        text: "PRP works best for those in the early to middle stages of hair thinning. If a follicle has been dead for years, PRP cannot bring it back - which is why early intervention is key.",
+        text: "PRP works best for those in the early to middle stages of hair thinning. If a follicle has been dead for years, PRP cannot bring it back, which is why early intervention is key.",
       },
     ],
   },

@@ -6,9 +6,9 @@ import FloatingCTA from "@/components/layout/FloatingCTA";
 import { BRAND } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Dermatologist in Civil Lines Kanpur — SKIN@Mantraa by Dr. Mamta Bhura",
+  title: "Dermatologist in Civil Lines Kanpur | SKIN@Mantraa by Dr. Mamta Bhura",
   description:
-    "Dermatologist near Civil Lines, Kanpur — SKIN@Mantraa at Swaroop Nagar. Dr. Mamta Bhura, MD Dermatology (IMS BHU), 26+ years. Laser, Botox, acne, and skin disease treatments. Consultation ₹600.",
+    "Dermatologist near Civil Lines, Kanpur, SKIN@Mantraa at Swaroop Nagar. Dr. Mamta Bhura, MD Dermatology (IMS BHU), 26+ years. Laser, Botox, acne, and skin disease treatments. Consultation ₹600.",
   keywords: [
     "dermatologist Civil Lines Kanpur",
     "skin doctor Civil Lines Kanpur",
@@ -21,9 +21,9 @@ export const metadata: Metadata = {
     canonical: "https://skinmantraa.in/dermatologist-civil-lines-kanpur",
   },
   openGraph: {
-    title: "Dermatologist in Civil Lines Kanpur — SKIN@Mantraa",
+    title: "Dermatologist in Civil Lines Kanpur | SKIN@Mantraa",
     description:
-      "SKIN@Mantraa serves Civil Lines patients. Dr. Mamta Bhura — MD Dermatology, IMS BHU, 26+ years. Advanced laser, anti-aging, acne and hair treatments.",
+      "SKIN@Mantraa serves Civil Lines patients. Dr. Mamta Bhura, MD Dermatology, IMS BHU, 26+ years. Advanced laser, anti-aging, acne and hair treatments.",
     url: "https://skinmantraa.in/dermatologist-civil-lines-kanpur",
     type: "website",
     images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
@@ -74,7 +74,7 @@ const pageSchema = {
           name: "Is there a good dermatologist near Civil Lines Kanpur?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "SKIN@Mantraa at Swaroop Nagar is approximately 5 km from Civil Lines and is the recommended advanced dermatology clinic for the area. Dr. Mamta Bhura — MBBS MD Dermatology (IMS BHU), 26+ years experience — is ranked #1 dermatologist in Kanpur by ThreeBestRated.in.",
+            text: "SKIN@Mantraa at Swaroop Nagar is approximately 5 km from Civil Lines and is the recommended advanced dermatology clinic for the area. Dr. Mamta Bhura, MBBS MD Dermatology (IMS BHU), 26+ years experience, is ranked #1 dermatologist in Kanpur by ThreeBestRated.in.",
           },
         },
         {
@@ -139,10 +139,10 @@ export default function CivilLinesPage() {
               Dermatologist Near Civil Lines, Kanpur
             </h1>
             <p style={{ fontFamily: "var(--font-body)", fontSize: "1.15rem", lineHeight: 1.75, color: "#5C4033", marginBottom: "1.5rem" }}>
-              SKIN@Mantraa at Swaroop Nagar — advanced dermatology and cosmetology for Civil Lines patients. Dr. Mamta Bhura, MD Dermatology, IMS BHU.
+              SKIN@Mantraa at Swaroop Nagar, advanced dermatology and cosmetology for Civil Lines patients. Dr. Mamta Bhura, MD Dermatology, IMS BHU.
             </p>
             <div style={{ display: "flex", gap: "1rem", flexWrap: "wrap" }}>
-              <Link href="/contact" className="btn-primary">Book Consultation — ₹600</Link>
+              <Link href="/contact" className="btn-primary">Book Consultation, ₹600</Link>
               <a href={`tel:${BRAND.clinic.phone}`} style={{ display: "inline-flex", alignItems: "center", gap: "0.4rem", padding: "0.65rem 1.4rem", borderRadius: "10px", border: "1px solid rgba(199,141,107,0.35)", color: "#C78D6B", fontFamily: "var(--font-accent)", fontSize: "0.85rem", fontWeight: 600, textDecoration: "none" }}>
                 Call Clinic
               </a>
@@ -155,24 +155,24 @@ export default function CivilLinesPage() {
                 Quick Answer
               </p>
               <p style={{ fontFamily: "var(--font-body)", fontSize: "1rem", lineHeight: 1.75, color: "#3D2B1F", margin: 0 }}>
-                SKIN@Mantraa at Swaroop Nagar is the nearest premium dermatology clinic to Civil Lines, Kanpur — approximately 5 km, or 15–20 minutes by road. Dr. Mamta Bhura (MBBS, MD Dermatology, IMS BHU) has 26+ years experience and offers the full range of clinical and cosmetic dermatology. Consultation: ₹600.
+                SKIN@Mantraa at Swaroop Nagar is the nearest premium dermatology clinic to Civil Lines, Kanpur, approximately 5 km, or 15–20 minutes by road. Dr. Mamta Bhura (MBBS, MD Dermatology, IMS BHU) has 26+ years experience and offers the full range of clinical and cosmetic dermatology. Consultation: ₹600.
               </p>
             </div>
 
-            <h2 style={styles.heading2}>Serving Civil Lines — Advanced Dermatology at Swaroop Nagar</h2>
+            <h2 style={styles.heading2}>Serving Civil Lines, Advanced Dermatology at Swaroop Nagar</h2>
             <p style={styles.para}>
-              Civil Lines is one of Kanpur&apos;s most established residential and commercial areas. Patients from Civil Lines regularly visit SKIN@Mantraa at Swaroop Nagar for dermatology care — the drive is straightforward and parking is available at the clinic.
+              Civil Lines is one of Kanpur&apos;s most established residential and commercial areas. Patients from Civil Lines regularly visit SKIN@Mantraa at Swaroop Nagar for dermatology care, the drive is straightforward and parking is available at the clinic.
             </p>
             <p style={styles.para}>
-              Dr. Mamta Bhura has been practising in Kanpur for over 26 years and is recognised across the city — including Civil Lines — for accurate diagnosis and honest, evidence-based treatment. She does not run a walk-in, high-volume practice; appointments are scheduled so that each patient receives adequate time and attention.
+              Dr. Mamta Bhura has been practising in Kanpur for over 26 years and is recognised across the city, including Civil Lines, for accurate diagnosis and honest, evidence-based treatment. She does not run a walk-in, high-volume practice; appointments are scheduled so that each patient receives adequate time and attention.
             </p>
 
             <h2 style={styles.heading2}>Treatments Accessed by Civil Lines Patients</h2>
             <ul style={{ margin: "0.5rem 0 1.25rem 1.5rem", listStyle: "disc" }}>
               {[
-                "Laser hair removal — Nd:YAG and diode laser, safe for all Indian skin tones",
+                "Laser hair removal, Nd:YAG and diode laser, safe for all Indian skin tones",
                 "Anti-aging: Botox, dermal fillers, HIFU, thread lift, PRP for face",
-                "Acne and scar treatment — Dermapen 4, TCA CROSS, subcision, chemical peels",
+                "Acne and scar treatment, Dermapen 4, TCA CROSS, subcision, chemical peels",
                 "Melasma and hormonal pigmentation treatment",
                 "PRP and GFC for hair fall and androgenetic alopecia",
                 "Medical dermatology: vitiligo, psoriasis, eczema, allergic dermatitis, fungal infections",
@@ -185,7 +185,7 @@ export default function CivilLinesPage() {
 
             <h2 style={styles.heading2}>Why Civil Lines Patients Travel to SKIN@Mantraa</h2>
             <p style={styles.para}>
-              Patients from Civil Lines typically come to SKIN@Mantraa because they want clinical expertise, not just cosmetic procedures. Dr. Bhura&apos;s background at IMS BHU — one of India&apos;s most respected dermatology programmes — and her 26+ years of Kanpur clinical practice means she brings diagnostic rigour that is not always present at aesthetic-only clinics.
+              Patients from Civil Lines typically come to SKIN@Mantraa because they want clinical expertise, not just cosmetic procedures. Dr. Bhura&apos;s background at IMS BHU, one of India&apos;s most respected dermatology programmes, and her 26+ years of Kanpur clinical practice means she brings diagnostic rigour that is not always present at aesthetic-only clinics.
             </p>
             <p style={styles.para}>
               For Civil Lines residents managing melasma, chronic skin conditions like vitiligo or psoriasis, or exploring Botox and fillers for the first time, the clinic&apos;s reputation for honest assessment and no-pressure consultations is a strong differentiator.
@@ -198,7 +198,7 @@ export default function CivilLinesPage() {
               </h2>
               <div style={{ display: "flex", flexDirection: "column", gap: "0.75rem" }}>
                 {[
-                  { q: "Is SKIN@Mantraa accessible from Civil Lines Kanpur?", a: "Yes. The clinic is at Swaroop Nagar, approximately 5 km from Civil Lines — a 15–20 minute drive. Auto-rickshaws, cabs, and personal vehicles all have easy access. Parking is available near the clinic." },
+                  { q: "Is SKIN@Mantraa accessible from Civil Lines Kanpur?", a: "Yes. The clinic is at Swaroop Nagar, approximately 5 km from Civil Lines, a 15–20 minute drive. Auto-rickshaws, cabs, and personal vehicles all have easy access. Parking is available near the clinic." },
                   { q: "Can I get Botox or fillers near Civil Lines Kanpur?", a: "Yes. SKIN@Mantraa at Swaroop Nagar offers Botox (botulinum toxin) and dermal fillers performed by Dr. Mamta Bhura personally. She assesses each face individually and recommends only what is genuinely needed." },
                   { q: "Is Dr. Mamta Bhura good for skin problems like psoriasis?", a: "Yes. Dr. Bhura is an MD Dermatologist with deep clinical training in medical skin conditions including psoriasis, vitiligo, eczema, and dermatitis. Her approach is evidence-based and addresses underlying cause, not just surface symptoms." },
                 ].map(({ q, a }, i) => (

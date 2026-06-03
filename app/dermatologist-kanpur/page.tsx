@@ -6,7 +6,7 @@ import FloatingCTA from "@/components/layout/FloatingCTA";
 import { BRAND } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "Best Dermatologist in Kanpur - Dr. Mamta Bhura | SKIN@Mantraa",
+  title: "Best Dermatologist in Kanpur | Dr. Mamta Bhura | SKIN@Mantraa",
   description:
     "Dr. Mamta Bhura is Kanpur's leading female dermatologist. MD Dermatology, IMS BHU. 26+ years experience. Rated #1 by ThreeBestRated. Advanced laser, anti-aging, acne, and hair treatments at SKIN@Mantraa, Swaroop Nagar.",
   keywords: [
@@ -23,9 +23,9 @@ export const metadata: Metadata = {
     canonical: "https://skinmantraa.in/dermatologist-kanpur",
   },
   openGraph: {
-    title: "Best Dermatologist in Kanpur - Dr. Mamta Bhura | SKIN@Mantraa",
+    title: "Best Dermatologist in Kanpur | Dr. Mamta Bhura | SKIN@Mantraa",
     description:
-      "Dr. Mamta Bhura - MD Dermatology, IMS BHU. 26+ years. Rated #1 dermatologist in Kanpur by ThreeBestRated. Advanced skin, laser, and hair treatments at SKIN@Mantraa Swaroop Nagar.",
+      "Dr. Mamta Bhura, MD Dermatology, IMS BHU. 26+ years. Rated #1 dermatologist in Kanpur by ThreeBestRated. Advanced skin, laser, and hair treatments at SKIN@Mantraa Swaroop Nagar.",
     url: "https://skinmantraa.in/dermatologist-kanpur",
     type: "website",
     images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
@@ -77,7 +77,7 @@ const pageSchema = {
           name: "Who is the best dermatologist in Kanpur?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Dr. Mamta Bhura at SKIN@Mantraa is widely recognised as one of Kanpur's most experienced dermatologists. She holds an MBBS and MD in Dermatology from IMS BHU, has 26+ years of clinical experience, and has been ranked #1 dermatologist in Kanpur by ThreeBestRated.in. She is a verified practitioner on Practo and Justdial with a 4.8-star rating.",
+            text: "Dr. Mamta Bhura at SKIN@Mantraa is widely recognised as one of Kanpur's most experienced dermatologists. She holds an MBBS and MD in Dermatology from IMS BHU, has 26+ years of clinical experience, and has been ranked #1 dermatologist in Kanpur by ThreeBestRated.in. She is a verified practitioner on Practo and Justdial with a 4.0-star rating.",
           },
         },
         {
@@ -85,7 +85,7 @@ const pageSchema = {
           name: "Is Dr. Mamta Bhura a female dermatologist?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes. Dr. Mamta Bhura is a female dermatologist and cosmetologist with 26+ years of clinical practice in Kanpur. Many patients - particularly women - specifically seek a female dermatologist for skin, hair, and cosmetic consultations. Dr. Bhura practises exclusively at SKIN@Mantraa, Swaroop Nagar.",
+            text: "Yes. Dr. Mamta Bhura is a female dermatologist and cosmetologist with 26+ years of clinical practice in Kanpur. Many patients, particularly women, specifically seek a female dermatologist for skin, hair, and cosmetic consultations. Dr. Bhura practises exclusively at SKIN@Mantraa, Swaroop Nagar.",
           },
         },
         {
@@ -159,12 +159,12 @@ const SERVICES_LIST = [
 ];
 
 const TRUST_ITEMS = [
-  { stat: "#1", label: "ThreeBestRated.in - Kanpur Dermatologist" },
+  { stat: "#1", label: "ThreeBestRated.in, Kanpur Dermatologist" },
   { stat: "26+", label: "Years of Clinical Experience" },
   { stat: "451+", label: "Verified Patient Reviews" },
   {
     stat: "MD",
-    label: "Dermatology - IMS BHU (Top-ranked medical university)",
+    label: "Dermatology, IMS BHU (Top-ranked medical university)",
   },
 ];
 
@@ -229,7 +229,7 @@ export default function DermatologistKanpurPage() {
                 marginBottom: "2rem",
               }}
             >
-              Dr. Mamta Bhura - MD Dermatology, IMS BHU - brings 26+ years of
+              Dr. Mamta Bhura, MD Dermatology, IMS BHU, brings 26+ years of
               clinical expertise to every patient at SKIN@Mantraa. Kanpur&apos;s
               only ThreeBestRated #1 ranked dermatologist. Female dermatologist.
               Advanced clinical dermatology and cosmetology.
@@ -250,7 +250,7 @@ export default function DermatologistKanpurPage() {
                   textDecoration: "none",
                 }}
               >
-                Book Consultation - ₹600
+                Book Consultation, ₹600
               </Link>
               <Link
                 href="/about/dr-mamta-bhura"
@@ -345,7 +345,7 @@ export default function DermatologistKanpurPage() {
                 marginBottom: "1.5rem",
               }}
             >
-              Dr. Mamta Bhura - Kanpur&apos;s Leading Female Dermatologist
+              Dr. Mamta Bhura, Kanpur&apos;s Leading Female Dermatologist
             </h2>
             <div
               style={{
@@ -365,7 +365,7 @@ export default function DermatologistKanpurPage() {
               >
                 Dr. Mamta Bhura completed her MBBS and MD in Dermatology from
                 the Institute of Medical Sciences, Banaras Hindu University (IMS
-                BHU) - one of India&apos;s most prestigious medical
+                BHU), one of India&apos;s most prestigious medical
                 institutions. She has 26+ years of full-time clinical practice
                 in Kanpur, making her one of the most experienced dermatologists
                 in Uttar Pradesh.
@@ -393,7 +393,7 @@ export default function DermatologistKanpurPage() {
                 }}
               >
                 Dr. Bhura specialises in treating Fitzpatrick Type III–V Indian
-                skin - customising all laser, chemical peel, and injectable
+                skin, customising all laser, chemical peel, and injectable
                 protocols for Indian skin tones to minimise pigmentation risk
                 and maximise results. She is one of the few dermatologists in
                 Kanpur who offers clinical-grade HIFU, Dermapen 4, GFC hair
@@ -475,7 +475,7 @@ export default function DermatologistKanpurPage() {
                 maxWidth: "550px",
               }}
             >
-              Advanced dermatology and cosmetology - all procedures performed or
+              Advanced dermatology and cosmetology, all procedures performed or
               directly supervised by Dr. Bhura.
             </p>
             <div
@@ -732,17 +732,17 @@ export default function DermatologistKanpurPage() {
                 {
                   concern: "Female Pattern Hair Loss",
                   story:
-                    "A 32-year-old teacher noticed significant diffuse thinning over two years. A baseline blood panel at SKIN@Mantraa revealed critically low ferritin and Vitamin D3 - both corrected with supplementation. Combined with four sessions of PRP therapy, she saw a measurable reduction in daily hair fall by session two and visible density improvement at the four-month mark. Without the blood panel, the PRP alone would have produced limited results.",
+                    "A 32-year-old teacher noticed significant diffuse thinning over two years. A baseline blood panel at SKIN@Mantraa revealed critically low ferritin and Vitamin D3, both corrected with supplementation. Combined with four sessions of PRP therapy, she saw a measurable reduction in daily hair fall by session two and visible density improvement at the four-month mark. Without the blood panel, the PRP alone would have produced limited results.",
                 },
                 {
                   concern: "Acne at 29",
                   story:
-                    "A 29-year-old professional came in convinced she needed laser treatment for her hormonal acne, having been told this by two other clinics. Dr. Bhura's assessment showed active inflammatory acne requiring medical management first - oral therapy for 8 weeks, followed by a salicylic acid peel course once stable. Within three months, her skin was clearer than it had been since her teens. The laser conversation was deferred indefinitely because it was not needed.",
+                    "A 29-year-old professional came in convinced she needed laser treatment for her hormonal acne, having been told this by two other clinics. Dr. Bhura's assessment showed active inflammatory acne requiring medical management first, oral therapy for 8 weeks, followed by a salicylic acid peel course once stable. Within three months, her skin was clearer than it had been since her teens. The laser conversation was deferred indefinitely because it was not needed.",
                 },
                 {
-                  concern: "Vitiligo - Child Patient",
+                  concern: "Vitiligo, Child Patient",
                   story:
-                    "An 8-year-old with newly diagnosed, spreading non-segmental vitiligo was brought to SKIN@Mantraa by her parents. Early intervention with NB-UVB phototherapy (2 sessions per week) combined with topical tacrolimus produced visible repigmentation on the face and hands within 5 months of treatment. Earlier treatment consistently produces better outcomes in vitiligo - a fact Dr. Bhura communicates clearly at the first consultation.",
+                    "An 8-year-old with newly diagnosed, spreading non-segmental vitiligo was brought to SKIN@Mantraa by her parents. Early intervention with NB-UVB phototherapy (2 sessions per week) combined with topical tacrolimus produced visible repigmentation on the face and hands within 5 months of treatment. Earlier treatment consistently produces better outcomes in vitiligo, a fact Dr. Bhura communicates clearly at the first consultation.",
                 },
               ].map(({ concern, story }) => (
                 <div

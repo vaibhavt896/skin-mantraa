@@ -7,9 +7,9 @@ import { BRAND } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title:
-    "Laser Hair Removal in Kanpur - Safe for Indian Skin | SKIN@Mantraa Swaroop Nagar",
+    "Laser Hair Removal in Kanpur, Safe for Indian Skin | SKIN@Mantraa Swaroop Nagar",
   description:
-    "Laser hair removal in Kanpur with Nd:YAG and diode laser - safe for Indian skin tones. 6–8 sessions. 80–90% permanent reduction. Dr. Mamta Bhura, SKIN@Mantraa, Swaroop Nagar.",
+    "Laser hair removal in Kanpur with Nd:YAG and diode laser, safe for Indian skin tones. 6–8 sessions. 80–90% permanent reduction. Dr. Mamta Bhura, SKIN@Mantraa, Swaroop Nagar.",
   keywords: [
     "laser hair removal Kanpur",
     "laser hair removal Swaroop Nagar Kanpur",
@@ -23,9 +23,9 @@ export const metadata: Metadata = {
     canonical: "https://skinmantraa.in/laser-hair-removal-kanpur",
   },
   openGraph: {
-    title: "Laser Hair Removal in Kanpur - Safe for Indian Skin | SKIN@Mantraa",
+    title: "Laser Hair Removal in Kanpur | Safe for Indian Skin | SKIN@Mantraa",
     description:
-      "Laser hair removal with Nd:YAG and diode laser - safe for Indian skin. 6–8 sessions for 80–90% permanent reduction. Dr. Mamta Bhura, SKIN@Mantraa, Swaroop Nagar, Kanpur.",
+      "Laser hair removal with Nd:YAG and diode laser, safe for Indian skin. 6–8 sessions for 80–90% permanent reduction. Dr. Mamta Bhura, SKIN@Mantraa, Swaroop Nagar, Kanpur.",
     url: "https://skinmantraa.in/laser-hair-removal-kanpur",
     type: "website",
     images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
@@ -41,7 +41,7 @@ const pageSchema = {
       procedureType: "Laser treatment",
       status: "EventScheduled",
       description:
-        "Nd:YAG and diode laser hair removal at SKIN@Mantraa, Kanpur - calibrated for Indian skin (Fitzpatrick Type III–V). 6–8 sessions, 4–6 weeks apart, for 80–90% permanent hair reduction.",
+        "Nd:YAG and diode laser hair removal at SKIN@Mantraa, Kanpur, calibrated for Indian skin (Fitzpatrick Type III–V). 6–8 sessions, 4–6 weeks apart, for 80–90% permanent hair reduction.",
       performedBy: {
         "@type": "Physician",
         name: "Dr. Mamta Bhura",
@@ -86,7 +86,7 @@ const pageSchema = {
           name: "Is laser hair removal painful?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Most patients describe a mild snapping or warming sensation. The laser handpiece has a built-in cooling mechanism. For facial treatments, topical anaesthetic cream is available. There is no downtime - patients return to normal activities immediately after each session.",
+            text: "Most patients describe a mild snapping or warming sensation. The laser handpiece has a built-in cooling mechanism. For facial treatments, topical anaesthetic cream is available. There is no downtime, patients return to normal activities immediately after each session.",
           },
         },
         {
@@ -110,7 +110,7 @@ const pageSchema = {
           name: "What should I do before a laser hair removal session?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Shave the treatment area 24 hours before (do not wax or thread for 4 weeks - the hair root must be intact). Avoid sun exposure for 2 weeks before. Arrive with clean, product-free skin on the treatment area. After each session, apply SPF 50+ sunscreen and avoid direct sun for 2 weeks.",
+            text: "Shave the treatment area 24 hours before (do not wax or thread for 4 weeks, the hair root must be intact). Avoid sun exposure for 2 weeks before. Arrive with clean, product-free skin on the treatment area. After each session, apply SPF 50+ sunscreen and avoid direct sun for 2 weeks.",
           },
         },
       ],
@@ -223,7 +223,7 @@ export default function LaserHairRemovalKanpurPage() {
                 marginBottom: "1.5rem",
               }}
             >
-              Safe for Indian skin. Nd:YAG and diode laser systems - the correct
+              Safe for Indian skin. Nd:YAG and diode laser systems, the correct
               lasers for Fitzpatrick Type III–V skin tones. 6 to 8 sessions. 80
               to 90% permanent hair reduction. All treatments performed under
               Dr. Mamta Bhura&apos;s supervision.
@@ -350,7 +350,7 @@ export default function LaserHairRemovalKanpurPage() {
                 >
                   Indian skin (Fitzpatrick Type III–V) has a higher melanin
                   density than lighter skin types. Laser hair removal works by
-                  targeting melanin in the hair follicle - but if the wrong
+                  targeting melanin in the hair follicle, but if the wrong
                   wavelength is used, it also heats the melanin in the
                   surrounding skin, causing burns or post-inflammatory
                   hyperpigmentation.
@@ -363,8 +363,8 @@ export default function LaserHairRemovalKanpurPage() {
                     color: "#2d2d2d",
                   }}
                 >
-                  This is why the alexandrite 755nm laser - effective for fair
-                  skin - is not recommended for darker Indian skin. And why many
+                  This is why the alexandrite 755nm laser, effective for fair
+                  skin, is not recommended for darker Indian skin. And why many
                   clinics offering low-cost &quot;laser packages&quot; without
                   Fitzpatrick-appropriate equipment produce poor results or skin
                   damage.
@@ -391,7 +391,7 @@ export default function LaserHairRemovalKanpurPage() {
                 {[
                   {
                     laser: "Nd:YAG 1064nm",
-                    note: "Gold standard for Fitzpatrick IV–VI. Lower melanin absorption - safer for darker skin.",
+                    note: "Gold standard for Fitzpatrick IV–VI. Lower melanin absorption, safer for darker skin.",
                   },
                   {
                     laser: "Diode 810nm",
@@ -438,7 +438,7 @@ export default function LaserHairRemovalKanpurPage() {
                   }}
                 >
                   Settings (fluence, pulse duration, spot size) are calibrated
-                  per patient at each session - not fixed clinic-wide values.
+                  per patient at each session, not fixed clinic-wide values.
                 </p>
               </div>
             </div>
@@ -538,7 +538,7 @@ export default function LaserHairRemovalKanpurPage() {
                 Who Is It For?
               </h2>
               {[
-                "Anyone with unwanted body or facial hair - any skin tone",
+                "Anyone with unwanted body or facial hair, any skin tone",
                 "PCOS patients with facial hair growth",
                 "Women seeking a permanent alternative to waxing or threading",
                 "Men with back, chest, or facial hair concerns",

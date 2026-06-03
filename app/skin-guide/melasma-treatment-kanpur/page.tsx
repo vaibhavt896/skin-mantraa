@@ -6,16 +6,16 @@ import FloatingCTA from "@/components/layout/FloatingCTA";
 
 export const metadata: Metadata = {
   title:
-    "What Causes Melasma and How to Treat It - A Clinical Guide for Indian Skin | SKIN@Mantraa",
+    "What Causes Melasma and How to Treat It, A Clinical Guide for Indian Skin | SKIN@Mantraa",
   description:
-    "Melasma is triggered by UV exposure, hormones, and heat - and is especially prevalent on Indian skin. Dr. Mamta Bhura explains the real causes, what makes it worse, and the step-by-step treatment approach that works.",
+    "Melasma is triggered by UV exposure, hormones, and heat, and is especially prevalent on Indian skin. Dr. Mamta Bhura explains the real causes, what makes it worse, and the step-by-step treatment approach that works.",
   alternates: {
     canonical: "https://skinmantraa.in/skin-guide/melasma-treatment-kanpur",
   },
   openGraph: {
     title: "What Causes Melasma and How to Treat It on Indian Skin",
     description:
-      "Melasma is triggered by UV exposure, hormones, and heat - and is especially prevalent on Indian skin. Dr. Mamta Bhura explains the real causes, what makes it worse, and the step-by-step treatment approach that works.",
+      "Melasma is triggered by UV exposure, hormones, and heat, and is especially prevalent on Indian skin. Dr. Mamta Bhura explains the real causes, what makes it worse, and the step-by-step treatment approach that works.",
     url: "https://skinmantraa.in/skin-guide/melasma-treatment-kanpur",
     type: "article",
     images: [{ url: "/opengraph-image", width: 1200, height: 630 }],
@@ -83,7 +83,7 @@ const faqSchema = {
       name: "What causes melasma?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Melasma is caused by overactivation of melanocytes - the pigment-producing cells in the skin - triggered by UV radiation, hormonal changes, and heat. The three primary triggers are sun exposure (UVA/UVB activate melanocytes directly), hormonal shifts (estrogen and progesterone increase melanocyte sensitivity - which is why melasma is common during pregnancy and with oral contraceptive use), and heat (infrared radiation from stoves, direct sun, and hot environments independently stimulates pigmentation). Indian skin is genetically predisposed to stronger melanocyte response, making melasma more prevalent and more persistent.",
+        text: "Melasma is caused by overactivation of melanocytes, the pigment-producing cells in the skin, triggered by UV radiation, hormonal changes, and heat. The three primary triggers are sun exposure (UVA/UVB activate melanocytes directly), hormonal shifts (estrogen and progesterone increase melanocyte sensitivity, which is why melasma is common during pregnancy and with oral contraceptive use), and heat (infrared radiation from stoves, direct sun, and hot environments independently stimulates pigmentation). Indian skin is genetically predisposed to stronger melanocyte response, making melasma more prevalent and more persistent.",
       },
     },
     {
@@ -91,7 +91,7 @@ const faqSchema = {
       name: "Can melasma be cured permanently?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Melasma can be effectively controlled and significantly lightened, but it is not a condition that is 'cured' in the way an infection is cured. The genetic predisposition and hormonal sensitivity remain. With the right treatment - topical depigmenting agents, chemical peels, laser therapy, and strict photoprotection - melasma can be cleared and kept clear for years. However, if sun protection lapses or hormonal triggers return, melasma can recur. Ongoing maintenance is part of the treatment plan.",
+        text: "Melasma can be effectively controlled and significantly lightened, but it is not a condition that is 'cured' in the way an infection is cured. The genetic predisposition and hormonal sensitivity remain. With the right treatment, topical depigmenting agents, chemical peels, laser therapy, and strict photoprotection, melasma can be cleared and kept clear for years. However, if sun protection lapses or hormonal triggers return, melasma can recur. Ongoing maintenance is part of the treatment plan.",
       },
     },
     {
@@ -99,7 +99,7 @@ const faqSchema = {
       name: "How is melasma treated on Indian skin?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Melasma treatment on Indian (Fitzpatrick Type III-V) skin must be approached carefully because aggressive laser settings or high-strength peels can trigger post-inflammatory hyperpigmentation - darkening the skin further rather than lightening it. The standard approach at SKIN@Mantraa is: Phase 1 - skin priming with topical agents (modified Kligman's formula or tranexamic acid combinations) for 4 to 6 weeks. Phase 2 - chemical peels (glycolic, lactic, or Jessner's) at appropriate strengths for Indian skin, spaced 3 to 4 weeks apart. Phase 3 - maintenance with daily broad-spectrum SPF 50+ PA+++ sunscreen and topical maintenance agents. Laser (Q-switched Nd:YAG or low-fluence) may be added at Phase 2 for deep or recalcitrant melasma after priming.",
+        text: "Melasma treatment on Indian (Fitzpatrick Type III-V) skin must be approached carefully because aggressive laser settings or high-strength peels can trigger post-inflammatory hyperpigmentation, darkening the skin further rather than lightening it. The standard approach at SKIN@Mantraa is: Phase 1, skin priming with topical agents (modified Kligman's formula or tranexamic acid combinations) for 4 to 6 weeks. Phase 2, chemical peels (glycolic, lactic, or Jessner's) at appropriate strengths for Indian skin, spaced 3 to 4 weeks apart. Phase 3, maintenance with daily broad-spectrum SPF 50+ PA+++ sunscreen and topical maintenance agents. Laser (Q-switched Nd:YAG or low-fluence) may be added at Phase 2 for deep or recalcitrant melasma after priming.",
       },
     },
     {
@@ -107,7 +107,7 @@ const faqSchema = {
       name: "Why does melasma worsen in summer?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Melasma worsens in summer for two reasons: increased UV radiation directly activates melanocytes, and increased ambient temperature and infrared radiation add an independent pigmentation stimulus. In Kanpur specifically, summer temperatures above 40°C mean that even time spent outdoors without direct sun exposure - due to ambient heat - can trigger melasma darkening. This is why physical sun protection (wide-brimmed hat, sun-protective clothing) matters in addition to sunscreen.",
+        text: "Melasma worsens in summer for two reasons: increased UV radiation directly activates melanocytes, and increased ambient temperature and infrared radiation add an independent pigmentation stimulus. In Kanpur specifically, summer temperatures above 40°C mean that even time spent outdoors without direct sun exposure, due to ambient heat, can trigger melasma darkening. This is why physical sun protection (wide-brimmed hat, sun-protective clothing) matters in addition to sunscreen.",
       },
     },
     {
@@ -115,7 +115,7 @@ const faqSchema = {
       name: "Does stopping contraceptive pills clear melasma?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Stopping hormonal contraceptives removes one trigger, but melasma does not automatically clear on its own - and in many patients, it persists long after stopping oral contraceptives because UV exposure continues to maintain and worsen it. Stopping the pill is often recommended when it is clearly the dominant trigger, but active treatment and photoprotection are still required to clear established melasma.",
+        text: "Stopping hormonal contraceptives removes one trigger, but melasma does not automatically clear on its own, and in many patients, it persists long after stopping oral contraceptives because UV exposure continues to maintain and worsen it. Stopping the pill is often recommended when it is clearly the dominant trigger, but active treatment and photoprotection are still required to clear established melasma.",
       },
     },
     {
@@ -123,7 +123,7 @@ const faqSchema = {
       name: "How many sessions of chemical peels are needed for melasma?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Most patients require 4 to 6 sessions of chemical peels spaced 3 to 4 weeks apart for significant improvement. The first improvement is usually visible after sessions 2 to 3. Sessions are always preceded by a priming phase with topical agents, and always followed by strict sun protection - without which peel results will not hold.",
+        text: "Most patients require 4 to 6 sessions of chemical peels spaced 3 to 4 weeks apart for significant improvement. The first improvement is usually visible after sessions 2 to 3. Sessions are always preceded by a priming phase with topical agents, and always followed by strict sun protection, without which peel results will not hold.",
       },
     },
   ],
@@ -237,7 +237,7 @@ export default function MelasmaTreatmentPage() {
               style={{ ...styles.para, fontSize: "1.15rem", color: "#5C4033" }}
             >
               Melasma is a chronic pigmentation disorder caused by the
-              overactivation of melanocytes - pigment-producing cells -
+              overactivation of melanocytes, pigment-producing cells -
               triggered by UV radiation, hormonal changes, and heat. It is among
               the most common skin concerns in Indian women, and one of the most
               frequently mistreated. Getting the treatment sequence right
@@ -313,12 +313,12 @@ export default function MelasmaTreatmentPage() {
                   margin: 0,
                 }}
               >
-                Melasma is a chronic pigmentation disorder caused by overactivation of melanocytes, triggered by UV exposure, hormonal changes, and heat. It is especially common and persistent on Indian skin (Fitzpatrick III–V). Effective treatment requires a phased approach — strict sun protection first, topical priming second (tranexamic acid, kojic acid), then procedures. Starting with laser before priming typically worsens melasma significantly.
+                Melasma is a chronic pigmentation disorder caused by overactivation of melanocytes, triggered by UV exposure, hormonal changes, and heat. It is especially common and persistent on Indian skin (Fitzpatrick III–V). Effective treatment requires a phased approach: strict sun protection first, topical priming second (tranexamic acid, kojic acid), then procedures. Starting with laser before priming typically worsens melasma significantly.
               </p>
             </div>
             <h2 style={styles.heading2}>What Melasma Actually Is</h2>
             <p style={styles.para}>
-              Melasma is not a single condition - it is a clinical presentation
+              Melasma is not a single condition, it is a clinical presentation
               of melanocyte hyperactivity that can involve epidermal (surface)
               pigmentation, dermal (deep) pigmentation, or both. The depth of
               pigmentation matters enormously for treatment, because superficial
@@ -331,7 +331,7 @@ export default function MelasmaTreatmentPage() {
               not. This is one of the first assessments we perform before
               designing a treatment plan, because starting with aggressive laser
               on unidentified deep melasma in Indian skin can cause
-              post-inflammatory hyperpigmentation - making the pigmentation
+              post-inflammatory hyperpigmentation, making the pigmentation
               significantly worse.
             </p>
 
@@ -356,14 +356,14 @@ export default function MelasmaTreatmentPage() {
               &quot;mask of pregnancy&quot; or chloasma) and in women using
               combined oral contraceptive pills. Thyroid dysfunction can also
               amplify melanocyte sensitivity. In men, melasma is less common but
-              does occur - typically driven by sun exposure rather than hormonal
+              does occur, typically driven by sun exposure rather than hormonal
               factors.
             </p>
             <p style={styles.para}>
               <strong>3. Heat</strong>
             </p>
             <p style={styles.para}>
-              Infrared radiation - heat - is an independent melasma trigger that
+              Infrared radiation, heat, is an independent melasma trigger that
               is frequently overlooked. Cooking over open flames, standing near
               hot environments, and prolonged outdoor exposure in
               high-temperature conditions can all worsen melasma even when UV is
@@ -377,7 +377,7 @@ export default function MelasmaTreatmentPage() {
             <p style={styles.para}>
               Fitzpatrick Type III–V Indian skin has a higher baseline
               melanocyte density and more reactive melanocytes than lighter skin
-              types. This is protective against skin cancer - but it also means
+              types. This is protective against skin cancer, but it also means
               that any stimulus (UV, hormonal, inflammatory) produces a stronger
               pigmentation response. Melasma in Indian skin tends to be:
             </p>
@@ -394,7 +394,7 @@ export default function MelasmaTreatmentPage() {
             </ul>
             <p style={styles.para}>
               This is precisely why the treatment protocols appropriate for
-              Western skin types are often too aggressive for Indian skin - and
+              Western skin types are often too aggressive for Indian skin, and
               why the treatment sequence here at SKIN@Mantraa is specifically
               calibrated for Fitzpatrick Type III–V patients.
             </p>
@@ -408,7 +408,7 @@ export default function MelasmaTreatmentPage() {
               tends to cause setbacks.
             </p>
             <p style={styles.para}>
-              <strong>Phase 1 - Priming (4 to 6 weeks)</strong>
+              <strong>Phase 1, Priming (4 to 6 weeks)</strong>
             </p>
             <p style={styles.para}>
               Before any procedural treatment, the skin is prepared with topical
@@ -422,7 +422,7 @@ export default function MelasmaTreatmentPage() {
               common cause of worsening in Indian patients.
             </p>
             <p style={styles.para}>
-              <strong>Phase 2 - Procedural treatment</strong>
+              <strong>Phase 2, Procedural treatment</strong>
             </p>
             <p style={styles.para}>
               After priming, chemical peels are introduced at conservative
@@ -434,7 +434,7 @@ export default function MelasmaTreatmentPage() {
               for Indian skin.
             </p>
             <p style={styles.para}>
-              <strong>Phase 3 - Maintenance</strong>
+              <strong>Phase 3, Maintenance</strong>
             </p>
             <p style={styles.para}>
               Once melasma is cleared, the result is not self-sustaining. Daily
@@ -451,23 +451,23 @@ export default function MelasmaTreatmentPage() {
             </p>
             <ul style={styles.ul}>
               <li style={styles.li}>
-                Using sunscreen once daily and not reapplying - SPF degrades
+                Using sunscreen once daily and not reapplying, SPF degrades
                 after 2 to 3 hours of sun exposure
               </li>
               <li style={styles.li}>
-                Using a sunscreen with SPF but no PA rating - PA measures UVA
+                Using a sunscreen with SPF but no PA rating, PA measures UVA
                 protection, which is specifically what drives melasma
               </li>
               <li style={styles.li}>
-                Starting laser treatment without priming - triggers
+                Starting laser treatment without priming, triggers
                 post-inflammatory hyperpigmentation
               </li>
               <li style={styles.li}>
-                Stopping treatment as soon as lightening begins - melasma
+                Stopping treatment as soon as lightening begins, melasma
                 requires full course completion and maintenance
               </li>
               <li style={styles.li}>
-                Home remedies with lemon juice or harsh exfoliants - these cause
+                Home remedies with lemon juice or harsh exfoliants, these cause
                 inflammation, which worsens pigmentation in Indian skin
               </li>
               <li style={styles.li}>
@@ -617,7 +617,7 @@ export default function MelasmaTreatmentPage() {
                 }}
               >
                 Written by <strong>Dr. Mamta Bhura</strong>, MD Dermatology (IMS
-                BHU), Member - IMA, IADVL, CDSI. 26+ years clinical practice in
+                BHU), Member, IMA, IADVL, CDSI. 26+ years clinical practice in
                 Kanpur.
               </p>
               <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem" }}>

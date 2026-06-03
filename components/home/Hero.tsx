@@ -9,21 +9,17 @@ import { staggerContainer, heroTextReveal } from "@/lib/animations";
 
 const EASE_IN = [0.7, 0, 1, 0.45] as [number, number, number, number];
 
-// Holds and gaps (ms)
-const PHRASE_HOLD = 3000; // "The Best Specialist" reading time
-const BRAND_HOLD  = 3200; // "SkinMantraa" reading time
+const PHRASE_HOLD = 3000;
+const BRAND_HOLD  = 3200;
 const EXIT_MS     = 360;
 const INIT_DELAY  = 600;
 
-// 32 ms between chars — continuous L→R stream across all three words
 const STAGGER  = 0.032;
-const WORD_GAP = 0.055; // tiny breath between words
+const WORD_GAP = 0.055;
 
-// Cumulative start delays so all three words feel like ONE typing stream
-const BEST_START = 3 * STAGGER + WORD_GAP;                   // after "The"
-const SPEC_START = (3 + 4) * STAGGER + 2 * WORD_GAP;         // after "The Best"
+const BEST_START = 3 * STAGGER + WORD_GAP;
+const SPEC_START = (3 + 4) * STAGGER + 2 * WORD_GAP;
 
-// Accent — italic gradient, terracotta palette
 const ACCENT: CSSProperties = {
   background: "linear-gradient(135deg, #8C3510 0%, #C85A2A 45%, #A84020 100%)",
   WebkitBackgroundClip: "text",
@@ -32,7 +28,6 @@ const ACCENT: CSSProperties = {
   fontStyle: "italic",
 };
 
-// Brand — sweeping shimmer
 const ACCENT_BRAND: CSSProperties = {
   background:
     "linear-gradient(110deg, #8C3510 0%, #C85A2A 20%, #E8A060 48%, #C85A2A 72%, #8C3510 100%)",
@@ -47,8 +42,6 @@ const ACCENT_BRAND: CSSProperties = {
 
 type Phase = "idle" | "phrase" | "out" | "brand";
 
-// Each word wraps as a flex item; chars spring in with a shared global delay
-// so "The Best Specialist" reads as one continuous typing stream.
 function Word({
   text,
   style,
@@ -113,16 +106,8 @@ function CinematicHeadline() {
 
   return (
     <>
-      {/* Static heading lines — always present, never re-render */}
       <span style={{ display: "block" }}>Your Skin</span>
       <span style={{ display: "block" }}>Deserves</span>
-
-      {/*
-        Accent line — all three words share one AnimatePresence so React
-        reconciles them together. Words are flex items → wrap at boundaries
-        cleanly. Each word has a cumulative startDelay so the typing stream
-        feels unbroken: T-h-e [beat] B-e-s-t [beat] S-p-e-c-i-a-l-i-s-t.
-      */}
       <span
         style={{
           display: "flex",
@@ -133,10 +118,10 @@ function CinematicHeadline() {
         }}
       >
         <AnimatePresence>
-          {showPhrase ? <Word key="the"        text="The"        style={ACCENT}        startDelay={0}          /> : null}
-          {showPhrase ? <Word key="best"       text="Best"       style={ACCENT}        startDelay={BEST_START} /> : null}
-          {showPhrase ? <Word key="specialist" text="Specialist" style={ACCENT}        startDelay={SPEC_START} /> : null}
-          {showBrand  ? <Word key="brand"      text="SkinMantraa" style={ACCENT_BRAND} startDelay={0}          /> : null}
+          {showPhrase ? <Word key="the"        text="The"         style={ACCENT}        startDelay={0}          /> : null}
+          {showPhrase ? <Word key="best"       text="Best"        style={ACCENT}        startDelay={BEST_START} /> : null}
+          {showPhrase ? <Word key="specialist" text="Specialist"  style={ACCENT}        startDelay={SPEC_START} /> : null}
+          {showBrand  ? <Word key="brand"      text="SkinMantraa" style={ACCENT_BRAND}  startDelay={0}          /> : null}
         </AnimatePresence>
       </span>
     </>
@@ -147,17 +132,12 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      style={{
-        position: "relative",
-        minHeight: "100svh",
-        display: "flex",
-        alignItems: "center",
-        overflow: "hidden",
-        background: "#E8D9CE",
-      }}
+      className="relative min-h-[100svh] lg:h-[100svh] flex flex-col lg:flex-row lg:items-center overflow-hidden bg-[#E8D9CE]"
     >
       {/* ── Background Video ── */}
-      <div className="absolute inset-y-0 right-0 w-full lg:w-[50%] z-0">
+      {/* On desktop: absolute right-0 w-[50%] z-0 h-full */}
+      {/* On mobile/tablet: absolute inset-0 w-full h-full z-0 */}
+      <div className="absolute inset-0 lg:inset-y-0 lg:right-0 w-full lg:w-[50%] h-full z-0">
         <Image
           src="/optimized/healthy-skin-poster.webp"
           alt="Healthy glowing skin – dermatology results at SKIN@Mantraa, Kanpur"
@@ -173,7 +153,7 @@ export default function Hero() {
           playsInline
           preload="metadata"
           poster="/optimized/healthy-skin-poster.webp"
-          className="hidden w-full h-full object-cover lg:block"
+          className="w-full h-full object-cover"
           style={{ filter: "brightness(1.02) saturate(0.95)" }}
         >
           <source src="/optimized/healthy-skin-hero-1080p-h265.mp4" type='video/mp4; codecs="hvc1"' />
@@ -182,31 +162,38 @@ export default function Hero() {
         </video>
       </div>
 
-      {/* ── Light-bleed overlay ── */}
+      {/* ── Light-bleed overlay (desktop only) ── */}
       <div
-        className="absolute inset-0 z-1 pointer-events-none"
+        className="hidden lg:block absolute inset-0 z-1 pointer-events-none"
         style={{
           background:
             "radial-gradient(circle at 20% 50%, rgba(253,246,236,0.8) 0%, transparent 60%)",
         }}
       />
 
+      {/* ── Soft fade overlay (mobile/tablet only) ── */}
+      <div
+        className="block lg:hidden absolute inset-0 z-1 pointer-events-none"
+        style={{
+          background:
+            "linear-gradient(to bottom, rgba(253, 246, 236, 0.96) 0%, rgba(253, 246, 236, 0.90) 50%, rgba(253, 246, 236, 0.45) 100%)",
+        }}
+      />
+
       {/* ── Main content ── */}
       <div
-        style={{
-          position: "relative",
-          zIndex: 10,
-          width: "100%",
-          maxWidth: "1440px",
-          margin: "0 auto",
-          padding: "clamp(1rem,5vh,3rem) clamp(1rem,5vw,6rem)",
-        }}
+        className="relative z-10 w-full max-w-[1440px] mx-auto px-6 sm:px-8 lg:px-[clamp(1rem,5vw,6rem)] pt-24 pb-12 lg:py-[clamp(1rem,5vh,3rem)]"
       >
         <motion.div
           variants={staggerContainer}
           initial="hidden"
           animate="visible"
-          style={{ display: "flex", flexDirection: "column", gap: "1.25rem", maxWidth: "min(100%, 580px)" }}
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            gap: "1.25rem",
+            maxWidth: "min(100%, 580px)",
+          }}
         >
           {/* 1. Trust badge */}
           <motion.div custom={0} variants={heroTextReveal}>
@@ -289,22 +276,16 @@ export default function Hero() {
             }}
           >
             {BRAND.doctor.name}
-            {" — Expert dermatological care designed for Indian skin. 26 years of excellence in Kanpur."}
+            {". Expert dermatological care designed for Indian skin. 26 years of excellence in Kanpur."}
           </motion.p>
 
           {/* 4. CTAs */}
           <motion.div
             custom={3}
             variants={heroTextReveal}
-            style={{
-              display: "flex",
-              flexWrap: "wrap" as const,
-              gap: "1rem",
-              alignItems: "center",
-              marginTop: "0.5rem",
-            }}
+            className="flex flex-col sm:flex-row gap-4 items-stretch sm:items-center mt-2"
           >
-            <Link href="/contact" className="btn-primary" style={{ padding: "1rem 2.25rem" }}>
+            <Link href="/contact" className="btn-primary justify-center sm:justify-start" style={{ padding: "1rem 2.25rem" }}>
               Book Appointment
               <svg width="18" height="18" viewBox="0 0 16 16" fill="none">
                 <path
@@ -318,7 +299,7 @@ export default function Hero() {
             </Link>
             <Link
               href="/services"
-              className="btn-ghost"
+              className="btn-ghost justify-center sm:justify-start"
               style={{
                 padding: "1rem 2.25rem",
                 background: "rgba(253,246,236,0.2)",
@@ -380,12 +361,12 @@ export default function Hero() {
       {/* ── Scroll indicator ── */}
       <Link
         href="/#trust"
+        className="hidden lg:flex"
         style={{
           position: "absolute",
           bottom: "2.5rem",
           left: "50%",
           transform: "translateX(-50%)",
-          display: "flex",
           flexDirection: "column",
           alignItems: "center",
           gap: "0.5rem",

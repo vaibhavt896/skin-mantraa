@@ -5,14 +5,14 @@ import Footer from "@/components/layout/Footer";
 import FloatingCTA from "@/components/layout/FloatingCTA";
 
 export const metadata: Metadata = {
-  title: "Botox Cost in Kanpur (2026) - Honest Pricing Guide | SKIN@Mantraa",
+  title: "Botox Cost in Kanpur (2026) | Honest Pricing Guide | SKIN@Mantraa",
   description:
     "How much does Botox cost in Kanpur? Dr. Mamta Bhura explains unit-based pricing, treatment areas, what affects cost, and why medical supervision matters. SKIN@Mantraa.",
   alternates: {
     canonical: "https://skinmantraa.in/skin-guide/botox-cost-kanpur",
   },
   openGraph: {
-    title: "Botox Cost in Kanpur (2026) - Honest Pricing Guide | SKIN@Mantraa",
+    title: "Botox Cost in Kanpur (2026) | Honest Pricing Guide | SKIN@Mantraa",
     description:
       "Botox pricing in Kanpur: forehead, frown lines, crow's feet, lip flip, jawline slimming. Dr. Mamta Bhura explains unit-based pricing and what you should know before booking.",
     url: "https://skinmantraa.in/skin-guide/botox-cost-kanpur",
@@ -32,7 +32,7 @@ const blogSchema = {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
   headline:
-    "Botox Cost in Kanpur (2026) - An Honest Pricing Guide by a Dermatologist",
+    "Botox Cost in Kanpur (2026), An Honest Pricing Guide by a Dermatologist",
   description:
     "Unit-based Botox pricing guide for Kanpur by Dr. Mamta Bhura. Covers area-wise units, total cost range, and what to look for when choosing a provider.",
   image: "https://skinmantraa.in/opengraph-image",
@@ -95,7 +95,7 @@ const faqSchema = {
       name: "Is Botox safe? Who should administer it?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Botox is a prescription medicine and should only be administered by a qualified doctor - a dermatologist or plastic surgeon - not by non-medical aestheticians. The most common complications (asymmetry, ptosis, unnatural results) come from incorrect placement or over-treatment. Dr. Mamta Bhura uses micro-dosing technique at SKIN@Mantraa, preserving natural facial movement while softening expression lines. All injectable treatments at SKIN@Mantraa are performed by Dr. Bhura personally.",
+        text: "Botox is a prescription medicine and should only be administered by a qualified doctor, a dermatologist or plastic surgeon, not by non-medical aestheticians. The most common complications (asymmetry, ptosis, unnatural results) come from incorrect placement or over-treatment. Dr. Mamta Bhura uses micro-dosing technique at SKIN@Mantraa, preserving natural facial movement while softening expression lines. All injectable treatments at SKIN@Mantraa are performed by Dr. Bhura personally.",
       },
     },
     {
@@ -103,7 +103,7 @@ const faqSchema = {
       name: "What is the difference between Botox and fillers?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Botox relaxes muscles that cause dynamic expression lines - forehead lines, frown lines, crow's feet. Fillers restore lost volume - they treat hollowing under the eyes, flat cheeks, thinning lips, and deepened nasolabial folds. Botox works on movement; fillers work on structure. They are often used together for comprehensive facial rejuvenation, but they treat fundamentally different problems.",
+        text: "Botox relaxes muscles that cause dynamic expression lines, forehead lines, frown lines, crow's feet. Fillers restore lost volume, they treat hollowing under the eyes, flat cheeks, thinning lips, and deepened nasolabial folds. Botox works on movement; fillers work on structure. They are often used together for comprehensive facial rejuvenation, but they treat fundamentally different problems.",
       },
     },
   ],
@@ -208,14 +208,14 @@ export default function BotoxCostKanpurPage() {
               Botox Cost in Kanpur
               <br />
               <span style={{ color: "#C4704E" }}>
-                What You Actually Pay - and Why
+                What You Actually Pay, and Why
               </span>
             </h1>
 
             <p
               style={{ ...styles.para, fontSize: "1.15rem", color: "#5C4033" }}
             >
-              Botox pricing in Kanpur is not a flat fee - it is priced per unit
+              Botox pricing in Kanpur is not a flat fee, it is priced per unit
               of toxin used, and the number of units depends on the area being
               treated and the individual patient. Understanding this structure
               helps you compare options accurately.
@@ -303,7 +303,7 @@ export default function BotoxCostKanpurPage() {
               This is why a flat "Botox for forehead: ₹X" quote is often
               misleading. Some patients with strong forehead muscles need more
               units than others. A competent dermatologist assesses your muscle
-              strength and movement before deciding on units - not after.
+              strength and movement before deciding on units, not after.
             </p>
 
             <h2 style={styles.heading2}>How Many Units Does Each Area Need?</h2>
@@ -353,7 +353,7 @@ export default function BotoxCostKanpurPage() {
             </h2>
             <p style={styles.para}>
               Botox is a prescription medicine. It should only be injected by a
-              qualified medical doctor - a dermatologist or plastic surgeon -
+              qualified medical doctor, a dermatologist or plastic surgeon -
               not by beauty therapists, nurses, or untrained aestheticians. The
               most common complications are not caused by the product itself;
               they are caused by incorrect placement and dosing.
@@ -363,7 +363,7 @@ export default function BotoxCostKanpurPage() {
               makes patients look operated-upon rather than rested. Under-dosed
               Botox produces results that last 4 to 6 weeks before wearing off
               unevenly. Incorrectly placed Botox near the brow can cause ptosis
-              (drooping eyelid) - a complication that takes 3 months to resolve
+              (drooping eyelid), a complication that takes 3 months to resolve
               on its own.
             </p>
             <p style={styles.para}>
@@ -521,7 +521,7 @@ export default function BotoxCostKanpurPage() {
                 }}
               >
                 Written by <strong>Dr. Mamta Bhura</strong>, MD Dermatology (IMS
-                BHU), Member - IMA, IADVL, CDSI. 26+ years clinical practice in
+                BHU), Member, IMA, IADVL, CDSI. 26+ years clinical practice in
                 Kanpur.
               </p>
               <div style={{ display: "flex", flexWrap: "wrap", gap: "0.5rem" }}>

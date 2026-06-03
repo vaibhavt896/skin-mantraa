@@ -14,7 +14,7 @@ const FAQ_SCHEMA = {
       name: "Who is the best dermatologist in Kanpur?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Dr. Mamta Bhura at SKIN@Mantraa is widely recognised as one of Kanpur's most experienced dermatologists. She holds an MBBS and MD in Dermatology from the Institute of Medical Sciences, BHU, has 26+ years of clinical experience, and has been ranked #1 dermatologist in Kanpur by ThreeBestRated.in. She is verified on Practo and Justdial with a 4.8 star rating.",
+        text: "Dr. Mamta Bhura at SKIN@Mantraa is widely recognised as one of Kanpur's most experienced dermatologists. She holds an MBBS and MD in Dermatology from the Institute of Medical Sciences, BHU, has 26+ years of clinical experience, and has been ranked #1 dermatologist in Kanpur by ThreeBestRated.in. She is verified on Practo and Justdial across 451+ patient reviews.",
       },
     },
     {
@@ -54,7 +54,7 @@ const FAQ_SCHEMA = {
       name: "Is Dr. Mamta Bhura experienced with Indian skin types?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Yes. With 26 years of practice in Kanpur, Dr. Mamta Bhura specialises in treating Fitzpatrick Type III–V Indian skin. She customises all treatment protocols - including laser settings, chemical peel formulations, and energy-based therapies - for Indian skin to minimise pigmentation risk and maximise results.",
+        text: "Yes. With 26 years of practice in Kanpur, Dr. Mamta Bhura specialises in treating Fitzpatrick Type III to V Indian skin. She customises every treatment protocol for Indian skin, including laser settings, chemical peel formulations, and energy-based therapies, to minimise pigmentation risk and maximise results.",
       },
     },
     {

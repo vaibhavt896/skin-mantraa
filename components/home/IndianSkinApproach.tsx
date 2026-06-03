@@ -104,7 +104,7 @@ export default function IndianSkinApproach() {
           heading="Dermatology Designed for Indian Skin"
           background="#FDF6EC"
           paragraphs={[
-            "Most cosmetic skin research comes from Western populations — lighter skin tones that behave very differently under lasers and chemical treatments compared to the skin tones most North Indian patients have.",
+            "Most cosmetic skin research comes from Western populations: lighter skin tones that behave very differently under lasers and chemical treatments compared to the skin most North Indian patients have.",
             "At SKIN@Mantraa, every plan is built for Indian skin. Laser settings, peel types, and after-care are all chosen with Indian skin's pigment sensitivity and healing patterns in mind. This is not an add-on. It is how we work.",
             "Dr. Mamta Bhura has 26 years of treating patients in Kanpur. She has direct, hands-on experience with conditions common in Indian skin: melasma, dark spots after acne, vitiligo, stubborn oily-skin acne, and early ageing from UP's high UV levels.",
             'If you have ever been told a treatment "might not suit your skin tone," come in for a consult. With the right tools and settings, most treatments work safely and well on Indian skin.',
@@ -118,8 +118,8 @@ export default function IndianSkinApproach() {
           heading="Assessment Before Treatment"
           background="#F5E6D3"
           paragraphs={[
-            "Before any procedure at SKIN@Mantraa, every patient goes through a skin consult. We look at skin type, health history, and your goals. This shapes every decision — which device to use, what settings to apply, and what results to expect.",
-            "Our clinic has clinical-grade laser systems — Nd:YAG, Diode, and Triple-Wavelength — for hair removal and pigmentation. We also have HIFU for skin tightening, Dermapen 4 for scars and texture, and medical-grade peels for Indian skin. All Botox and filler treatments are done by Dr. Bhura personally, using approved products.",
+            "Before any procedure at SKIN@Mantraa, every patient goes through a skin consult. We look at skin type, health history, and your goals. This shapes every decision: which device to use, what settings to apply, and what results to expect.",
+            "Our clinic runs clinical-grade laser systems (Nd:YAG, Diode, and Triple-Wavelength) for hair removal and pigmentation. We also have HIFU for skin tightening, Dermapen 4 for scars and texture, and medical-grade peels for Indian skin. All Botox and filler treatments are done by Dr. Bhura personally, using approved products.",
             "We do not push packages. We build plans around what you need. Some patients need one session. Others need a few months of care. You will know what to expect before anything begins.",
           ]}
         />
