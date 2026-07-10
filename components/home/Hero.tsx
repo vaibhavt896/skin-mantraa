@@ -137,7 +137,7 @@ export default function Hero() {
       {/* ── Background Video ── */}
       {/* On desktop: absolute right-0 w-[50%] z-0 h-full */}
       {/* On mobile/tablet: absolute inset-0 w-full h-full z-0 */}
-      <div className="absolute inset-0 lg:inset-y-0 lg:right-0 w-full lg:w-[50%] h-full z-0">
+      <div className="absolute inset-0 lg:left-auto lg:inset-y-0 lg:right-0 w-full lg:w-[50%] h-full z-0">
         <Image
           src="/optimized/healthy-skin-poster.webp"
           alt="Healthy glowing skin – dermatology results at SKIN@Mantraa, Kanpur"

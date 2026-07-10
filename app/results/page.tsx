@@ -492,11 +492,8 @@ export default function ResultsPage() {
                     className="text-sm leading-relaxed mb-3"
                     style={{ fontFamily: "var(--font-body)", color: "#5C4033" }}
                   >
-                    <strong>Individual results vary.</strong> Outcomes depend on
-                    multiple factors including skin type, age, severity of
-                    condition, adherence to pre- and post-treatment care
-                    instructions, and the patient&apos;s overall health. No
-                    specific result can be guaranteed.
+                    <strong>Individual results vary.</strong>
+                    {" Outcomes depend on multiple factors including skin type, age, severity of condition, adherence to pre- and post-treatment care instructions, and the patient's overall health. No specific result can be guaranteed."}
                   </p>
                   <p
                     className="text-sm leading-relaxed"
