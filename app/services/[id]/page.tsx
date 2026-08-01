@@ -379,7 +379,7 @@ const SERVICE_DETAILS: Record<string, ServiceDetail> = {
       },
       {
         q: "How do I book an appointment for skin disease treatment?",
-        a: "Call +91 73830 79825, WhatsApp +91 98380 00024, or fill the contact form at skinmantraa.in/contact. Consultation fee: ₹600. Walk-ins welcome during clinic hours (Mon–Fri 11AM–6PM, Saturday 12PM–6PM, Sunday 10AM–2PM).",
+        a: "Call or WhatsApp +91 98380 00024, or fill the contact form at skinmantraa.in/contact. Consultation fee: ₹600. Walk-ins welcome during clinic hours (Mon–Fri 11AM–6PM, Saturday 12PM–6PM, Sunday 10AM–2PM).",
       },
     ],
   },

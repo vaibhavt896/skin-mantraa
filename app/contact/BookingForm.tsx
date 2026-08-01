@@ -6,6 +6,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
 import { motion, AnimatePresence } from "framer-motion";
 import { useSearchParams } from "next/navigation";
+import { BRAND } from "@/lib/constants";
 
 const today = new Date().toISOString().split("T")[0];
 
@@ -300,7 +301,7 @@ function BookingFormInner({ services }: BookingFormProps) {
 
               {/* WhatsApp hand-off CTA */}
               <a
-                href="https://wa.me/919145899699?text=Hi%2C%20I%20just%20submitted%20an%20appointment%20request%20on%20your%20website."
+                href={`https://wa.me/${BRAND.clinic.whatsapp}?text=Hi%2C%20I%20just%20submitted%20an%20appointment%20request%20on%20your%20website.`}
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{

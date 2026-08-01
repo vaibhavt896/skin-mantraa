@@ -759,7 +759,7 @@ export default function HifuBlogPage() {
                   marginBottom: "0.25rem",
                 }}
               >
-                +91 73830 79825 &nbsp;·&nbsp; WhatsApp: +91 98380 00024
+                +91 98380 00024 &nbsp;·&nbsp; Call or WhatsApp
               </p>
               <p
                 style={{
