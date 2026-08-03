@@ -3,6 +3,7 @@ import Link from "next/link";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import FloatingCTA from "@/components/layout/FloatingCTA";
+import { BRAND } from "@/lib/constants";
 
 export const metadata: Metadata = {
   title:
@@ -759,7 +760,7 @@ export default function HifuBlogPage() {
                   marginBottom: "0.25rem",
                 }}
               >
-                +91 98380 00024 &nbsp;·&nbsp; Call or WhatsApp
+                {BRAND.clinic.phoneDisplay} &nbsp;·&nbsp; Call or WhatsApp
               </p>
               <p
                 style={{

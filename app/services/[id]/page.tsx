@@ -8,6 +8,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import FloatingCTA from "@/components/layout/FloatingCTA";
 import { fadeInUp, staggerContainer } from "@/lib/animations";
+import { BRAND } from "@/lib/constants";
 
 interface ServiceStep {
   step: string;
@@ -379,7 +380,7 @@ const SERVICE_DETAILS: Record<string, ServiceDetail> = {
       },
       {
         q: "How do I book an appointment for skin disease treatment?",
-        a: "Call or WhatsApp +91 98380 00024, or fill the contact form at skinmantraa.in/contact. Consultation fee: ₹600. Walk-ins welcome during clinic hours (Mon–Fri 11AM–6PM, Saturday 12PM–6PM, Sunday 10AM–2PM).",
+        a: `Call or WhatsApp ${BRAND.clinic.phoneDisplay}, or fill the contact form at skinmantraa.in/contact. Consultation fee: ₹600. Walk-ins welcome during clinic hours (Mon–Fri 11AM–6PM, Saturday 12PM–6PM, Sunday 10AM–2PM).`,
       },
     ],
   },

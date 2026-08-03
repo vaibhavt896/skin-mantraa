@@ -18,9 +18,9 @@ export const BRAND = {
     address: "Bungalow No. 4, 113/196, Swaroop Nagar",
     landmark: "Behind Hotel Royal Cliff",
     city: "Kanpur, Uttar Pradesh 208002",
-    phone: "+919838000024",
-    phoneDisplay: "+91 98380 00024",
-    whatsapp: "+919838000024",
+    phone: "+919235460024",
+    phoneDisplay: "+91 92354 60024",
+    whatsapp: "919235460024",
     email: "skinmantraa@gmail.com",
     hours: {
       weekdays: "Mon–Fri: 11:00 AM – 6:00 PM",

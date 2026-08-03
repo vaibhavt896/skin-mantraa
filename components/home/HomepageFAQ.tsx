@@ -4,6 +4,7 @@ import { useState } from "react";
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { fadeInUp, staggerContainer } from "@/lib/animations";
+import { BRAND } from "@/lib/constants";
 
 const FAQ_SCHEMA = {
   "@context": "https://schema.org",
@@ -46,7 +47,7 @@ const FAQ_SCHEMA = {
       name: "How do I book an appointment with Dr. Mamta Bhura?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Call or WhatsApp +91 98380 00024, or fill the contact form at skinmantraa.in/contact. Walk-ins are welcome during clinic hours.",
+        text: `Call or WhatsApp ${BRAND.clinic.phoneDisplay}, or fill the contact form at skinmantraa.in/contact. Walk-ins are welcome during clinic hours.`,
       },
     },
     {
