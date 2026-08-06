@@ -184,7 +184,7 @@ export default function KidwaiNagarPage() {
 
             <h2 style={styles.heading2}>Book an Appointment</h2>
             <p style={styles.para}>
-              Clinic hours: Mon–Fri 11 AM–6 PM, Sat 12 PM–6 PM, Sun 10 AM–2 PM. Contact: {BRAND.clinic.phoneDisplay}. WhatsApp bookings accepted.
+              Clinic hours: Mon–Fri 11 AM–6 PM, Sat 12 PM–6 PM, Sun 10 AM–2 PM. Call {BRAND.clinic.phoneDisplay} or WhatsApp {BRAND.clinic.whatsappDisplay} to book.
             </p>
 
             {/* FAQ */}

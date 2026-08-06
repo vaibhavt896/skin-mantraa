@@ -117,7 +117,7 @@ const pageSchema = {
           name: "What are the clinic hours at SKIN@Mantraa Swaroop Nagar?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: `Clinic hours: Monday–Friday 11AM–6PM, Saturday 12PM–6PM, Sunday 10AM–2PM. Walk-ins are welcome. For guaranteed appointment time, book in advance via call or WhatsApp on ${BRAND.clinic.phoneDisplay}.`,
+            text: `Clinic hours: Monday–Friday 11AM–6PM, Saturday 12PM–6PM, Sunday 10AM–2PM. Walk-ins are welcome. For guaranteed appointment time, book in advance via call on ${BRAND.clinic.phoneDisplay} or WhatsApp on ${BRAND.clinic.whatsappDisplay}.`,
           },
         },
         {
@@ -323,7 +323,7 @@ export default function SkinSpecialistSwaroopNagarPage() {
                     fontWeight: 600,
                   }}
                 >
-                  💬 {BRAND.clinic.phoneDisplay}
+                  💬 {BRAND.clinic.whatsappDisplay}
                 </a>
                 <a
                   href={`mailto:${BRAND.clinic.email}`}

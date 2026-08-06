@@ -230,7 +230,7 @@ export default function KakadeoPage() {
 
             <h2 style={styles.heading2}>Clinic Hours and Location</h2>
             <p style={styles.para}>
-              SKIN@Mantraa is open Monday to Friday 11:00 AM – 6:00 PM, Saturday 12:00 PM – 6:00 PM, and Sunday 10:00 AM – 2:00 PM. To book: call or WhatsApp {BRAND.clinic.phoneDisplay}.
+              SKIN@Mantraa is open Monday to Friday 11:00 AM – 6:00 PM, Saturday 12:00 PM – 6:00 PM, and Sunday 10:00 AM – 2:00 PM. To book: call {BRAND.clinic.phoneDisplay} or WhatsApp {BRAND.clinic.whatsappDisplay}.
             </p>
 
             {/* FAQ */}
@@ -277,7 +277,7 @@ export default function KakadeoPage() {
                 Serving Kakadeo and all of Kanpur. Honest diagnosis, clear plan, no pressure.
               </p>
               <p style={{ fontFamily: "var(--font-accent)", fontSize: "0.9rem", color: "#C78D6B", marginBottom: "0.25rem" }}>
-                {BRAND.clinic.phoneDisplay} &nbsp;·&nbsp; Call or WhatsApp
+                Call {BRAND.clinic.phoneDisplay} &nbsp;·&nbsp; WhatsApp {BRAND.clinic.whatsappDisplay}
               </p>
               <div style={{ display: "flex", flexWrap: "wrap", gap: "0.75rem", justifyContent: "center", marginTop: "1.25rem" }}>
                 <Link href="/contact" className="btn-primary" style={{ borderRadius: "10px" }}>

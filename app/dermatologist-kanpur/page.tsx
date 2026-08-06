@@ -117,7 +117,7 @@ const pageSchema = {
           name: "How do I book an appointment with Dr. Mamta Bhura?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: `Call or WhatsApp ${BRAND.clinic.phoneDisplay}, or fill the contact form at skinmantraa.in/contact. Walk-ins are welcome during clinic hours.`,
+            text: `Call ${BRAND.clinic.phoneDisplay} or WhatsApp ${BRAND.clinic.whatsappDisplay}, or fill the contact form at skinmantraa.in/contact. Walk-ins are welcome during clinic hours.`,
           },
         },
       ],
@@ -623,7 +623,7 @@ export default function DermatologistKanpurPage() {
                     textDecoration: "none",
                   }}
                 >
-                  💬 WhatsApp: {BRAND.clinic.phoneDisplay}
+                  💬 WhatsApp: {BRAND.clinic.whatsappDisplay}
                 </a>
               </div>
             </div>

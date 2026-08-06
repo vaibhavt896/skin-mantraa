@@ -760,7 +760,7 @@ export default function HifuBlogPage() {
                   marginBottom: "0.25rem",
                 }}
               >
-                {BRAND.clinic.phoneDisplay} &nbsp;·&nbsp; Call or WhatsApp
+                Call {BRAND.clinic.phoneDisplay} &nbsp;·&nbsp; WhatsApp {BRAND.clinic.whatsappDisplay}
               </p>
               <p
                 style={{
